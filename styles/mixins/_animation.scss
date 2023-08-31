@@ -1,0 +1,97 @@
+/* Define Keyframes Here */
+
+@mixin animate($name, $duration, $timing, $delay, $direction) {
+	animation: var(--#{$name});
+	animation-duration: var(--#{$duration});
+	animation-timing-function: var(--#{$timing});
+	animation-delay: var(--#{$delay});
+	animation-direction: var(--#{$direction});
+	animation-fill-mode: var(--animation-fill-mode-both);
+}
+
+@mixin define-keyframes($name) {
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+// Additional Mixins
+@mixin fade-in(
+	$duration: animation-duration-medium,
+	$timing: animation-timing-ease,
+	$delay: animation-delay-short,
+	$direction: animation-direction-normal
+) {
+	@include animate(
+		animation-keyframes-fade-in,
+		$duration,
+		$timing,
+		$delay,
+		$direction
+	);
+}
+
+@mixin fade-out(
+	$duration: animation-duration-medium,
+	$timing: animation-timing-ease,
+	$delay: animation-delay-short,
+	$direction: animation-direction-normal
+) {
+	@include animate(
+		animation-keyframes-fade-out,
+		$duration,
+		$timing,
+		$delay,
+		$direction
+	);
+}
+
+@mixin bounce(
+	$duration: animation-duration-medium,
+	$timing: animation-timing-ease,
+	$delay: animation-delay-short,
+	$direction: animation-direction-normal
+) {
+	@include animate(
+		animation-keyframes-bounce,
+		$duration,
+		$timing,
+		$delay,
+		$direction
+	);
+}
+
+@mixin pulse(
+	$duration: animation-duration-medium,
+	$timing: animation-timing-ease,
+	$delay: animation-delay-short,
+	$direction: animation-direction-normal
+) {
+	@include animate(
+		animation-keyframes-pulse,
+		$duration,
+		$timing,
+		$delay,
+		$direction
+	);
+}
+// sample usage
+// .my-element {
+// 	@include fade-in;
+// }
+
+// .animated-element {
+// 	@include bounce(animation-duration-slow, animation-timing-ease-in-out);
+// }
+
+// .custom-fade {
+// 	@include define-keyframes(fadeOutCustom) {
+// 		from {
+// 			opacity: 1;
+// 		}
+// 		to {
+// 			opacity: 0;
+// 		}
+// 	}
+// 	animation: fadeOutCustom 1s ease-in-out;
+// }

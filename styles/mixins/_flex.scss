@@ -1,0 +1,188 @@
+// _flexbox.scss
+
+// Flex container mixin
+@mixin flex-container(
+	$direction: row,
+	$wrap: nowrap,
+	$justify: center,
+	$align: center
+) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+// Flex item mixin
+@mixin flex-item($flex: 1, $align-self: auto) {
+	flex: $flex;
+	align-self: $align-self;
+}
+
+// Flex center mixin
+@mixin flex-center($direction: row) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+	align-items: center;
+}
+
+// Flex row mixin
+@mixin flex-row($wrap: nowrap, $justify: flex-start, $align: stretch) {
+	@include flex-container(row, $wrap, $justify, $align);
+}
+
+// Flex column mixin
+@mixin flex-column($wrap: nowrap, $justify: flex-start, $align: stretch) {
+	@include flex-container(column, $wrap, $justify, $align);
+}
+
+// Flex wrap mixin
+@mixin flex-wrap($wrap: wrap, $align: stretch) {
+	@include flex-container(row, $wrap, flex-start, $align);
+}
+
+// Flex container with space between items
+@mixin flex-space-between($direction: row, $wrap: nowrap, $align: stretch) {
+	@include flex-container($direction, $wrap, space-between, $align);
+}
+
+// Flex container with space around items
+@mixin flex-space-around($direction: row, $wrap: nowrap, $align: stretch) {
+	@include flex-container($direction, $wrap, space-around, $align);
+}
+
+// Flex container with space evenly between items
+@mixin flex-space-evenly($direction: row, $wrap: nowrap, $align: stretch) {
+	@include flex-container($direction, $wrap, space-evenly, $align);
+}
+
+// Flex container with flex-end alignment
+@mixin flex-end($direction: row, $wrap: nowrap, $align: stretch) {
+	@include flex-container($direction, $wrap, flex-end, $align);
+}
+
+// Flex container with align-content
+@mixin flex-align-content(
+	$direction: row,
+	$wrap: wrap,
+	$align-content: space-between,
+	$align: stretch
+) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: flex-start;
+	align-items: $align;
+	align-content: $align-content;
+}
+
+// Flex item with order
+@mixin flex-order($order: 0) {
+	order: $order;
+}
+
+// Flex item with flex-grow and flex-shrink
+@mixin flex-grow-shrink($grow: 1, $shrink: 1) {
+	flex-grow: $grow;
+	flex-shrink: $shrink;
+}
+
+// Flex item with basis
+@mixin flex-basis($basis: auto) {
+	flex-basis: $basis;
+}
+
+// Flex item with alignSelf
+@mixin flex-self($align-self: auto) {
+	align-self: $align-self;
+}
+
+// Flex container and item for vertical centering
+@mixin flex-vertical-center($direction: row, $align: center) {
+	@include flex-container($direction, nowrap, center, $align);
+	@include flex-item;
+}
+
+// Flex container and item for horizontal centering
+@mixin flex-horizontal-center($direction: column, $justify: center) {
+	@include flex-container($direction, nowrap, $justify, center);
+	@include flex-item;
+}
+
+// Flex container with space between and center alignment
+@mixin flex-space-center($direction: row, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, space-between, center);
+}
+
+// Flex container with space around and center alignment
+@mixin flex-space-around-center($direction: row, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, space-around, center);
+}
+
+// Flex container with space evenly between and center alignment
+@mixin flex-space-evenly-center($direction: row, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, space-evenly, center);
+}
+
+// Flex container with center alignment and centered items
+@mixin flex-center-center($direction: row, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, center, center);
+}
+
+// Flex container with bottom alignment and centered items
+@mixin flex-bottom-center($direction: row, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, flex-end, center);
+}
+
+// Flex container with top alignment and centered items
+@mixin flex-top-center($direction: row, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, flex-start, center);
+}
+
+// Flex container with left alignment and centered items
+@mixin flex-left-center($direction: column, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, center, flex-start);
+}
+
+// Flex container with right alignment and centered items
+@mixin flex-right-center($direction: column, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, center, flex-end);
+}
+
+// Flex container with equal space between and centered items
+@mixin flex-space-evenly-middle($direction: row, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, space-evenly, center);
+}
+
+// Flex container with stretch alignment and centered items
+@mixin flex-stretch-center($direction: row, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, flex-start, stretch);
+}
+
+// Flex container with equal space around and stretch alignment
+@mixin flex-space-around-stretch($direction: row, $wrap: nowrap) {
+	@include flex-container($direction, $wrap, space-around, stretch);
+}
+// usage
+
+// .container {
+// 	@include flex-container(row, wrap, space-between, center);
+// }
+
+// .item {
+// 	@include flex-item(2);
+// }
+
+// .centered {
+// 	@include flex-center(column);
+// }
+
+// .row {
+// 	@include flex-row(wrap);
+// }
+
+// .column {
+// 	@include flex-column();
+// }

@@ -1,0 +1,89 @@
+// _buttons.scss
+
+// Base button mixin
+@mixin button-base($bg-color, $text-color) {
+	display: inline-block;
+	padding: 12px 24px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+	background-color: $bg-color;
+	color: $text-color;
+	text-transform: uppercase;
+	&:hover {
+		background-color: darken($bg-color, 10%);
+		color: $text-color;
+		transform: translateY(-2px);
+	}
+	&:active {
+		transform: translateY(2px);
+	}
+}
+
+// Gradient button mixin
+@mixin gradient-button($start-color, $end-color, $text-color) {
+	@include button-base(
+		linear-gradient(to right, $start-color, $end-color),
+		$text-color
+	);
+}
+
+// Shadow button mixin
+@mixin shadow-button($bg-color, $shadow-color, $text-color) {
+	@include button-base($bg-color, $text-color);
+	box-shadow: 0px 4px 8px rgba($shadow-color, 0.2);
+}
+
+// Rounded button mixin
+@mixin rounded-button($bg-color, $text-color) {
+	@include button-base($bg-color, $text-color);
+	border-radius: 30px;
+}
+
+// Small button mixin
+@mixin small-button {
+	font-size: 14px;
+	padding: 8px 20px;
+}
+
+// Large button mixin
+@mixin large-button {
+	font-size: 20px;
+	padding: 15px 30px;
+}
+
+// Usage
+
+// .my-primary-button {
+// 	@include button-base($primary-color, #fff);
+// }
+
+// .my-secondary-button {
+// 	@include gradient-button(#f2b705, #ff8127, #fff);
+// }
+
+// .my-outline-button {
+// 	@include shadow-button(transparent, #333, $primary-color);
+// 	border: 2px solid $primary-color;
+// }
+
+// .my-disabled-button {
+// 	@include rounded-button($disabled-color, #ccc);
+// 	cursor: not-allowed;
+// }
+
+// .my-special-button {
+// 	@include shadow-button(#3498db, #3498db, #fff);
+// 	border: 2px solid #2980b9;
+// }
+
+// .my-small-button {
+// 	@include small-button;
+// }
+
+// .my-large-button {
+// 	@include large-button;
+// }
