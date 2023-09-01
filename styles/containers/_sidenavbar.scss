@@ -17,9 +17,9 @@ nav {
 			}
 
 			.bars {
-				display: flex;
-				font-size: 25px;
+				font-size: 10px;
 				margin-left: 50px;
+				filter: invert(100%);
 			}
 		}
 
@@ -44,6 +44,7 @@ nav {
 			.icon,
 			.link_text {
 				font-size: 20px;
+				filter: invert(100%);
 			}
 		}
 	}

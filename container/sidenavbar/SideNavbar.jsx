@@ -1,17 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faTh,
-	faBars,
-	faUserAlt,
-	faChartBar,
-	faCommentAlt,
-	faShoppingBag,
-	faTags,
-} from "@fortawesome/free-solid-svg-icons";
-
 export default function Sidebar({ children }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggle = () => setIsOpen(!isOpen);
@@ -20,59 +9,72 @@ export default function Sidebar({ children }) {
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: faTh,
+			icon: "/sidenavbar/menu.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: faUserAlt,
+			icon: "/sidenavbar/menu.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: faChartBar,
+			icon: "/sidenavbar/menu.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: faCommentAlt,
+			icon: "/sidenavbar/menu.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: faShoppingBag,
+			icon: "/sidenavbar/menu.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: faTags,
+			icon: "/sidenavbar/menu.svg",
 		},
 	];
 
 	return (
 		<nav className="container">
-			<div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
+			<div style={{ width: isOpen ? "300px" : "50px" }} className="sidebar">
 				<div className="top_section">
-					{/* <Image
+					<Image
 						src="/SpaceOtaku.png"
 						width={30}
 						height={30}
 						alt="LOGO"
-					></Image> */}
+						style={{ display: isOpen ? "block" : "none" }}
+					></Image>
 					<h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
-						Logo
+						Space Otaku
 					</h1>
-					<div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
-						<button onClick={toggle}>
-							<FontAwesomeIcon icon={faBars} />
-						</button>
+					<div
+						style={{ marginLeft: isOpen ? "50px" : "0px" }}
+						className="bars"
+						onClick={toggle}
+					>
+						<Image
+							src="/sidenavbar/menu.svg"
+							width={30}
+							height={30}
+							alt="BARS"
+						></Image>
 					</div>
 				</div>
 				{menuItem.map((item, index) => (
 					<Link href={item.path} key={index}>
 						<span className="link">
 							<div className="icon">
-								<FontAwesomeIcon icon={item.icon} />
+								<Image
+									src={item.icon}
+									width={30}
+									height={30}
+									alt={item.icon}
+								></Image>
 							</div>
 							<div
 								style={{ display: isOpen ? "block" : "none" }}
