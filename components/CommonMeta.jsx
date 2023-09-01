@@ -1,6 +1,20 @@
 import Head from "next/head";
-
+import { useEffect } from "react";
 export default function CommonMeta() {
+	useEffect(() => {
+		// Create a script element
+		const script = document.createElement("script");
+		script.async = true;
+		script.src = "https://www.clarity.ms/tag/ioi3g8s3zl?ref=bwt";
+
+		// Append the script to the head
+		document.head.appendChild(script);
+
+		// Cleanup: Remove the script when the component unmounts
+		return () => {
+			document.head.removeChild(script);
+		};
+	}, []);
 	return (
 		<Head>
 			{/* Basic Meta Tags */}
@@ -62,6 +76,7 @@ export default function CommonMeta() {
 			/>
 
 			{/* Bing Webmaster Tools Verification */}
+
 			{/* <meta name="msvalidate.01" content="" /> */}
 
 			{/* Yandex Webmaster Verification */}
