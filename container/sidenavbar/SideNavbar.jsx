@@ -1,12 +1,10 @@
-// components/SideNavbar.js
-
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faBars,
-	faXmark,
+	faTimes,
 	faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 const SideNavbar = () => {
@@ -19,17 +17,24 @@ const SideNavbar = () => {
 	return (
 		<div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
 			<div className="logo-details">
-				<Image src="/SpaceOtaku.png" width={50} height={50} alt="logo"></Image>
+				{/* Conditionally render the logo image based on the sidebar state */}
+				{isSidebarOpen && (
+					<Image src="/SpaceOtaku.png" width={50} height={50} alt="logo" />
+				)}
 				<div className="logo_name">CodingLab</div>
+				{/* Toggle button */}
 				{isSidebarOpen ? (
 					<FontAwesomeIcon
-						icon={faBars}
+						icon={faTimes} // Use close (x-mark) icon when sidebar is open
 						onClick={toggleSidebar}
+						id="btn"
+						className="open"
 					></FontAwesomeIcon>
 				) : (
 					<FontAwesomeIcon
-						icon={faXmark}
+						icon={faBars} // Use hamburger (bars) icon when sidebar is closed
 						onClick={toggleSidebar}
+						id="btn"
 					></FontAwesomeIcon>
 				)}
 			</div>
