@@ -37,28 +37,21 @@ export default function CommonMeta() {
 			<meta name="geo.placename" content="Kolkata, West Bengal, India" />
 			<meta name="geo.position" content="22.476632;88.322844" />
 			<meta name="geo.region" content="IN-WB" />
-			{/* Language */}
-			<meta name="language" content="en" /> {/* Additional SEO Meta Tags */}
+
+			<meta name="language" content="en" />
 			<meta name="target" content="all" />
 			<meta name="HandheldFriendly" content="True" />
 			<meta name="MobileOptimized" content="450" />
-			{/* Dublin Core Meta Tags */}
-			<meta name="DC.Title" content="Space Otaku - Explore the Universe" />
-			<meta name="DC.Creator" content="Ankur" />
 			<meta
 				name="DC.Description"
 				content="Your ultimate destination for space-related information."
 			/>
-			{/* Pinterest Meta Tags */}
 			<meta name="pinterest-rich-pin" content="true" />
-			{/* Rating Meta Tags */}
 			<meta name="rating" content="general" />
-			{/* Google Search Console Verification */}
 			<meta
 				name="google-site-verification"
 				content="UHzgiXdnV44kTW17GiC7CXXX5NnBxRl4GhXCAfSIXNU"
 			/>
-			{/* Yandex Webmaster Verification */}
 			<meta name="yandex-verification" content="6bf6f827d7e4d463" />
 		</Head>
 	);

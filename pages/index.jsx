@@ -16,44 +16,60 @@ function index() {
 				<SideNavbar></SideNavbar>
 				<h1>This is Created by Ankur </h1>
 				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas
-					molestias vero corrupti deserunt fugiat accusamus soluta, eligendi
-					sint? Nemo mollitia incidunt consequuntur ipsum, corrupti provident
-					nulla eaque similique? Est, iusto.
+					n real life, NASA Advanced Supercomputing (NAS) research scientists,
+					at the agency’s Ames Research Center in California’s Silicon Valley,
+					are producing highly detailed simulations and visualizations to help
+					keep astronauts safe during the dynamic liftoff conditions of NASA’s
+					Orion spacecraft, which will send humans to the Moon and potential
+					future destinations, and return them safely back to Earth. The NAS
+					scientists’ advanced simulation techniques are being used to predict
+					vibrations on the Orion spacecraft’s Launch Abort Vehicle (LAV). The
+					LAV is the combined configuration of the Orion launch abort system and
+					crew module. The LAV is designed to pull the crew away from peril if
+					an emergency occurs on the launch pad or during the first two minutes
+					of flight.
 				</p>
 				<h3>space otaku</h3>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur hic
-					voluptate nihil illum, libero laborum, ipsum quaerat aliquam adipisci
-					ratione voluptatibus voluptates ab saepe consequatur blanditiis enim
-					ullam tempore recusandae suscipit inventore fugiat architecto! Maiores
-					officiis pariatur fugiat et blanditiis tempora quisquam error
-					repudiandae. Qui fugiat voluptate, dolore error dolorem autem sunt
-					perspiciatis deleniti unde sequi officiis beatae perferendis enim aut
-					distinctio aperiam voluptatum rerum nisi recusandae voluptatibus
-					ipsam. Quia dolor laborum beatae culpa reiciendis. Illo dolorem, unde
-					magni ratione, sunt, provident est sed quaerat autem reiciendis velit
-					nam itaque explicabo. Mollitia, beatae id. Doloribus sint vitae
-					possimus unde qui?
+					Astronomer Charles Messier discovered Messier 89 in 1781. Messier
+					began cataloging astronomical objects after he mistook a faint object
+					in the sky for Halley’s Comet. Upon closer inspection, he realized the
+					object was actually the Crab Nebula. To prevent other astronomers from
+					making the same error, he decided to catalog all the bright, deep-sky
+					objects that could potentially be mistaken for comets. His methodical
+					observations of the night sky led to the first comprehensive catalog
+					of astronomical objects: the Messier Catalog! Messier 89 holds the
+					record for being the last giant elliptical Messier found, and the most
+					perfectly spherical galaxy in his catalog of 110 objects.
 				</p>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nisi
-					ratione sed unde, vitae laborum nemo architecto animi rem est minus
-					eligendi ipsa? Culpa molestias consequuntur rerum ratione voluptatum
-					excepturi quas veniam ullam aspernatur quos praesentium earum libero
-					ducimus dolor illo fugiat quam, laborum facere, modi officiis iste.
-					Sequi, voluptates possimus expedita minima, quo nisi necessitatibus
-					sapiente cupiditate beatae ipsum at itaque. Itaque modi corporis
-					eligendi, a repellat minima quidem totam, maxime quis aliquam maiores
-					sit ipsum omnis molestias molestiae consequuntur earum rem voluptas
-					sequi quod? Commodi rerum pariatur vitae hic laudantium ex non quo
-					error itaque, obcaecati impedit? Repellat voluptatem debitis ratione?
-					Nisi eum natus neque in quod optio iusto. Culpa molestias sit nesciunt
-					aspernatur tempora voluptatibus, magnam veniam aliquam odio minus
-					reprehenderit ipsum, consectetur incidunt debitis dignissimos officiis
-					officia assumenda illo, perferendis nemo deleniti ipsa quam! Sequi
-					recusandae libero commodi, autem omnis minima a dolorum officiis
-					voluptate error.
+					From Earth orbit to the Moon and Mars, explore the world of human
+					spaceflight with NASA each week on the official podcast of the Johnson
+					Space Center in Houston, Texas. Listen to in-depth conversations with
+					the astronauts, scientists and engineers who make it possible.
+				</p>
+				<p>
+					XRISM’s microcalorimeter spectrometer, named Resolve, is a
+					collaboration between JAXA and NASA. It will create spectra,
+					measurements of light’s intensity over a range of energies, for X-rays
+					from 400 to 12,000 electron volts. (For comparison, visible light
+					energies range from about 2 to 3 electron volts.) To do this, Resolve
+					measures tiny temperature changes created when an X-ray hits its
+					6-by-6-pixel detector. To measure that minuscule increase and
+					determine the X-ray’s energy, the detector needs to cool down to
+					around minus 460 Fahrenheit (around minus 270 Celsius), just a
+					fraction of a degree above absolute zero. The instrument reaches its
+					operating temperature after a multistage mechanical cooling process
+					inside a refrigerator-sized container of liquid helium. Resolve will
+					help astronomers learn more about the composition and motion of
+					extremely hot gas within clusters of galaxies, near-light-speed
+					particle jets powered by black holes in active galaxies, and other
+					cosmic mysteries. The Webb telescope captures similar spectra, but for
+					infrared light. Webb’s spectra have revealed the makeup of gas near
+					active black holes and mapped the movement of this material toward or
+					away from the viewer. Data from XRISM’s Resolve instrument will do the
+					same at higher energies, helping paint a fuller picture of these
+					objects.
 				</p>
 			</div>
 		</Fragment>
