@@ -32,13 +32,13 @@ export default function CommonMeta() {
 			<meta name="apple-mobile-web-app-capable" content="yes" />
 			<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 			{/* Canonical Link (to specify the preferred version of your page) */}
-			<link rel="canonical" href="https://spaceotaku.online/" />
+			<link rel="canonical" href="https://www.spaceotaku.online/" />
 			{/* Geo locations */}
 			<meta name="geo.placename" content="Kolkata, West Bengal, India" />
 			<meta name="geo.position" content="22.476632;88.322844" />
 			<meta name="geo.region" content="IN-WB" />
-			<meta name="language" content="English" />
-			{/* Additional SEO Meta Tags */}
+			{/* Language */}
+			<meta name="language" content="en" /> {/* Additional SEO Meta Tags */}
 			<meta name="target" content="all" />
 			<meta name="HandheldFriendly" content="True" />
 			<meta name="MobileOptimized" content="450" />
@@ -53,13 +53,11 @@ export default function CommonMeta() {
 			<meta name="pinterest-rich-pin" content="true" />
 			{/* Rating Meta Tags */}
 			<meta name="rating" content="general" />
-
 			{/* Google Search Console Verification */}
 			<meta
 				name="google-site-verification"
 				content="UHzgiXdnV44kTW17GiC7CXXX5NnBxRl4GhXCAfSIXNU"
 			/>
-
 			{/* Yandex Webmaster Verification */}
 			<meta name="yandex-verification" content="6bf6f827d7e4d463" />
 		</Head>

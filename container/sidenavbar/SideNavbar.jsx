@@ -49,9 +49,9 @@ export default function Sidebar({ children }) {
 						alt="LOGO"
 						style={{ display: isOpen ? "block" : "none" }}
 					></Image>
-					<h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
+					<h2 style={{ display: isOpen ? "block" : "none" }} className="logo">
 						Space Otaku
-					</h1>
+					</h2>
 					<div
 						style={{ marginLeft: isOpen ? "50px" : "0px" }}
 						className="bars"
