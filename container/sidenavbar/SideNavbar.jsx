@@ -1,83 +1,90 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+	faTh,
 	faBars,
-	faTimes,
-	faMagnifyingGlass,
+	faUserAlt,
+	faChartBar,
+	faCommentAlt,
+	faShoppingBag,
+	faTags,
 } from "@fortawesome/free-solid-svg-icons";
-const SideNavbar = () => {
-	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-	const toggleSidebar = () => {
-		setIsSidebarOpen(!isSidebarOpen);
-	};
+export default function Sidebar({ children }) {
+	const [isOpen, setIsOpen] = useState(false);
+	const toggle = () => setIsOpen(!isOpen);
+
+	const menuItem = [
+		{
+			path: "/",
+			name: "Coming Soon",
+			icon: faTh,
+		},
+		{
+			path: "/",
+			name: "Coming Soon",
+			icon: faUserAlt,
+		},
+		{
+			path: "/",
+			name: "Coming Soon",
+			icon: faChartBar,
+		},
+		{
+			path: "/",
+			name: "Coming Soon",
+			icon: faCommentAlt,
+		},
+		{
+			path: "/",
+			name: "Coming Soon",
+			icon: faShoppingBag,
+		},
+		{
+			path: "/",
+			name: "Coming Soon",
+			icon: faTags,
+		},
+	];
 
 	return (
-		<div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
-			<div className="logo-details">
-				{/* Conditionally render the logo image based on the sidebar state */}
-				{isSidebarOpen && (
-					<Image src="/SpaceOtaku.png" width={50} height={50} alt="logo" />
-				)}
-				<div className="logo_name">CodingLab</div>
-				{/* Toggle button */}
-				{isSidebarOpen ? (
-					<FontAwesomeIcon
-						icon={faTimes} // Use close (x-mark) icon when sidebar is open
-						onClick={toggleSidebar}
-						id="btn"
-						className="open"
-					></FontAwesomeIcon>
-				) : (
-					<FontAwesomeIcon
-						icon={faBars} // Use hamburger (bars) icon when sidebar is closed
-						onClick={toggleSidebar}
-						id="btn"
-					></FontAwesomeIcon>
-				)}
-			</div>
-			<ul className="nav-list">
-				<li>
-					<FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
-					<input type="text" placeholder="Search..." />
-					<span className="tooltip">Search</span>
-				</li>
-				<li>
-					<Link href="#">
-						<FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
-						<span className="links_name">Dashboard</span>
-					</Link>
-					<span className="tooltip">Dashboard</span>
-				</li>
-
-				<li>
-					<Link href="#">
-						<FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
-						<span className="links_name">User</span>
-					</Link>
-					<span className="tooltip">User</span>
-				</li>
-
-				<li className="profile">
-					<div className="profile-details">
-						<Image
-							src="/SpaceOtaku.png"
-							width={50}
-							height={50}
-							alt="logo"
-						></Image>
-						<div className="name_job">
-							<div className="name">Prem Shahi</div>
-							<div className="job">Web designer</div>
-						</div>
+		<nav className="container">
+			<div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
+				<div className="top_section">
+					{/* <Image
+						src="/SpaceOtaku.png"
+						width={30}
+						height={30}
+						alt="LOGO"
+					></Image> */}
+					<h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
+						Logo
+					</h1>
+					<div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
+						<button onClick={toggle}>
+							<FontAwesomeIcon icon={faBars} />
+						</button>
 					</div>
-					<FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
-				</li>
-			</ul>
-		</div>
+				</div>
+				{menuItem.map((item, index) => (
+					<Link href={item.path} key={index}>
+						<span className="link">
+							<div className="icon">
+								<FontAwesomeIcon icon={item.icon} />
+							</div>
+							<div
+								style={{ display: isOpen ? "block" : "none" }}
+								className="link_text"
+							>
+								{item.name}
+							</div>
+						</span>
+					</Link>
+				))}
+			</div>
+			<main>{children}</main>
+		</nav>
 	);
-};
-
-export default SideNavbar;
+}
