@@ -60,15 +60,8 @@ export default function CommonMeta() {
 				content="UHzgiXdnV44kTW17GiC7CXXX5NnBxRl4GhXCAfSIXNU"
 			/>
 
-			{/* Bing Webmaster Tools Verification */}
-
-			{/* <meta name="msvalidate.01" content="" /> */}
-
 			{/* Yandex Webmaster Verification */}
-			{/* <meta
-				name="yandex-verification"
-				content="YOUR_YANDEX_WEBMASTER_VERIFICATION_CODE"
-			/> */}
+			<meta name="yandex-verification" content="6bf6f827d7e4d463" />
 		</Head>
 	);
 }
