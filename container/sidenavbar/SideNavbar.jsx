@@ -39,30 +39,40 @@ export default function Sidebar({ children }) {
 	];
 
 	return (
-		<nav className="container">
+		<nav className="sidenav-container">
 			<div style={{ width: isOpen ? "300px" : "50px" }} className="sidebar">
 				<div className="top_section">
 					<Image
 						src="/SpaceOtaku.png"
-						width={30}
-						height={30}
+						width={180}
+						height={180}
 						alt="LOGO"
 						style={{ display: isOpen ? "block" : "none" }}
 					></Image>
-					<h2 style={{ display: isOpen ? "block" : "none" }} className="logo">
-						Space Otaku
-					</h2>
 					<div
 						style={{ marginLeft: isOpen ? "50px" : "0px" }}
 						className="bars"
 						onClick={toggle}
 					>
-						<Image
-							src="/sidenavbar/menu.svg"
-							width={30}
-							height={30}
-							alt="BARS"
-						></Image>
+						{isOpen ? (
+							<div className="">
+								<Image
+									src="/sidenavbar/menu-alt-right.svg"
+									width={30}
+									height={30}
+									alt="BARS"
+								></Image>
+							</div>
+						) : (
+							<div>
+								<Image
+									src="/sidenavbar/menu.svg"
+									width={30}
+									height={30}
+									alt="BARS"
+								></Image>
+							</div>
+						)}
 					</div>
 				</div>
 				{menuItem.map((item, index) => (
