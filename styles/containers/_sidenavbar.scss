@@ -4,7 +4,8 @@
 		background: black;
 		height: 100vh;
 		max-height: 100%;
-		transition: all 1s;
+		// transition: all 1s;
+		// transition: ease-in-out 0.5s;
 		.top_section {
 			@include flex-container(row, wrap, center, center);
 			margin-bottom: 30px;
