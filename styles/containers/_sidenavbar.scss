@@ -11,15 +11,14 @@
 			display: flex;
 			align-items: center;
 			padding: 20px 15px;
-
 			.logo {
-				font-size: 30px;
+				margin: 0;
 			}
-
 			.bars {
-				font-size: 10px;
-				margin-left: 50px;
 				filter: invert(100%);
+				.closing-menu-container {
+					margin-bottom: 120px;
+				}
 			}
 		}
 

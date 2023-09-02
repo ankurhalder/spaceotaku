@@ -42,20 +42,22 @@ export default function Sidebar({ children }) {
 		<nav className="sidenav-container">
 			<div style={{ width: isOpen ? "300px" : "50px" }} className="sidebar">
 				<div className="top_section">
-					<Image
-						src="/SpaceOtaku.png"
-						width={180}
-						height={180}
-						alt="LOGO"
-						style={{ display: isOpen ? "block" : "none" }}
-					></Image>
+					<div className="logo">
+						<Image
+							src="/SpaceOtaku.png"
+							width={180}
+							height={180}
+							alt="LOGO"
+							style={{ display: isOpen ? "block" : "none" }}
+						></Image>
+					</div>
 					<div
 						style={{ marginLeft: isOpen ? "50px" : "0px" }}
 						className="bars"
 						onClick={toggle}
 					>
 						{isOpen ? (
-							<div className="">
+							<div className="closing-menu-container">
 								<Image
 									src="/sidenavbar/menu-alt-right.svg"
 									width={30}
@@ -64,7 +66,7 @@ export default function Sidebar({ children }) {
 								></Image>
 							</div>
 						) : (
-							<div>
+							<div className="menu-container">
 								<Image
 									src="/sidenavbar/menu.svg"
 									width={30}
