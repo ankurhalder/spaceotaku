@@ -8,7 +8,7 @@
 
 		.top_section {
 			@include flex-container(row, wrap, center, center);
-
+			margin-bottom: 30px;
 			padding: 10px 5px;
 			.logo {
 				margin: 0;
@@ -17,7 +17,7 @@
 				cursor: pointer;
 				filter: invert(100%);
 				.closing-menu-container {
-					margin-bottom: 120px;
+					margin-bottom: 20px;
 				}
 			}
 		}
@@ -40,7 +40,6 @@
 				background: lightskyblue;
 				color: #000;
 			}
-
 			.icon {
 				filter: invert(100%);
 			}

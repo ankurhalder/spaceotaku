@@ -52,7 +52,7 @@ export default function Sidebar({ children }) {
 						></Image>
 					</div>
 					<div
-						style={{ marginLeft: isOpen ? "50px" : "0px" }}
+						style={{ marginLeft: isOpen ? "30px" : "0px" }}
 						className="bars"
 						onClick={toggle}
 					>
