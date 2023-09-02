@@ -59,7 +59,7 @@ export default function Sidebar({ children }) {
 						{isOpen ? (
 							<div className="closing-menu-container">
 								<Image
-									src="/sidenavbar/menu-alt-right.svg"
+									src="/sidenavbar/close.svg"
 									width={30}
 									height={30}
 									alt="BARS"
