@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import { SideNavbar } from "@/container";
+// import { SideNavbar } from "@/container";
 
 function index() {
 	return (
@@ -13,7 +13,7 @@ function index() {
 				/>
 			</Head>
 			<div>
-				<SideNavbar></SideNavbar>
+				{/* <SideNavbar></SideNavbar> */}
 				<h1>This is Created by Ankur </h1>
 				<p>
 					n real life, NASA Advanced Supercomputing (NAS) research scientists,
