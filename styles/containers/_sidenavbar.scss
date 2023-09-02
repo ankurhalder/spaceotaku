@@ -1,14 +1,14 @@
 .sidenav-container {
-	display: flex;
 	.sidebar {
+		@include flex-container(row, wrap, center, center);
 		background: #000;
 		color: #fff;
 		height: 100vh;
-		width: 200px;
 		transition: all 0.5s;
 
 		.top_section {
-			display: flex;
+			// display: flex;
+			// @include flex-container(co);
 			align-items: center;
 			padding: 20px 15px;
 			.logo {
