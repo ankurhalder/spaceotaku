@@ -1,21 +1,20 @@
 .sidenav-container {
 	.sidebar {
-		@include flex-container(row, wrap, center, center);
-		background: #000;
-		color: #fff;
+		// @include flex-container(row, wrap, center, center);
+		background: black;
 		height: 100vh;
 		max-height: 100%;
 		transition: all 0.5s;
 
 		.top_section {
-			// display: flex;
-			// @include flex-container(co);
-			align-items: center;
-			padding: 20px 15px;
+			@include flex-container(row, wrap, center, center);
+
+			padding: 10px 5px;
 			.logo {
 				margin: 0;
 			}
 			.bars {
+				cursor: pointer;
 				filter: invert(100%);
 				.closing-menu-container {
 					margin-bottom: 120px;
@@ -24,10 +23,12 @@
 		}
 
 		.items {
-			// color: #fff;
+			@include flex-container(row, wrap, flex-start, center);
+
 			padding: 10px 15px;
-			gap: 15px;
+			gap: 55px;
 			transition: all 0.5s;
+			margin-top: 15px;
 
 			&:hover {
 				background: lightskyblue;
@@ -46,6 +47,7 @@
 
 			.link_text {
 				font-size: 20px;
+				color: white;
 			}
 		}
 	}

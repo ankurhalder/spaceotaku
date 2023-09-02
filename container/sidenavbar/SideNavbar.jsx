@@ -9,32 +9,32 @@ export default function Sidebar({ children }) {
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: "/sidenavbar/menu.svg",
+			icon: "/sidenavbar/question.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: "/sidenavbar/menu.svg",
+			icon: "/sidenavbar/question.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: "/sidenavbar/menu.svg",
+			icon: "/sidenavbar/question.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: "/sidenavbar/menu.svg",
+			icon: "/sidenavbar/question.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: "/sidenavbar/menu.svg",
+			icon: "/sidenavbar/question.svg",
 		},
 		{
 			path: "/",
 			name: "Coming Soon",
-			icon: "/sidenavbar/menu.svg",
+			icon: "/sidenavbar/question.svg",
 		},
 	];
 
