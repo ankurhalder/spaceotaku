@@ -32,13 +32,12 @@
 
 			&:hover {
 				background: lightskyblue;
-				color: #000;
+
 				transition: all 0.5s;
 			}
 
 			&.active {
 				background: lightskyblue;
-				color: #000;
 			}
 			.icon {
 				filter: invert(100%);
@@ -47,6 +46,9 @@
 			.link_text {
 				font-size: 20px;
 				color: white;
+				&:hover {
+					color: black;
+				}
 			}
 		}
 	}
