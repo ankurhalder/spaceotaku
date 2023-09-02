@@ -79,7 +79,7 @@ export default function Sidebar({ children }) {
 				</div>
 				{menuItem.map((item, index) => (
 					<Link href={item.path} key={index}>
-						<span className="link">
+						<div className="items">
 							<div className="icon">
 								<Image
 									src={item.icon}
@@ -94,7 +94,7 @@ export default function Sidebar({ children }) {
 							>
 								{item.name}
 							</div>
-						</span>
+						</div>
 					</Link>
 				))}
 			</div>

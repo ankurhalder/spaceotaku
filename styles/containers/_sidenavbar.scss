@@ -22,9 +22,8 @@
 			}
 		}
 
-		.link {
-			display: flex;
-			color: #fff;
+		.items {
+			// color: #fff;
 			padding: 10px 15px;
 			gap: 15px;
 			transition: all 0.5s;
@@ -40,10 +39,12 @@
 				color: #000;
 			}
 
-			.icon,
+			.icon {
+				filter: invert(100%);
+			}
+
 			.link_text {
 				font-size: 20px;
-				filter: invert(100%);
 			}
 		}
 	}
