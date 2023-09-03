@@ -1,10 +1,8 @@
 import Head from "next/head";
-import { Fragment } from "react";
-// import { SideNavbar } from "@/container";
-
+import Layout from "@/layout/Layout";
 function index() {
 	return (
-		<Fragment>
+		<Layout>
 			<Head>
 				<title>Space Otaku</title>
 				<meta
@@ -13,7 +11,6 @@ function index() {
 				/>
 			</Head>
 			<div>
-				{/* <SideNavbar></SideNavbar> */}
 				<h1>This is Created by Ankur </h1>
 				<p>
 					n real life, NASA Advanced Supercomputing (NAS) research scientists,
@@ -72,7 +69,7 @@ function index() {
 					objects.
 				</p>
 			</div>
-		</Fragment>
+		</Layout>
 	);
 }
 
