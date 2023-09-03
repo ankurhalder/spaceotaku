@@ -86,30 +86,6 @@ const SideNavBar = () => {
 					))}
 				</div>
 			</div>
-			{/* <div className="nav-footer">
-				{isExpanded && (
-					<div className="nav-details">
-						<div className="nav-footer-avater">
-							<Image
-								src="/sidenavbar/admin-avatar.svg"
-								width={30}
-								height={30}
-								alt="ADMIN"
-							></Image>
-						</div>
-						<div className="nav-footer-info">
-							<p className="nav-footer-user-name">M Showkat</p>
-							<p className="nav-footer-user-position">store admin</p>
-						</div>
-					</div>
-				)}
-				<Image
-					src="/sidenavbar/logout.svg"
-					width={40}
-					height={40}
-					alt="Logout"
-				></Image>
-			</div> */}
 		</div>
 	);
 };
