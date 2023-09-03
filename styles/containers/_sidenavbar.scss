@@ -24,13 +24,8 @@
 		height: 75px;
 
 		.nav-brand {
-			display: flex;
-			color: white;
-
-			img {
-				width: 40px;
-				padding: 0 10px;
-			}
+			@include flex-container(column, wrap, center, center);
+			color: black;
 		}
 
 		.hamburger {

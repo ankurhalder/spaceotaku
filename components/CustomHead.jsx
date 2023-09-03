@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function CustomHead() {
 	return (
 		<Head>
-			<link rel="icon" type="image/x-icon" href="/favicon_icons/favicon.ico" />
+			{/* <link rel="icon" type="image/x-icon" href="/favicon_icons/favicon.ico" />
 			<link
 				rel="icon"
 				type="image/png"
@@ -21,9 +21,9 @@ export default function CustomHead() {
 				type="image/png"
 				sizes="96x96"
 				href="/favicon_icons/favicon-96x96.png"
-			/>
-			<link rel="manifest" href="/manifest.json" />
-			<meta name="msapplication-config" content="/browserconfig.xml" />
+			/> */}
+			{/* <link rel="manifest" href="/manifest.json" />
+			<meta name="msapplication-config" content="/browserconfig.xml" /> */}
 		</Head>
 	);
 }

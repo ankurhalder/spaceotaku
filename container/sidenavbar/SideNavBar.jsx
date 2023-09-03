@@ -51,12 +51,12 @@ const SideNavBar = () => {
 					{isExpanded && (
 						<div className="nav-brand">
 							<Image
-								src="/sidenavbar/Logo.svg"
-								width={30}
-								height={30}
+								src="/sidenavbar/solar-system.png"
+								width={150}
+								height={150}
 								alt="Logo"
 							></Image>
-							<h2>Showkart</h2>
+							<h2>Space Otaku</h2>
 						</div>
 					)}
 					<button
