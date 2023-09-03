@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function CustomHead() {
+export default function IconMeta() {
 	return (
 		<Head>
 			{/* <link rel="icon" type="image/x-icon" href="/favicon_icons/favicon.ico" />
@@ -22,8 +22,8 @@ export default function CustomHead() {
 				sizes="96x96"
 				href="/favicon_icons/favicon-96x96.png"
 			/> */}
-			{/* <link rel="manifest" href="/manifest.json" />
-			<meta name="msapplication-config" content="/browserconfig.xml" /> */}
+			{/* <link rel="manifest" href="/manifest.json" /> */}
+			{/* <meta name="msapplication-config" content="/browserconfig.xml" /> */}
 		</Head>
 	);
 }

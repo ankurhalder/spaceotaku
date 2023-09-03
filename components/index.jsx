@@ -1,2 +1,2 @@
-export { default as CustomHead } from "./CustomHead";
+export { default as IconMeta } from "./IconMeta";
 export { default as CommonMeta } from "./CommonMeta";
