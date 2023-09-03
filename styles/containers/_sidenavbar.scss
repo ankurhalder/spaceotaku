@@ -24,7 +24,8 @@
 		height: 75px;
 
 		.nav-brand {
-			@include flex-container(column, wrap, center, center);
+			// @include flex-container(row, wrap, center, center);
+			display: flex;
 			color: black;
 		}
 

@@ -52,8 +52,8 @@ const SideNavBar = () => {
 						<div className="nav-brand">
 							<Image
 								src="/sidenavbar/solar-system.png"
-								width={150}
-								height={150}
+								width={100}
+								height={100}
 								alt="Logo"
 							></Image>
 							<h2>Space Otaku</h2>
