@@ -1,6 +1,11 @@
 :root {
-	/* Colors for homepage */
-	--blue: hsl(240, 100%, 22%);
-	--deepblue: hsl(237, 92%, 10%);
-	--violet: hsl(303, 100%, 14%);
+	--black: black;
+	--white: white;
+	--primary-color-1: linear-gradient(to bottom, #1e2a78, #4e7dfc);
+	--panel-bg: #1e1e1e;
+	--panel-txt: #ffffff;
+	--primary-accent: #3498db;
+	--secondary-accent: #27ae60;
+	--tertiary-accent: #e74;
+	--red: #e74c3c;
 }

@@ -50,14 +50,12 @@ const SideNavBar = () => {
 				<div className="nav-heading">
 					{isExpanded && (
 						<div className="nav-brand">
-							<Image
-								src="/logo.png"
-								width={150}
-								height={150}
-								alt="Logo"
-							></Image>
+							<div className="logo-container">
+								<Image src="/logo.png" layout="fill" alt="Logo"></Image>
+							</div>
 						</div>
 					)}
+					{isExpanded && <h2>Space Otaku</h2>}
 					<button
 						className={
 							isExpanded ? "hamburger hamburger-in" : "hamburger hamburger-out"
@@ -69,7 +67,11 @@ const SideNavBar = () => {
 						<span></span>
 					</button>
 				</div>
-				<div className="nav-menu">
+				<div
+					className={`nav-menu  ${
+						isExpanded ? "expanded-nav-menu" : "not-expanded-nav-menu"
+					}`}
+				>
 					{menuItems.map(({ text, icon }) => (
 						<Link
 							key={text}
