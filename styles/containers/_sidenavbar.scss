@@ -48,24 +48,28 @@
 				width: 35px;
 				transition: 0.4s;
 
-				&:hover {
-					background-color: blue;
-				}
+				// &:hover {
+				// 	background-color: blue;
+				// }
 			}
 
 			&.hamburger-in:hover {
+				// background-color: black;
 				span:nth-child(1) {
 					width: 25px;
 					transform: translateY(4px) rotate(-25deg);
+					background-color: black;
 				}
 
 				span:nth-child(2) {
 					width: 40px;
+					background-color: black;
 				}
 
 				span:nth-child(3) {
 					width: 25px;
 					transform: translateY(-4px) rotate(25deg);
+					background-color: black;
 				}
 			}
 
@@ -76,15 +80,18 @@
 					span:nth-child(1) {
 						width: 25px;
 						transform: translate(14px, 4px) rotate(-155deg);
+						background-color: black;
 					}
 
 					span:nth-child(2) {
 						width: 40px;
+						background-color: black;
 					}
 
 					span:nth-child(3) {
 						width: 25px;
 						transform: translate(14px, -4px) rotate(155deg);
+						background-color: black;
 					}
 				}
 			}
