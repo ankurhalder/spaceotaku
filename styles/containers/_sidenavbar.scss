@@ -22,17 +22,28 @@
 					max-height: 15%;
 					width: 180px;
 					max-width: 50%;
-					left: 15%;
+					left: 20%;
 					top: 2%;
 				}
 			}
-			h2 {
+			.expanded {
+				position: absolute;
+				bottom: 72%;
 				font-family: "eliantoregular";
 				font-size: var(--font-6);
 				text-transform: uppercase;
 				letter-spacing: 5px;
-				margin-top: 210px;
-				left: 17%;
+				background: var(--primary-color-1);
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				transition: 1s;
+			}
+			.not-expanded {
+				width: 0;
+				height: 0;
+				font-size: 0;
+				transition: 1s;
 			}
 
 			.hamburger {
@@ -44,34 +55,30 @@
 
 				span {
 					display: block;
-					margin-top: 5px;
-					background-color: white;
+					margin-top: 6px;
+					background-color: var(--white);
 					border-radius: 15px;
-					height: 5px;
+					height: 3.5px;
 					width: 35px;
-					transition: 0.4s;
-
-					// &:hover {
-					// 	background-color: blue;
-					// }
+					transition: 0.6s;
 				}
 
 				&.hamburger-in:hover {
 					span:nth-child(1) {
 						width: 25px;
 						transform: translateY(4px) rotate(-25deg);
-						background-color: black;
+						background-color: var(--cool-blue);
 					}
 
 					span:nth-child(2) {
 						width: 40px;
-						background-color: black;
+						background-color: var(--cool-blue);
 					}
 
 					span:nth-child(3) {
 						width: 25px;
 						transform: translateY(-4px) rotate(25deg);
-						background-color: black;
+						background-color: var(--cool-blue);
 					}
 				}
 
@@ -82,18 +89,18 @@
 						span:nth-child(1) {
 							width: 25px;
 							transform: translate(14px, 4px) rotate(-155deg);
-							background-color: black;
+							background-color: var(--cool-blue);
 						}
 
 						span:nth-child(2) {
 							width: 40px;
-							background-color: black;
+							background-color: var(--cool-blue);
 						}
 
 						span:nth-child(3) {
 							width: 25px;
 							transform: translate(14px, -4px) rotate(155deg);
-							background-color: black;
+							background-color: var(--cool-blue);
 						}
 					}
 				}
@@ -117,14 +124,14 @@
 		}
 
 		.menu-item {
+			position: relative;
 			height: 50px;
 			display: flex;
 			color: white;
 			text-decoration: none;
 			text-transform: uppercase;
-			margin: auto 20px;
 			border-radius: 10px;
-
+			margin-top: 30px;
 			&.menu-item-NX {
 				margin: auto;
 			}
@@ -133,9 +140,12 @@
 				background: var(--primary-1);
 			}
 
-			img {
-				width: 30px;
-				padding: 0 20px;
+			// .menu-item-icon {
+			// 	width: 30px;
+			// 	padding: 0 20px;
+			// }
+			&:first-child {
+				margin-top: 350%;
 			}
 		}
 	}

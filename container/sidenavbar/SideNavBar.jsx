@@ -55,7 +55,15 @@ const SideNavBar = () => {
 							</div>
 						</div>
 					)}
-					{isExpanded && <h2>Space Otaku</h2>}
+
+					{/* {isExpanded ? (
+						<h2>Space Otaku</h2>
+					) : (
+						<h2 style={{ width: 0 }}>Space Otaku</h2>
+					)} */}
+					<h2 className={`${isExpanded ? "expanded" : "not-expanded"}`}>
+						Space Otaku
+					</h2>
 					<button
 						className={
 							isExpanded ? "hamburger hamburger-in" : "hamburger hamburger-out"
@@ -79,7 +87,7 @@ const SideNavBar = () => {
 							href="/"
 						>
 							<div className="menu-item-icon">
-								<Image src={icon} width={100} height={100} alt="ICON"></Image>
+								<Image src={icon} width={40} height={40} alt="ICON"></Image>
 							</div>
 							{isExpanded && <p>{text}</p>}
 						</Link>
