@@ -5,8 +5,8 @@ const SideNavBar = () => {
 	const [isExpanded, setExpendState] = useState(false);
 	const menuItems = [
 		{
-			text: "Dashboard",
-			icon: "/sidenavbar/grid.svg",
+			text: "Home",
+			icon: "/sidenavbar/home.png",
 		},
 		{
 			text: "Admin Profile",
@@ -51,12 +51,11 @@ const SideNavBar = () => {
 					{isExpanded && (
 						<div className="nav-brand">
 							<Image
-								src="/sidenavbar/solar-system.png"
-								width={100}
-								height={100}
+								src="/logo.png"
+								width={150}
+								height={150}
 								alt="Logo"
 							></Image>
-							<h2>Space Otaku</h2>
 						</div>
 					)}
 					<button
@@ -78,14 +77,14 @@ const SideNavBar = () => {
 							href="/"
 						>
 							<div className="menu-item-icon">
-								<Image src={icon} width={25} height={25} alt="ICON"></Image>
+								<Image src={icon} width={100} height={100} alt="ICON"></Image>
 							</div>
 							{isExpanded && <p>{text}</p>}
 						</Link>
 					))}
 				</div>
 			</div>
-			<div className="nav-footer">
+			{/* <div className="nav-footer">
 				{isExpanded && (
 					<div className="nav-details">
 						<div className="nav-footer-avater">
@@ -102,14 +101,13 @@ const SideNavBar = () => {
 						</div>
 					</div>
 				)}
-				{/* <img className="logout-icon" src="icons/logout.svg" alt="" /> */}
 				<Image
 					src="/sidenavbar/logout.svg"
 					width={40}
 					height={40}
 					alt="Logout"
 				></Image>
-			</div>
+			</div> */}
 		</div>
 	);
 };

@@ -1,5 +1,5 @@
 .side-nav-container {
-	background-color: rgb(117, 117, 117);
+	background-color: rgb(98, 98, 98);
 	width: 300px;
 	height: 100vh;
 	position: fixed;
@@ -122,43 +122,43 @@
 		}
 	}
 
-	.nav-footer {
-		width: 100%;
-		height: 87px;
-		position: absolute;
-		bottom: 0;
-		grid-template-rows: 1fr;
-		grid-template-columns: 2fr 1fr;
+	// .nav-footer {
+	// 	width: 100%;
+	// 	height: 87px;
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	grid-template-rows: 1fr;
+	// 	grid-template-columns: 2fr 1fr;
 
-		.nav-details {
-			display: flex;
+	// 	.nav-details {
+	// 		display: flex;
 
-			img {
-				width: 50px;
-				padding: 0 20px;
-			}
-		}
+	// 		img {
+	// 			width: 50px;
+	// 			padding: 0 20px;
+	// 		}
+	// 	}
 
-		.nav-footer-user-name {
-			font-size: 18px;
-			font-weight: 900;
-		}
+	// 	.nav-footer-user-name {
+	// 		font-size: 18px;
+	// 		font-weight: 900;
+	// 	}
 
-		.nav-footer-user-position {
-			margin-top: -15px;
-			color: black;
-		}
+	// 	.nav-footer-user-position {
+	// 		margin-top: -15px;
+	// 		color: black;
+	// 	}
 
-		.logout-icon {
-			width: 30px;
-			margin: auto;
-			border-radius: 90px;
-			padding: 20px;
-			margin-left: 5px;
+	// 	.logout-icon {
+	// 		width: 30px;
+	// 		margin: auto;
+	// 		border-radius: 90px;
+	// 		padding: 20px;
+	// 		margin-left: 5px;
 
-			&:hover {
-				background-color: blue;
-			}
-		}
-	}
+	// 		&:hover {
+	// 			background-color: blue;
+	// 		}
+	// 	}
+	// }
 }
