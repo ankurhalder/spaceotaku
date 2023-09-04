@@ -12,10 +12,7 @@ function index() {
 				/>
 			</Head>
 			<div className="landing-page">
-				<TwinklingStars
-					numberOfTwinkling={101}
-					numberOfNonTwinkling={101}
-				></TwinklingStars>
+				<TwinklingStars></TwinklingStars>
 				<h1>This is Created by Ankur </h1>
 
 				<h3>space otaku</h3>

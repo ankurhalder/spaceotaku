@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const TwinklingStars = ({ numberOfTwinkling, numberOfNonTwinkling }) => {
+const TwinklingStars = () => {
 	useEffect(() => {
 		const createStar = (twinkling) => {
 			const star = document.createElement("div");
@@ -15,15 +15,15 @@ const TwinklingStars = ({ numberOfTwinkling, numberOfNonTwinkling }) => {
 		};
 
 		// Create twinkling stars
-		for (let i = 0; i < numberOfTwinkling; i++) {
+		for (let i = 0; i < 150; i++) {
 			createStar(true);
 		}
 
 		// Create non-twinkling stars
-		for (let i = 0; i < numberOfNonTwinkling; i++) {
+		for (let i = 0; i < 150; i++) {
 			createStar(false);
 		}
-	}, [numberOfTwinkling, numberOfNonTwinkling]);
+	}, []);
 
 	return null;
 };
