@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 const SideNavbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -75,8 +76,11 @@ const SideNavbar = () => {
 					</Link>
 					<span className="tooltip">Setting</span>
 				</li>
-				<li className={`profile ${isOpen ? "open" : ""}`}>
+				<li className={`profile ${isOpen ? "open" : "close"}`}>
 					<div className="profile-details">
+						<div className="image-container">
+							<Image src="/profile.jpeg" layout="fill" alt="Profile"></Image>
+						</div>
 						<div className="name_job">
 							<div className="name">Ankur Halder</div>
 							<div className="job">Web Developer</div>

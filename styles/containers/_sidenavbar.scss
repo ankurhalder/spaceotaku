@@ -178,7 +178,8 @@
 			transform: translateX(-100%);
 			transition: opacity 0.4s ease, transform 0.4s ease;
 
-			img {
+			.image-container {
+				position: relative;
 				height: 45px;
 				width: 45px;
 				object-fit: cover;
