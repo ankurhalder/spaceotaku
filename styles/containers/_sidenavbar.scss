@@ -45,14 +45,10 @@
 			top: 50%;
 			right: 0;
 			transform: translateY(-50%);
-			font-size: 23px;
+			font-size: 33px;
 			text-align: center;
 			cursor: pointer;
 			transition: all 0.5s ease;
-
-			&.open {
-				text-align: right;
-			}
 		}
 	}
 
@@ -77,11 +73,6 @@
 
 				&:hover {
 					background: #fff;
-
-					.links_name {
-						opacity: 1;
-						left: 100%;
-					}
 				}
 
 				.image-container {
@@ -98,14 +89,15 @@
 
 	li.profile {
 		position: fixed;
-		height: 60px;
+		height: 90px;
 		width: 78px;
 		left: 0;
-		bottom: -8px;
+		bottom: -10px;
 		padding: 10px 14px;
 		background: #1d1b31;
 		transition: all 0.5s ease;
 		overflow: hidden;
+		list-style-type: none;
 
 		&.open {
 			width: 250px;
@@ -115,15 +107,12 @@
 				transform: translateX(0);
 			}
 		}
-
 		.profile-details {
 			display: flex;
 			align-items: center;
 			flex-wrap: nowrap;
 			opacity: 0;
-			transform: translateX(-100%);
 			transition: opacity 0.4s ease, transform 0.4s ease;
-
 			.image-container {
 				position: relative;
 				height: 45px;
@@ -151,12 +140,5 @@
 				}
 			}
 		}
-	}
-}
-
-.sidebar.close {
-	.nav-list li a .links_name {
-		opacity: 0;
-		left: 150%;
 	}
 }
