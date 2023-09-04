@@ -3,7 +3,7 @@
 	width: 270px;
 	max-width: 15%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	transition: 0.5s;
 	&.side-nav-container-NX {
 		width: 85px;
@@ -11,24 +11,24 @@
 	}
 
 	.nav-upper {
+		position: relative;
 		@include flex-container(row, wrap, center, center);
 		.nav-heading {
-			@include flex-container(row, wrap, flex-start, flex-start);
 			.nav-brand {
 				display: flex;
 				.logo-container {
 					position: absolute;
-					height: 180px;
-					max-height: 15%;
-					width: 180px;
-					max-width: 50%;
-					left: 20%;
-					top: 2%;
+					height: 150px;
+					max-height: 25%;
+					width: 150px;
+					max-width: 60%;
+					left: 15%;
+					top: 15px;
 				}
 			}
 			.heading-expanded {
-				position: absolute;
-				bottom: 72%;
+				position: relative;
+				// bottom: 72%;
 				font-family: "eliantoregular";
 				font-size: var(--font-6);
 				text-transform: uppercase;
@@ -147,9 +147,9 @@
 			// 	width: 30px;
 			// 	padding: 0 20px;
 			// }
-			&:first-child {
-				margin-top: 350%;
-			}
+			// &:first-child {
+			// 	margin-top: 350%;
+			// }
 		}
 	}
 }
