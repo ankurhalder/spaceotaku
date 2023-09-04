@@ -77,13 +77,11 @@ const SideNavbar = () => {
 				</li>
 				<li className={`profile ${isOpen ? "open" : ""}`}>
 					<div className="profile-details">
-						{/* <img src="/public/sidenavbar/profile.jpeg" alt="profileImg" /> */}
 						<div className="name_job">
 							<div className="name">Ankur Halder</div>
 							<div className="job">Web Developer</div>
 						</div>
 					</div>
-					<i className="bx bx-log-out" id="log_out"></i>
 				</li>
 			</ul>
 		</div>
