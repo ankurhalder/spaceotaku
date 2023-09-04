@@ -1,1 +1,1 @@
-export { default as SideNavBar } from "./sidenavbar/SideNavBar";
+export { default as SideNavbar } from "./sidenavbar/SideNavBar";
