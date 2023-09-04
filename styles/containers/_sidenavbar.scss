@@ -24,6 +24,7 @@
 			.logo-container,
 			.logo_name {
 				opacity: 1;
+				transition: all 0.5s ease;
 			}
 		}
 	}
@@ -44,8 +45,8 @@
 			position: absolute;
 			top: 50%;
 			right: 0;
-			transform: translateY(-50%);
-			font-size: 33px;
+			transform: translateY(-50%) translateX(-10%);
+			font-size: 40px;
 			text-align: center;
 			cursor: pointer;
 			transition: all 0.5s ease;
@@ -73,6 +74,7 @@
 
 				&:hover {
 					background: #fff;
+					color: black;
 				}
 
 				.image-container {

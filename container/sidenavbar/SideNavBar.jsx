@@ -11,13 +11,17 @@ const SideNavbar = () => {
 
 	const links = [
 		{ href: "/", icon: "/sidenavbar/house.png", label: "Home" },
-		{ href: "/", icon: "/sidenavbar/house.png", label: "Home" },
-		{ href: "/", icon: "/sidenavbar/house.png", label: "Home" },
-		{ href: "/", icon: "/sidenavbar/house.png", label: "Home" },
-		{ href: "/", icon: "/sidenavbar/house.png", label: "Home" },
-		{ href: "/", icon: "/sidenavbar/house.png", label: "Home" },
-		{ href: "/", icon: "/sidenavbar/house.png", label: "Home" },
-		{ href: "/", icon: "/sidenavbar/house.png", label: "Home" },
+		{
+			href: "/solarsystem",
+			icon: "/sidenavbar/solar-system.png",
+			label: "Solar System",
+		},
+		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
+		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
+		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
+		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
+		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
+		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
 	];
 
 	return (
@@ -40,7 +44,7 @@ const SideNavbar = () => {
 							<div className="image-container">
 								<Image src={link.icon} layout="fill" alt={link.label} />
 							</div>
-							<span className="links_name">{link.label}</span>
+							{isOpen ? <span className="links_name">{link.label}</span> : null}
 						</Link>
 					</li>
 				))}
