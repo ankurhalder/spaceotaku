@@ -17,9 +17,10 @@ body {
 	background: linear-gradient(
 		135deg,
 		$background-color-1 0%,
-		$background-color-2 25%,
+		$background-color-2 20%,
 		$background-color-3 50%,
-		$background-color-4 75%
+		$background-color-4 80%,
+		$background-color-1 100%
 	);
 	background-attachment: fixed;
 	background-size: cover;
@@ -33,5 +34,3 @@ body {
 	justify-content: center;
 	height: 100vh;
 }
-
-/* Add your website styles below */
