@@ -13,8 +13,8 @@ function index() {
 			</Head>
 			<div className="landing-page">
 				<TwinklingStars
-					numberOfTwinkling={50}
-					numberOfNonTwinkling={50}
+					numberOfTwinkling={100}
+					numberOfNonTwinkling={100}
 				></TwinklingStars>
 				<h1>This is Created by Ankur </h1>
 
