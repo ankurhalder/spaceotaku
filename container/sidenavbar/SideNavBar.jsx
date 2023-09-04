@@ -56,12 +56,11 @@ const SideNavBar = () => {
 						</div>
 					)}
 
-					{/* {isExpanded ? (
-						<h2>Space Otaku</h2>
-					) : (
-						<h2 style={{ width: 0 }}>Space Otaku</h2>
-					)} */}
-					<h2 className={`${isExpanded ? "expanded" : "not-expanded"}`}>
+					<h2
+						className={`${
+							isExpanded ? "heading-expanded" : "heading-not-expanded"
+						}`}
+					>
 						Space Otaku
 					</h2>
 					<button

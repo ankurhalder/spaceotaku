@@ -26,7 +26,7 @@
 					top: 2%;
 				}
 			}
-			.expanded {
+			.heading-expanded {
 				position: absolute;
 				bottom: 72%;
 				font-family: "eliantoregular";
@@ -37,13 +37,16 @@
 				-webkit-background-clip: text;
 				background-clip: text;
 				color: transparent;
-				transition: 1s;
+				transition: all 0.5s;
+				opacity: 1;
 			}
-			.not-expanded {
-				width: 0;
-				height: 0;
-				font-size: 0;
-				transition: 1s;
+			.heading-not-expanded {
+				opacity: 0;
+				background: var(--primary-color-1);
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				transition: all 0.5s;
 			}
 
 			.hamburger {
