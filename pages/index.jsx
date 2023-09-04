@@ -10,7 +10,7 @@ function index() {
 					content="Your ultimate destination for the latest space news, astronaut activities, satellite locations, solar system details, and more. Explore real-time space information."
 				/>
 			</Head>
-			<div>
+			<div className="landing-page">
 				<h1>This is Created by Ankur </h1>
 				<p>
 					n real life, NASA Advanced Supercomputing (NAS) research scientists,

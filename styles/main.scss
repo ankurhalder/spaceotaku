@@ -8,6 +8,30 @@
 @import "pages/manifest";
 @import "icons/manifest";
 
-// #__next {
-// 	display: flex;
-// }
+$background-color-1: #051c2c; // Dark blue
+$background-color-2: #002b48; // Slightly lighter blue
+$background-color-3: #004174; // Deep blue
+$background-color-4: #021e37; // Darker blue
+
+body {
+	background: linear-gradient(
+		135deg,
+		$background-color-1 0%,
+		$background-color-2 25%,
+		$background-color-3 50%,
+		$background-color-4 75%
+	);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #ffffff; // Text color for better contrast
+	font-family: Arial, sans-serif; // Choose your preferred font
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+/* Add your website styles below */
