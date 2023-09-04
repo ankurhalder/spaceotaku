@@ -7,7 +7,7 @@ const TwinklingStars = ({ numberOfTwinkling, numberOfNonTwinkling }) => {
 			star.className = twinkling ? "star twinkling" : "star";
 			const left = Math.random() * 100;
 			const top = Math.random() * 100;
-			const delay = Math.random(); // Adjust this value for the delay range
+			const delay = Math.random();
 			star.style.left = `${left}%`;
 			star.style.top = `${top}%`;
 			star.style.animationDelay = `${delay}s`;
