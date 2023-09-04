@@ -1,12 +1,24 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+
 const SideNavbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleSidebar = () => {
 		setIsOpen(!isOpen);
 	};
+
+	const links = [
+		{ href: "/", icon: "bx bxs-home", label: "Home" },
+		{ href: "/", icon: "bx bx-user", label: "Profile" },
+		{ href: "/", icon: "bx bx-chat", label: "Chat" },
+		{ href: "/", icon: "bx bx-pie-chart-alt-2", label: "Statistics" },
+		{ href: "/", icon: "bx bx-folder", label: "Folders" },
+		{ href: "/", icon: "bx bx-cart-alt", label: "Cart" },
+		{ href: "/", icon: "bx bx-heart", label: "Favorites" },
+		{ href: "/", icon: "bx bx-cog", label: "Settings" },
+	];
 
 	return (
 		<div className={`sidebar ${isOpen ? "open" : "close"}`}>
@@ -20,62 +32,17 @@ const SideNavbar = () => {
 				></i>
 			</div>
 			<ul className="nav-list">
-				<li>
-					<Link href="/">
-						<i className="bx bx-grid-alt"></i>
-						<span className="links_name">Dashboard</span>
-					</Link>
-					<span className="tooltip">Dashboard</span>
-				</li>
-				<li>
-					<Link href="/">
-						<i className="bx bx-user"></i>
-						<span className="links_name">User</span>
-					</Link>
-					<span className="tooltip">User</span>
-				</li>
-				<li>
-					<Link href="/">
-						<i className="bx bx-chat"></i>
-						<span className="links_name">Messages</span>
-					</Link>
-					<span className="tooltip">Messages</span>
-				</li>
-				<li>
-					<Link href="/">
-						<i className="bx bx-pie-chart-alt-2"></i>
-						<span className="links_name">Analytics</span>
-					</Link>
-					<span className="tooltip">Analytics</span>
-				</li>
-				<li>
-					<Link href="/">
-						<i className="bx bx-folder"></i>
-						<span className="links_name">File Manager</span>
-					</Link>
-					<span className="tooltip">Files</span>
-				</li>
-				<li>
-					<Link href="/">
-						<i className="bx bx-cart-alt"></i>
-						<span className="links_name">Order</span>
-					</Link>
-					<span className="tooltip">Order</span>
-				</li>
-				<li>
-					<Link href="/">
-						<i className="bx bx-heart"></i>
-						<span className="links_name">Saved</span>
-					</Link>
-					<span className="tooltip">Saved</span>
-				</li>
-				<li>
-					<Link href="/">
-						<i className="bx bx-cog"></i>
-						<span className="links_name">Setting</span>
-					</Link>
-					<span className="tooltip">Setting</span>
-				</li>
+				{links.map((link, index) => (
+					<li
+						key={index}
+						className={isOpen ? "open" : "close"} // Add or remove the class here
+					>
+						<Link href={link.href}>
+							<i className={link.icon}></i>
+							<span className="links_name">{link.label}</span>
+						</Link>
+					</li>
+				))}
 				<li className={`profile ${isOpen ? "open" : "close"}`}>
 					<div className="profile-details">
 						<div className="image-container">
