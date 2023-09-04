@@ -14,21 +14,18 @@
 		position: relative;
 		@include flex-container(row, wrap, center, center);
 		.nav-heading {
-			.nav-brand {
-				display: flex;
-				.logo-container {
-					position: absolute;
-					height: 150px;
-					max-height: 25%;
-					width: 150px;
-					max-width: 60%;
-					left: 15%;
-					top: 15px;
-				}
+			.logo-container {
+				position: relative;
+				height: 150px;
+				max-height: 22%;
+				width: 150px;
+				max-width: 80%;
+				top: 15px;
+				left: 3%;
 			}
 			.heading-expanded {
 				position: relative;
-				// bottom: 72%;
+				top: 20px;
 				font-family: "eliantoregular";
 				font-size: var(--font-6);
 				text-transform: uppercase;
@@ -128,13 +125,12 @@
 
 		.menu-item {
 			position: relative;
-			height: 50px;
+
 			display: flex;
 			color: white;
 			text-decoration: none;
 			text-transform: uppercase;
 			border-radius: 10px;
-			margin-top: 30px;
 			&.menu-item-NX {
 				margin: auto;
 			}
@@ -142,14 +138,9 @@
 			&:hover {
 				background: var(--primary-1);
 			}
-
-			// .menu-item-icon {
-			// 	width: 30px;
-			// 	padding: 0 20px;
-			// }
-			// &:first-child {
-			// 	margin-top: 350%;
-			// }
+			&:first-child {
+				margin-top: 300px;
+			}
 		}
 	}
 }

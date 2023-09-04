@@ -1,9 +1,9 @@
 import { Fragment } from "react";
-import { SideNavBar } from "@/container";
+// import { SideNavBar } from "@/container";
 function Layout({ children }) {
 	return (
 		<Fragment>
-			<SideNavBar></SideNavBar>
+			{/* <SideNavBar></SideNavBar> */}
 			{children}
 		</Fragment>
 	);
