@@ -20,11 +20,6 @@ const SideNavbar = () => {
 			</div>
 			<ul className="nav-list">
 				<li>
-					<i className="bx bx-search"></i>
-					<input type="text" placeholder="Search..." />
-					<span className="tooltip">Search</span>
-				</li>
-				<li>
 					<Link href="/">
 						<i className="bx bx-grid-alt"></i>
 						<span className="links_name">Dashboard</span>
