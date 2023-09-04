@@ -8,7 +8,7 @@ const SideNavbar = () => {
 	};
 
 	return (
-		<div className={`sidebar ${isOpen ? "open" : ""}`}>
+		<div className={`sidebar ${isOpen ? "open" : "close"}`}>
 			<div className="logo-details">
 				<i className="bx bxl-c-plus-plus icon"></i>
 				<h3 className="logo_name">Space Otaku</h3>
@@ -82,7 +82,7 @@ const SideNavbar = () => {
 				</li>
 				<li className="profile">
 					<div className="profile-details">
-						<img src="profile.jpeg" alt="profileImg" />
+						{/* <img src="/public/sidenavbar/profile.jpeg" alt="profileImg" /> */}
 						<div className="name_job">
 							<div className="name">Ankur Halder</div>
 							<div className="job">Web Developer</div>
