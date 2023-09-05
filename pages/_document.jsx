@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { CommonMeta, IconMeta } from "@/components";
 export default function Document() {
 	return (
 		<Html lang="en">
