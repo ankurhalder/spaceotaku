@@ -49,7 +49,7 @@ const SideNavbar = () => {
 					</li>
 				))}
 			</ul>
-			<li className={`profile ${isOpen ? "open" : "close"}`}>
+			<div className={`profile ${isOpen ? "profile-open" : "profile-close"}`}>
 				<div className="profile-details">
 					<div className="image-container">
 						<Image src="/profile.jpeg" layout="fill" alt="Profile" />
@@ -59,7 +59,7 @@ const SideNavbar = () => {
 						<div className="job">Web Developer</div>
 					</div>
 				</div>
-			</li>
+			</div>
 		</div>
 	);
 };

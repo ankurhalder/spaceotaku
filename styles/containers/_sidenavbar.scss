@@ -59,7 +59,7 @@
 
 		li {
 			position: relative;
-			margin: 8px 0;
+			margin: 10px 0 0 0;
 			list-style: none;
 
 			a {
@@ -83,13 +83,13 @@
 					width: 50px;
 					object-fit: cover;
 					border-radius: 12px;
-					margin-right: 10px;
+					margin-right: 2px;
 				}
 			}
 		}
 	}
 
-	li.profile {
+	.profile {
 		position: fixed;
 		height: 90px;
 		width: 78px;
@@ -101,14 +101,6 @@
 		overflow: hidden;
 		list-style-type: none;
 
-		&.open {
-			width: 250px;
-
-			.profile-details {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
 		.profile-details {
 			display: flex;
 			align-items: center;
@@ -125,6 +117,7 @@
 			}
 
 			.name_job {
+				opacity: 1;
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
@@ -140,6 +133,30 @@
 					font-size: 12px;
 					color: #fff;
 				}
+			}
+		}
+	}
+	.profile-open {
+		width: 250px;
+
+		.profile-details {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	.profile-close {
+		.profile-details {
+			.image-container {
+				opacity: 1;
+				position: relative;
+				height: 45px;
+				width: 45px;
+				object-fit: cover;
+				border-radius: 6px;
+				margin-right: 10px;
+			}
+			.name_job {
+				display: none;
 			}
 		}
 	}
