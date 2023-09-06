@@ -32,7 +32,7 @@ const PlanetPage = () => {
 							<li key={index}>
 								<div className="agency">
 									<Image
-										src={agency.image}
+										src={`/organisations/${agency.name}.png`}
 										alt={`${agency.name} Logo`}
 										width={60}
 										height={60}

@@ -7,34 +7,34 @@ const agenciesData = {
 				missions: [
 					{
 						name: "Solar and Heliospheric Observatory (SOHO)",
-						image: "/images/nasa.png",
+						image: "/body/nasa.png",
 					},
 				],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: [
 					{
 						name: "Solar Orbiter (planned)",
-						image: "/images/esa.png",
+						image: "/body/ESA.jpg",
 					},
 				],
 			},
 			{
-				name: "ISRO (Indian Space Research Organisation)",
+				name: "ISRO",
 				missions: [
 					{
 						name: "Aditya-L1 (planned)",
-						image: "/images/isro.png",
+						image: "/body/ISRO.png",
 					},
 				],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: [
 					{
 						name: "SOLAR",
-						image: "/images/roscosmos.png",
+						image: "/body/ROSCOSMOS.png",
 					},
 				],
 			},
@@ -48,15 +48,15 @@ const agenciesData = {
 				missions: ["Mariner 10", "MESSENGER", "BepiColombo"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["BepiColombo"],
 			},
 			{
-				name: "ISRO (Indian Space Research Organisation)",
+				name: "ISRO",
 				missions: ["Mars Orbiter Mission (Mangalyaan)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Merkur (planned)"],
 			},
 		],
@@ -69,15 +69,15 @@ const agenciesData = {
 				missions: ["Magellan", "Akatsuki"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Venus Express"],
 			},
 			{
-				name: "ISRO (Indian Space Research Organisation)",
+				name: "ISRO",
 				missions: ["Venus Orbiter Mission (planned)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venera series"],
 			},
 		],
@@ -90,15 +90,15 @@ const agenciesData = {
 				missions: ["Various Earth-observing satellites (e.g., Terra, Aqua)"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Sentinel series (e.g., Sentinel-1, Sentinel-2)"],
 			},
 			{
-				name: "CNSA (China National Space Administration)",
+				name: "CNSA",
 				missions: ["Gaofen series (e.g., Gaofen-7)"],
 			},
 			{
-				name: "ISRO (Indian Space Research Organisation)",
+				name: "ISRO",
 				missions: ["IRS series (e.g., IRS-1C, IRS-1D)"],
 			},
 		],
@@ -111,15 +111,15 @@ const agenciesData = {
 				missions: ["Mars rovers (e.g., Curiosity, Perseverance)", "InSight"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Mars Express", "ExoMars (upcoming)"],
 			},
 			{
-				name: "ISRO (Indian Space Research Organisation)",
+				name: "ISRO",
 				missions: ["Mars Orbiter Mission (Mangalyaan)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Mars program"],
 			},
 		],
@@ -132,15 +132,15 @@ const agenciesData = {
 				missions: ["Juno", "Voyager 1 and 2"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["JUpiter ICy moons Explorer (JUICE) (upcoming)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Hisaki (Akatsuki)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venera program (studied Venus, some flybys)"],
 			},
 		],
@@ -153,15 +153,15 @@ const agenciesData = {
 				missions: ["Cassini-Huygens", "Voyager 1 and 2"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Huygens (Cassini-Huygens)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Phobos program (studied Mars and its moons)"],
 			},
 		],
@@ -174,15 +174,15 @@ const agenciesData = {
 				missions: ["Voyager 2"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Herschel (studied Uranus's atmosphere)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -195,15 +195,15 @@ const agenciesData = {
 				missions: ["Voyager 2"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Herschel (studied Neptune's atmosphere)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -220,11 +220,11 @@ const agenciesData = {
 				missions: ["New Horizons"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -237,11 +237,11 @@ const agenciesData = {
 				missions: ["Dawn"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Hayabusa2 (flyby)"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Dawn (collaborative)"],
 			},
 		],
@@ -254,11 +254,11 @@ const agenciesData = {
 				missions: ["Dawn"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Hayabusa2 (flyby)"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Dawn (collaborative)"],
 			},
 		],
@@ -271,15 +271,15 @@ const agenciesData = {
 				missions: ["Dawn"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Hayabusa2 (flyby)"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Dawn (collaborative)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -296,11 +296,11 @@ const agenciesData = {
 				missions: ["New Horizons"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -313,15 +313,15 @@ const agenciesData = {
 				missions: ["Voyager 2"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Herschel (studied Uranus's atmosphere)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -334,15 +334,15 @@ const agenciesData = {
 				missions: ["Voyager 2"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Herschel (studied Uranus's atmosphere)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -355,15 +355,15 @@ const agenciesData = {
 				missions: ["Cassini-Huygens"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Huygens (Cassini-Huygens)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -376,15 +376,15 @@ const agenciesData = {
 				missions: ["Voyager 2"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Herschel (studied Neptune's atmosphere)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -397,15 +397,15 @@ const agenciesData = {
 				missions: ["Cassini-Huygens"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Huygens (Cassini-Huygens)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -418,15 +418,15 @@ const agenciesData = {
 				missions: ["Cassini-Huygens"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Huygens (Cassini-Huygens)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -439,15 +439,15 @@ const agenciesData = {
 				missions: ["Cassini-Huygens"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Huygens (Cassini-Huygens)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -460,15 +460,15 @@ const agenciesData = {
 				missions: ["Cassini-Huygens"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Huygens (Cassini-Huygens)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -481,11 +481,11 @@ const agenciesData = {
 				missions: ["Galileo"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Hisaki (Akatsuki)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venera program (studied Venus, flybys)"],
 			},
 		],
@@ -498,11 +498,11 @@ const agenciesData = {
 				missions: ["Galileo"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Hisaki (Akatsuki)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venera program (studied Venus, flybys)"],
 			},
 		],
@@ -515,15 +515,15 @@ const agenciesData = {
 				missions: ["Cassini-Huygens"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Huygens (Cassini-Huygens)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
@@ -536,15 +536,15 @@ const agenciesData = {
 				missions: ["Cassini-Huygens"],
 			},
 			{
-				name: "ESA (European Space Agency)",
+				name: "ESA",
 				missions: ["Huygens (Cassini-Huygens)"],
 			},
 			{
-				name: "JAXA (Japan Aerospace Exploration Agency)",
+				name: "JAXA",
 				missions: ["Akatsuki (studied Venus, flyby)"],
 			},
 			{
-				name: "ROSCOSMOS (Russian Federal Space Agency)",
+				name: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
 			},
 		],
