@@ -1,90 +1,60 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
-import { Fragment } from "react";
+import { useState } from "react";
 import Layout from "@/layout/Layout";
+import planetData from "../../data/planetData";
+import agenciesData from "../../data/agenciesData";
+import Image from "next/image";
 const PlanetPage = () => {
-	const [currentPlanetIndex, setCurrentPlanetIndex] = useState(0);
-	const [currentPlanet, setCurrentPlanet] = useState(null);
+	const [selectedPlanet, setSelectedPlanet] = useState("sun");
 
-	const planetData = {
-		mercury: {
-			name: "Mercury",
-			distanceFromSun: "36 million miles",
-			numberOfMoons: 0,
-		},
-		venus: {
-			name: "Venus",
-			distanceFromSun: "67 million miles",
-			numberOfMoons: 0,
-		},
-		earth: {
-			name: "Earth",
-			distanceFromSun: "93 million miles",
-			numberOfMoons: 1,
-		},
-		mars: {
-			name: "Mars",
-			distanceFromSun: "142 million miles",
-			numberOfMoons: 2,
-		},
-		jupiter: {
-			name: "Jupiter",
-			distanceFromSun: "484 million miles",
-			numberOfMoons: 79,
-		},
-		saturn: {
-			name: "Saturn",
-			distanceFromSun: "886 million miles",
-			numberOfMoons: 82,
-		},
-		uranus: {
-			name: "Uranus",
-			distanceFromSun: "1.8 billion miles",
-			numberOfMoons: 27,
-		},
-		neptune: {
-			name: "Neptune",
-			distanceFromSun: "2.8 billion miles",
-			numberOfMoons: 14,
-		},
+	const handleChangePlanet = (event) => {
+		setSelectedPlanet(event.target.value);
 	};
 
-	useEffect(() => {
-		const planetName = Object.keys(planetData)[currentPlanetIndex];
-		setCurrentPlanet(planetData[planetName]);
-	}, [currentPlanetIndex]);
-
-	const planetNames = Object.keys(planetData);
-
-	const handlePlanetChange = (event) => {
-		setCurrentPlanetIndex(event.target.value);
-	};
+	const celestialBody = planetData[selectedPlanet];
+	const agencies = agenciesData[selectedPlanet]?.agencies || [];
 
 	return (
-		<Fragment>
-			<Layout>
-				<div>
-					<h1>Planet Information</h1>
-					<div>
-						<label>Select a planet:</label>
-						<select value={currentPlanetIndex} onChange={handlePlanetChange}>
-							{planetNames.map((planet, index) => (
-								<option key={index} value={index}>
-									{planet}
-								</option>
-							))}
-						</select>
-					</div>
-					{currentPlanet && (
-						<div>
-							<h2>{currentPlanet.name}</h2>
-							<p>Distance from the Sun: {currentPlanet.distanceFromSun}</p>
-							<p>Number of Moons: {currentPlanet.numberOfMoons}</p>
-						</div>
-					)}
+		<Layout>
+			<div className="planet-container">
+				<div className="planet-details">
+					<h1>{celestialBody.name}</h1>
+					<p>Distance from Sun: {celestialBody.distanceFromSun}</p>
+					<p>Number of Moons: {celestialBody.numberOfMoons}</p>
+					<p>Diameter: {celestialBody.diameter}</p>
+					<p>Orbital Period: {celestialBody.orbitalPeriod}</p>
+					<p>Interesting Fact: {celestialBody.interestingFact}</p>
+					<p>Surface Features: {celestialBody.surfaceFeatures}</p>
+					<p>Atmosphere: {celestialBody.atmosphere}</p>
+					<h2>Agencies and Missions:</h2>
+					<ul>
+						{agencies.map((agency, index) => (
+							<li key={index}>
+								<strong>{agency.name}:</strong> {agency.missions.join(", ")}
+							</li>
+						))}
+					</ul>
 				</div>
-			</Layout>
-		</Fragment>
+				<div className="planet-image">
+					<Image
+						src={`/images/${selectedPlanet}.jpg`}
+						alt={`${selectedPlanet} Image`}
+						width={500}
+						height={500}
+					/>
+				</div>
+			</div>
+
+			<div className="planet-dropdown">
+				<label>Select a planet:</label>
+				<select value={selectedPlanet} onChange={handleChangePlanet}>
+					{Object.keys(planetData).map((planet) => (
+						<option key={planet} value={planet}>
+							{planetData[planet].name}
+						</option>
+					))}
+				</select>
+			</div>
+		</Layout>
 	);
 };
 
