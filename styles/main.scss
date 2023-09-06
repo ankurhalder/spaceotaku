@@ -14,7 +14,6 @@ $background-color-3: #004174; // Deep blue
 $background-color-4: #021e37; // Darker blue
 
 body {
-	z-index: -100;
 	background: linear-gradient(
 		135deg,
 		$background-color-1 0%,
@@ -43,6 +42,7 @@ body {
 	height: 2px;
 	background: #ffffff;
 	border-radius: 50%;
+	z-index: -1;
 }
 
 .twinkling {
