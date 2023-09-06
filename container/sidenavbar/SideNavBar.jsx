@@ -16,7 +16,11 @@ const SideNavbar = () => {
 			icon: "/sidenavbar/solar-system.png",
 			label: "Solar System",
 		},
-		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
+		{
+			href: "/planetpicker",
+			icon: "/sidenavbar/planets.png",
+			label: "Planets Information",
+		},
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },

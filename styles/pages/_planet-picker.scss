@@ -1,0 +1,38 @@
+/* planet-page.scss */
+
+.planet-page {
+	text-align: center;
+
+	h1 {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+
+	label {
+		font-weight: bold;
+		margin-right: 10px;
+	}
+
+	select {
+		padding: 5px;
+		font-size: 16px;
+	}
+
+	div {
+		margin-top: 20px;
+
+		h2 {
+			font-size: 20px;
+			margin-top: 10px;
+		}
+
+		p {
+			font-size: 16px;
+			margin: 5px 0;
+
+			&:first-child {
+				margin-top: 15px;
+			}
+		}
+	}
+}
