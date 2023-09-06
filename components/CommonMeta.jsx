@@ -53,6 +53,8 @@ export default function CommonMeta() {
 				content="UHzgiXdnV44kTW17GiC7CXXX5NnBxRl4GhXCAfSIXNU"
 			/>
 			<meta name="yandex-verification" content="6bf6f827d7e4d463" />
+			{/*  seobolity verification  */}
+			<meta name="seobility" content="bc8ead32fb1b671c727b9e653283b982"></meta>
 		</Head>
 	);
 }
