@@ -1,9 +1,8 @@
 import Head from "next/head";
-import Layout from "@/layout/Layout";
-import { TwinklingStars } from "@/components";
+import { Fragment } from "react";
 function index() {
 	return (
-		<Layout>
+		<Fragment>
 			<Head>
 				<title>Space Otaku</title>
 				<meta
@@ -16,7 +15,7 @@ function index() {
 
 				<h3>space otaku</h3>
 			</div>
-		</Layout>
+		</Fragment>
 	);
 }
 

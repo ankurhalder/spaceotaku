@@ -1,12 +1,12 @@
 import "../styles/main.scss";
 import { Fragment } from "react";
-import { IconMeta, CommonMeta } from "@/components";
+import Layout from "@/layout/Layout";
 export default function App({ Component, pageProps }) {
 	return (
 		<Fragment>
-			<IconMeta></IconMeta>
-			<CommonMeta></CommonMeta>
-			<Component {...pageProps} />
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
 		</Fragment>
 	);
 }

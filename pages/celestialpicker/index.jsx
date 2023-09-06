@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Layout from "@/layout/Layout";
+import { Fragment } from "react";
 import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
 import Image from "next/image";
@@ -15,7 +15,7 @@ const PlanetPage = () => {
 	const agencies = agenciesData[selectedPlanet]?.agencies || [];
 
 	return (
-		<Layout>
+		<Fragment>
 			<div className="planet-container">
 				<div className="planet-details">
 					<h1>{celestialBody.name}</h1>
@@ -74,7 +74,7 @@ const PlanetPage = () => {
 					))}
 				</select>
 			</div>
-		</Layout>
+		</Fragment>
 	);
 };
 
