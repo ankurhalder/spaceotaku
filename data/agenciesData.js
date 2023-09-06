@@ -7,7 +7,7 @@ const agenciesData = {
 				missions: [
 					{
 						name: "Solar and Heliospheric Observatory (SOHO)",
-						image: "/body/nasa.png",
+						image: "/body/SOHO.png",
 					},
 				],
 			},
@@ -16,7 +16,7 @@ const agenciesData = {
 				missions: [
 					{
 						name: "Solar Orbiter (planned)",
-						image: "/body/ESA.jpg",
+						image: "/body/Solar_Orbiter.png",
 					},
 				],
 			},
@@ -24,8 +24,8 @@ const agenciesData = {
 				name: "ISRO",
 				missions: [
 					{
-						name: "Aditya-L1 (planned)",
-						image: "/body/ISRO.png",
+						name: "Aditya-L1 ",
+						image: "/body/Aditya-L1.jpg",
 					},
 				],
 			},
@@ -34,7 +34,7 @@ const agenciesData = {
 				missions: [
 					{
 						name: "SOLAR",
-						image: "/body/ROSCOSMOS.png",
+						image: "/body/ROSCOSMOS-SOLAR.jpeg",
 					},
 				],
 			},
