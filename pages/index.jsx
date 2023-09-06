@@ -22,7 +22,7 @@ function Index() {
 				<h3>Your Cosmic Gateway to the Universe</h3>
 				<h4>Created by Ankur Halder</h4>
 				<h5>Explore the Solar System Insights</h5>
-				<h6> Keep tabs on the orbits by satelites</h6>
+				<h6> Keep tabs on the orbits by satellites</h6>
 				<p>
 					Are you ready to embark on an awe-inspiring cosmic adventure? Space
 					Otaku is your trusted portal for exploring the wonders of the
