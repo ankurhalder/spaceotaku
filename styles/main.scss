@@ -8,10 +8,10 @@
 @import "pages/manifest";
 @import "icons/manifest";
 
-$background-color-1: #051c2c; // Dark blue
-$background-color-2: #002b48; // Slightly lighter blue
-$background-color-3: #004174; // Deep blue
-$background-color-4: #021e37; // Darker blue
+$background-color-1: #000000; // Dark black
+$background-color-2: #030303; // Slightly lighter black
+$background-color-3: #020202; // Deep black
+$background-color-4: #040404; // Darker black
 
 body {
 	background: linear-gradient(
@@ -34,29 +34,4 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	position: relative;
-}
-
-.star {
-	position: absolute;
-	width: 2px;
-	height: 2px;
-	background: #ffffff;
-	border-radius: 50%;
-	z-index: -1;
-}
-
-.twinkling {
-	animation: twinkling 2s infinite;
-}
-
-@keyframes twinkling {
-	0%,
-	100% {
-		opacity: 0;
-		transform: translateY(0);
-	}
-	50% {
-		opacity: 1;
-		transform: translateY(-5px);
-	}
 }

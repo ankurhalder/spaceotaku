@@ -1,0 +1,24 @@
+.star {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: #ffffff;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.twinkling {
+	animation: twinkling 2s infinite;
+}
+
+@keyframes twinkling {
+	0%,
+	100% {
+		opacity: 0;
+		transform: translateY(0);
+	}
+	50% {
+		opacity: 1;
+		transform: translateY(-5px);
+	}
+}
