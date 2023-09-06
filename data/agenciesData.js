@@ -4,19 +4,39 @@ const agenciesData = {
 		agencies: [
 			{
 				name: "NASA",
-				missions: ["Solar and Heliospheric Observatory (SOHO)"],
+				missions: [
+					{
+						name: "Solar and Heliospheric Observatory (SOHO)",
+						image: "/images/nasa.png",
+					},
+				],
 			},
 			{
 				name: "ESA (European Space Agency)",
-				missions: ["Solar Orbiter (planned)"],
+				missions: [
+					{
+						name: "Solar Orbiter (planned)",
+						image: "/images/esa.png",
+					},
+				],
 			},
 			{
 				name: "ISRO (Indian Space Research Organisation)",
-				missions: ["Aditya-L1 (planned)"],
+				missions: [
+					{
+						name: "Aditya-L1 (planned)",
+						image: "/images/isro.png",
+					},
+				],
 			},
 			{
 				name: "ROSCOSMOS (Russian Federal Space Agency)",
-				missions: ["SOLAR"],
+				missions: [
+					{
+						name: "SOLAR",
+						image: "/images/roscosmos.png",
+					},
+				],
 			},
 		],
 	},

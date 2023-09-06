@@ -3,6 +3,7 @@ import Layout from "@/layout/Layout";
 import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
 import Image from "next/image";
+
 const PlanetPage = () => {
 	const [selectedPlanet, setSelectedPlanet] = useState("sun");
 
@@ -29,7 +30,26 @@ const PlanetPage = () => {
 					<ul>
 						{agencies.map((agency, index) => (
 							<li key={index}>
-								<strong>{agency.name}:</strong> {agency.missions.join(", ")}
+								<div className="agency">
+									<Image
+										src={agency.image}
+										alt={`${agency.name} Logo`}
+										width={60}
+										height={60}
+									/>
+									<strong>{agency.name}:</strong>{" "}
+									{agency.missions.map((mission, idx) => (
+										<div key={idx} className="mission">
+											<Image
+												src={mission.image}
+												alt={`${mission.name} Image`}
+												width={40}
+												height={40}
+											/>
+											{mission.name}
+										</div>
+									))}
+								</div>
 							</li>
 						))}
 					</ul>

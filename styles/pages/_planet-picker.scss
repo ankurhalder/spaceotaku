@@ -1,38 +1,127 @@
-/* planet-page.scss */
+.planet-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #1e1e1e;
+	border-radius: 15px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
-.planet-page {
-	text-align: center;
+	.planet-details {
+		flex: 1;
+		padding: 20px;
+		background-color: #252525;
+		border-radius: 15px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
-	h1 {
-		font-size: 24px;
-		margin-bottom: 20px;
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+			color: #ffcd3c;
+		}
+
+		p {
+			font-size: 20px;
+			margin: 10px 0;
+			color: #d9d9d9;
+
+			&:first-child {
+				margin-top: 20px;
+			}
+		}
+
+		h2 {
+			font-size: 28px;
+			margin-top: 20px;
+			color: #ffcd3c;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+
+			li {
+				font-size: 20px;
+				margin: 15px 0;
+				color: #d9d9d9;
+
+				.agency {
+					display: flex;
+					align-items: center;
+
+					img {
+						max-width: 100px;
+						height: auto;
+						border-radius: 50%;
+						margin-right: 20px;
+						box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+					}
+
+					strong {
+						color: #ffcd3c;
+					}
+				}
+
+				.mission {
+					display: flex;
+					align-items: center;
+
+					img {
+						max-width: 80px;
+						height: auto;
+						border-radius: 50%;
+						margin-right: 20px;
+						box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+					}
+				}
+			}
+		}
 	}
+
+	.planet-image {
+		flex: 1;
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #252525;
+		border-radius: 15px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+		transition: transform 0.3s ease-in-out;
+
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 15px;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+.planet-dropdown {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
 
 	label {
 		font-weight: bold;
 		margin-right: 10px;
+		color: #ffcd3c;
 	}
 
 	select {
-		padding: 5px;
-		font-size: 16px;
-	}
+		padding: 12px;
+		font-size: 18px;
+		border: 2px solid #ffcd3c;
+		border-radius: 5px;
+		background-color: #1e1e1e;
+		color: #ffcd3c;
+		transition: border-color 0.3s, background-color 0.3s, transform 0.2s;
 
-	div {
-		margin-top: 20px;
-
-		h2 {
-			font-size: 20px;
-			margin-top: 10px;
-		}
-
-		p {
-			font-size: 16px;
-			margin: 5px 0;
-
-			&:first-child {
-				margin-top: 15px;
-			}
+		&:hover,
+		&:focus {
+			border-color: #ffcd3c;
+			background-color: #252525;
+			transform: scale(1.05);
 		}
 	}
 }
