@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
 import Image from "next/image";
-
+import Head from "next/head";
 const PlanetPage = () => {
 	const [selectedPlanet, setSelectedPlanet] = useState("sun");
 
@@ -14,8 +14,17 @@ const PlanetPage = () => {
 	const celestialBody = planetData[selectedPlanet];
 	const agencies = agenciesData[selectedPlanet]?.agencies || [];
 
+	const pageTitle = `${celestialBody.name} - Space Otaku | Explore Celestial Bodies`;
+	const metaKeywords = `${celestialBody.name}, ${celestialBody.distanceFromSun}, ${celestialBody.numberOfMoons}, ${celestialBody.diameter}, ${celestialBody.orbitalPeriod}, space, astronomy, celestial bodies`;
+	const metaDescription = `Learn about ${celestialBody.name} - its distance from the Sun, number of moons, diameter, orbital period, and more. Explore celestial bodies and space facts on Space Otaku.`;
+
 	return (
 		<Fragment>
+			<Head>
+				<title>{pageTitle}</title>
+				<meta name="description" content={metaDescription} />
+				<meta name="keywords" content={metaKeywords} />
+			</Head>
 			<div className="planet-container">
 				<div className="planet-details">
 					<h1>{celestialBody.name}</h1>
