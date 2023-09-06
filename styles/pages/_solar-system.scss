@@ -2,7 +2,7 @@
 	width: 100vw;
 	height: 100vh;
 }
-.solar-sysytem-heading {
+.solar-system-heading {
 	position: absolute;
 	top: 10%;
 	left: 30%;
@@ -11,4 +11,7 @@
 	letter-spacing: 2px;
 	font-weight: 400;
 	text-transform: uppercase;
+}
+.solar-system-description {
+	display: none;
 }
