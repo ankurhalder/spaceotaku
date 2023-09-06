@@ -9,7 +9,7 @@ function Index() {
 				<title>Space Otaku | Your Cosmic Gateway</title>
 				<meta
 					name="description"
-					content="Explore the cosmos with Space Otaku, your ultimate destination for the latest space news, astronaut biographies, satellite data, solar system details, cosmic discoveries, and more. Join us on a celestial journey!"
+					content="Explore the cosmos with Space Otaku, your ultimate destination for the latest space news, astronaut biographies, satellite data, solar system details, cosmic discoveries, and more!"
 				/>
 				<meta
 					name="keywords"
@@ -18,9 +18,11 @@ function Index() {
 			</Head>
 
 			<div className="landing-page">
-				<h1>Welcome to Space Otaku</h1>
+				<h1>Lets Adventure in Space Otaku</h1>
 				<h3>Your Cosmic Gateway to the Universe</h3>
 				<h4>Created by Ankur Halder</h4>
+				<h5>Explore the Solar System Insights</h5>
+				<h6> Keep tabs on the orbits by satelites</h6>
 				<p>
 					Are you ready to embark on an awe-inspiring cosmic adventure? Space
 					Otaku is your trusted portal for exploring the wonders of the

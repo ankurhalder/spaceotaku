@@ -34,7 +34,7 @@ const SideNavbar = () => {
 				<div className="logo-container">
 					<Image src="/logo.png" layout="fill" alt="Logo" />
 				</div>
-				<h3 className="logo_name">Space Otaku</h3>
+				<h2 className="logo_name">Space Otaku</h2>
 				<i
 					className={`bx ${isOpen ? "bx-x-circle" : "bx-menu"}`}
 					id="btn"
