@@ -65,7 +65,7 @@ const PlanetPage = () => {
 			</div>
 
 			<div className="planet-dropdown">
-				<label>Select a planet:</label>
+				<label>Select a Celestial Body:</label>
 				<select value={selectedPlanet} onChange={handleChangePlanet}>
 					{Object.keys(planetData).map((planet) => (
 						<option key={planet} value={planet}>

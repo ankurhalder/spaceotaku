@@ -17,9 +17,9 @@ const SideNavbar = () => {
 			label: "Solar System",
 		},
 		{
-			href: "/planetpicker",
+			href: "/celestialpicker",
 			icon: "/sidenavbar/planets.png",
-			label: "Planets Information",
+			label: "Celestial Bodies",
 		},
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
