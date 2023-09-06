@@ -56,7 +56,7 @@ const PlanetPage = () => {
 				</div>
 				<div className="planet-image">
 					<Image
-						src={`/celestials/${selectedPlanet}.png`}
+						src={`/celestial/${selectedPlanet}.png`}
 						alt={`${selectedPlanet} Image`}
 						width={500}
 						height={500}
