@@ -6,10 +6,7 @@ function Index() {
 	return (
 		<Fragment>
 			<Head>
-				<title>
-					Space Otaku: Your Cosmic Hub for Astronomy, Astronauts, and Space
-					Exploration
-				</title>
+				<title>Space Otaku: Your Cosmic Hub</title>
 				<meta
 					name="description"
 					content="Discover space wonders with Space Otaku: your source for space news, astronaut profiles, satellite data, and celestial revelations!"
