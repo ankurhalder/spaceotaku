@@ -63,32 +63,19 @@
 			border-top-left-radius: 10px;
 			border-top-right-radius: 10px;
 
-			span {
-				margin: 0;
-				color: #fff;
-				font-size: 10px;
-				font-weight: bold;
-			}
-
 			.close-button {
+				position: relative;
 				background: none;
 				border: none;
 				cursor: pointer;
 				color: #fff;
 				font-size: 22px;
-
+				width: 20px;
+				height: 20px;
 				&:hover {
 					color: #ccc;
 				}
 			}
-
-			h5 {
-				font-size: 14px;
-				margin: 0;
-				color: #ddd;
-				font-weight: normal;
-			}
-
 			.avatar {
 				margin-left: 10px;
 				img {

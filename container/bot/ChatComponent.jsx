@@ -194,13 +194,17 @@ export default function ChatComponent() {
 			<div className={`chat-panel ${open ? "open" : "close"}`}>
 				<div className="chat-title">
 					<h4>Space Otaku</h4>
-					<button className="close-button" onClick={handleChatIconClick}>
-						<FontAwesomeIcon icon={faTimes} />
-					</button>
-					<span>I am a ChatBot Created by Ankur Halder</span>
 					<figure className="avatar">
 						<Image src="/logo.png" alt="Bot Avatar" width={20} height={20} />
 					</figure>
+					<button className="close-button" onClick={handleChatIconClick}>
+						<Image
+							src="/bot/close.png"
+							layout="fill"
+							alt="Bot"
+							onClick={handleChatIconClick}
+						></Image>
+					</button>
 				</div>
 				<div className="messages">
 					<div className="messages-content" ref={messagesContentRef}></div>
