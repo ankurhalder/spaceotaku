@@ -32,7 +32,13 @@ const SideNavbar = () => {
 		<div className={`sidebar ${isOpen ? "open" : "close"}`}>
 			<div className="logo-details">
 				<div className="logo-container">
-					<Image src="/logo.png" layout="fill" alt="Logo" />
+					<Image
+						src="/logo.png"
+						layout="responsive"
+						width={20}
+						height={20}
+						alt="Logo"
+					/>
 				</div>
 				<h2 className="logo_name">Space Otaku</h2>
 				<i
@@ -46,7 +52,13 @@ const SideNavbar = () => {
 					<li key={index} className={isOpen ? "open" : "close"}>
 						<Link href={link.href}>
 							<div className="image-container">
-								<Image src={link.icon} layout="fill" alt={link.label} />
+								<Image
+									src={link.icon}
+									layout="responsive"
+									width={20}
+									height={20}
+									alt={link.label}
+								/>
 							</div>
 							{isOpen ? <span className="links_name">{link.label}</span> : null}
 						</Link>
@@ -56,7 +68,13 @@ const SideNavbar = () => {
 			<div className={`profile ${isOpen ? "profile-open" : "profile-close"}`}>
 				<div className="profile-details">
 					<div className="image-container">
-						<Image src="/profile.jpeg" layout="fill" alt="Profile" />
+						<Image
+							src="/profile.jpeg"
+							layout="responsive"
+							width={20}
+							height={20}
+							alt="Profile"
+						/>
 					</div>
 					<div className="name_job">
 						<div className="name">Ankur Halder</div>

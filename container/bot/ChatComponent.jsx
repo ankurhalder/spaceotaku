@@ -144,7 +144,9 @@ export default function ChatComponent() {
 			<div className={`chat-icon ${open ? "open" : ""}`}>
 				<Image
 					src="/bot.png"
-					layout="fill"
+					layout="responsive"
+					width={20}
+					height={20}
 					alt="Bot"
 					onClick={handleChatIconClick}
 				></Image>
@@ -158,8 +160,10 @@ export default function ChatComponent() {
 					<button className="close-button" onClick={handleChatIconClick}>
 						<Image
 							src="/bot/close.png"
-							layout="fill"
-							alt="Bot"
+							layout="responsive"
+							width={20}
+							height={20}
+							alt="Close"
 							onClick={handleChatIconClick}
 						></Image>
 					</button>
@@ -180,10 +184,22 @@ export default function ChatComponent() {
 						className="message-submit"
 						onClick={handleStartRecord}
 					>
-						<Image src={customRecordingSrc} layout="fill" alt="MIC"></Image>
+						<Image
+							src={customRecordingSrc}
+							layout="responsive"
+							width={20}
+							height={20}
+							alt="MIC"
+						></Image>
 					</button>
 					<button type="submit" className="message-submit">
-						<Image src="/bot/send.png" layout="fill" alt="SEND"></Image>
+						<Image
+							src="/bot/send.png"
+							layout="responsive"
+							width={20}
+							height={20}
+							alt="SEND"
+						></Image>
 					</button>
 				</form>
 			</div>
