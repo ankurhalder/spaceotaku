@@ -154,21 +154,18 @@
 
 				&:focus {
 					background-color: #fff;
-					box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+					box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
 				}
 			}
 
 			.message-submit {
 				position: relative;
-				background-color: #007bff;
-				color: #fff;
-				border: none;
+				background: #007bff;
+				height: 40px;
+				width: 40px;
 				border-radius: 25px;
-				padding: 12px 20px;
+				margin-left: 2%;
 				cursor: pointer;
-				outline: none;
-				font-size: 18px;
-				transition: background-color 0.2s ease-in-out;
 
 				&:hover {
 					background-color: #0056b3;

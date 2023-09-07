@@ -6,12 +6,10 @@ export default function ChatComponent() {
 	const [open, setOpen] = useState(false);
 	const messagesContentRef = useRef(null);
 	const [inputValue, setInputValue] = useState("");
-
 	const [isListening, setIsListening] = useState(false);
 	const recognition = useRef(null);
-
 	const [audioData, setAudioData] = useState(null);
-
+	const [recoding, setRecording] = useState(false);
 	useEffect(() => {
 		try {
 			recognition.current = new (window.SpeechRecognition ||
@@ -55,12 +53,14 @@ export default function ChatComponent() {
 		if (!isListening) {
 			recognition.current.start();
 			setIsListening(true);
+			setRecording(true);
 		} else {
 			recognition.current.stop();
 			setIsListening(false);
+			setRecording(false);
 		}
 	};
-
+	const customRecordingSrc = recoding ? "/bot/recording.png" : "/bot/mic.png";
 	useEffect(() => {
 		try {
 			var SpeechRecognition =
@@ -92,7 +92,7 @@ export default function ChatComponent() {
 			}
 
 			setTimeout(function () {
-				serverMessage("Hello I am Space Otacu Bot How Can i help you?");
+				serverMessage("Hello I am Space OtaKu Bot How Can i help you?");
 			}, 500);
 		};
 
@@ -216,11 +216,10 @@ export default function ChatComponent() {
 						className="message-submit"
 						onClick={handleStartRecord}
 					>
-						{/* <FontAwesomeIcon icon={faMicrophone} /> */}
-						<Image src="/bot/mic.png" layout="fill" alt="Bot"></Image>
+						<Image src={customRecordingSrc} layout="fill" alt="MIC"></Image>
 					</button>
 					<button type="submit" className="message-submit">
-						{/* <FontAwesomeIcon icon={faPaperPlane} /> */}
+						<Image src="/bot/send.png" layout="fill" alt="SEND"></Image>
 					</button>
 				</form>
 			</div>
