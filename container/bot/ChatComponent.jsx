@@ -1,11 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import {
-	faMicrophone,
-	faPaperPlane,
-	faTimes,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import $ from "jquery";
 import "malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
 export default function ChatComponent() {
@@ -222,10 +216,11 @@ export default function ChatComponent() {
 						className="message-submit"
 						onClick={handleStartRecord}
 					>
-						<FontAwesomeIcon icon={faMicrophone} />
+						{/* <FontAwesomeIcon icon={faMicrophone} /> */}
+						<Image src="/bot/mic.png" layout="fill" alt="Bot"></Image>
 					</button>
 					<button type="submit" className="message-submit">
-						<FontAwesomeIcon icon={faPaperPlane} />
+						{/* <FontAwesomeIcon icon={faPaperPlane} /> */}
 					</button>
 				</form>
 			</div>
