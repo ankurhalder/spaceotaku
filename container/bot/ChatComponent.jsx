@@ -83,7 +83,6 @@ export default function ChatComponent() {
 		};
 
 		const handleComponentLoad = async () => {
-			// Browserify setup
 			if (
 				typeof window !== "undefined" &&
 				window.$ &&
@@ -91,7 +90,6 @@ export default function ChatComponent() {
 			) {
 				$(messagesContentRef.current).mCustomScrollbar();
 			} else {
-				// Load jQuery and malihu-custom-scrollbar-plugin
 				await import("jquery");
 				await import(
 					"malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min"
@@ -101,7 +99,7 @@ export default function ChatComponent() {
 
 			setTimeout(function () {
 				serverMessage("Hello I am Space Otacu Bot How Can i help you?");
-			}, 100);
+			}, 500);
 		};
 
 		const updateScrollbar = () => {
@@ -195,13 +193,13 @@ export default function ChatComponent() {
 			</div>
 			<div className={`chat-panel ${open ? "open" : "close"}`}>
 				<div className="chat-title">
-					<h1>Space Otaku</h1>
+					<h4>Space Otaku</h4>
 					<button className="close-button" onClick={handleChatIconClick}>
 						<FontAwesomeIcon icon={faTimes} />
 					</button>
-					<h2>I am a ChatBot Created by Ankur Halder</h2>
+					<span>I am a ChatBot Created by Ankur Halder</span>
 					<figure className="avatar">
-						<Image src="/bot.png" alt="Bot Avatar" width={20} height={20} />
+						<Image src="/logo.png" alt="Bot Avatar" width={20} height={20} />
 					</figure>
 				</div>
 				<div className="messages">
