@@ -3,11 +3,9 @@ import Image from "next/image";
 import {
 	faMicrophone,
 	faPaperPlane,
-	faComment,
 	faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Script from "next/script";
 import $ from "jquery";
 import "malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
 export default function ChatComponent() {
@@ -188,7 +186,12 @@ export default function ChatComponent() {
 	return (
 		<div className={`chat ${open ? "open" : ""}`}>
 			<div className={`chat-icon ${open ? "open" : ""}`}>
-				<FontAwesomeIcon icon={faComment} onClick={handleChatIconClick} />
+				<Image
+					src="/bot.png"
+					layout="fill"
+					alt="Bot"
+					onClick={handleChatIconClick}
+				></Image>
 			</div>
 			<div className={`chat-panel ${open ? "open" : "close"}`}>
 				<div className="chat-title">
@@ -203,7 +206,6 @@ export default function ChatComponent() {
 				</div>
 				<div className="messages">
 					<div className="messages-content" ref={messagesContentRef}></div>
-					<div className="suggestion"></div>
 				</div>
 				<form className="message-box" id="mymsg" method="POST">
 					<input
@@ -224,10 +226,6 @@ export default function ChatComponent() {
 						<FontAwesomeIcon icon={faPaperPlane} />
 					</button>
 				</form>
-				{/* <Script
-					src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
-					strategy="afterInteractive"
-				/> */}
 			</div>
 		</div>
 	);
