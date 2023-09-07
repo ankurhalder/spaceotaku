@@ -1,16 +1,13 @@
 .chat {
 	color: var(--black);
 	position: fixed;
-
 	transition: right 0.7s;
 	z-index: 1000;
 	margin-left: 94%;
 	margin-top: 40%;
 	&.open {
-		// bottom: 5%;
-		// left: 80%;
 		margin-left: 80%;
-		margin-top: 21%;
+		margin-top: 25%;
 		@media (max-width: #{$breakpoint-extra-large}) {
 			// bottom: 2%;
 			// left: 72%;
