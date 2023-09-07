@@ -13,7 +13,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	color: var(--black);
 	&.open {
 		right: 20px; /* Adjust the position when the chat is open */
 	}
