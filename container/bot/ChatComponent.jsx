@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import $ from "jquery";
-import "malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
+// import "malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
 export default function ChatComponent() {
 	const [open, setOpen] = useState(false);
 	const messagesContentRef = useRef(null);
@@ -76,35 +76,6 @@ export default function ChatComponent() {
 			insertMessage();
 		};
 
-		const handleComponentLoad = async () => {
-			if (
-				typeof window !== "undefined" &&
-				window.$ &&
-				typeof window.$.fn.mCustomScrollbar === "function"
-			) {
-				$(messagesContentRef.current).mCustomScrollbar();
-			} else {
-				await import("jquery");
-				await import(
-					"malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min"
-				);
-				$(messagesContentRef.current).mCustomScrollbar();
-			}
-
-			setTimeout(function () {
-				serverMessage("Hello I am Space OtaKu Bot How Can i help you?");
-			}, 500);
-		};
-
-		const updateScrollbar = () => {
-			$(messagesContentRef.current)
-				.mCustomScrollbar("update")
-				.mCustomScrollbar("scrollTo", "bottom", {
-					scrollInertia: 10,
-					timeout: 0,
-				});
-		};
-
 		const insertMessage = () => {
 			var msg = document.querySelector(".message-input").value;
 			if (msg.trim() === "") {
@@ -116,7 +87,6 @@ export default function ChatComponent() {
 			messagesContentRef.current.appendChild(newMessage);
 			fetchmsg();
 			document.querySelector(".message-input").value = null;
-			updateScrollbar();
 		};
 
 		document.getElementById("mymsg").onsubmit = (e) => {
@@ -132,7 +102,6 @@ export default function ChatComponent() {
 			loadingMessage.classList.add("message", "loading", "new");
 			loadingMessage.innerHTML = ``;
 			messagesContentRef.current.appendChild(loadingMessage);
-			updateScrollbar();
 
 			setTimeout(function () {
 				loadingMessage.remove();
@@ -140,7 +109,6 @@ export default function ChatComponent() {
 				newMessage.classList.add("message", "new");
 				newMessage.innerHTML = ` ${response2} `;
 				messagesContentRef.current.appendChild(newMessage);
-				updateScrollbar();
 			}, 100 + Math.random() * 20 * 100);
 		};
 
@@ -168,8 +136,6 @@ export default function ChatComponent() {
 				})
 				.catch((error) => console.error("Error:", error));
 		};
-
-		handleComponentLoad();
 	}, [audioData]);
 	const handleChatIconClick = () => {
 		setOpen(!open);
