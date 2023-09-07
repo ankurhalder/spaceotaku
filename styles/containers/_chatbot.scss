@@ -1,21 +1,24 @@
 .chat {
 	color: var(--black);
 	position: fixed;
-	bottom: -38%;
-	left: 95%;
+
 	transition: right 0.7s;
 	z-index: 1000;
+	margin-left: 94%;
+	margin-top: 40%;
 	&.open {
-		bottom: 5%;
-		left: 80%;
+		// bottom: 5%;
+		// left: 80%;
+		margin-left: 80%;
+		margin-top: 21%;
 		@media (max-width: #{$breakpoint-extra-large}) {
-			bottom: 2%;
-			left: 72%;
+			// bottom: 2%;
+			// left: 72%;
 		}
 	}
 	@media (max-width: #{$breakpoint-extra-large}) {
-		bottom: -46%;
-		left: 93%;
+		// bottom: -46%;
+		// left: 93%;
 	}
 	.chat-icon {
 		opacity: 1;
@@ -37,8 +40,7 @@
 		}
 		&.open {
 			opacity: 0;
-			width: 0;
-			height: 0;
+			display: none;
 		}
 	}
 
