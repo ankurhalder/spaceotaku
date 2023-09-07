@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import $ from "jquery";
+// import $ from "jquery";
 // import "malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
 export default function ChatComponent() {
 	const [open, setOpen] = useState(false);
