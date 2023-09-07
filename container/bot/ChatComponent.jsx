@@ -187,10 +187,10 @@ export default function ChatComponent() {
 			</div>
 			<div className={`chat-panel ${open ? "open" : "close"}`}>
 				<div className="chat-title">
-					<h4>Space Otaku</h4>
 					<figure className="avatar">
 						<Image src="/logo.png" alt="Bot Avatar" width={20} height={20} />
 					</figure>
+					<h4>Space Otaku</h4>
 					<button className="close-button" onClick={handleChatIconClick}>
 						<Image
 							src="/bot/close.png"
