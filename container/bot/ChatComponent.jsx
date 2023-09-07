@@ -187,7 +187,7 @@ export default function ChatComponent() {
 
 	return (
 		<div className={`chat ${open ? "open" : ""}`}>
-			<div className="chat-icon">
+			<div className={`chat-icon ${open ? "open" : ""}`}>
 				<FontAwesomeIcon icon={faComment} onClick={handleChatIconClick} />
 			</div>
 			<div className={`chat-panel ${open ? "open" : "close"}`}>
@@ -196,7 +196,7 @@ export default function ChatComponent() {
 					<button className="close-button" onClick={handleChatIconClick}>
 						<FontAwesomeIcon icon={faTimes} />
 					</button>
-					<h2>I am a Servent of Space Otaku Created by Ankur Halder</h2>
+					<h2>I am a ChatBot Created by Ankur Halder</h2>
 					<figure className="avatar">
 						<Image src="/bot.png" alt="Bot Avatar" width={20} height={20} />
 					</figure>
