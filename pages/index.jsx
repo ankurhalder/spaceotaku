@@ -6,21 +6,23 @@ function Index() {
 	return (
 		<Fragment>
 			<Head>
-				<title>Space Otaku | Your Cosmic Gateway</title>
+				<title>
+					Space Otaku: Your Cosmic Hub for Astronomy, Astronauts, and Space
+					Exploration
+				</title>
 				<meta
 					name="description"
-					content="Explore the cosmos with Space Otaku, your ultimate destination for the latest space news, astronaut biographies, satellite data, solar system details, cosmic discoveries, and more!"
+					content="Discover space wonders with Space Otaku: your source for space news, astronaut profiles, satellite data, and celestial revelations!"
 				/>
 				<meta
 					name="keywords"
-					content="space, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts"
+					content="space, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts , Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,"
 				/>
 			</Head>
 
 			<div className="landing-page">
-				<h1>Lets Adventure in Space Otaku</h1>
-				<h3>Your Cosmic Gateway to the Universe</h3>
-				<h4>Created by Ankur Halder</h4>
+				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>
+				<h3>Created by Ankur Halder</h3>
 				<h5>Explore the Solar System Insights</h5>
 				<h6> Keep tabs on the orbits by satellites</h6>
 				<p>
