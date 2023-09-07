@@ -23,6 +23,10 @@ function Index() {
 			<div className="landing-page">
 				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>
 				<h3>Created by Ankur Halder</h3>
+				<h4>
+					Embark on a Celestial Journey with Space Otaku: Your Source for Space
+					Enthusiasts
+				</h4>
 				<h5>Explore the Solar System Insights</h5>
 				<h6> Keep tabs on the orbits by satellites</h6>
 				<p>
