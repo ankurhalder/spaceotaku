@@ -143,20 +143,20 @@ export default function ChatComponent() {
 		<div className={`chat ${open ? "open" : ""}`}>
 			<div className={`chat-icon ${open ? "open" : ""}`}>
 				<Image
-					src="/bot.png"
+					src="/bot/owl.png"
 					layout="responsive"
 					width={20}
 					height={20}
-					alt="Bot"
+					alt="OrbitOwl"
 					onClick={handleChatIconClick}
 				></Image>
 			</div>
 			<div className={`chat-panel ${open ? "open" : "close"}`}>
 				<div className="chat-title">
 					<figure className="avatar">
-						<Image src="/logo.png" alt="Bot Avatar" width={20} height={20} />
+						<Image src="/logo.png" alt="Logo" width={20} height={20} />
 					</figure>
-					<h4>Space Otaku by Ankur Halder</h4>
+					<h4>Orbit Owl</h4>
 					<button className="close-button" onClick={handleChatIconClick}>
 						<Image
 							src="/bot/close.png"
@@ -177,7 +177,7 @@ export default function ChatComponent() {
 						id="MSG"
 						name="MSG"
 						className="message-input"
-						placeholder="Type message..."
+						placeholder="Your Space Encyclopedia..."
 					/>
 					<button
 						type="button"

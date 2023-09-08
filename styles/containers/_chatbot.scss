@@ -66,16 +66,17 @@
 				}
 			}
 			h4 {
+				font-family: var(--font-tektur);
+				font-size: var(--font-10);
+				color: var(--black);
+				font-weight: 500;
+				letter-spacing: 2px;
 			}
 			.close-button {
 				position: relative;
 				cursor: pointer;
-				color: #fff;
 				width: 30px;
 				height: 30px;
-				&:hover {
-					color: #ccc;
-				}
 			}
 		}
 
@@ -85,7 +86,6 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
-
 			.messages-content {
 				padding: 15px;
 				max-height: 300px;
@@ -95,28 +95,13 @@
 					margin-bottom: 10px;
 					padding: 12px;
 					border-radius: 12px;
-					background-color: #f0f0f0;
-					color: #333;
+					background: #bbb;
 					font-size: 16px;
-
-					&.message-personal {
-						background-color: #007bff;
-						color: #fff;
-						align-self: flex-end;
-					}
-
-					&.message-new {
-						background-color: #f0f0f0;
-						color: #333;
-					}
-
-					&.message-loading {
-						background-color: #f0f0f0;
-						color: #333;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-					}
+				}
+				.message-personal {
+					background: var(--primary-color-1);
+					color: var(--white);
+					align-self: flex-end;
 				}
 			}
 		}
@@ -141,7 +126,7 @@
 				transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
 				&::placeholder {
-					color: #bbb;
+					color: #747474;
 				}
 
 				&:focus {
@@ -160,7 +145,7 @@
 				cursor: pointer;
 
 				&:hover {
-					background-color: #0056b3;
+					background-color: darken($color: #007bff, $amount: 20%);
 				}
 			}
 		}
