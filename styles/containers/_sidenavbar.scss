@@ -3,7 +3,7 @@
 	left: 0;
 	top: 0;
 	height: 100%;
-	width: 78px;
+	width: 75px;
 	background: #11101d;
 	padding: 6px 14px;
 	z-index: 99;
@@ -13,24 +13,33 @@
 		width: 250px;
 
 		.logo-details {
+			display: grid;
+			grid-template-rows: repeat(3, 1fr);
+			margin-bottom: 100px;
 			.logo-container {
-				position: relative;
-				height: 50px;
-				width: 50px;
+				height: 100px;
+				width: 100px;
+				margin: 10px 0 0 40px;
 				object-fit: cover;
 				border-radius: 12px;
-				margin-right: 10px;
+				opacity: 1;
+				transition: all 0.5s ease;
 			}
-			.logo-container,
+
 			.logo_name {
 				opacity: 1;
 				transition: all 0.5s ease;
+				margin: 10px 0 0 15px;
+				font-family: var(--font-elianto);
+				font-size: var(--font-12);
+				text-transform: uppercase;
+				letter-spacing: 2px;
 			}
 			#btn {
 				position: absolute;
 				top: 50%;
 				right: 0;
-				transform: translateY(-50%) translateX(40%);
+				transform: translateY(20%) translateX(10%);
 				font-size: 40px;
 				text-align: center;
 				cursor: pointer;
@@ -64,7 +73,7 @@
 	}
 
 	.nav-list {
-		margin-top: 20px;
+		margin-top: 70px;
 		height: 100%;
 
 		li {
@@ -78,13 +87,18 @@
 				width: 100%;
 				border-radius: 12px;
 				align-items: center;
+				justify-items: flex-start;
 				text-decoration: none;
+				font-family: var(--font-roboto);
+				font-size: var(--font-13);
+				font-weight: 400;
+				letter-spacing: 2px;
 				transition: all 0.4s ease;
 				background: #11101d;
 
 				&:hover {
-					background: #fff;
-					color: black;
+					background: var(--white);
+					color: var(--black);
 				}
 
 				.image-container {
@@ -95,6 +109,17 @@
 					border-radius: 12px;
 					margin-right: 2px;
 				}
+				.links_name {
+					margin-left: 10px;
+				}
+			}
+			&:first-child {
+				margin-top: 120px;
+			}
+			&.close {
+				&:first-child {
+					margin-top: 0px;
+				}
 			}
 		}
 	}
@@ -102,10 +127,10 @@
 	.profile {
 		position: fixed;
 		height: 90px;
-		width: 78px;
+		width: 75px;
 		left: 0;
 		bottom: -10px;
-		padding: 10px 14px;
+		padding: 8px 8px;
 		background: #1d1b31;
 		transition: all 0.5s ease;
 		overflow: hidden;
@@ -123,7 +148,7 @@
 				width: 45px;
 				object-fit: cover;
 				border-radius: 6px;
-				margin-right: 10px;
+				margin-left: 3px;
 			}
 
 			.name_job {
@@ -152,6 +177,20 @@
 		.profile-details {
 			opacity: 1;
 			transform: translateX(0);
+			.name_job {
+				transform: translateX(20px);
+				font-family: var(--font-elianto);
+				font-size: var(--font-15);
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				.name {
+					margin-top: 0px;
+				}
+				.job {
+					margin-top: 5px;
+					margin-left: 4px;
+				}
+			}
 		}
 	}
 	.profile-close {
