@@ -73,11 +73,10 @@
 	}
 
 	.nav-list {
-		margin-top: 70px;
-		height: 100%;
+		// margin-top: 70px;
+		// height: 100%;
 
 		li {
-			position: relative;
 			margin: 10px 0 0 0;
 			list-style: none;
 
@@ -207,6 +206,94 @@
 			}
 			.name_job {
 				display: none;
+			}
+		}
+	}
+	@media (max-width: #{$breakpoint-desktop}) {
+		&.open {
+			width: 230px;
+			.logo-details {
+				height: 0;
+				.logo-container {
+					height: 80px;
+					width: 80px;
+					margin: 10px 0 0 50px;
+				}
+				.logo_name {
+					margin: 20px 0 0 15px;
+				}
+				#btn {
+					transform: translateY(60%) translateX(-20%);
+					font-size: 30px;
+				}
+			}
+		}
+		.logo-details {
+			#btn {
+				transform: translateY(-50%) translateX(-20%);
+				font-size: 30px;
+			}
+		}
+		.nav-list {
+			li {
+				margin: 0px;
+				a {
+					.links_name {
+						font-size: var(--font-14);
+						font-weight: 500;
+					}
+				}
+				.image-container {
+					height: 20px;
+					width: 20px;
+				}
+				&:first-child {
+					margin-top: 140px;
+				}
+			}
+		}
+		.profile {
+			height: 70px;
+			width: 75px;
+			.profile-details {
+				.image-container {
+					height: 30px;
+					width: 40px;
+				}
+				.name_job {
+					.name {
+						font-size: 13px;
+					}
+					.job {
+						font-size: 10px;
+					}
+				}
+			}
+		}
+		.profile-open {
+			width: 230px;
+			.profile-details {
+				.name_job {
+					transform: translateX(25px) translateY(5px);
+					font-size: var(--font-15);
+					.name {
+						margin-top: 0px;
+					}
+					.job {
+						margin-top: 5px;
+						margin-left: 4px;
+					}
+				}
+			}
+		}
+		.profile-close {
+			padding: 0;
+			.profile-details {
+				.image-container {
+					height: 40px;
+					width: 40px;
+					margin-left: 18px;
+				}
 			}
 		}
 	}
