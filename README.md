@@ -54,7 +54,7 @@ Contributions are welcome and encouraged! If you find a bug or have an idea for 
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [GNU AFFERO GENERAL PUBLIC LICENSE](LICENSE).
 
 ---
 
