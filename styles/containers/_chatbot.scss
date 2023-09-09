@@ -37,7 +37,8 @@
 		bottom: 20px;
 		right: -360px;
 		z-index: 998;
-		width: 360px;
+		width: 100%; /* Adjusted width to 100% for responsiveness */
+		max-width: 360px; /* Added max-width for responsiveness */
 		background-color: #f7f7f7;
 		border-radius: 10px;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -149,5 +150,24 @@
 				}
 			}
 		}
+	}
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 450px) {
+	.chat {
+		width: 50px; /* Adjusted width for smaller screens */
+		height: 50px; /* Adjusted height for smaller screens */
+	}
+
+	.chat.open {
+		right: 10px; /* Adjusted position for smaller screens */
+	}
+
+	.chat-panel {
+		width: 100%; /* Adjusted width for smaller screens */
+		max-width: 70%; /* Removed max-width for smaller screens */
+		bottom: 20px;
+		right: -380px;
 	}
 }
