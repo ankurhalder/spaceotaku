@@ -1,79 +1,178 @@
-.planet-container {
+// PlanetPage.scss
+.planetPage {
+	background-color: #111;
+	color: #fff;
+	padding: 20px;
+	min-height: 100vh;
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 
-	.planet-details {
-		flex: 1;
-		padding: 20px;
+	.pageTitle {
+		font-size: 36px;
+		margin-bottom: 20px;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
 
-		h1 {
-			font-size: 24px;
-			margin-bottom: 10px;
-		}
+	.planetContainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		text-align: center;
+		color: #ffffff;
+		width: 100%;
 
-		p {
-			margin: 5px 0;
-		}
+		.planetDetails {
+			padding: 20px;
+			background-color: #0f0f0f;
+			border-radius: 12px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+			transition: background-color 0.3s ease;
 
-		h2 {
-			font-size: 20px;
-			margin-top: 20px;
-		}
+			h1 {
+				font-size: 24px;
+				margin-bottom: 10px;
+				color: #ffffff;
+			}
 
-		ul {
-			list-style: none;
-			padding: 0;
+			.detailsGrid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 10px;
 
-			li {
-				margin-top: 10px;
-
-				.agency {
+				.detailItem {
 					display: flex;
-					align-items: center;
+					justify-content: space-between;
+					font-size: 16px;
+					margin-bottom: 8px;
 
 					strong {
-						margin-left: 10px;
+						font-weight: bold;
+					}
+				}
+			}
+
+			h2 {
+				margin-top: 20px;
+				font-size: 20px;
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 10px 0;
+
+				li {
+					display: flex;
+					align-items: center;
+					margin-bottom: 10px;
+
+					strong {
+						margin-right: 10px;
+						font-weight: bold;
+						color: #ffffff;
 					}
 
 					.mission {
+						font-size: 14px;
 						display: flex;
 						align-items: center;
+						color: #dddddd;
 
-						img {
-							margin-right: 5px;
+						&:not(:last-child) {
+							margin-right: 10px;
 						}
 					}
 				}
 			}
 		}
+
+		.planetImage {
+			img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 12px;
+				box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+			}
+		}
+
+		&:hover {
+			.planetDetails {
+				background-color: #1a1a1a;
+			}
+		}
+
+		@media (max-width: 450px) {
+			grid-template-columns: 1fr;
+			text-align: left;
+
+			.planetDetails {
+				padding: 15px;
+				margin-bottom: 10px;
+
+				h1 {
+					font-size: 20px;
+				}
+
+				.detailsGrid {
+					grid-template-columns: 1fr;
+				}
+
+				p {
+					font-size: 14px;
+				}
+			}
+		}
 	}
 
-	.planet-image {
-		flex: 1;
+	.planetDropdown {
+		label {
+			font-size: 20px;
+			color: #fff;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
 
-		img {
-			max-width: 100%;
-			height: auto;
+		select {
+			width: 200px;
+			padding: 10px; /* Reduced padding */
+			font-size: 16px; /* Reduced font size */
+			border: none;
+			background: linear-gradient(135deg, #1e3d59, #0078d4);
+			color: #fff;
+			border-radius: 10px;
+			cursor: pointer;
+			outline: none;
+			transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+			transform-origin: center;
+			box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+		}
+
+		select:hover,
+		select:focus {
+			background: linear-gradient(135deg, #3d91ff, #ff7e7e);
+			color: #fff;
+			transform: scale(1.02);
+		}
+
+		select::after {
+			content: "▼";
+			font-size: 16px;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+			pointer-events: none;
+			color: #fff;
+		}
+
+		/* Styles for option elements */
+		select option {
+			background-color: #6d6d6d;
+			color: #fff;
+			font-size: 16px;
+			padding: 10px;
 		}
 	}
 }
-
-.planet-dropdown {
-	text-align: center;
-	margin-top: 20px;
-
-	label {
-		display: block;
-		font-size: 18px;
-		margin-bottom: 10px;
-	}
-
-	select {
-		width: 100%;
-		padding: 10px;
-		font-size: 16px;
-	}
-}
-
-/* Add additional styles or media queries as needed */
