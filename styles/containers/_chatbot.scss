@@ -2,7 +2,7 @@
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	z-index: 999;
+	z-index: 9999;
 	transition: right 0.3s ease-in-out;
 	width: 60px;
 	height: 60px;
@@ -120,7 +120,7 @@
 				padding: 12px;
 				border-radius: 25px;
 				margin-right: 10px;
-				font-size: 16px;
+				font-size: var(--font-12);
 				outline: none;
 				background-color: #f0f0f0;
 				color: #333;
@@ -159,15 +159,13 @@
 		width: 50px; /* Adjusted width for smaller screens */
 		height: 50px; /* Adjusted height for smaller screens */
 	}
-
-	.chat.open {
-		right: 10px; /* Adjusted position for smaller screens */
-	}
-
 	.chat-panel {
-		width: 100%; /* Adjusted width for smaller screens */
-		max-width: 70%; /* Removed max-width for smaller screens */
+		width: 270px; /* Adjusted width for smaller screens */
+		max-width: 75%; /* Removed max-width for smaller screens */
 		bottom: 20px;
 		right: -380px;
+		.message-box {
+			padding: 10px; /* Adjusted padding for smaller screens */
+		}
 	}
 }
