@@ -1,4 +1,3 @@
-// PlanetPage.js
 import { useState } from "react";
 import { Fragment } from "react";
 import planetData from "../../data/planetData";
@@ -31,8 +30,8 @@ const PlanetPage = () => {
 				<h1 className="pageTitle">Explore Celestial Bodies</h1>
 				<div className="planetContainer">
 					<div className="planetDetails">
-						<h1>{celestialBody.name}</h1>
-						<div className="detailsGrid">
+						<h3>{celestialBody.name}</h3>
+						<div className="details">
 							<div className="detailItem">
 								<strong>Distance from Sun:</strong>
 								<span>{celestialBody.distanceFromSun}</span>
@@ -62,13 +61,23 @@ const PlanetPage = () => {
 								<span>{celestialBody.atmosphere}</span>
 							</div>
 						</div>
-						<h2>Agencies and Missions:</h2>
+					</div>
+					<div className="planetImage">
+						<Image
+							src={`/celestial/${selectedPlanet}.png`}
+							alt={`${selectedPlanet} Image`}
+							width={500}
+							height={500}
+						/>
+					</div>
+					<div className="agency-mission">
+						<h4>Agencies and Missions:</h4>
 						<ul>
 							{agencies.map((agency, index) => (
 								<li key={index}>
 									<div className="agency">
 										<Image
-											src={`/organisations/${agency.name}.png`}
+											src={`/organisations/${agency.image}.png`}
 											alt={`${agency.name} Logo`}
 											width={60}
 											height={60}
@@ -83,14 +92,6 @@ const PlanetPage = () => {
 								</li>
 							))}
 						</ul>
-					</div>
-					<div className="planetImage">
-						<Image
-							src={`/celestial/${selectedPlanet}.png`}
-							alt={`${selectedPlanet} Image`}
-							width={500}
-							height={500}
-						/>
 					</div>
 				</div>
 
