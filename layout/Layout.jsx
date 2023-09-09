@@ -8,7 +8,7 @@ function Layout({ children }) {
 			<IconMeta></IconMeta>
 			<CommonMeta></CommonMeta>
 			<TwinklingStars></TwinklingStars>
-			{/* <SideNavbar></SideNavbar> */}
+			<SideNavbar></SideNavbar>
 			<ChatBot></ChatBot>
 			{children}
 		</Fragment>

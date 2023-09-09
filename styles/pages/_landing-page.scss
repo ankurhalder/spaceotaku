@@ -1,66 +1,81 @@
 .landing-page {
-	background: rgba(21, 19, 19, 0.1);
+	background: rgba(0, 0, 0, 0.1);
 	border-radius: 15px;
 	padding: 30px;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 	margin: 20px;
 	text-align: center;
-	backdrop-filter: blur(1px);
+	backdrop-filter: blur(0.1px);
 	transition: background-color 0.3s ease;
 	// border: #ccc 1px solid;
 	margin-left: 6.5%;
-
+	margin-top: 5%;
+	@media (max-width: #{$breakpoint-phone}) {
+		margin-left: 15%;
+		margin-top: 20px;
+	}
 	h1 {
-		font-size: 36px;
-		color: #fff;
+		font-family: var(--font-orbitron);
+		font-size: var(--font-7);
+		font-weight: 100;
+		letter-spacing: 3px;
+		color: var(--white);
 		margin-bottom: 15px;
 		font-weight: bold;
 	}
 
 	h3 {
-		font-size: 24px;
+		letter-spacing: 2px;
+		font-size: var(--font-9);
 		color: #ccc;
-		margin-bottom: 10px;
+		margin-bottom: 12px;
 	}
 
 	h4 {
-		font-size: 20px;
+		letter-spacing: 2px;
+		font-size: var(--font-10);
 		color: #ff6633;
 		margin-bottom: 10px;
 	}
 
 	h5 {
-		font-size: 18px;
+		letter-spacing: 2px;
+		font-size: var(--font-11);
 		color: #ff9900;
 		margin-bottom: 10px;
 	}
 
 	h6 {
-		font-size: 16px;
+		letter-spacing: 2px;
+		font-size: var(--font-12);
 		color: #ff3366;
 		margin-bottom: 10px;
 	}
 
 	p {
-		font-size: 16px;
+		font-family: var(--font-oswald);
+		letter-spacing: 2px;
+		font-size: var(--font-13);
 		color: #ddd;
 		line-height: 1.6;
 		margin: 20px 0;
 	}
 
 	ul {
-		list-style: disc;
+		list-style: none;
 		padding-left: 20px;
 
 		li {
-			font-size: 14px;
-			color: #ccc;
-			margin: 10px 0;
+			letter-spacing: 2px;
+			font-size: var(--font-14);
+			color: var(--white);
+			margin: 20px 0;
 			list-style: none;
 		}
 	}
 
 	strong {
+		margin-right: 5px;
 		font-weight: bold;
 		color: #ff6633;
 	}
