@@ -152,20 +152,3 @@
 		}
 	}
 }
-
-/* Media Query for Responsive Design */
-@media screen and (max-width: 450px) {
-	.chat {
-		width: 50px; /* Adjusted width for smaller screens */
-		height: 50px; /* Adjusted height for smaller screens */
-	}
-	.chat-panel {
-		width: 270px; /* Adjusted width for smaller screens */
-		max-width: 75%; /* Removed max-width for smaller screens */
-		bottom: 20px;
-		right: -380px;
-		.message-box {
-			padding: 10px; /* Adjusted padding for smaller screens */
-		}
-	}
-}
