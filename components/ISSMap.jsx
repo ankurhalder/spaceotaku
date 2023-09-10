@@ -12,20 +12,12 @@ const ISSMap = () => {
 	useEffect(() => {
 		const fetchISSLocation = async () => {
 			try {
-				const response = await axios.get(
-					"http://api.open-notify.org/iss-now.json", // Use HTTP for this specific request
-					{
-						httpsAgent: new https.Agent({ rejectUnauthorized: false }), // Allow insecure HTTPS requests
-					}
-				);
+				const response = await axios.get("/api/iss");
 				setISSLocation(response.data.iss_position);
 			} catch (error) {
 				console.error("Error fetching ISS location:", error);
-				console.log("Error details:", error.message); // Log the error details
-				console.log("Error response:", error.response); // Log the response object if available
 			}
 		};
-
 		const interval = setInterval(fetchISSLocation, 500);
 		return () => clearInterval(interval);
 
