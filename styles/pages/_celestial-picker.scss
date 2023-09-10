@@ -5,6 +5,8 @@
 	@include flex-container(column, wrap, flex-start, center);
 	height: 100%;
 	min-height: 100vh;
+	@media (max-width: #{$breakpoint-desktop}) {
+	}
 	.page-title {
 		font-family: var(--font-elianto);
 		text-transform: uppercase;
@@ -15,6 +17,10 @@
 		background-clip: text;
 		color: transparent;
 		padding: 1% 0 1% 0;
+		@media (max-width: #{$breakpoint-desktop}) {
+			padding: 0.8% 0 0.8% 0;
+			font-size: var(--font-6);
+		}
 	}
 
 	.planet-data-container {
@@ -26,6 +32,11 @@
 		height: 100%;
 		max-height: 1800px;
 		margin: 2% 0 5% 0;
+		@media (max-width: #{$breakpoint-desktop}) {
+			max-width: 1000px;
+			margin: 1.5% 0 4% 0%;
+			border-radius: 18px;
+		}
 		.planet-details {
 			@include flex-container(column, wrap, flex-start, center);
 
@@ -42,6 +53,9 @@
 				&:hover {
 					transform: scale(1.05);
 				}
+				@media (max-width: #{$breakpoint-desktop}) {
+					font-size: var(--font-8);
+				}
 			}
 
 			.details {
@@ -49,6 +63,9 @@
 					@include flex-container(column, wrap, flex-start, flex-start);
 					text-align: center;
 					margin-bottom: 20px;
+					@media (max-width: #{$breakpoint-desktop}) {
+						margin-bottom: 15px;
+					}
 					strong {
 						font-family: var(--font-roboto);
 						font-size: var(--font-9);
@@ -56,6 +73,9 @@
 						font-weight: 400;
 						color: var(--primary-accent);
 						margin: 0 0 2% 2%;
+						@media (max-width: #{$breakpoint-desktop}) {
+							font-size: var(--font-11);
+						}
 					}
 
 					span {
@@ -65,6 +85,9 @@
 						font-weight: 400;
 						color: var(--cool-yellow);
 						margin: 0 0 2% 2%;
+						@media (max-width: #{$breakpoint-desktop}) {
+							font-size: var(--font-12);
+						}
 					}
 				}
 			}
@@ -84,6 +107,12 @@
 				transition: transform 0.3s ease-in-out;
 				&:hover {
 					transform: scale(1.05);
+				}
+				@media (max-width: #{$breakpoint-desktop}) {
+					max-width: 350px;
+					max-height: 350px;
+					right: 40%;
+					top: 10%;
 				}
 			}
 		}
@@ -105,6 +134,9 @@
 				&:hover {
 					transform: scale(1.05);
 				}
+				@media (max-width: #{$breakpoint-desktop}) {
+					font-size: var(--font-8);
+				}
 			}
 
 			ul {
@@ -113,6 +145,9 @@
 
 				li {
 					margin-bottom: 20px;
+					@media (max-width: #{$breakpoint-desktop}) {
+						margin-bottom: 15px;
+					}
 
 					.agency {
 						@include flex-container(row, nowrap, flex-start, flex-start);
@@ -126,6 +161,10 @@
 							transition: transform 0.3s ease-in-out;
 							&:hover {
 								transform: scale(1.05);
+							}
+							@media (max-width: #{$breakpoint-desktop}) {
+								width: 70px;
+								height: 70px;
 							}
 						}
 
@@ -141,6 +180,10 @@
 							&:hover {
 								transform: scale(1.05);
 							}
+							@media (max-width: #{$breakpoint-desktop}) {
+								font-size: var(--font-11);
+								margin: 0.5% 0 2% 2%;
+							}
 						}
 
 						.mission {
@@ -150,6 +193,10 @@
 							font-weight: 400;
 							color: var(--white);
 							margin: 2.3% 0 2% 2%;
+							@media (max-width: #{$breakpoint-desktop}) {
+								font-size: var(--font-12);
+								margin: 0.5% 0 2% 2%;
+							}
 						}
 					}
 				}
@@ -161,6 +208,9 @@
 		margin: 2% 0 0 0;
 		width: 100%;
 		max-width: 400px;
+		@media (max-width: #{$breakpoint-desktop}) {
+			max-width: 300px;
+		}
 
 		label {
 			font-size: var(--font-9);
@@ -169,6 +219,9 @@
 			color: var(--white);
 			cursor: default;
 			margin: 0 0 0 7%;
+			@media (max-width: #{$breakpoint-desktop}) {
+				font-size: var(--font-11);
+			}
 		}
 
 		select {
@@ -185,7 +238,13 @@
 			font-weight: 300;
 			text-transform: uppercase;
 			transition: background-color 0.3s ease-in-out;
-
+			@media (max-width: #{$breakpoint-desktop}) {
+				font-size: var(--font-12);
+			}
+			&:focus {
+				outline: none;
+				background-color: rgba(41, 41, 41, 0.9);
+			}
 			option {
 				background-color: rgba(32, 32, 32, 0.9);
 			}
