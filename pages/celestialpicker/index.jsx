@@ -26,51 +26,50 @@ const PlanetPage = () => {
 				<meta name="description" content={metaDescription} />
 				<meta name="keywords" content={metaKeywords} />
 			</Head>
-			<div className="planetPage">
-				<h1 className="pageTitle">Explore Celestial Bodies</h1>
-				<div className="planetContainer">
-					<div className="planetDetails">
+			<div className="planet-page">
+				<h1 className="page-title">Explore Celestial Bodies</h1>
+				<div className="planet-data-container">
+					<div className="planet-details">
 						<h3>{celestialBody.name}</h3>
 						<div className="details">
-							<div className="detailItem">
+							<div className="detail-item">
 								<strong>Distance from Sun:</strong>
 								<span>{celestialBody.distanceFromSun}</span>
 							</div>
-							<div className="detailItem">
+							<div className="detail-item">
 								<strong>Number of Moons:</strong>
 								<span>{celestialBody.numberOfMoons}</span>
 							</div>
-							<div className="detailItem">
+							<div className="detail-item">
 								<strong>Diameter:</strong>
 								<span>{celestialBody.diameter}</span>
 							</div>
-							<div className="detailItem">
+							<div className="detail-item">
 								<strong>Orbital Period:</strong>
 								<span>{celestialBody.orbitalPeriod}</span>
 							</div>
-							<div className="detailItem">
+							<div className="detail-item">
 								<strong>Interesting Fact:</strong>
 								<span>{celestialBody.interestingFact}</span>
 							</div>
-							<div className="detailItem">
+							<div className="detail-item">
 								<strong>Surface Features:</strong>
 								<span>{celestialBody.surfaceFeatures}</span>
 							</div>
-							<div className="detailItem">
+							<div className="detail-item">
 								<strong>Atmosphere:</strong>
 								<span>{celestialBody.atmosphere}</span>
 							</div>
 						</div>
 					</div>
-					<div className="planetImage">
+					<div className="planet-image">
 						<Image
 							src={`/celestial/${selectedPlanet}.png`}
 							alt={`${selectedPlanet} Image`}
-							width={500}
-							height={500}
+							layout="fill"
 						/>
 					</div>
-					<div className="agency-mission">
+					<div className="planet-agency-mission">
 						<h4>Agencies and Missions:</h4>
 						<ul>
 							{agencies.map((agency, index) => (
@@ -95,7 +94,7 @@ const PlanetPage = () => {
 					</div>
 				</div>
 
-				<div className="planetDropdown">
+				<div className="planet-dropdown">
 					<label>Select a Celestial Body:</label>
 					<select value={selectedPlanet} onChange={handleChangePlanet}>
 						{Object.keys(planetData).map((planet) => (
