@@ -77,9 +77,9 @@
 				max-height: 500px;
 				overflow: hidden;
 				right: 40%;
-				top: 5%;
+				top: 7%;
 				border-radius: 20px;
-				box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+				box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
 				animation: scaleIn 1s forwards;
 				transition: transform 0.3s ease-in-out;
 				&:hover {
@@ -158,41 +158,38 @@
 	}
 
 	.planet-dropdown {
-		margin-top: 20px;
+		margin: 2% 0 0 0;
 		width: 100%;
 		max-width: 400px;
 
 		label {
-			font-size: 24px;
-			font-weight: bold;
-			color: #ffc107;
-			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-			animation: fadeIn 1s forwards;
-			transition: transform 0.2s ease-in-out;
-			cursor: pointer;
-
-			// Hover Animation
-			&:hover {
-				transform: scale(1.05);
-			}
+			font-size: var(--font-9);
+			font-family: var(--font-roboto);
+			text-transform: uppercase;
+			color: var(--white);
+			cursor: default;
+			margin: 0 0 0 7%;
 		}
 
 		select {
 			width: 100%;
-			padding: 15px;
-			margin-top: 10px;
-			border: none;
+			padding: 4.5%;
+			margin: 4% 0 0 0;
+			border: 2px solid var(--cool-blue);
 			border-radius: 10px;
 			background-color: rgba(32, 32, 32, 0.9);
-			color: #fff;
-			font-size: 20px;
+			color: var(--white);
+			font-family: var(--font-source);
+			font-size: var(--font-10);
+			letter-spacing: 2px;
+			font-weight: 300;
+			text-transform: uppercase;
 			transition: background-color 0.3s ease-in-out;
 
 			option {
 				background-color: rgba(32, 32, 32, 0.9);
 			}
 
-			// Hover and Active Effects
 			&:hover {
 				background-color: rgba(41, 41, 41, 0.9);
 			}
