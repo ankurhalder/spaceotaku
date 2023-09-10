@@ -73,25 +73,16 @@ const ISSMap = () => {
 	}, [issLocation, map, issIcon]);
 
 	if (!issLocation) {
-		return <div>Loading ISS location...</div>;
+		return <div className="loading-iss-location">Loading ISS location...</div>;
 	}
 
 	return (
-		<div
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				alignItems: "center",
-				height: "100vh",
-			}}
-		>
+		<div className="iss-map-container">
 			<h1>Live ISS Location</h1>
 			<p>Latitude: {issLocation.latitude}</p>
 			<p>Longitude: {issLocation.longitude}</p>
-			<Image src={ISS_IMAGE_URL} alt="ISS" width={32} height={32} />{" "}
-			{/* Display the custom ISS icon */}
-			<div id="map" style={{ width: "100%", height: "60vh" }}></div>{" "}
-			{/* Adjust map height */}
+			<Image src={ISS_IMAGE_URL} alt="ISS" width={32} height={32} />
+			<div id="map"></div>
 		</div>
 	);
 };
