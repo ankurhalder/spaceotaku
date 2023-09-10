@@ -28,6 +28,16 @@ const PlanetPage = () => {
 			</Head>
 			<div className="planet-page">
 				<h1 className="page-title">Explore Celestial Bodies</h1>
+				<div className="planet-dropdown">
+					<label>Select a Celestial Body:</label>
+					<select value={selectedPlanet} onChange={handleChangePlanet}>
+						{Object.keys(planetData).map((planet) => (
+							<option key={planet} value={planet}>
+								{planetData[planet].name}
+							</option>
+						))}
+					</select>
+				</div>
 				<div className="planet-data-container">
 					<div className="planet-details">
 						<h3 className="planet-name">{celestialBody.name}</h3>
@@ -93,17 +103,6 @@ const PlanetPage = () => {
 							))}
 						</ul>
 					</div>
-				</div>
-
-				<div className="planet-dropdown">
-					<label>Select a Celestial Body:</label>
-					<select value={selectedPlanet} onChange={handleChangePlanet}>
-						{Object.keys(planetData).map((planet) => (
-							<option key={planet} value={planet}>
-								{planetData[planet].name}
-							</option>
-						))}
-					</select>
 				</div>
 			</div>
 		</Fragment>

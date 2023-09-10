@@ -14,7 +14,8 @@ $background-color-3: #020202; // Deep black
 $background-color-4: #040404; // Darker black
 
 body {
-	height: 100vh;
+	position: relative;
+	height: 100%;
 	width: 100%;
 	background: linear-gradient(
 		135deg,
@@ -24,18 +25,8 @@ body {
 		$background-color-4 80%,
 		$background-color-1 100%
 	);
-	// background-attachment: fixed;
-	// background-size: contain;
-	// background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+	background-repeat: no-repeat;
 	color: var(--white);
-	// margin: 0;
-	// padding: 0;
-	// display: flex;
-	// align-items: center;
-	// justify-content: center;
-	// height: 100vh;
-	// overflow: hidden;
-	position: relative;
-	/* Add a subtle box-shadow to the body for depth */
-	// box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }

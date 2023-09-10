@@ -8,7 +8,7 @@
 	.page-title {
 		font-family: var(--font-elianto);
 		text-transform: uppercase;
-		font-size: var(--font-6);
+		font-size: var(--font-5);
 		letter-spacing: 3px;
 		background: var(--primary-color-2);
 		-webkit-background-clip: text;
@@ -24,16 +24,17 @@
 		width: 100%;
 		max-width: 1400px;
 		height: 100%;
-		max-height: 1500px;
+		max-height: 1800px;
+		margin: 2% 0 5% 0;
 		.planet-details {
 			@include flex-container(column, wrap, flex-start, center);
 
 			.planet-name {
 				font-family: var(--font-orbitron);
 				font-size: var(--font-6);
-				letter-spacing: 4px;
+				letter-spacing: 6px;
 				margin-bottom: 2%;
-				color: var(--cool-yellow);
+				color: var(--tertiary-accent);
 				font-weight: 400;
 				text-decoration: underline;
 				transition: transform 0.2s ease-in-out;
@@ -49,12 +50,11 @@
 					text-align: center;
 					margin-bottom: 20px;
 					strong {
-						// font-weight: bold;
 						font-family: var(--font-roboto);
 						font-size: var(--font-9);
 						letter-spacing: 2px;
 						font-weight: 400;
-						color: var(--cool-blue);
+						color: var(--primary-accent);
 						margin: 0 0 2% 2%;
 					}
 
@@ -82,14 +82,6 @@
 				box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
 				animation: scaleIn 1s forwards;
 				transition: transform 0.3s ease-in-out;
-
-				img {
-					object-fit: cover;
-					width: 100%;
-					height: 100%;
-					border-radius: 20px;
-				}
-
 				&:hover {
 					transform: scale(1.05);
 				}
@@ -97,21 +89,19 @@
 		}
 
 		.planet-agency-mission {
-			flex: 1;
-			padding: 40px;
-			text-align: center;
+			padding: 5%;
+			@include flex-container(row, wrap, center, center);
 
 			h4 {
-				font-size: 36px;
-				font-weight: bold;
-				margin-bottom: 20px;
-				color: #ffc107;
-				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-				animation: fadeIn 1s forwards;
+				font-family: var(--font-orbitron);
+				font-size: var(--font-6);
+				letter-spacing: 6px;
+				margin-bottom: 2%;
+				color: var(--tertiary-accent);
+				font-weight: 400;
+				text-decoration: underline;
 				transition: transform 0.2s ease-in-out;
-				cursor: pointer;
-
-				// Hover Animation
+				cursor: default;
 				&:hover {
 					transform: scale(1.05);
 				}
@@ -125,42 +115,41 @@
 					margin-bottom: 20px;
 
 					.agency {
-						display: flex;
-						align-items: center;
-						justify-content: center;
+						@include flex-container(row, nowrap, flex-start, flex-start);
 
 						img {
-							width: 120px;
-							height: 120px;
-							margin-right: 15px;
-							border-radius: 50%;
-							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+							width: 100px;
+							height: 100px;
+							margin: 0 2% 0 0;
+							border-radius: 30%;
+							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 							transition: transform 0.3s ease-in-out;
-
-							// Hover Animation
 							&:hover {
-								transform: scale(1.1);
+								transform: scale(1.05);
 							}
 						}
 
 						strong {
-							font-weight: bold;
-							color: #fff;
-							font-size: 24px;
+							font-family: var(--font-roboto);
+							font-size: var(--font-9);
+							letter-spacing: 2px;
+							font-weight: 400;
+							color: var(--cool-blue);
+							margin: 2% 0 2% 2%;
 							transition: transform 0.2s ease-in-out;
-							cursor: pointer;
 
-							// Hover Animation
 							&:hover {
 								transform: scale(1.05);
 							}
 						}
 
 						.mission {
-							margin-top: 5px;
-							margin-left: 15px;
-							color: #ccc;
-							font-size: 20px;
+							font-family: var(--font-roboto);
+							font-size: var(--font-10);
+							letter-spacing: 2px;
+							font-weight: 400;
+							color: var(--white);
+							margin: 2.3% 0 2% 2%;
 						}
 					}
 				}
