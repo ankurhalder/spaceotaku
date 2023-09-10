@@ -1,0 +1,201 @@
+// planet-page.scss
+
+.planet-page {
+	font-family: "Arial", sans-serif;
+	background: radial-gradient(circle, #2a2a2a, #000000);
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	min-height: 100vh;
+	overflow: hidden;
+
+	.page-title {
+		font-size: 48px;
+		font-weight: bold;
+		color: #ffc107;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		animation: fadeInUp 1s forwards;
+	}
+
+	@keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.planet-data-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background-color: rgba(32, 32, 32, 0.9);
+		border-radius: 20px;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+		width: 100%;
+		max-width: 1200px;
+		transition: transform 0.3s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+
+		.planet-details {
+			flex: 1;
+			padding: 40px;
+			text-align: center;
+
+			.planet-name {
+				font-size: 54px;
+				font-weight: bold;
+				margin-bottom: 20px;
+				color: #ffc107;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+				animation: fadeIn 1s forwards;
+			}
+
+			.details {
+				.detail-item {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 20px;
+
+					strong {
+						font-weight: bold;
+						color: #fff;
+					}
+
+					span {
+						flex: 1;
+						margin-left: 15px;
+						color: #ccc;
+					}
+				}
+			}
+
+			.planet-image {
+				position: relative;
+				width: 100%;
+				max-height: 500px;
+				overflow: hidden;
+				border-radius: 20px;
+				margin-top: 40px;
+				box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+				animation: scaleIn 1s forwards;
+
+				img {
+					object-fit: cover;
+					width: 100%;
+					height: 100%;
+					border-radius: 20px;
+					transition: transform 0.3s ease-in-out;
+				}
+
+				img:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+
+		.planet-agency-mission {
+			flex: 1;
+			padding: 40px;
+			text-align: center;
+
+			h4 {
+				font-size: 36px;
+				font-weight: bold;
+				margin-bottom: 20px;
+				color: #ffc107;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+				animation: fadeIn 1s forwards;
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+
+				li {
+					margin-bottom: 20px;
+
+					.agency {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						img {
+							width: 120px;
+							height: 120px;
+							margin-right: 15px;
+							border-radius: 50%;
+							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+							transition: transform 0.3s ease-in-out;
+						}
+
+						img:hover {
+							transform: scale(1.1);
+						}
+
+						strong {
+							font-weight: bold;
+							color: #fff;
+							font-size: 24px;
+						}
+
+						.mission {
+							margin-top: 5px;
+							margin-left: 15px;
+							color: #ccc;
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.planet-dropdown {
+		margin-top: 20px;
+		width: 100%;
+		max-width: 400px;
+
+		label {
+			font-size: 24px;
+			font-weight: bold;
+			color: #ffc107;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+			animation: fadeIn 1s forwards;
+		}
+
+		select {
+			width: 100%;
+			padding: 15px;
+			margin-top: 10px;
+			border: none;
+			border-radius: 10px;
+			background-color: rgba(32, 32, 32, 0.9);
+			color: #fff;
+			font-size: 20px;
+			transition: background-color 0.3s ease-in-out;
+
+			option {
+				background-color: rgba(32, 32, 32, 0.9);
+			}
+
+			&:hover {
+				background-color: rgba(41, 41, 41, 0.9);
+			}
+
+			&:active {
+				background-color: rgba(24, 24, 24, 0.9);
+			}
+		}
+	}
+}
