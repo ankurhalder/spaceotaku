@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 import axios from "axios";
-import Image from "next/image";
+import Head from "next/head";
 const ISS_IMAGE_URL = "/ISS.png";
 
 const ISSMap = () => {
@@ -128,23 +128,38 @@ const ISSMap = () => {
 	}
 
 	return (
-		<div className="iss-map-container">
-			<h1>Live ISS Location</h1>
-			<p>Latitude: {issLocation.latitude}</p>
-			<p>Longitude: {issLocation.longitude}</p>
-			<p>
-				Your Latitude: {userLocation ? userLocation.latitude : "Loading..."}
-			</p>
-			<p>
-				Your Longitude: {userLocation ? userLocation.longitude : "Loading..."}
-			</p>
-			<p>
-				Distance to ISS:{" "}
-				{distanceToISS ? `${distanceToISS} km` : "Calculating..."}
-			</p>
-			<Image src={ISS_IMAGE_URL} alt="ISS" width={32} height={32} />
-			<div id="map"></div>
-		</div>
+		<Fragment>
+			<Head>
+				<title>
+					Track International Space Station (ISS) Location in Real Time
+				</title>
+				<meta
+					name="description"
+					content="Stay updated with the real-time location of the International Space Station (ISS). Calculate your distance and explore its coordinates on an interactive map."
+				/>
+				<meta
+					name="keywords"
+					content="ISS tracking, International Space Station location, real-time ISS tracker, ISS coordinates, space exploration, Earth's orbit, ISS map"
+				/>
+			</Head>
+			<div className="iss-map-container">
+				<h1>Live ISS(International Space Station) Location</h1>
+				<p>Latitude: {issLocation.latitude}</p>
+				<p>Longitude: {issLocation.longitude}</p>
+				<p>
+					Your Latitude: {userLocation ? userLocation.latitude : "Loading..."}
+				</p>
+				<p>
+					Your Longitude: {userLocation ? userLocation.longitude : "Loading..."}
+				</p>
+				<p>
+					Distance to ISS:{" "}
+					{distanceToISS ? `${distanceToISS} km` : "Calculating..."}
+				</p>
+
+				<div id="map"></div>
+			</div>
+		</Fragment>
 	);
 };
 
