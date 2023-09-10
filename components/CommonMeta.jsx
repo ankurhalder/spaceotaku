@@ -31,8 +31,6 @@ export default function CommonMeta() {
 			<meta name="mobile-web-app-capable" content="yes" />
 			<meta name="apple-mobile-web-app-capable" content="yes" />
 			<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-			{/* Canonical Link (to specify the preferred version of your page) */}
-			<link rel="canonical" href="https://www.spaceotaku.online/" />
 			{/* Geo locations */}
 			<meta name="geo.placename" content="Kolkata, West Bengal, India" />
 			<meta name="geo.position" content="22.476632;88.322844" />
