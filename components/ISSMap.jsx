@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
-import https from "https";
 const ISS_IMAGE_URL = "/ISS.png";
 
 const ISSMap = () => {
