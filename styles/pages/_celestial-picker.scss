@@ -75,12 +75,12 @@
 				.detail-item {
 					@include flex-container(column, wrap, flex-start, flex-start);
 					text-align: center;
-					margin-bottom: 20px;
+					// margin-bottom: 2px;
 					@media (max-width: #{$breakpoint-desktop}) {
-						margin-bottom: 15px;
+						// margin-bottom: 15px;
 					}
 					@media (max-width: #{$breakpoint-phone}) {
-						margin-bottom: 10px;
+						// margin-bottom: 10px;
 					}
 					strong {
 						font-family: var(--font-roboto);
@@ -117,9 +117,9 @@
 			.planet-image {
 				position: relative;
 				width: 100%;
-				max-width: 500px;
+				max-width: 450px;
 				height: 100%;
-				max-height: 500px;
+				max-height: 450px;
 				overflow: hidden;
 				right: 40%;
 				top: 7%;
@@ -146,7 +146,7 @@
 		}
 
 		.planet-agency-mission {
-			padding: 5%;
+			padding: 2%;
 			@include flex-container(row, wrap, center, center);
 
 			h4 {
