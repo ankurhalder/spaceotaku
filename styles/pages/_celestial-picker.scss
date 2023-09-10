@@ -2,27 +2,11 @@
 
 .planet-page {
 	font-family: "Arial", sans-serif;
-	background: radial-gradient(circle, #2a2a2a, #000000);
-	color: #fff;
-	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
+	@include flex-container(column, wrap, flex-start, center);
 	min-height: 100vh;
-	overflow: hidden;
-
-	// Background Animation
-	animation: gradientShift 20s infinite alternate;
-
-	@keyframes gradientShift {
-		0% {
-			background: radial-gradient(circle, #2a2a2a, #000000);
-		}
-		100% {
-			background: radial-gradient(circle, #000000, #2a2a2a);
-		}
-	}
 
 	.page-title {
 		font-size: 48px;

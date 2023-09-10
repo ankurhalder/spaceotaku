@@ -4,8 +4,8 @@
 @mixin flex-container(
 	$direction: row,
 	$wrap: nowrap,
-	$justify: center,
-	$align: center
+	$justify: flex-start,
+	$align: flex-start
 ) {
 	display: flex;
 	flex-direction: $direction;
