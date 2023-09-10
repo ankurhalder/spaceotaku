@@ -7,6 +7,8 @@
 	min-height: 100vh;
 	@media (max-width: #{$breakpoint-desktop}) {
 	}
+	@media (max-width: #{$breakpoint-phone}) {
+	}
 	.page-title {
 		font-family: var(--font-elianto);
 		text-transform: uppercase;
@@ -20,6 +22,11 @@
 		@media (max-width: #{$breakpoint-desktop}) {
 			padding: 0.8% 0 0.8% 0;
 			font-size: var(--font-6);
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			padding: 0.8% 0 0.8% 0;
+			font-size: var(--font-10);
+			margin: 0 0 0 10%;
 		}
 	}
 
