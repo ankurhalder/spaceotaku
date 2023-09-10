@@ -24,12 +24,22 @@ async function generateSitemap() {
 		changefreq: "daily",
 		priority: 1.0,
 	});
-
+	sitemapStream.write({
+		url: "/isstracker",
+		changefreq: "daily",
+		priority: 1.0,
+	});
 	// End the sitemap stream AFTER writing URLs
 	sitemapStream.end();
 
 	// Wait for the stream to finish before proceeding
-	await streamToPromise(sitemapStream);
+	const sitemap = await streamToPromise(sitemapStream);
+
+	// Write the sitemap to a file in the public directory
+	const sitemapPath = resolve("./public/sitemap.xml");
+	const writeStream = createWriteStream(sitemapPath);
+	writeStream.write(sitemap);
+	writeStream.end();
 }
 
 generateSitemap()
