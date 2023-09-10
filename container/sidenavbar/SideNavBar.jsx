@@ -21,7 +21,11 @@ const SideNavbar = ({ isOpen, setIsOpen }) => {
 			icon: "/sidenavbar/planets.png",
 			label: "Celestial Bodies",
 		},
-		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
+		{
+			href: "/isstracker",
+			icon: "/sidenavbar/satelite.png",
+			label: "ISS Tracker",
+		},
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },

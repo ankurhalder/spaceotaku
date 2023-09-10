@@ -133,10 +133,10 @@ const ISSMap = () => {
 			<p>Latitude: {issLocation.latitude}</p>
 			<p>Longitude: {issLocation.longitude}</p>
 			<p>
-				User Latitude: {userLocation ? userLocation.latitude : "Loading..."}
+				Your Latitude: {userLocation ? userLocation.latitude : "Loading..."}
 			</p>
 			<p>
-				User Longitude: {userLocation ? userLocation.longitude : "Loading..."}
+				Your Longitude: {userLocation ? userLocation.longitude : "Loading..."}
 			</p>
 			<p>
 				Distance to ISS:{" "}
