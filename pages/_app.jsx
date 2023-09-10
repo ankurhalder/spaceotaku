@@ -1,4 +1,5 @@
 import "../styles/main.scss";
+import "leaflet/dist/leaflet.css";
 import { Fragment, useState } from "react";
 import Layout from "@/layout/Layout";
 export default function App({ Component, pageProps }) {
