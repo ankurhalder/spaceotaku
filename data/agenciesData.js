@@ -264,6 +264,7 @@ const agenciesData = {
 			},
 			{
 				name: "Johns Hopkins University Applied Physics Laboratory (JHUAPL)",
+				image: "JHUAPL",
 				missions: ["New Horizons"],
 			},
 			{
@@ -278,6 +279,41 @@ const agenciesData = {
 			},
 		],
 	},
+	moon: {
+		name: "Moon (Luna)",
+		agencies: [
+			{
+				name: "National Aeronautics and Space Administration (NASA)",
+				image: "NASA",
+				missions: [
+					"Apollo Program",
+					"Lunar Reconnaissance Orbiter (LRO)",
+					"Artemis Program (planned)",
+				],
+			},
+			{
+				name: "European Space Agency (ESA)",
+				image: "ESA",
+				missions: ["SMART-1", "Lunar Gateway (planned)"],
+			},
+			{
+				name: "China National Space Administration (CNSA)",
+				image: "CNSA",
+				missions: ["Chang'e Program (multiple missions)"],
+			},
+			{
+				name: "Indian Space Research Organisation (ISRO)",
+				image: "ISRO",
+				missions: ["Chandrayaan-1", "Chandrayaan-2", "Chaandrayaan-3"],
+			},
+			{
+				name: "Russian Federal Space Agency (ROSCOSMOS)",
+				image: "ROSCOSMOS",
+				missions: ["Luna Program (multiple missions)"],
+			},
+		],
+	},
+
 	vesta: {
 		name: "Vesta (asteroid)",
 		agencies: [
@@ -353,6 +389,7 @@ const agenciesData = {
 			},
 			{
 				name: "Johns Hopkins University Applied Physics Laboratory (JHUAPL)",
+				image: "JHUAPL",
 				missions: ["New Horizons"],
 			},
 			{
@@ -629,6 +666,220 @@ const agenciesData = {
 				name: "Russian Federal Space Agency (ROSCOSMOS)",
 				image: "ROSCOSMOS",
 				missions: ["Venus program (studied Venus, flybys)"],
+			},
+		],
+	},
+	ganymede: {
+		name: "Ganymede",
+		agencies: [
+			{
+				name: "National Aeronautics and Space Administration (NASA)",
+				image: "NASA",
+				missions: ["Galileo spacecraft", "Europa Clipper (upcoming)"],
+			},
+			{
+				name: "European Space Agency (ESA)",
+				image: "ESA",
+				missions: ["JUpiter ICy moons Explorer (JUICE)"],
+			},
+		],
+	},
+	titan: {
+		name: "Titan",
+		agencies: [
+			{
+				name: "National Aeronautics and Space Administration (NASA)",
+				image: "NASA",
+				missions: [
+					"Cassini-Huygens",
+					"Dragonfly (upcoming)",
+					"Titan Mare Explorer (TiME, concept study)",
+				],
+			},
+			{
+				name: "European Space Agency (ESA)",
+				image: "ESA",
+				missions: ["Huygens (part of Cassini-Huygens)"],
+			},
+		],
+	},
+	eris: {
+		name: "Eris",
+		description:
+			"A dwarf planet in the Kuiper Belt, known for its discovery as part of the debate over Pluto's classification.",
+		agencies: [
+			{
+				name: "International Astronomical Union (IAU)",
+				image: "IAU",
+				missions: ["None (No dedicated missions as of last knowledge update)"],
+			},
+		],
+	},
+	makemake: {
+		name: "Makemake",
+		description:
+			"A dwarf planet in the Kuiper Belt, notable for its reddish color and the second brightest Kuiper Belt object after Pluto.",
+		agencies: [
+			{
+				name: "International Astronomical Union (IAU)",
+				image: "IAU",
+				missions: ["None (No dedicated missions as of last knowledge update)"],
+			},
+		],
+	},
+	haumea: {
+		name: "Haumea",
+		description:
+			"A dwarf planet in the Kuiper Belt, notable for its elongated shape and rapid rotation.",
+		agencies: [
+			{
+				name: "International Astronomical Union (IAU)",
+				image: "IAU",
+				missions: ["None (No dedicated missions as of last knowledge update)"],
+			},
+		],
+	},
+	io: {
+		name: "Io",
+		description:
+			"One of Jupiter's largest moons known for its intense volcanic activity.",
+		agencies: [
+			{
+				name: "National Aeronautics and Space Administration (NASA)",
+				image: "NASA",
+				missions: [
+					"Pioneer 10",
+					"Pioneer 11",
+					"Voyager 1",
+					"Voyager 2",
+					"Galileo spacecraft",
+					"Juno (Io observations as part of its mission to Jupiter)",
+				],
+			},
+			{
+				name: "European Space Agency (ESA)",
+				image: "ESA",
+				missions: [
+					"None (No dedicated missions, but ESA has collaborated on Jovian missions)",
+				],
+			},
+		],
+	},
+	europa: {
+		name: "Europa",
+		description:
+			"A moon of Jupiter with a subsurface ocean, making it a target for the search for extraterrestrial life.",
+		agencies: [
+			{
+				name: "National Aeronautics and Space Administration (NASA)",
+				image: "NASA",
+				missions: ["Galileo spacecraft", "Europa Clipper (upcoming)"],
+			},
+			{
+				name: "European Space Agency (ESA)",
+				image: "ESA",
+				missions: [
+					"JUpiter ICy moons Explorer (JUICE, includes Europa observations)",
+				],
+			},
+		],
+	},
+	enceladus: {
+		name: "Enceladus",
+		description:
+			"A moon of Saturn with active geysers and a subsurface ocean, considered a key target in the search for extraterrestrial life.",
+		agencies: [
+			{
+				name: "National Aeronautics and Space Administration (NASA)",
+				image: "NASA",
+				missions: [
+					"Voyager 1",
+					"Voyager 2",
+					"Cassini-Huygens",
+					"Dragonfly (upcoming, focused on Titan but relevant to Enceladus studies)",
+				],
+			},
+			{
+				name: "European Space Agency (ESA)",
+				image: "ESA",
+				missions: [
+					"None (No dedicated missions, but ESA has participated in Cassini-Huygens mission)",
+				],
+			},
+		],
+	},
+	triton: {
+		name: "Triton",
+		description:
+			"The largest moon of Neptune, known for its retrograde orbit and geologic activity, including cryovolcanism.",
+		agencies: [
+			{
+				name: "National Aeronautics and Space Administration (NASA)",
+				image: "NASA",
+				missions: ["None (No dedicated missions as of last knowledge update)"],
+			},
+			{
+				name: "European Space Agency (ESA)",
+				image: "ESA",
+				missions: ["None (No dedicated missions as of last knowledge update)"],
+			},
+		],
+	},
+	hygiea: {
+		name: "Hygiea",
+		description:
+			"One of the largest asteroids in the asteroid belt, located between Mars and Jupiter.",
+		agencies: [
+			{
+				name: "International Astronomical Union (IAU)",
+				image: "IAU",
+				missions: ["None (No dedicated missions as of last knowledge update)"],
+			},
+			{
+				name: "NASA and Other Space Agencies",
+				image: "NASA",
+				missions: ["None (No dedicated missions as of last knowledge update)"],
+			},
+		],
+	},
+	phobos: {
+		name: "Phobos",
+		description:
+			"One of the two moons of Mars, known for its irregular shape and proximity to the planet.",
+		agencies: [
+			{
+				name: "National Aeronautics and Space Administration (NASA)",
+				image: "NASA",
+				missions: [
+					"Mars Reconnaissance Orbiter (observations)",
+					"Mars Express (observations)",
+					"Phobos-Grunt (Russia, attempted mission)",
+				],
+			},
+			{
+				name: "Russian Federal Space Agency (ROSCOSMOS)",
+				image: "ROSCOSMOS",
+				missions: ["Phobos-Grunt (attempted mission)"],
+			},
+		],
+	},
+	deimos: {
+		name: "Deimos",
+		description:
+			"The smaller and outermost moon of Mars, known for its irregular shape and proximity to the planet.",
+		agencies: [
+			{
+				name: "National Aeronautics and Space Administration (NASA)",
+				image: "NASA",
+				missions: [
+					"Mars Reconnaissance Orbiter (observations)",
+					"Mars Express (observations)",
+				],
+			},
+			{
+				name: "Russian Federal Space Agency (ROSCOSMOS)",
+				image: "ROSCOSMOS",
+				missions: ["None (as of last knowledge update)"],
 			},
 		],
 	},
