@@ -30,7 +30,7 @@ const PlanetPage = () => {
 				<h1 className="page-title">Explore Celestial Bodies</h1>
 				<div className="planet-data-container">
 					<div className="planet-details">
-						<h3>{celestialBody.name}</h3>
+						<h3 className="planet-name">{celestialBody.name}</h3>
 						<div className="details">
 							<div className="detail-item">
 								<strong>Distance from Sun:</strong>
@@ -61,14 +61,15 @@ const PlanetPage = () => {
 								<span>{celestialBody.atmosphere}</span>
 							</div>
 						</div>
+						<div className="planet-image">
+							<Image
+								src={`/celestial/${selectedPlanet}.png`}
+								alt={`${selectedPlanet} Image`}
+								layout="fill"
+							/>
+						</div>
 					</div>
-					<div className="planet-image">
-						<Image
-							src={`/celestial/${selectedPlanet}.png`}
-							alt={`${selectedPlanet} Image`}
-							layout="fill"
-						/>
-					</div>
+
 					<div className="planet-agency-mission">
 						<h4>Agencies and Missions:</h4>
 						<ul>
