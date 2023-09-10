@@ -23,24 +23,10 @@
 		justify-content: space-between;
 		background-color: rgba(32, 32, 32, 0.9);
 		border-radius: 20px;
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 		width: 100%;
-		max-width: 1200px;
-		transition: transform 0.3s ease-in-out;
-		cursor: pointer;
-
-		// Smooth Scroll Behavior
-		scroll-behavior: smooth;
-
-		&:hover {
-			transform: scale(1.05);
-			box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
-		}
-
+		max-width: 1400px;
 		.planet-details {
-			flex: 1;
-			padding: 40px;
-			text-align: center;
+			@include flex-container(column, wrap, flex-start, center);
 
 			.planet-name {
 				font-size: 54px;
@@ -78,9 +64,10 @@
 			}
 
 			.planet-image {
-				position: relative;
 				width: 100%;
-				max-height: 500px;
+				max-width: 400px;
+				height: 100%;
+				max-height: 400px;
 				overflow: hidden;
 				border-radius: 20px;
 				margin-top: 40px;
