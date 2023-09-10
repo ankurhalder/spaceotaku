@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
+import https from "https";
 const ISS_IMAGE_URL = "/ISS.png";
 
 const ISSMap = () => {
@@ -12,7 +13,10 @@ const ISSMap = () => {
 		const fetchISSLocation = async () => {
 			try {
 				const response = await axios.get(
-					"http://api.open-notify.org/iss-now.json"
+					"http://api.open-notify.org/iss-now.json", // Use HTTP for this specific request
+					{
+						httpsAgent: new https.Agent({ rejectUnauthorized: false }), // Allow insecure HTTPS requests
+					}
 				);
 				setISSLocation(response.data.iss_position);
 			} catch (error) {
