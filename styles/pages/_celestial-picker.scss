@@ -1,40 +1,20 @@
 // planet-page.scss
 
 .planet-page {
-	font-family: "Arial", sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	font-family: var(--font-roboto);
 	@include flex-container(column, wrap, flex-start, center);
+	height: 100%;
 	min-height: 100vh;
-
 	.page-title {
-		font-size: 48px;
-		font-weight: bold;
-		color: #ffc107;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-		animation: fadeInUp 1s forwards;
-		transition: transform 0.2s ease-in-out;
-		cursor: pointer;
-
-		// Parallax Scrolling
-		transform: translateX(0);
-		transition: transform 0.4s ease-in-out;
-
-		&:hover {
-			transform: scale(1.05) translateX(20px);
-		}
-	}
-
-	@keyframes fadeInUp {
-		0% {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		100% {
-			opacity: 1;
-			transform: translateY(0);
-		}
+		font-family: var(--font-elianto);
+		text-transform: uppercase;
+		font-size: var(--font-6);
+		letter-spacing: 3px;
+		background: var(--primary-color-2);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		padding: 0.5% 0 0.5% 0;
 	}
 
 	.planet-data-container {
