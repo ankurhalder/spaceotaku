@@ -14,6 +14,7 @@ const ISSMap = () => {
 			try {
 				const response = await axios.get("/api/iss");
 				setISSLocation(response.data.iss_position);
+				console.log("ISS location:", response.data.iss_position);
 			} catch (error) {
 				console.error("Error fetching ISS location:", error);
 			}
