@@ -7,22 +7,81 @@ const ISSMap = () => {
 	const [issLocation, setISSLocation] = useState(null);
 	const [map, setMap] = useState(null);
 	const [issIcon, setISSIcon] = useState(null);
+	const [userLocation, setUserLocation] = useState(null);
+	const [distanceToISS, setDistanceToISS] = useState(null);
+
+	function calculateDistance(lat1, lon1, lat2, lon2) {
+		const R = 6371; // Radius of the Earth in kilometers
+		const lat1Rad = (Math.PI / 180) * lat1;
+		const lat2Rad = (Math.PI / 180) * lat2;
+		const lon1Rad = (Math.PI / 180) * lon1;
+		const lon2Rad = (Math.PI / 180) * lon2;
+
+		const dLat = lat2Rad - lat1Rad;
+		const dLon = lon2Rad - lon1Rad;
+
+		const a =
+			Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+			Math.cos(lat1Rad) *
+				Math.cos(lat2Rad) *
+				Math.sin(dLon / 2) *
+				Math.sin(dLon / 2);
+		const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+		const distance = R * c; // Distance in kilometers
+		return distance;
+	}
+
+	const getUserLocation = () => {
+		if ("geolocation" in navigator) {
+			navigator.geolocation.getCurrentPosition((position) => {
+				setUserLocation({
+					latitude: position.coords.latitude,
+					longitude: position.coords.longitude,
+				});
+			});
+		}
+	};
 
 	useEffect(() => {
 		const fetchISSLocation = async () => {
 			try {
 				const response = await axios.get("/api/iss");
 				setISSLocation(response.data.iss_position);
-				console.log("ISS location:", response.data.iss_position);
 			} catch (error) {
 				console.error("Error fetching ISS location:", error);
 			}
 		};
-		const interval = setInterval(fetchISSLocation, 500);
-		return () => clearInterval(interval);
 
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+		const interval = setInterval(fetchISSLocation, 500);
+
+		return () => clearInterval(interval);
 	}, []);
+
+	useEffect(() => {
+		getUserLocation();
+	}, []);
+
+	useEffect(() => {
+		let timeoutId;
+
+		const updateDistance = () => {
+			if (userLocation && issLocation) {
+				const distance = calculateDistance(
+					userLocation.latitude,
+					userLocation.longitude,
+					issLocation.latitude,
+					issLocation.longitude
+				);
+				setDistanceToISS(distance.toFixed(2));
+			}
+			timeoutId = setTimeout(updateDistance, 500);
+		};
+
+		updateDistance();
+
+		return () => clearTimeout(timeoutId);
+	}, [userLocation, issLocation]);
 
 	useEffect(() => {
 		if (typeof window !== "undefined" && issLocation) {
@@ -33,7 +92,6 @@ const ISSMap = () => {
 						3
 					);
 
-					// Move the zoom controls to the top-right corner
 					newMap.zoomControl.setPosition("topright");
 
 					L.tileLayer(
@@ -74,6 +132,16 @@ const ISSMap = () => {
 			<h1>Live ISS Location</h1>
 			<p>Latitude: {issLocation.latitude}</p>
 			<p>Longitude: {issLocation.longitude}</p>
+			<p>
+				User Latitude: {userLocation ? userLocation.latitude : "Loading..."}
+			</p>
+			<p>
+				User Longitude: {userLocation ? userLocation.longitude : "Loading..."}
+			</p>
+			<p>
+				Distance to ISS:{" "}
+				{distanceToISS ? `${distanceToISS} km` : "Calculating..."}
+			</p>
 			<Image src={ISS_IMAGE_URL} alt="ISS" width={32} height={32} />
 			<div id="map"></div>
 		</div>
