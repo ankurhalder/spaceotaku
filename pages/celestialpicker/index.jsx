@@ -65,8 +65,7 @@ const PlanetPage = () => {
 							<Image
 								src={`/celestial/${selectedPlanet}.png`}
 								alt={`${selectedPlanet} Image`}
-								height={300}
-								width={300}
+								layout="fill"
 							/>
 						</div>
 					</div>

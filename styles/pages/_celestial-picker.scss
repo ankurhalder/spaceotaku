@@ -14,31 +14,30 @@
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
-		padding: 0.5% 0 0.5% 0;
+		padding: 1% 0 1% 0;
 	}
 
 	.planet-data-container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		background-color: rgba(32, 32, 32, 0.9);
+		@include flex-container(row, wrap, space-between, none);
+		background-color: rgba(32, 32, 32, 1);
 		border-radius: 20px;
 		width: 100%;
 		max-width: 1400px;
+		height: 100%;
+		max-height: 1500px;
 		.planet-details {
 			@include flex-container(column, wrap, flex-start, center);
 
 			.planet-name {
-				font-size: 54px;
-				font-weight: bold;
-				margin-bottom: 20px;
-				color: #ffc107;
-				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-				animation: fadeIn 1s forwards;
+				font-family: var(--font-orbitron);
+				font-size: var(--font-6);
+				letter-spacing: 4px;
+				margin-bottom: 2%;
+				color: var(--cool-yellow);
+				font-weight: 400;
+				text-decoration: underline;
 				transition: transform 0.2s ease-in-out;
-				cursor: pointer;
-
-				// Hover Animation
+				cursor: default;
 				&:hover {
 					transform: scale(1.05);
 				}
@@ -46,31 +45,40 @@
 
 			.details {
 				.detail-item {
-					display: flex;
-					justify-content: space-between;
+					@include flex-container(column, wrap, flex-start, flex-start);
+					text-align: center;
 					margin-bottom: 20px;
-
 					strong {
-						font-weight: bold;
-						color: #fff;
+						// font-weight: bold;
+						font-family: var(--font-roboto);
+						font-size: var(--font-9);
+						letter-spacing: 2px;
+						font-weight: 400;
+						color: var(--cool-blue);
+						margin: 0 0 2% 2%;
 					}
 
 					span {
-						flex: 1;
-						margin-left: 15px;
-						color: #ccc;
+						font-family: var(--font-roboto);
+						font-size: var(--font-10);
+						letter-spacing: 2px;
+						font-weight: 400;
+						color: var(--cool-yellow);
+						margin: 0 0 2% 2%;
 					}
 				}
 			}
 
 			.planet-image {
+				position: relative;
 				width: 100%;
-				max-width: 400px;
+				max-width: 500px;
 				height: 100%;
-				max-height: 400px;
+				max-height: 500px;
 				overflow: hidden;
+				right: 40%;
+				top: 5%;
 				border-radius: 20px;
-				margin-top: 40px;
 				box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
 				animation: scaleIn 1s forwards;
 				transition: transform 0.3s ease-in-out;
