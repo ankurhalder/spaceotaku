@@ -1,10 +1,11 @@
 import "../styles/main.scss";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Layout from "@/layout/Layout";
 export default function App({ Component, pageProps }) {
+	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<Fragment>
-			<Layout>
+			<Layout isOpen={isOpen} setIsOpen={setIsOpen}>
 				<Component {...pageProps} />
 			</Layout>
 		</Fragment>

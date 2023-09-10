@@ -1,3 +1,15 @@
+@media (max-width: #{$breakpoint-phone}) {
+	#btn {
+		position: absolute;
+		top: -0.5%;
+		right: 88%;
+		transform: translateY(0%) translateX(0%);
+		font-size: 40px;
+		text-align: center;
+		cursor: pointer;
+		transition: all 0.5s ease;
+	}
+}
 .sidebar {
 	position: fixed;
 	left: 0;
@@ -8,8 +20,49 @@
 	padding: 6px 14px;
 	z-index: 1000;
 	transition: all 0.5s ease;
-
+	@media (max-width: #{$breakpoint-phone}) {
+		display: none;
+	}
 	&.open {
+		@media (max-width: #{$breakpoint-phone}) {
+			display: block;
+			width: 250px;
+
+			.logo-details {
+				display: grid;
+				grid-template-rows: repeat(3, 1fr);
+				margin-bottom: 100px;
+				.logo-container {
+					height: 100px;
+					width: 100px;
+					margin: 10px 0 0 40px;
+					object-fit: cover;
+					border-radius: 12px;
+					opacity: 1;
+					transition: all 0.5s ease;
+				}
+
+				.logo_name {
+					opacity: 1;
+					transition: all 0.5s ease;
+					margin: 20px 0 0 15px;
+					font-family: var(--font-elianto);
+					font-size: var(--font-12);
+					text-transform: uppercase;
+					letter-spacing: 2px;
+				}
+				#btn {
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translateY(20%) translateX(10%);
+					font-size: 40px;
+					text-align: center;
+					cursor: pointer;
+					transition: all 0.5s ease;
+				}
+			}
+		}
 		width: 250px;
 
 		.logo-details {
