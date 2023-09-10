@@ -18,6 +18,7 @@ const ISSMap = () => {
 			} catch (error) {
 				console.error("Error fetching ISS location:", error);
 				console.log("Error details:", error.message); // Log the error details
+				console.log("Error response:", error.response); // Log the response object if available
 			}
 		};
 
