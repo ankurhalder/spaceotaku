@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
-
-// Replace '/ISS.png' with the correct path to your custom ISS icon image
 const ISS_IMAGE_URL = "/ISS.png";
 
 const ISSMap = () => {
@@ -19,13 +17,11 @@ const ISSMap = () => {
 				setISSLocation(response.data.iss_position);
 			} catch (error) {
 				console.error("Error fetching ISS location:", error);
+				console.log("Error details:", error.message); // Log the error details
 			}
 		};
 
-		// Fetch ISS location every 0.5 seconds (500 milliseconds)
 		const interval = setInterval(fetchISSLocation, 500);
-
-		// Cleanup the interval on component unmount
 		return () => clearInterval(interval);
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
