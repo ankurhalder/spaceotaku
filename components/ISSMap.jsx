@@ -143,16 +143,16 @@ const ISSMap = () => {
 				/>
 			</Head>
 			<div className="iss-map-container">
-				<h1>Live ISS(International Space Station) Location</h1>
-				<p>Latitude: {issLocation.latitude}</p>
-				<p>Longitude: {issLocation.longitude}</p>
-				<p>
+				<h1>Live International Space Station (ISS) Location</h1>
+				<p className="lat">Latitude: {issLocation.latitude}</p>
+				<p className="lon">Longitude: {issLocation.longitude}</p>
+				<p className="user-lat">
 					Your Latitude: {userLocation ? userLocation.latitude : "Loading..."}
 				</p>
-				<p>
+				<p className="user-lon">
 					Your Longitude: {userLocation ? userLocation.longitude : "Loading..."}
 				</p>
-				<p>
+				<p className="distance">
 					Distance to ISS:{" "}
 					{distanceToISS ? `${distanceToISS} km` : "Calculating..."}
 				</p>
