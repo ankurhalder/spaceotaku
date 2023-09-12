@@ -2,28 +2,41 @@
 	.tab-nav {
 		display: flex;
 		justify-content: center;
-		background-color: #333;
+		background-color: #1e2a38;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 1;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+		transition: background-color 0.3s ease-in-out;
 
 		button {
 			background-color: transparent;
 			border: none;
-			color: white;
+			color: #ffffff;
 			padding: 10px 20px;
 			cursor: pointer;
+			font-size: 18px;
+			font-weight: bold;
+			transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
+
+			&:hover {
+				background-color: #ff5722;
+				color: #fff;
+				transform: translateY(-3px);
+			}
 
 			&.active {
-				background-color: #555;
+				background-color: #ff5722;
+				color: #fff;
+				border-bottom: 3px solid #ffffff;
 			}
 		}
 	}
 
 	/* Define styles for the content area */
 	.content {
-		margin-top: 50px; /* Adjust margin to account for fixed navigation bar */
+		margin-top: 60px; /* Adjust margin to account for fixed navigation bar */
 	}
 }
 

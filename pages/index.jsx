@@ -1,11 +1,14 @@
 import Head from "next/head";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Articles, Blogs, Reports } from "@/components";
 function Index() {
 	const [selectedTab, setSelectedTab] = useState("articles");
 	const handleTabChange = (tab) => {
 		setSelectedTab(tab);
 	};
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [selectedTab]);
 	return (
 		<Fragment>
 			<Head>
@@ -20,7 +23,7 @@ function Index() {
 				/>
 				<link rel="canonical" href="https://www.spaceotaku.online/" />
 			</Head>
-			<div className="landing-page-sample-contents">
+			{/* <div className="landing-page-sample-contents">
 				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>
 				<h3>Created by Ankur Halder</h3>
 				<h4>
@@ -96,7 +99,7 @@ function Index() {
 					Are you ready to embark on this cosmic voyage? Let&aposs explore the
 					cosmos together!
 				</p>
-			</div>
+			</div> */}
 
 			<div className="landing-container">
 				<nav className="tab-nav">
