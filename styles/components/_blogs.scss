@@ -8,7 +8,10 @@
 	margin: 0 0 0 25%;
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
+	@media (max-width: #{$breakpoint-phone}) {
+		margin: 0 0 0 15%;
+		width: 100%;
+	}
 	&:hover {
 		transform: translateY(-4px);
 		box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
@@ -22,6 +25,11 @@
 		font-weight: 500;
 		color: var(--cool-blue);
 		text-align: center;
+		@media (max-width: #{$breakpoint-phone}) {
+			font-size: var(--font-9);
+			letter-spacing: 2px;
+			margin-bottom: 1.5%;
+		}
 	}
 
 	ul {
@@ -40,6 +48,9 @@
 				transform: translateY(-4px);
 				box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 			}
+			@media (max-width: #{$breakpoint-phone}) {
+				padding: 10px;
+			}
 
 			h4 {
 				font-size: var(--font-10);
@@ -49,6 +60,11 @@
 				letter-spacing: 3.5px;
 				margin-bottom: 2%;
 				font-weight: 500;
+				@media (max-width: #{$breakpoint-phone}) {
+					font-size: var(--font-11);
+					letter-spacing: 4px;
+					margin-bottom: 4.5%;
+				}
 			}
 
 			p {
@@ -59,19 +75,30 @@
 				color: var(--white);
 				letter-spacing: 2px;
 				font-weight: 400;
+				@media (max-width: #{$breakpoint-phone}) {
+					font-size: var(--font-12);
+					letter-spacing: 2px;
+					margin-bottom: 2.5%;
+				}
 			}
 
 			a {
 				color: #00aaff;
 				text-decoration: none;
 				line-height: 1.6;
-				margin-bottom: 1.5%;
+				margin-bottom: 1%;
 				letter-spacing: 2px;
 				font-weight: 400;
 				transition: color 0.2s;
+				font-size: var(--font-15);
 
 				&:hover {
 					color: #0077aa;
+				}
+				@media (max-width: #{$breakpoint-phone}) {
+					font-size: var(--font-13);
+					letter-spacing: 2px;
+					margin-bottom: 1.5%;
 				}
 			}
 
@@ -81,6 +108,9 @@
 				margin-top: 2%;
 				border-radius: 8px;
 				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+				@media (max-width: #{$breakpoint-phone}) {
+					margin-top: 4%;
+				}
 			}
 
 			.launches,
@@ -89,6 +119,9 @@
 				padding: 16px;
 				background-color: #1e1e1e;
 				border-radius: 12px;
+				@media (max-width: #{$breakpoint-phone}) {
+					padding: 10px;
+				}
 
 				h6 {
 					font-size: var(--font-9);
@@ -98,6 +131,11 @@
 					margin-left: 1.5%;
 					margin-bottom: 12px;
 					color: #00aaff;
+					@media (max-width: #{$breakpoint-phone}) {
+						font-size: var(--font-10);
+						letter-spacing: 2px;
+						margin-bottom: 4.5%;
+					}
 				}
 
 				ul {
@@ -113,6 +151,11 @@
 							color: var(--cool-yellow);
 							letter-spacing: 4px;
 							font-weight: 400;
+							@media (max-width: #{$breakpoint-phone}) {
+								font-size: var(--font-12);
+								letter-spacing: 2px;
+								margin-bottom: 2.5%;
+							}
 						}
 					}
 				}
@@ -122,6 +165,9 @@
 				margin-top: 20px;
 				border: none;
 				border-top: 1px solid #656464;
+				@media (max-width: #{$breakpoint-phone}) {
+					margin-top: 10px;
+				}
 			}
 		}
 	}
