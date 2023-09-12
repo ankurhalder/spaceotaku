@@ -33,7 +33,7 @@ const Articles = () => {
 
 	return (
 		<div key={articles.id} className="articles">
-			<h1>Spaceflight News Articles</h1>
+			<h3>Spaceflight News Articles</h3>
 			<ul>
 				{articles.map((article) => (
 					<li key={article.id}>
