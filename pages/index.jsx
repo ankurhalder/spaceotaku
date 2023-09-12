@@ -1,8 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
-import { Fragment } from "react";
-
+import { Fragment, useState } from "react";
+import { Articles, Blogs, Reports } from "@/components";
 function Index() {
+	const [selectedTab, setSelectedTab] = useState("articles");
+	const handleTabChange = (tab) => {
+		setSelectedTab(tab);
+	};
 	return (
 		<Fragment>
 			<Head>
@@ -17,8 +20,7 @@ function Index() {
 				/>
 				<link rel="canonical" href="https://www.spaceotaku.online/" />
 			</Head>
-
-			<div className="landing-page">
+			<div className="landing-page-sample-contents">
 				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>
 				<h3>Created by Ankur Halder</h3>
 				<h4>
@@ -34,15 +36,15 @@ function Index() {
 					updates, all within easy reach.
 				</p>
 				<p>
-					At Space Otaku, we're driven by an unquenchable passion for everything
-					space-related. From the dazzling beauty of distant celestial bodies to
-					the incredible feats of astronauts venturing beyond our planet's
-					boundaries, we're here to share our wonder with you and make the
-					cosmos accessible to all.
+					At Space Otaku, we&aposre driven by an unquenchable passion for
+					everything space-related. From the dazzling beauty of distant
+					celestial bodies to the incredible feats of astronauts venturing
+					beyond our planet&aposs boundaries, we&aposre here to share our wonder
+					with you and make the cosmos accessible to all.
 				</p>
 				<p>
-					What awaits you at Space Otaku? Here's a sneak peek of what we have in
-					store:
+					What awaits you at Space Otaku? Here&aposs a sneak peek of what we
+					have in store:
 				</p>
 				<ul>
 					<li>
@@ -86,14 +88,46 @@ function Index() {
 					Join us on an extraordinary journey as we unravel the boundless
 					mysteries of the universe, from the dazzling beauty of distant
 					galaxies to the challenges and triumphs of human spaceflight. Whether
-					you're a seasoned stargazer or a curious newcomer, Space Otaku
+					you&aposre a seasoned stargazer or a curious newcomer, Space Otaku
 					welcomes all cosmic enthusiasts to share in the wonder and excitement
 					of the final frontier.
 				</p>
 				<p>
-					Are you ready to embark on this cosmic voyage? Let's explore the
+					Are you ready to embark on this cosmic voyage? Let&aposs explore the
 					cosmos together!
 				</p>
+			</div>
+
+			<div className="landing-container">
+				<nav className="tab-nav">
+					<button
+						className={`tab-button ${
+							selectedTab === "articles" ? "active" : ""
+						}`}
+						onClick={() => handleTabChange("articles")}
+					>
+						Articles
+					</button>
+					<button
+						className={`tab-button ${selectedTab === "blogs" ? "active" : ""}`}
+						onClick={() => handleTabChange("blogs")}
+					>
+						Blogs
+					</button>
+					<button
+						className={`tab-button ${
+							selectedTab === "reports" ? "active" : ""
+						}`}
+						onClick={() => handleTabChange("reports")}
+					>
+						Reports
+					</button>
+				</nav>
+				<div className="content">
+					{selectedTab === "articles" && <Articles />}
+					{selectedTab === "blogs" && <Blogs />}
+					{selectedTab === "reports" && <Reports />}
+				</div>
 			</div>
 		</Fragment>
 	);

@@ -1,4 +1,34 @@
-.landing-page {
+.landing-container {
+	.tab-nav {
+		display: flex;
+		justify-content: center;
+		background-color: #333;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+
+		button {
+			background-color: transparent;
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			cursor: pointer;
+
+			&.active {
+				background-color: #555;
+			}
+		}
+	}
+
+	/* Define styles for the content area */
+	.content {
+		margin-top: 50px; /* Adjust margin to account for fixed navigation bar */
+	}
+}
+
+.landing-page-sample-contents {
+	display: none;
 	border-radius: 15px;
 	padding: 30px;
 	margin: 20px;
