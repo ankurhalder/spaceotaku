@@ -32,10 +32,10 @@ function Reports() {
 
 	return (
 		<div className="reports">
-			<h2>Reports</h2>
+			<h3>Reports</h3>
 			{reports.map((report) => (
 				<div key={report.id} className="report">
-					<h3 className="report-title">{report.title}</h3>
+					<h4 className="report-title">{report.title}</h4>
 					<p className="report-summary">{report.summary}</p>
 					<p>
 						<strong>Published at:</strong> {report.published_at}

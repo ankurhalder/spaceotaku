@@ -37,7 +37,7 @@ const Articles = () => {
 			<ul>
 				{articles.map((article) => (
 					<li key={article.id}>
-						<h2>{article.title}</h2>
+						<h4>{article.title}</h4>
 						<p>{article.summary}</p>
 						<a href={article.url} target="_blank" rel="noopener noreferrer">
 							Read More
@@ -52,8 +52,8 @@ const Articles = () => {
 
 						{/* Display launches if available */}
 						{article.launches.length > 0 && (
-							<div>
-								<h3>Launches:</h3>
+							<div className="launches">
+								<h6>Launches:</h6>
 								<ul>
 									{article.launches.map((launch) => (
 										<li key={launch.launch_id}>
@@ -68,7 +68,7 @@ const Articles = () => {
 						{/* Display events if available */}
 						{article.events.length > 0 && (
 							<div>
-								<h3>Events:</h3>
+								<h6 className="events">Events:</h6>
 								<ul>
 									{article.events.map((event) => (
 										<li key={event.event_id}>

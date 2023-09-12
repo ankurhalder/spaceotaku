@@ -32,11 +32,11 @@ const Blogs = () => {
 
 	return (
 		<div className="blogs">
-			<h1>Blogs</h1>
+			<h3>Blogs</h3>
 			<ul>
 				{blogs.map((blog) => (
 					<li key={blog.id}>
-						<h2>{blog.title}</h2>
+						<h4>{blog.title}</h4>
 						<p>
 							<strong>Published:</strong> {blog.published_at}
 						</p>
