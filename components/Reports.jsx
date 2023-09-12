@@ -1,5 +1,3 @@
-// components/Reports.jsx
-
 import React, { useState, useEffect } from "react";
 import { fetchReports } from "@/functions/SpaceFlightApi";
 
@@ -33,26 +31,31 @@ function Reports() {
 	}, []); // Add and remove scroll event listener
 
 	return (
-		<div>
+		<div className="reports">
 			<h2>Reports</h2>
 			{reports.map((report) => (
-				<div key={report.id}>
-					<h3>{report.title}</h3>
-					<p>{report.summary}</p>
-					<p>Published at: {report.published_at}</p>
-					<p>News Site: {report.news_site}</p>
+				<div key={report.id} className="report">
+					<h3 className="report-title">{report.title}</h3>
+					<p className="report-summary">{report.summary}</p>
 					<p>
-						URL:{" "}
-						<a href={report.url} target="_blank" rel="noopener noreferrer">
+						<strong>Published at:</strong> {report.published_at}
+					</p>
+					<p>
+						<strong>News Site:</strong> {report.news_site}
+					</p>
+					<p>
+						<strong>URL:</strong>{" "}
+						<a
+							href={report.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="report-url"
+						>
 							{report.url}
 						</a>
 					</p>
 					{report.image_url && (
-						<img
-							src={report.image_url}
-							alt="Report"
-							style={{ maxWidth: "100%" }}
-						/>
+						<img src={report.image_url} alt="Report" className="report-image" />
 					)}
 				</div>
 			))}

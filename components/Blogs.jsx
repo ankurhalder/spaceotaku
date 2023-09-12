@@ -29,8 +29,9 @@ const Blogs = () => {
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []); // Add and remove scroll event listener
+
 	return (
-		<div>
+		<div className="blogs">
 			<h1>Blogs</h1>
 			<ul>
 				{blogs.map((blog) => (
@@ -47,7 +48,12 @@ const Blogs = () => {
 						</p>
 						<p>
 							<strong>URL:</strong>{" "}
-							<a href={blog.url} target="_blank" rel="noopener noreferrer">
+							<a
+								href={blog.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="blog-url"
+							>
 								{blog.url}
 							</a>
 						</p>
