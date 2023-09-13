@@ -10,6 +10,13 @@ function Reports() {
 	// Check if we're running on the client side
 	const isClient = typeof window !== "undefined";
 
+	// Add isMobile detection only if we're on the client side
+	const isMobile =
+		isClient &&
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		);
+
 	useEffect(() => {
 		async function fetchData() {
 			const reportData = await fetchReports(page); // Pass the current page to the API function
@@ -21,9 +28,14 @@ function Reports() {
 
 	const handleScroll = () => {
 		if (
-			isClient && // Check if we're on the client side
-			window.innerHeight + window.pageYOffset >=
-				document.documentElement.offsetHeight
+			(isClient && // Check if we're on the client side
+				(!isMobile || // Check if it's not a mobile device
+					window.innerHeight + window.pageYOffset >=
+						document.documentElement.offsetHeight)) ||
+			(isClient && // Check if we're on the client side
+				isMobile && // For mobile devices, add a buffer to trigger earlier
+				window.innerHeight + window.pageYOffset + 100 >=
+					document.documentElement.offsetHeight)
 		) {
 			// User has scrolled to the bottom of the page
 			setPage((prevPage) => prevPage + 1); // Load the next page of data
