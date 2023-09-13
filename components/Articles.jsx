@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // components/Articles.js
 import { useEffect, useState } from "react";
 import { fetchArticles } from "@/functions/SpaceFlightApi";
@@ -6,7 +7,15 @@ const Articles = () => {
 	const [articles, setArticles] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [page, setPage] = useState(1); // Initial page number
+	// Check if we're running on the client side
+	const isClient = typeof window !== "undefined";
 
+	// Add isMobile detection only if we're on the client side
+	const isMobile =
+		isClient &&
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		);
 	useEffect(() => {
 		async function fetchData() {
 			const articleData = await fetchArticles(page); // Pass the current page to the API function
@@ -14,12 +23,16 @@ const Articles = () => {
 			setLoading(false);
 		}
 		fetchData();
-	}, [page]); // Trigger the effect when the page number changes
+	}, [page]);
 
 	const handleScroll = () => {
 		if (
-			window.innerHeight + document.documentElement.scrollTop ===
-			document.documentElement.offsetHeight
+			(!isMobile && // Check if it's not a mobile device
+				window.innerHeight + window.pageYOffset >=
+					document.documentElement.offsetHeight) ||
+			(isMobile && // For mobile devices, add a buffer to trigger earlier
+				window.innerHeight + window.pageYOffset + 100 >=
+					document.documentElement.offsetHeight)
 		) {
 			// User has scrolled to the bottom of the page
 			setPage((prevPage) => prevPage + 1); // Load the next page of data
