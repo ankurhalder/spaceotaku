@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-// components/Articles.js
 import { useEffect, useState } from "react";
 import { fetchArticles } from "@/functions/SpaceFlightApi";
 
