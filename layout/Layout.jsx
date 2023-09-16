@@ -8,7 +8,7 @@ function Layout({ children, isOpen, setIsOpen }) {
 			<IconMeta></IconMeta>
 			<CommonMeta></CommonMeta>
 			<TwinklingStars></TwinklingStars>
-			<SideNavbar isOpen={isOpen} setIsOpen={setIsOpen}></SideNavbar>
+			{/* <SideNavbar isOpen={isOpen} setIsOpen={setIsOpen}></SideNavbar> */}
 			<ChatBot></ChatBot>
 			{children}
 		</Fragment>
