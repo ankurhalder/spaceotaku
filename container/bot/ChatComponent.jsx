@@ -111,20 +111,23 @@ export default function ChatComponent() {
 		};
 
 		const fetchmsg = () => {
-			var url = "https://spaceotaku.onrender.com/send-msg";
+			var url = "https://www.spaceotaku.online/api/dialogflow";
 
-			const data = new URLSearchParams();
-			for (const pair of new FormData(document.getElementById("mymsg"))) {
-				data.append(pair[0], pair[1]);
-			}
+			const formData = new FormData(document.getElementById("mymsg"));
 
 			if (audioData) {
-				data.append("audio", audioData);
+				formData.append("audio", audioData);
 			}
 
+			// Debugging statement to log the formData
+			console.log("Form Data:", formData);
+
 			fetch(url, {
+				headers: {
+					"Content-Type": "application/json", // Removed extra spaces
+				},
 				method: "POST",
-				body: data,
+				body: JSON.stringify(Object.fromEntries(formData)), // Convert FormData to an object
 			})
 				.then((res) => res.json())
 				.then((response) => {

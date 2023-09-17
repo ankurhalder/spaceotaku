@@ -12,14 +12,12 @@
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 		overflow: hidden;
 		max-height: 400px;
-		background: linear-gradient(to bottom right, #ff6b80, #ff7f50);
-		color: #fff;
+
 		transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
 
 		&:hover {
 			transform: translateY(-5px);
 			box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
-			background: linear-gradient(to bottom right, #ff7f50, #ff6b80);
 		}
 
 		.space-facts-title {
@@ -38,8 +36,6 @@
 		}
 
 		.space-facts-button {
-			background: linear-gradient(to right, #ff6b80, #ff7f50);
-			color: #fff;
 			border: none;
 			border-radius: 30px;
 			padding: 18px 36px;
@@ -48,7 +44,6 @@
 			transition: background 0.3s, transform 0.2s;
 
 			&:hover {
-				background: linear-gradient(to right, #ff7f50, #ff6b80);
 				transform: translateY(-2px);
 			}
 		}
