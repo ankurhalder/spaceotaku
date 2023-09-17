@@ -885,6 +885,4 @@ const agenciesData = {
 	},
 };
 
-console.log(agenciesData);
-
 export default agenciesData;
