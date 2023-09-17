@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import spaceFacts from "@/data/spaceFacts";
-
-// Define sets of matching color pairs
 const colorPairs = [
 	{
 		backgroundGradient: "linear-gradient(to right, #FF5733, #FFBD33)",
@@ -486,13 +484,10 @@ function SpaceFacts() {
 	const [visitedFactIndices, setVisitedFactIndices] = useState([]);
 
 	useEffect(() => {
-		// Retrieve visited fact indices from local storage if available
 		const storedIndices = localStorage.getItem("visitedFactIndices");
 		if (storedIndices) {
 			setVisitedFactIndices(JSON.parse(storedIndices));
 		}
-
-		// Retrieve the last used color pair from local storage
 		const lastColorPairIndex = localStorage.getItem("lastColorPairIndex");
 		if (lastColorPairIndex) {
 			const parsedIndex = parseInt(lastColorPairIndex, 10);
@@ -507,36 +502,27 @@ function SpaceFacts() {
 	}, []);
 
 	const [currentColorPair, setCurrentColorPair] = useState(() => {
-		// Initial random color pair when the component mounts
 		const randomIndex = Math.floor(Math.random() * colorPairs.length);
 		return colorPairs[randomIndex];
 	});
 
 	const handleNextFact = () => {
-		// Generate an array of unvisited fact indices
 		const unvisitedIndices = spaceFacts
 			.map((_, index) => index)
 			.filter((index) => !visitedFactIndices.includes(index));
-
-		// If there are unvisited facts, choose a random one
 		if (unvisitedIndices.length > 0) {
 			const randomIndex =
 				unvisitedIndices[Math.floor(Math.random() * unvisitedIndices.length)];
 			setCurrentFactIndex(randomIndex);
-
-			// Update visitedFactIndices and store it in local storage
 			setVisitedFactIndices([...visitedFactIndices, randomIndex]);
 			localStorage.setItem(
 				"visitedFactIndices",
 				JSON.stringify([...visitedFactIndices, randomIndex])
 			);
-
-			// Choose a new random color pair and store it in local storage
 			const newRandomIndex = Math.floor(Math.random() * colorPairs.length);
 			setCurrentColorPair(colorPairs[newRandomIndex]);
 			localStorage.setItem("lastColorPairIndex", newRandomIndex.toString());
 		} else {
-			// If all facts have been visited, reset the visitedFactIndices
 			setVisitedFactIndices([]);
 			localStorage.removeItem("visitedFactIndices");
 		}
