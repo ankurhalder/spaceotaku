@@ -1,52 +1,56 @@
 /* SpaceFacts.scss */
 
-.space-facts-container {
-	text-align: center;
-	max-width: 400px;
-	margin: 0 auto;
-	padding: 30px;
-	border-radius: 16px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-	overflow: hidden;
-	max-height: 400px;
-	background: linear-gradient(to bottom right, #ff6b80, #ff7f50);
-	color: #fff;
-	transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
-
-	&:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
-		background: linear-gradient(to bottom right, #ff7f50, #ff6b80);
-	}
-
-	.space-facts-title {
-		font-size: 36px;
-		font-weight: bold;
-		margin-bottom: 20px;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-	}
-
-	.space-facts-text {
-		font-size: 20px;
-		margin-bottom: 30px;
-		line-height: 1.6;
-		overflow-y: auto;
-		max-height: 200px;
-	}
-
-	.space-facts-button {
-		background: linear-gradient(to right, #ff6b80, #ff7f50);
+.ignore {
+	height: 100vh;
+	width: 100vh;
+	.space-facts-container {
+		text-align: center;
+		max-width: 400px;
+		margin: 0 auto;
+		padding: 30px;
+		border-radius: 16px;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		overflow: hidden;
+		max-height: 400px;
+		background: linear-gradient(to bottom right, #ff6b80, #ff7f50);
 		color: #fff;
-		border: none;
-		border-radius: 30px;
-		padding: 18px 36px;
-		font-size: 24px;
-		cursor: pointer;
-		transition: background 0.3s, transform 0.2s;
+		transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
 
 		&:hover {
-			background: linear-gradient(to right, #ff7f50, #ff6b80);
-			transform: translateY(-2px);
+			transform: translateY(-5px);
+			box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+			background: linear-gradient(to bottom right, #ff7f50, #ff6b80);
+		}
+
+		.space-facts-title {
+			font-size: 36px;
+			font-weight: bold;
+			margin-bottom: 20px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		}
+
+		.space-facts-text {
+			font-size: 20px;
+			margin-bottom: 30px;
+			line-height: 1.6;
+			overflow-y: auto;
+			max-height: 200px;
+		}
+
+		.space-facts-button {
+			background: linear-gradient(to right, #ff6b80, #ff7f50);
+			color: #fff;
+			border: none;
+			border-radius: 30px;
+			padding: 18px 36px;
+			font-size: 24px;
+			cursor: pointer;
+			transition: background 0.3s, transform 0.2s;
+
+			&:hover {
+				background: linear-gradient(to right, #ff7f50, #ff6b80);
+				transform: translateY(-2px);
+			}
 		}
 	}
 }
