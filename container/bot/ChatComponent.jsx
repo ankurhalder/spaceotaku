@@ -111,7 +111,7 @@ export default function ChatComponent() {
 		};
 
 		const fetchmsg = () => {
-			var url = "https://www.spaceotaku.online/api/dialogflow";
+			var url = "https://www.spaceotaku.online/api/dialogflow-server";
 
 			const formData = new FormData(document.getElementById("mymsg"));
 
