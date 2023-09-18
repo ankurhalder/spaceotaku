@@ -65,6 +65,7 @@ function SpaceFacts() {
 			>
 				<Title />
 				<p className="space-facts-text">{spaceFacts[currentFactIndex].fact}</p>
+				{/* this is to fix bug */}
 				<span>{spaceFacts[currentFactIndex].index}</span>
 				<button className="space-facts-button" onClick={handleNextFact}>
 					Next Fact
