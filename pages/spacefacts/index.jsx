@@ -58,8 +58,6 @@ function SpaceFacts() {
 				className="space-facts-container"
 				style={{
 					"--background-gradient": currentColorPair.backgroundGradient,
-					"--h1-color": currentColorPair.h1Color,
-					"--text-color": currentColorPair.textColor,
 					"--button-gradient": currentColorPair.buttonGradient,
 				}}
 			>
