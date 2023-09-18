@@ -1,98 +1,22 @@
 import React, { useState, useEffect } from "react";
 import spaceFacts from "@/data/spaceFacts";
 import colorPairs from "@/data/colorPairs";
-import styled from "styled-components";
 
-const SpaceFactsContainer = styled.div`
-	text-align: center;
-	max-width: 500px;
-	margin: 0 auto;
-	padding: 30px;
-	border-radius: 16px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-	overflow: hidden;
-	background: linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 0.1),
-		rgba(0, 0, 0, 0.2)
-	);
-	color: #fff;
-	position: relative;
-	transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+const Header = () => (
+	<header>
+		<h1>Space Facts</h1>
+	</header>
+);
 
-	&:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
-	}
+const Title = () => (
+	<h1>
+		<span>Did You Know?</span>
+	</h1>
+);
 
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: ${(props) => props.currentColorPair.backgroundGradient};
-		opacity: 0.8;
-		z-index: -1;
-		transition: opacity 0.3s;
-	}
-
-	.space-facts-title {
-		font-family: "Pacifico", cursive;
-		font-size: 48px;
-		font-weight: bold;
-		margin-bottom: 20px;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-		color: ${(props) => props.currentColorPair.h1Color};
-	}
-
-	.space-facts-text {
-		font-size: 20px;
-		margin-bottom: 30px;
-		line-height: 1.6;
-		overflow-y: auto;
-		max-height: 200px;
-		color: ${(props) => props.currentColorPair.textColor};
-		transition: color 0.3s;
-	}
-
-	.space-facts-button {
-		border: none;
-		border-radius: 30px;
-		padding: 18px 36px;
-		font-size: 24px;
-		cursor: pointer;
-		background: ${(props) => props.currentColorPair.buttonGradient};
-		color: ${(props) => props.currentColorPair.h1Color};
-		transition: background 0.3s, transform 0.2s;
-
-		&:hover {
-			transform: translateY(-2px);
-		}
-	}
-`;
-
-const Header = styled.header`
-	background-color: #20232a;
-	padding: 20px 0;
-	text-align: center;
-	border-bottom: 4px solid #61dafb;
-`;
-
-const Title = styled.h1`
-	color: #61dafb;
-	font-size: 48px;
-	margin: 0;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-`;
-
-const FadeIn = styled.div`
-	opacity: ${(props) => (props.visible ? 1 : 0)};
-	transition: opacity 0.5s ease-in-out;
-`;
+const FadeIn = ({ visible, children }) => (
+	<div className={`fade-in ${visible ? "visible" : ""}`}>{children}</div>
+);
 
 function SpaceFacts() {
 	const [currentFactIndex, setCurrentFactIndex] = useState(0);
@@ -138,11 +62,17 @@ function SpaceFacts() {
 
 	return (
 		<>
-			<Header>
-				<Title>Space Facts</Title>
-			</Header>
-			<SpaceFactsContainer currentColorPair={currentColorPair}>
-				<h1 className="space-facts-title">Did You Know?</h1>
+			<Header />
+			<div
+				className="space-facts-container"
+				style={{
+					"--background-gradient": currentColorPair.backgroundGradient,
+					"--h1-color": currentColorPair.h1Color,
+					"--text-color": currentColorPair.textColor,
+					"--button-gradient": currentColorPair.buttonGradient,
+				}}
+			>
+				<Title />
 				<FadeIn visible={isVisible}>
 					<p className="space-facts-text">
 						{spaceFacts[currentFactIndex].fact}
@@ -151,7 +81,7 @@ function SpaceFacts() {
 						Next Fact
 					</button>
 				</FadeIn>
-			</SpaceFactsContainer>
+			</div>
 		</>
 	);
 }
