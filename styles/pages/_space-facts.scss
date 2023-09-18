@@ -51,9 +51,9 @@ $color-2: var(--color-2);
 	.space-facts-container {
 		position: relative;
 		text-align: center;
-		width: 650px;
+		width: 600px;
 		max-width: 60%;
-		height: 800px;
+		height: 700px;
 		max-height: 80%;
 		margin: 0 auto;
 		padding: 30px;
@@ -62,7 +62,6 @@ $color-2: var(--color-2);
 		background: transparent;
 		color: var(--text-color);
 		transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-
 		&::before {
 			content: "";
 			position: absolute;
@@ -90,16 +89,20 @@ $color-2: var(--color-2);
 
 		.space-facts-text {
 			text-align: inherit;
-			margin: 60px 0 0 0;
+			margin: 30px 0 0 0;
 			font-family: var(--font-roboto);
-			font-size: var(--font-7);
+			font-size: var(--font-8);
 			font-weight: 600;
-			letter-spacing: 4px;
-			line-height: 2;
+			letter-spacing: 3px;
+			line-height: 1.5;
 			color: var(--black);
+			overflow: hidden;
 		}
 
 		.space-facts-button {
+			position: absolute;
+			top: 80%;
+			right: 36%;
 			border: none;
 			border-radius: 30px;
 			padding: 18px 36px;
