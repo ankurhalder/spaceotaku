@@ -18,14 +18,14 @@ const SpaceFactsContainer = styled.div`
 	);
 	color: #fff;
 	position: relative;
-	transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
+	transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 
 	&:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
 	}
 
-	&:before {
+	&::before {
 		content: "";
 		position: absolute;
 		top: 0;
@@ -35,6 +35,7 @@ const SpaceFactsContainer = styled.div`
 		background: ${(props) => props.currentColorPair.backgroundGradient};
 		opacity: 0.8;
 		z-index: -1;
+		transition: opacity 0.3s;
 	}
 
 	.space-facts-title {
@@ -53,6 +54,7 @@ const SpaceFactsContainer = styled.div`
 		overflow-y: auto;
 		max-height: 200px;
 		color: ${(props) => props.currentColorPair.textColor};
+		transition: color 0.3s;
 	}
 
 	.space-facts-button {
@@ -87,9 +89,15 @@ const Title = styled.h1`
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 `;
 
+const FadeIn = styled.div`
+	opacity: ${(props) => (props.visible ? 1 : 0)};
+	transition: opacity 0.5s ease-in-out;
+`;
+
 function SpaceFacts() {
 	const [currentFactIndex, setCurrentFactIndex] = useState(0);
 	const [visitedFactIndices, setVisitedFactIndices] = useState([]);
+	const [isVisible, setIsVisible] = useState(true);
 
 	useEffect(() => {
 		const storedIndices = localStorage.getItem("visitedFactIndices");
@@ -110,14 +118,18 @@ function SpaceFacts() {
 		if (unvisitedIndices.length > 0) {
 			const randomIndex =
 				unvisitedIndices[Math.floor(Math.random() * unvisitedIndices.length)];
-			setCurrentFactIndex(randomIndex);
-			setVisitedFactIndices([...visitedFactIndices, randomIndex]);
-			localStorage.setItem(
-				"visitedFactIndices",
-				JSON.stringify([...visitedFactIndices, randomIndex])
-			);
-			const newRandomIndex = Math.floor(Math.random() * colorPairs.length);
-			setCurrentColorPair(colorPairs[newRandomIndex]);
+			setIsVisible(false);
+			setTimeout(() => {
+				setCurrentFactIndex(randomIndex);
+				setVisitedFactIndices([...visitedFactIndices, randomIndex]);
+				localStorage.setItem(
+					"visitedFactIndices",
+					JSON.stringify([...visitedFactIndices, randomIndex])
+				);
+				const newRandomIndex = Math.floor(Math.random() * colorPairs.length);
+				setCurrentColorPair(colorPairs[newRandomIndex]);
+				setIsVisible(true);
+			}, 500); // Delay for the fade-in effect
 		} else {
 			setVisitedFactIndices([]);
 			localStorage.removeItem("visitedFactIndices");
@@ -131,10 +143,14 @@ function SpaceFacts() {
 			</Header>
 			<SpaceFactsContainer currentColorPair={currentColorPair}>
 				<h1 className="space-facts-title">Did You Know?</h1>
-				<p className="space-facts-text">{spaceFacts[currentFactIndex].fact}</p>
-				<button className="space-facts-button" onClick={handleNextFact}>
-					Next Fact
-				</button>
+				<FadeIn visible={isVisible}>
+					<p className="space-facts-text">
+						{spaceFacts[currentFactIndex].fact}
+					</p>
+					<button className="space-facts-button" onClick={handleNextFact}>
+						Next Fact
+					</button>
+				</FadeIn>
 			</SpaceFactsContainer>
 		</>
 	);
