@@ -1,14 +1,3 @@
-/* SpaceFacts.scss */
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
 .space-facts-container {
 	text-align: center;
 	max-width: 500px;
@@ -17,7 +6,8 @@
 	border-radius: 16px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
-	background: var(--background-gradient);
+	// background: var(--background-gradient);
+	background: transparent;
 	color: var(--text-color);
 	position: relative;
 	transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
@@ -47,7 +37,6 @@
 		margin-bottom: 20px;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 		color: var(--h1-color);
-		animation: fadeIn 0.5s ease-in-out;
 	}
 
 	.space-facts-text {
@@ -64,13 +53,42 @@
 		padding: 18px 36px;
 		font-size: 24px;
 		cursor: pointer;
-		background: var(--button-gradient);
-		color: var(--h1-color);
-		transition: background 0.3s, transform 0.2s;
-		animation: fadeIn 0.5s ease-in-out;
+		background: linear-gradient(to bottom, #ff6b6b, #ff5733);
+		color: #fff;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+		transition: background 0.3s, transform 0.2s, color 0.3s, box-shadow 0.3s;
 
 		&:hover {
-			transform: translateY(-2px);
+			transform: translateY(-3px);
+			background: linear-gradient(to bottom, #ff5733, #ff6b6b);
+			box-shadow: 0 10px 20px rgba(255, 87, 51, 0.5);
+		}
+
+		&:active {
+			transform: translateY(0);
+			box-shadow: none;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: -4px;
+			left: -4px;
+			right: -4px;
+			bottom: -4px;
+			background: radial-gradient(circle, #ff6b6b, transparent);
+			border-radius: inherit;
+			z-index: -1;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		&:hover:before {
+			opacity: 1;
 		}
 	}
 }

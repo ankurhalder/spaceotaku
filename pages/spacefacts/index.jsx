@@ -14,14 +14,9 @@ const Title = () => (
 	</h1>
 );
 
-const FadeIn = ({ visible, children }) => (
-	<div className={`fade-in ${visible ? "visible" : ""}`}>{children}</div>
-);
-
 function SpaceFacts() {
 	const [currentFactIndex, setCurrentFactIndex] = useState(0);
 	const [visitedFactIndices, setVisitedFactIndices] = useState([]);
-	const [isVisible, setIsVisible] = useState(true);
 
 	useEffect(() => {
 		const storedIndices = localStorage.getItem("visitedFactIndices");
@@ -42,18 +37,14 @@ function SpaceFacts() {
 		if (unvisitedIndices.length > 0) {
 			const randomIndex =
 				unvisitedIndices[Math.floor(Math.random() * unvisitedIndices.length)];
-			setIsVisible(false);
-			setTimeout(() => {
-				setCurrentFactIndex(randomIndex);
-				setVisitedFactIndices([...visitedFactIndices, randomIndex]);
-				localStorage.setItem(
-					"visitedFactIndices",
-					JSON.stringify([...visitedFactIndices, randomIndex])
-				);
-				const newRandomIndex = Math.floor(Math.random() * colorPairs.length);
-				setCurrentColorPair(colorPairs[newRandomIndex]);
-				setIsVisible(true);
-			}, 500); // Delay for the fade-in effect
+			setCurrentFactIndex(randomIndex);
+			setVisitedFactIndices([...visitedFactIndices, randomIndex]);
+			localStorage.setItem(
+				"visitedFactIndices",
+				JSON.stringify([...visitedFactIndices, randomIndex])
+			);
+			const newRandomIndex = Math.floor(Math.random() * colorPairs.length);
+			setCurrentColorPair(colorPairs[newRandomIndex]);
 		} else {
 			setVisitedFactIndices([]);
 			localStorage.removeItem("visitedFactIndices");
@@ -73,14 +64,10 @@ function SpaceFacts() {
 				}}
 			>
 				<Title />
-				<FadeIn visible={isVisible}>
-					<p className="space-facts-text">
-						{spaceFacts[currentFactIndex].fact}
-					</p>
-					<button className="space-facts-button" onClick={handleNextFact}>
-						Next Fact
-					</button>
-				</FadeIn>
+				<p className="space-facts-text">{spaceFacts[currentFactIndex].fact}</p>
+				<button className="space-facts-button" onClick={handleNextFact}>
+					Next Fact
+				</button>
 			</div>
 		</>
 	);
