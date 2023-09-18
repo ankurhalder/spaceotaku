@@ -1,8 +1,10 @@
 .facts-container {
+	width: 100%;
+	height: 100vh;
+	max-height: 100%;
 	.header {
 		text-align: center;
 		padding: 20px 0;
-		border-bottom: 4px solid #61dafb;
 
 		h1 {
 			font-size: 48px;
