@@ -59,6 +59,8 @@ function SpaceFacts() {
 				style={{
 					"--background-gradient": currentColorPair.backgroundGradient,
 					"--button-gradient": currentColorPair.buttonGradient,
+					"--gradient-color-1": currentColorPair.color1,
+					"--gradient-color-2": currentColorPair.color2,
 				}}
 			>
 				<Title />

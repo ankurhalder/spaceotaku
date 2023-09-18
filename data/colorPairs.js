@@ -348,7 +348,9 @@ const modifiedColorPairs = colorPairs.map((colorPair) => {
 
 	return {
 		...colorPair,
-		buttonGradient: newButtonGradient,
+		color1,
+		color2,
+		newButtonGradient,
 	};
 });
 

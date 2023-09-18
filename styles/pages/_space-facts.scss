@@ -1,5 +1,7 @@
 $space-container-gradient: var(--background-gradient);
 $button-gradient: var(--button-gradient);
+$color-1: var(--color-1);
+$color-2: var(--color-2);
 .facts-container {
 	width: 100%;
 	height: 100vh;
@@ -18,10 +20,10 @@ $button-gradient: var(--button-gradient);
 				45deg,
 				#ff7854,
 				#fd267d,
-				#643fa5,
-				#00cdac,
-				#0ed2f7,
-				#ff7854
+				#4e7dfc,
+				#27ae60,
+				#ffc107,
+				#e74c3c
 			);
 			background-clip: text;
 			-webkit-background-clip: text;
@@ -103,7 +105,7 @@ $button-gradient: var(--button-gradient);
 			padding: 18px 36px;
 			font-size: 24px;
 			cursor: pointer;
-			background: linear-gradient(to bottom, #ff6b6b, #ff5733);
+			//! background: linear-gradient(to bottom, #ff6b6b, #ff5733);
 			background: $button-gradient;
 			color: #fff;
 			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
@@ -112,7 +114,9 @@ $button-gradient: var(--button-gradient);
 			&:hover {
 				transform: translateY(-3px);
 				background: linear-gradient(to bottom, #ff5733, #ff6b6b);
+				// background: $space-container-gradient;
 				box-shadow: 0 10px 20px rgba(255, 87, 51, 0.5);
+				// box-shadow: var(--color-1);
 			}
 
 			&:active {
@@ -132,6 +136,7 @@ $button-gradient: var(--button-gradient);
 				right: -4px;
 				bottom: -4px;
 				background: radial-gradient(circle, #ff6b6b, transparent);
+				// background: radial-gradient(circle, var(--color-2), transparent);
 				border-radius: inherit;
 				z-index: -1;
 				opacity: 0;
