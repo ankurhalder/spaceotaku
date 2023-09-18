@@ -340,9 +340,9 @@ const colorPairs = [
 		index: 67,
 	},
 ];
-// Loop through the array and modify the buttonGradient property
+
 const modifiedColorPairs = colorPairs.map((colorPair) => {
-	const [color1, color2] = colorPair.buttonGradient.match(/#[0-9A-Fa-f]{6}/g); // Extract both colors from the gradient
+	const [color1, color2] = colorPair.buttonGradient.match(/#[0-9A-Fa-f]{6}/g);
 
 	const newButtonGradient = `linear-gradient(to right, ${color2}, ${color1})`;
 
@@ -352,6 +352,4 @@ const modifiedColorPairs = colorPairs.map((colorPair) => {
 	};
 });
 
-// Now modifiedColorPairs contains the updated data with swapped colors in buttonGradient
-// console.log(modifiedColorPairs);
-export default colorPairs;
+export default modifiedColorPairs;
