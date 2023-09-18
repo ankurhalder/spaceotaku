@@ -1,7 +1,7 @@
 $space-container-gradient: var(--background-gradient);
 $button-gradient: var(--button-gradient);
-$color-1: var(--color-1);
-$color-2: var(--color-2);
+$radial-gradient: var(--radial-gradient);
+$box-shadow: var(--box-shadow);
 .facts-container {
 	width: 100%;
 	height: 100vh;
@@ -31,6 +31,10 @@ $color-2: var(--color-2);
 			transition: color 0.3s, background-position 0.3s;
 			background-size: 200% 200%;
 			animation: gradient-animation 3s linear infinite;
+			@media (max-width: #{$breakpoint-desktop}) {
+				font-size: var(--font-6);
+				margin-bottom: 1.5%;
+			}
 		}
 
 		@keyframes gradient-animation {
@@ -116,10 +120,10 @@ $color-2: var(--color-2);
 
 			&:hover {
 				transform: translateY(-3px);
-				background: linear-gradient(to bottom, #ff5733, #ff6b6b);
-				// background: $space-container-gradient;
+				//! background: linear-gradient(to bottom, #ff5733, #ff6b6b);
+				background: $space-container-gradient;
 				box-shadow: 0 10px 20px rgba(255, 87, 51, 0.5);
-				// box-shadow: var(--color-1);
+				box-shadow: $box-shadow;
 			}
 
 			&:active {
@@ -139,7 +143,8 @@ $color-2: var(--color-2);
 				right: -4px;
 				bottom: -4px;
 				background: radial-gradient(circle, #ff6b6b, transparent);
-				// background: radial-gradient(circle, var(--color-2), transparent);
+				background: $radial-gradient;
+
 				border-radius: inherit;
 				z-index: -1;
 				opacity: 0;

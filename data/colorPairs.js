@@ -345,12 +345,13 @@ const modifiedColorPairs = colorPairs.map((colorPair) => {
 	const [color1, color2] = colorPair.buttonGradient.match(/#[0-9A-Fa-f]{6}/g);
 
 	const newButtonGradient = `linear-gradient(to right, ${color2}, ${color1})`;
-
+	const radialGradient = `radial-gradient(circle, ${color1}, transparent)`;
+	const boxShadow = `0 10px 20px ${color2}`;
 	return {
 		...colorPair,
-		color1,
-		color2,
 		newButtonGradient,
+		radialGradient,
+		boxShadow,
 	};
 });
 

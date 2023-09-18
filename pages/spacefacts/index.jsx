@@ -58,9 +58,9 @@ function SpaceFacts() {
 				className="space-facts-container"
 				style={{
 					"--background-gradient": currentColorPair.backgroundGradient,
-					"--button-gradient": currentColorPair.buttonGradient,
-					"--gradient-color-1": currentColorPair.color1,
-					"--gradient-color-2": currentColorPair.color2,
+					"--button-gradient": currentColorPair.newButtonGradient,
+					"--radial-gradient": currentColorPair.radialGradient,
+					"--box-shadow": currentColorPair.boxShadow,
 				}}
 			>
 				<Title />
