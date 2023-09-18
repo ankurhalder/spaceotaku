@@ -31,7 +31,11 @@ const SideNavbar = ({ isOpen, setIsOpen }) => {
 			icon: "/sidenavbar/wow.png",
 			label: "Amazing Space Facts",
 		},
-		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
+		{
+			href: "/astronauts",
+			icon: "/sidenavbar/astronaut.png",
+			label: "Astronauts in Space",
+		},
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
 		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
 	];
