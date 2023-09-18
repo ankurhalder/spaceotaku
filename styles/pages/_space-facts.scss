@@ -9,13 +9,12 @@
 		h1 {
 			font-size: 48px;
 			font-weight: bold;
-			color: #333; /* Choose a modern text color */
-			text-transform: uppercase;
-			letter-spacing: 2px; /* Reduced letter spacing for a modern look */
-			position: relative;
-			margin-bottom: 10px; /* Add some spacing below the title */
 
-			/* Apply a gradient background with animation */
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			position: relative;
+			margin-bottom: 10px;
+
 			background: linear-gradient(45deg, #61dafb, #ff5733);
 			background-clip: text;
 			-webkit-background-clip: text;
@@ -24,11 +23,9 @@
 			background-size: 200% 200%;
 			animation: gradient-animation 3s linear infinite;
 
-			/* Add a subtle text shadow for depth */
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 		}
 
-		/* Define a keyframes animation for the gradient */
 		@keyframes gradient-animation {
 			0% {
 				background-position: 100% 0;
@@ -38,10 +35,9 @@
 			}
 		}
 
-		/* Add a hover effect */
 		h1:hover {
-			color: #fff; /* Change text color on hover */
-			background-position: 0 0; /* Reset gradient position on hover */
+			color: #fff;
+			background-position: 0 0;
 		}
 	}
 
@@ -53,7 +49,6 @@
 		border-radius: 16px;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 		overflow: hidden;
-		// background: var(--background-gradient);
 		background: transparent;
 		color: var(--text-color);
 		position: relative;
