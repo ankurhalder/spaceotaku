@@ -12,6 +12,7 @@ const astronauts = {
 			current_crew_capacity: 7,
 			length: "Approximately 72.8 meters (239 feet)",
 			width: "Approximately 108.5 meters (356 feet)",
+			// image_url: "/images/iss.jpg",
 		},
 		{
 			craft: "Tiangong",
@@ -25,6 +26,7 @@ const astronauts = {
 			current_crew_capacity: 6,
 			length: "Approximately 22.4 meters (73 feet)",
 			width: "Approximately 4.2 meters (14 feet)",
+			// image_url: "/images/tiangong.jpg",
 		},
 	],
 	people: [
@@ -42,6 +44,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 20 hours",
 			educational_background: "Master's degree in Aviation and Piloting",
 			hobbies: "Photography, chess, swimming",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Dmitry Ivanovich Petelin",
@@ -57,6 +60,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Master's degree in Aviation and Piloting",
 			hobbies: "Reading, playing musical instruments",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Frank Arthur Rubio",
@@ -72,6 +76,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 27 hours",
 			educational_background: "Doctor of Medicine",
 			hobbies: "Playing guitar, painting",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Jing Haiping",
@@ -88,6 +93,7 @@ const astronauts = {
 			educational_background:
 				"Master's degree in Astronautics and Space Engineering",
 			hobbies: "Stargazing, calligraphy",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Gui Haichow",
@@ -103,6 +109,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 6 hours",
 			educational_background: "Doctorate in Aerospace Engineering",
 			hobbies: "Cycling, gardening",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Zhu Yangzhu",
@@ -118,6 +125,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Master's degree in Space Physics",
 			hobbies: "Mountaineering, photography",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Jasmin Moghbeli",
@@ -133,6 +141,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 12 hours",
 			educational_background: "Master's degree in Aerospace Engineering",
 			hobbies: "Salsa dancing, scuba diving",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Andreas Enevold Mogensen",
@@ -148,6 +157,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Master's degree in Aerospace Engineering",
 			hobbies: "Sailing, astronomy",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Satoshi Furukawa",
@@ -163,6 +173,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Doctor of Medicine",
 			hobbies: "Bonsai cultivation, martial arts",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Konstantin Borisov",
@@ -178,6 +189,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 13 hours",
 			educational_background: "Master's degree in Aerospace Engineering",
 			hobbies: "Camping, wildlife photography",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Oleg Dmitriyevich Kononenko",
@@ -193,6 +205,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 38 hours",
 			educational_background: "Master's degree in Aviation and Piloting",
 			hobbies: "Bird watching, gardening",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Nikolai Vladimirovich Chub",
@@ -208,6 +221,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 6 hours",
 			educational_background: "Master's degree in Aerospace Engineering",
 			hobbies: "Amateur astronomy, cooking",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 		{
 			name: "Loral Emily O'Hara",
@@ -223,6 +237,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Doctor of Engineering",
 			hobbies: "Rock climbing, writing",
+			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
 		},
 	],
 };
