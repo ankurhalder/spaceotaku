@@ -135,11 +135,16 @@ $box-shadow: var(--box-shadow);
 		.space-facts-button {
 			position: absolute;
 			top: 80%;
-			right: 36%;
+			right: 35%;
+
 			border: none;
 			border-radius: 30px;
 			padding: 18px 36px;
-			font-size: 24px;
+			font-family: var(--font-orbitron);
+			font-size: var(--font-12);
+			letter-spacing: 3px;
+			font-weight: 600;
+
 			cursor: pointer;
 			//! background: linear-gradient(to bottom, #ff6b6b, #ff5733);
 			background: $button-gradient;
@@ -184,12 +189,14 @@ $box-shadow: var(--box-shadow);
 				opacity: 1;
 			}
 			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: 20px;
+				font-size: var(--font-12);
 				padding: 15px 30px;
+				right: 33%;
 			}
 			@media (max-width: #{$breakpoint-phone}) {
-				font-size: 16px;
+				font-size: var(--font-13);
 				padding: 15px 15px;
+				right: 32%;
 			}
 		}
 	}
