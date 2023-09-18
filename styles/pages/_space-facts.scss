@@ -4,18 +4,24 @@
 	max-height: 100%;
 	.header {
 		text-align: center;
-		padding: 20px 0;
+		// padding: 20px 0;
 
 		h1 {
-			font-size: 48px;
-			font-weight: bold;
-
-			text-transform: uppercase;
-			letter-spacing: 2px;
 			position: relative;
-			margin-bottom: 10px;
-
-			background: linear-gradient(45deg, #61dafb, #ff5733);
+			font-family: var(--font-elianto);
+			font-size: var(--font-5);
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			margin-bottom: 2%;
+			background: linear-gradient(
+				45deg,
+				#ff7854,
+				#fd267d,
+				#643fa5,
+				#00cdac,
+				#0ed2f7,
+				#ff7854
+			);
 			background-clip: text;
 			-webkit-background-clip: text;
 			color: transparent;
