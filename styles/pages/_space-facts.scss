@@ -28,8 +28,6 @@
 			transition: color 0.3s, background-position 0.3s;
 			background-size: 200% 200%;
 			animation: gradient-animation 3s linear infinite;
-
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 		}
 
 		@keyframes gradient-animation {
@@ -48,22 +46,19 @@
 	}
 
 	.space-facts-container {
+		position: relative;
 		text-align: center;
-		max-width: 500px;
+		width: 700px;
+		max-width: 70%;
+		height: 500px;
+		max-height: 60%;
 		margin: 0 auto;
 		padding: 30px;
-		border-radius: 16px;
-		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		border-radius: 25px;
 		overflow: hidden;
 		background: transparent;
 		color: var(--text-color);
-		position: relative;
 		transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-
-		&:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
-		}
 
 		&::before {
 			content: "";
@@ -79,12 +74,14 @@
 		}
 
 		.space-facts-title {
-			font-family: "Pacifico", cursive;
-			font-size: 48px;
-			font-weight: bold;
-			margin-bottom: 20px;
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-			color: var(--h1-color);
+			span {
+				font-family: "Pacifico", cursive;
+				font-size: 48px;
+				font-weight: bold;
+				margin-bottom: 20px;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+				color: var(--h1-color);
+			}
 		}
 
 		.space-facts-text {
