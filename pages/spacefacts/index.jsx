@@ -3,7 +3,7 @@ import spaceFacts from "@/data/spaceFacts";
 import colorPairs from "@/data/colorPairs";
 
 const Header = () => (
-	<header>
+	<header className="header">
 		<h1>Space Facts</h1>
 	</header>
 );
@@ -52,7 +52,7 @@ function SpaceFacts() {
 	};
 
 	return (
-		<>
+		<div className="facts-container">
 			<Header />
 			<div
 				className="space-facts-container"
@@ -69,7 +69,7 @@ function SpaceFacts() {
 					Next Fact
 				</button>
 			</div>
-		</>
+		</div>
 	);
 }
 
