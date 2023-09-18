@@ -9,9 +9,9 @@ const Header = () => (
 );
 
 const Title = () => (
-	<h1>
+	<h3>
 		<span>Did You Know?</span>
-	</h1>
+	</h3>
 );
 
 function SpaceFacts() {
