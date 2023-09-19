@@ -94,16 +94,19 @@ const Slider = () => {
 						<p>Launch Date: {craft.launch_date}</p>
 						<p>Orbit Height: {craft.orbit_height}</p>
 						<p>Orbit Period: {craft.orbit_period}</p>
+						<p>Number of Modules: {craft.number_of_modules}</p>
+						<p>Current Crew Capacity: {craft.current_crew_capacity}</p>
+						<p>Length: {craft.length}</p>
+						<p>Width: {craft.width}</p>
 					</div>
 				</div>
 			)}
 			{showMorePanel && (
 				<div className={`more-panel ${showMorePanel ? "active" : ""}`}>
-					{/* "Show More" panel content */}
 					<h3>{astronaut.name}</h3>
 					<p>Role: {astronaut.role}</p>
 					<p>Birth Date: {astronaut.birth_date}</p>
-					{/* Add additional astronaut information here */}
+					<p>Birth Place: {astronaut.birth_place}</p>
 					<p>Missions: {astronaut.missions.join(", ")}</p>
 					<p>Total Time in Space: {astronaut.total_time_in_space}</p>
 					<p>Spacewalks: {astronaut.spacewalks}</p>
