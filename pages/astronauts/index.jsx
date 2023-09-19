@@ -5,8 +5,6 @@ import astronauts from "@/data/astronauts";
 const Slider = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [showCraftPanel, setShowCraftPanel] = useState(false);
-	// const [craftImageHovered, setCraftImageHovered] = useState(false);
-
 	const nextSlide = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % astronauts.people.length);
 	};
@@ -29,6 +27,7 @@ const Slider = () => {
 
 	return (
 		<div className="slider-container">
+			<h1 className="slider-heading">Astronauts In Space</h1>
 			<div className="slider">
 				{astronauts.people.map((person, index) => (
 					<div
@@ -43,8 +42,6 @@ const Slider = () => {
 						<div
 							className={`craft-image ${showCraftPanel ? "active" : ""}`}
 							onClick={toggleCraftPanel}
-							// onMouseEnter={() => setCraftImageHovered(true)}
-							// onMouseLeave={() => setCraftImageHovered(false)}
 						>
 							<Image
 								src={craft.image_url}
@@ -64,6 +61,13 @@ const Slider = () => {
 							<p>Nationality: {person.nationality}</p>
 							<p>Role: {person.role}</p>
 							<p>Birth Date: {person.birth_date}</p>
+							{/* Add additional astronaut information here */}
+							<p>Missions: {person.missions.join(", ")}</p>
+							<p>Total Time in Space: {person.total_time_in_space}</p>
+							<p>Spacewalks: {person.spacewalks}</p>
+							<p>Spacewalk Duration: {person.spacewalk_duration}</p>
+							<p>Educational Background: {person.educational_background}</p>
+							<p>Hobbies: {person.hobbies}</p>
 						</div>
 					</div>
 				))}
@@ -75,10 +79,7 @@ const Slider = () => {
 				Next
 			</button>
 			{showCraftPanel && (
-				<div
-					className={`craft-panel ${showCraftPanel ? "active" : ""}`}
-					// onClick={toggleCraftPanel}
-				>
+				<div className={`craft-panel ${showCraftPanel ? "active" : ""}`}>
 					<div className="craft-header">
 						<Image
 							src={craft.image_url}
