@@ -1,82 +1,97 @@
+/* Style the slider */
 .slider-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
+}
 
-	.slider {
-		perspective: 1000px;
-		width: 300px;
-		height: 400px;
-		position: relative;
-	}
+/* Style the slider */
+.slider {
+	perspective: 1000px;
+	width: 300px;
+	height: 400px;
+	position: relative;
+	margin-top: 20px;
+	perspective-origin: center;
+}
 
-	.slide {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		transition: transform 0.5s ease;
-		background-color: #f5f5f5;
-		border: 1px solid #ccc;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-		transform-origin: center center -150px;
-		border-radius: 5px;
-		z-index: 1; /* Set a consistent z-index for all slides */
-	}
+/* Style individual slides */
+.slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.5s ease;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 1px solid #ccc;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transform-origin: center center -150px;
+	border-radius: 5px;
+	z-index: 1;
+}
 
-	.slide img {
-		max-width: 100%;
-		max-height: 100%;
-		border-radius: 5px 5px 0 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		transition: z-index 0.5s ease; /* Add a transition for z-index */
-		z-index: 2; /* Initially, set z-index of images to 2 */
-	}
+/* Style astronaut images */
+/* Style astronaut images */
+/* Style astronaut images */
+.slide img {
+	width: 100%; /* Set the width to 100% to fill the container */
+	height: 100%; /* Set the height to 100% to fill the container */
+	object-fit: cover; /* Scale the image to cover the container */
+	border-radius: 5px 5px 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 0.5s ease, z-index 0.5s ease, filter 0.5s ease; /* Add filter transition */
+	z-index: 2;
+}
 
-	.slide-content {
-		padding: 10px;
-		text-align: center;
-		position: relative;
-		z-index: 3; /* Ensure content is on top */
-	}
+/* Apply reduced brightness filter to non-active background images */
+.slide:not(.active) img {
+	filter: brightness(0.3); /* Reduce image brightness for non-active slides */
+}
 
-	.active {
-		transform: translateZ(0);
-		z-index: 4; /* Set a higher z-index for the active slide */
-	}
+/* Style slide content */
+.slide-content {
+	padding: 20px;
+	text-align: center;
+	position: relative;
+	z-index: 3;
+	color: #333;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 0 0 5px 5px;
+}
 
-	.prev-button,
-	.next-button {
-		margin-top: 20px;
-		cursor: pointer;
-		padding: 10px 20px;
-		background-color: #007bff;
-		color: #fff;
-		border: none;
-		border-radius: 5px;
-		font-size: 16px;
-	}
+/* Style active slide */
+.active {
+	transform: translateZ(0);
+	z-index: 4;
+}
 
-	.prev-button {
-		margin-right: 10px;
-	}
+/* Style navigation buttons */
+.prev-button,
+.next-button {
+	margin-top: 20px;
+	cursor: pointer;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	position: relative; /* Ensure button positioning context */
+	z-index: 5; /* Set a higher z-index to keep buttons on top */
+}
 
-	.prev-button:hover,
-	.next-button:hover {
-		background-color: #0056b3;
-	}
+.prev-button {
+	margin-right: 10px;
+}
 
-	// Apply 360-degree rotation for 13 images
-	@for $i from 1 through 13 {
-		.slide:nth-child(#{$i}) {
-			transform: rotateY(#{(360 / 13) * ($i - 1)}deg) translateZ(300px);
-		}
-	}
+.prev-button:hover,
+.next-button:hover {
+	background-color: #0056b3;
 }
