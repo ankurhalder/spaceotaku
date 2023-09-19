@@ -44,7 +44,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 20 hours",
 			educational_background: "Master's degree in Aviation and Piloting",
 			hobbies: "Photography, chess, swimming",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			// image_url: "/public/astronauts/Sergey Valeryevich Prokopyev.jpg",
 		},
 		{
 			name: "Dmitry Ivanovich Petelin",
@@ -60,7 +60,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Master's degree in Aviation and Piloting",
 			hobbies: "Reading, playing musical instruments",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			// image_url: "/public/astronauts/",
 		},
 		{
 			name: "Frank Arthur Rubio",
@@ -76,7 +76,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 27 hours",
 			educational_background: "Doctor of Medicine",
 			hobbies: "Playing guitar, painting",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			// image_url: "/public/astronauts/",
 		},
 		{
 			name: "Jing Haiping",
