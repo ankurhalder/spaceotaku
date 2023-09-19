@@ -44,7 +44,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 20 hours",
 			educational_background: "Master's degree in Aviation and Piloting",
 			hobbies: "Photography, chess, swimming",
-			// image_url: "/public/astronauts/Sergey Valeryevich Prokopyev.jpg",
+			image_url: "/astronauts/Sergey-Valeryevich-Prokopyev.jpg",
 		},
 		{
 			name: "Dmitry Ivanovich Petelin",
@@ -60,7 +60,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Master's degree in Aviation and Piloting",
 			hobbies: "Reading, playing musical instruments",
-			// image_url: "/public/astronauts/",
+			image_url: "/astronauts/Dmitry-Ivanovich-Petelin.jpg",
 		},
 		{
 			name: "Frank Arthur Rubio",
@@ -76,7 +76,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 27 hours",
 			educational_background: "Doctor of Medicine",
 			hobbies: "Playing guitar, painting",
-			// image_url: "/public/astronauts/",
+			image_url: "/astronauts/Frank-Arthur-Rubio.jpg",
 		},
 		{
 			name: "Jing Haiping",
@@ -93,7 +93,7 @@ const astronauts = {
 			educational_background:
 				"Master's degree in Astronautics and Space Engineering",
 			hobbies: "Stargazing, calligraphy",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Jing-Haiping.jpg",
 		},
 		{
 			name: "Gui Haichow",
@@ -109,7 +109,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 6 hours",
 			educational_background: "Doctorate in Aerospace Engineering",
 			hobbies: "Cycling, gardening",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Gui-Haichow.jpg",
 		},
 		{
 			name: "Zhu Yangzhu",
@@ -125,7 +125,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Master's degree in Space Physics",
 			hobbies: "Mountaineering, photography",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Zhu-Yangzhu.jpg",
 		},
 		{
 			name: "Jasmin Moghbeli",
@@ -141,7 +141,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 12 hours",
 			educational_background: "Master's degree in Aerospace Engineering",
 			hobbies: "Salsa dancing, scuba diving",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Jasmin-Moghbeli.jpg",
 		},
 		{
 			name: "Andreas Enevold Mogensen",
@@ -157,7 +157,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Master's degree in Aerospace Engineering",
 			hobbies: "Sailing, astronomy",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Andreas-Enevold-Mogensen.jpg",
 		},
 		{
 			name: "Satoshi Furukawa",
@@ -173,7 +173,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Doctor of Medicine",
 			hobbies: "Bonsai cultivation, martial arts",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Satoshi-Furukawa.jpg",
 		},
 		{
 			name: "Konstantin Borisov",
@@ -189,7 +189,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 13 hours",
 			educational_background: "Master's degree in Aerospace Engineering",
 			hobbies: "Camping, wildlife photography",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Konstantin-Borisov.jpg",
 		},
 		{
 			name: "Oleg Dmitriyevich Kononenko",
@@ -205,7 +205,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 38 hours",
 			educational_background: "Master's degree in Aviation and Piloting",
 			hobbies: "Bird watching, gardening",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Oleg-Dmitriyevich-Kononenko.jpg",
 		},
 		{
 			name: "Nikolai Vladimirovich Chub",
@@ -221,7 +221,7 @@ const astronauts = {
 			spacewalk_duration: "Approximately 6 hours",
 			educational_background: "Master's degree in Aerospace Engineering",
 			hobbies: "Amateur astronomy, cooking",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Nikolai-Vladimirovich-Chub.jpg",
 		},
 		{
 			name: "Loral Emily O'Hara",
@@ -237,7 +237,7 @@ const astronauts = {
 			spacewalk_duration: "N/A",
 			educational_background: "Doctor of Engineering",
 			hobbies: "Rock climbing, writing",
-			// image_url: "/images/sergey_valeryevich_prokopyev.jpg",
+			image_url: "/astronauts/Loral-Emily-OHara.jpg",
 		},
 	],
 };
