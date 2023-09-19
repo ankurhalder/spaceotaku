@@ -5,6 +5,7 @@
 	justify-content: center;
 	height: 100vh;
 }
+
 .slider-container h1 {
 	position: absolute;
 	top: 5%;
@@ -13,6 +14,7 @@
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 	z-index: 100;
 }
+
 .slider {
 	perspective: 1000px;
 	width: 300px;
@@ -22,6 +24,7 @@
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .slide {
 	width: 100%;
 	height: 100%;
@@ -38,11 +41,13 @@
 	transform-origin: center center -150px;
 	z-index: 1;
 }
+
 .slide:hover {
 	transform: scale(1.05);
 	border-color: #ff69b4;
 	box-shadow: 0 12px 24px rgba(255, 105, 180, 0.6);
 }
+
 .craft-image {
 	position: absolute;
 	top: 10px;
@@ -56,11 +61,13 @@
 	border-radius: 50%;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
+
 .craft-image:hover {
 	transform: scale(1.1);
 	border-color: #ff00ff;
 	box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
 }
+
 .slide-content {
 	padding: 20px;
 	text-align: center;
@@ -74,25 +81,30 @@
 		transform 0.3s ease;
 	backdrop-filter: blur(8px);
 }
+
 .slide-content:hover {
 	background-color: rgba(0, 0, 0, 0.8);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 	transform: scale(1.02);
+
 	h2 {
 		font-size: 32px;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 	}
+
 	p {
 		font-size: 20px;
 		line-height: 1.6;
 		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 	}
 }
+
 .active {
 	transform: translateZ(0);
 	z-index: 4;
 	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
+
 .prev-button,
 .next-button {
 	margin-top: 20px;
@@ -109,6 +121,7 @@
 	box-shadow: 0 8px 16px rgba(255, 77, 77, 0.4);
 	position: relative;
 }
+
 .prev-button::before,
 .next-button::before {
 	content: "";
@@ -120,26 +133,31 @@
 	border-style: solid;
 	transition: border-color 0.3s ease;
 }
+
 .prev-button::before {
 	border-width: 10px 20px 10px 0;
 	border-color: transparent transparent transparent #fff;
 	left: 10px;
 }
+
 .next-button::before {
 	border-width: 10px 0 10px 20px;
 	border-color: transparent #fff transparent transparent;
 	right: 10px;
 }
+
 .prev-button:hover,
 .next-button:hover {
 	background-color: #ff3333;
 	transform: scale(1.08);
 	box-shadow: 0 12px 24px rgba(255, 51, 51, 0.6);
 }
+
 .prev-button:hover::before,
 .next-button:hover::before {
 	border-color: transparent transparent transparent #ff3333;
 }
+
 .craft-panel {
 	position: absolute;
 	top: 15%;
@@ -161,6 +179,7 @@
 	border: 4px solid #fff;
 	box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
+
 .craft-panel img {
 	max-width: 180px;
 	max-height: 180px;
@@ -169,19 +188,65 @@
 	border: 4px solid #fff;
 	box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
+
 .craft-panel h3 {
 	font-size: 28px;
 	margin-bottom: 10px;
 	font-weight: bold;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
 .craft-panel p {
 	font-size: 18px;
 	margin-bottom: 12px;
 	line-height: 1.5;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
+
 .craft-panel.active {
+	opacity: 1;
+	transform: scale(1);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+// Style for the "Show More" panel
+.more-panel {
+	position: absolute;
+	top: 15%;
+	left: 5%; // Adjust the left position for your layout
+	width: 320px;
+	background-color: rgba(0, 0, 0, 0.9);
+	border-radius: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 6;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	color: #fff;
+	text-align: center;
+	border: 4px solid #fff;
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.more-panel h3 {
+	font-size: 28px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.more-panel p {
+	font-size: 18px;
+	margin-bottom: 12px;
+	line-height: 1.5;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.more-panel.active {
 	opacity: 1;
 	transform: scale(1);
 	transition: opacity 0.3s ease, transform 0.3s ease;

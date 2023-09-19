@@ -5,6 +5,8 @@ import astronauts from "@/data/astronauts";
 const Slider = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [showCraftPanel, setShowCraftPanel] = useState(false);
+	const [showMorePanel, setShowMorePanel] = useState(false);
+
 	const nextSlide = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % astronauts.people.length);
 	};
@@ -23,6 +25,10 @@ const Slider = () => {
 
 	const toggleCraftPanel = () => {
 		setShowCraftPanel(!showCraftPanel);
+	};
+
+	const toggleMorePanel = () => {
+		setShowMorePanel(!showMorePanel);
 	};
 
 	return (
@@ -59,15 +65,8 @@ const Slider = () => {
 						<div className="slide-content">
 							<h2>{person.name}</h2>
 							<p>Nationality: {person.nationality}</p>
-							<p>Role: {person.role}</p>
-							<p>Birth Date: {person.birth_date}</p>
-							{/* Add additional astronaut information here */}
-							<p>Missions: {person.missions.join(", ")}</p>
-							<p>Total Time in Space: {person.total_time_in_space}</p>
-							<p>Spacewalks: {person.spacewalks}</p>
-							<p>Spacewalk Duration: {person.spacewalk_duration}</p>
-							<p>Educational Background: {person.educational_background}</p>
-							<p>Hobbies: {person.hobbies}</p>
+							{/* Add more details if needed */}
+							<button onClick={toggleMorePanel}>Show More</button>
 						</div>
 					</div>
 				))}
@@ -80,6 +79,7 @@ const Slider = () => {
 			</button>
 			{showCraftPanel && (
 				<div className={`craft-panel ${showCraftPanel ? "active" : ""}`}>
+					{/* Craft panel content */}
 					<div className="craft-header">
 						<Image
 							src={craft.image_url}
@@ -95,6 +95,21 @@ const Slider = () => {
 						<p>Orbit Height: {craft.orbit_height}</p>
 						<p>Orbit Period: {craft.orbit_period}</p>
 					</div>
+				</div>
+			)}
+			{showMorePanel && (
+				<div className={`more-panel ${showMorePanel ? "active" : ""}`}>
+					{/* "Show More" panel content */}
+					<h3>{astronaut.name}</h3>
+					<p>Role: {astronaut.role}</p>
+					<p>Birth Date: {astronaut.birth_date}</p>
+					{/* Add additional astronaut information here */}
+					<p>Missions: {astronaut.missions.join(", ")}</p>
+					<p>Total Time in Space: {astronaut.total_time_in_space}</p>
+					<p>Spacewalks: {astronaut.spacewalks}</p>
+					<p>Spacewalk Duration: {astronaut.spacewalk_duration}</p>
+					<p>Educational Background: {astronaut.educational_background}</p>
+					<p>Hobbies: {astronaut.hobbies}</p>
 				</div>
 			)}
 		</div>
