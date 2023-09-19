@@ -26,6 +26,7 @@
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 		transform-origin: center center -150px;
 		border-radius: 5px;
+		z-index: 1; /* Set a consistent z-index for all slides */
 	}
 
 	.slide img {
@@ -36,17 +37,19 @@
 		top: 0;
 		left: 0;
 		transition: z-index 0.5s ease; /* Add a transition for z-index */
+		z-index: 2; /* Initially, set z-index of images to 2 */
 	}
 
 	.slide-content {
 		padding: 10px;
 		text-align: center;
 		position: relative;
-		z-index: 1; /* Ensure content is on top */
+		z-index: 3; /* Ensure content is on top */
 	}
 
 	.active {
 		transform: translateZ(0);
+		z-index: 4; /* Set a higher z-index for the active slide */
 	}
 
 	.prev-button,
@@ -74,7 +77,6 @@
 	@for $i from 1 through 13 {
 		.slide:nth-child(#{$i}) {
 			transform: rotateY(#{(360 / 13) * ($i - 1)}deg) translateZ(300px);
-			z-index: #{14 - $i}; /* Adjust the z-index for the front image */
 		}
 	}
 }
