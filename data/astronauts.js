@@ -12,7 +12,7 @@ const astronauts = {
 			current_crew_capacity: 7,
 			length: "Approximately 72.8 meters (239 feet)",
 			width: "Approximately 108.5 meters (356 feet)",
-			// image_url: "/images/iss.jpg",
+			image_url: "/ISS.png",
 		},
 		{
 			craft: "Tiangong",
@@ -26,7 +26,7 @@ const astronauts = {
 			current_crew_capacity: 6,
 			length: "Approximately 22.4 meters (73 feet)",
 			width: "Approximately 4.2 meters (14 feet)",
-			// image_url: "/images/tiangong.jpg",
+			image_url: "/tiangong.png",
 		},
 	],
 	people: [
