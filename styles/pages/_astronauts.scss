@@ -94,25 +94,39 @@
 /* Style the craft panel */
 .craft-panel {
 	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: 300px; /* Adjust the size as needed */
-	background-color: #fff;
-	border: 1px solid #ccc;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
-	z-index: 5;
+	top: 25%;
+	right: 2%;
+	width: 300px; /* Adjust the panel width as needed */
+	background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent dark background */
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	padding: 20px;
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 6; /* Ensure the craft panel is above other elements */
+	transform: translateY(-50%); /* Center the panel vertically */
+	opacity: 0; /* Start with 0 opacity */
+	transition: opacity 0.3s ease;
+	color: white;
 }
 
+/* Style the craft image within the craft panel */
 .craft-panel img {
-	width: 100px; /* Adjust the size as needed */
-	height: auto;
-	margin: 10px;
+	max-width: 150px; /* Adjust the image size as needed */
+	max-height: 150px; /* Adjust the image size as needed */
+	border-radius: 50%; /* Make the image circular */
+	margin-bottom: 10px;
 }
 
-.craft-details {
-	padding: 10px;
+/* Style the craft panel when it is visible */
+.craft-panel.active {
+	opacity: 1; /* Show the panel with full opacity */
 }
 
-/* Add more styles for the craft panel content as needed */
+/* Add hover effect for craft image */
+.craft-image:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
