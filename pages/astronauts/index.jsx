@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import astronauts from "@/data/astronauts";
 
 function Astronauts() {
-	return <div>Coming soon</div>;
+	return <div></div>;
 }
 
 export default Astronauts;
