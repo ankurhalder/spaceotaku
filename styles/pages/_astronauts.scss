@@ -91,42 +91,53 @@
 	background-color: #0056b3;
 }
 
-/* Style the craft panel */
 .craft-panel {
 	position: absolute;
-	top: 25%;
-	right: 2%;
-	width: 300px; /* Adjust the panel width as needed */
-	background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent dark background */
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-	border-radius: 10px;
+	top: 15%;
+	right: 5%;
+	width: 320px;
+	background-color: transparent;
+	border-radius: 20px;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	z-index: 6; /* Ensure the craft panel is above other elements */
-	transform: translateY(-50%); /* Center the panel vertically */
-	opacity: 0; /* Start with 0 opacity */
-	transition: opacity 0.3s ease;
-	color: white;
+	z-index: 6;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	color: #fff; /* White text color */
+	text-align: center;
+	border: 4px solid #fff; /* Add a white border */
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Soft inner glow */
 }
 
-/* Style the craft image within the craft panel */
 .craft-panel img {
-	max-width: 150px; /* Adjust the image size as needed */
-	max-height: 150px; /* Adjust the image size as needed */
-	border-radius: 50%; /* Make the image circular */
+	max-width: 180px;
+	max-height: 180px;
+	border-radius: 50%;
+	margin-bottom: 15px;
+	border: 4px solid #fff; /* Add a white border */
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Soft inner glow */
+}
+
+.craft-panel h3 {
+	font-size: 28px;
 	margin-bottom: 10px;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for elegance */
 }
 
-/* Style the craft panel when it is visible */
+.craft-panel p {
+	font-size: 18px;
+	margin-bottom: 12px;
+	line-height: 1.5;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Text shadow for readability */
+}
+
 .craft-panel.active {
-	opacity: 1; /* Show the panel with full opacity */
-}
-
-/* Add hover effect for craft image */
-.craft-image:hover {
-	transform: scale(1.1);
-	transition: transform 0.3s ease;
+	opacity: 1;
+	transform: scale(1); /* Slight scale effect when active */
+	transition: opacity 0.3s ease, transform 0.3s ease;
 }
