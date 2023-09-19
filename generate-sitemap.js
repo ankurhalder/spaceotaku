@@ -13,21 +13,26 @@ async function generateSitemap() {
 	const sitemapStream = new SitemapStream({ hostname: baseUrl });
 
 	// Add URLs to your sitemap here
-	sitemapStream.write({ url: "/", changefreq: "daily", priority: 1.0 });
+	sitemapStream.write({ url: "/", changefreq: "always", priority: 1.0 });
 	sitemapStream.write({
 		url: "/celestialpicker",
-		changefreq: "daily",
-		priority: 1.0,
+		changefreq: "monthly",
+		priority: 0.9,
 	});
 	sitemapStream.write({
 		url: "/solarsystem",
-		changefreq: "daily",
-		priority: 1.0,
+		changefreq: "yearly",
+		priority: 0.5,
 	});
 	sitemapStream.write({
 		url: "/isstracker",
-		changefreq: "daily",
+		changefreq: "always",
 		priority: 1.0,
+	});
+	sitemapStream.write({
+		url: "/spacefacts",
+		changefreq: "yearly",
+		priority: 0.8,
 	});
 	// End the sitemap stream AFTER writing URLs
 	sitemapStream.end();
