@@ -139,7 +139,15 @@ const ISSMap = () => {
 				/>
 				<meta
 					name="keywords"
-					content="ISS tracking, International Space Station location, real-time ISS tracker, ISS coordinates, space exploration, Earth's orbit, ISS map"
+					content=" space otaku,ISS tracking, International Space Station location, real-time ISS tracker, ISS coordinates, space exploration, Earth's orbit, ISS map"
+				/>
+				<meta
+					property="og:url"
+					content="https://www.spaceotaku.online/isstracker"
+				/>
+				<meta
+					name="twitter:url"
+					content="https://www.spaceotaku.online/isstracker"
 				/>
 			</Head>
 			<div className="iss-map-container">

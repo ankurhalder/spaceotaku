@@ -20,9 +20,11 @@ function Index() {
 				/>
 				<meta
 					name="keywords"
-					content="space, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts , Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,"
+					content=" space otaku,space, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts , Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,"
 				/>
 				<link rel="canonical" href="https://www.spaceotaku.online/" />
+				<meta property="og:url" content="https://www.spaceotaku.online/" />
+				<meta name="twitter:url" content="https://www.spaceotaku.online/" />
 			</Head>
 			<div className="landing-page-sample-contents">
 				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>

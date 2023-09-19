@@ -16,7 +16,7 @@ const PlanetPage = () => {
 	const agencies = agenciesData[selectedPlanet]?.agencies || [];
 
 	const pageTitle = `${celestialBody.name} - Space Otaku | Explore Celestial Bodies`;
-	const metaKeywords = `${celestialBody.name}, ${celestialBody.distanceFromSun}, ${celestialBody.numberOfMoons}, ${celestialBody.diameter}, ${celestialBody.orbitalPeriod}, space, astronomy, celestial bodies`;
+	const metaKeywords = `${celestialBody.name}, ${celestialBody.distanceFromSun}, ${celestialBody.numberOfMoons}, ${celestialBody.diameter}, ${celestialBody.orbitalPeriod},space otaku, space, astronomy, celestial bodies`;
 	const metaDescription = `Learn about ${celestialBody.name} - its distance from the Sun, number of moons, diameter, orbital period, and more. Explore celestial bodies and space facts on Space Otaku.`;
 
 	return (
@@ -25,6 +25,14 @@ const PlanetPage = () => {
 				<title>{pageTitle}</title>
 				<meta name="description" content={metaDescription} />
 				<meta name="keywords" content={metaKeywords} />
+				<meta
+					property="og:url"
+					content="https://www.spaceotaku.online/celestialpicker"
+				/>
+				<meta
+					name="twitter:url"
+					content="https://www.spaceotaku.online/celestialpicker"
+				/>
 			</Head>
 			<div className="planet-page">
 				<h1 className="page-title">Explore Celestial Bodies</h1>

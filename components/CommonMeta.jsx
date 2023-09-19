@@ -11,8 +11,7 @@ export default function CommonMeta() {
 			<meta name="author" content="Ankur Halder" />
 			<meta name="robots" content="index, follow" />
 			{/* Open Graph Meta Tags (for social sharing) */}
-			<meta property="og:image" content="/favicon_icons/favicon-32x32.png" />
-			<meta property="og:url" content="https://www.spaceotaku.online/" />
+			<meta property="og:image" content="/icon/favicon-32x32.png" />
 			<meta property="og:type" content="website" />
 			<meta property="og:site_name" content="Space Otaku" />
 			{/* Twitter Meta Tags (for Twitter cards) */}
@@ -22,8 +21,7 @@ export default function CommonMeta() {
 				name="twitter:description"
 				content="Your ultimate destination for the latest space news, astronaut activities, satellite locations, solar system details, and more. Explore real-time space information with Next.js, Sass, and Dialogflow chatbot."
 			/>
-			<meta name="twitter:image" content="/favicon_icons/favicon-32x32.png" />
-			<meta name="twitter:url" content="https://www.spaceotaku.online/" />
+			<meta name="twitter:image" content="/icon/favicon-32x32.png" />
 			<meta name="twitter:site" content="@SpaceOtakuOfficial" />
 			{/* DNS Prefetch (improves website loading speed) */}
 			<link rel="dns-prefetch" href="//www.spaceotaku.online" />

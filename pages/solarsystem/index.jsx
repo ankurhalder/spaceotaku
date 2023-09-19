@@ -16,7 +16,15 @@ export default function SolarSystem() {
 				/>
 				<meta
 					name="keywords"
-					content="Solar System, Space Otaku, Planet Distances, Planet Sizes, Planet Speeds, Cosmic Neighborhood, Space Exploration, Celestial Wonders, Space Enthusiast, Educational Simulation, Interactive Learning, Astronomy, Inner Planets, Gas Giants, Ice Giants, Terrestrial Worlds, Dwarf Planets, Kuiper Belt, Oort Cloud, Sun, Solar Phenomena, Space Weather, Astronomy Education, Space Exploration Missions, Solar System Discoveries"
+					content="space otaku, Solar System, Space Otaku, Planet Distances, Planet Sizes, Planet Speeds, Cosmic Neighborhood, Space Exploration, Celestial Wonders, Space Enthusiast, Educational Simulation, Interactive Learning, Astronomy, Inner Planets, Gas Giants, Ice Giants, Terrestrial Worlds, Dwarf Planets, Kuiper Belt, Oort Cloud, Sun, Solar Phenomena, Space Weather, Astronomy Education, Space Exploration Missions, Solar System Discoveries"
+				/>
+				<meta
+					property="og:url"
+					content="https://www.spaceotaku.online/solarsystem/"
+				/>
+				<meta
+					name="twitter:url"
+					content="https://www.spaceotaku.online/solarsystem/"
 				/>
 			</Head>
 			<h1 className="solar-system-heading">

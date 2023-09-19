@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
 import spaceFacts from "@/data/spaceFacts";
 import colorPairs from "@/data/colorPairs";
-
+import Head from "next/head";
+import { Fragment } from "react";
 const Header = () => (
 	<header className="header">
 		<h1>Space Facts</h1>
@@ -52,26 +54,49 @@ function SpaceFacts() {
 	};
 
 	return (
-		<div className="facts-container">
-			<Header />
-			<div
-				className="space-facts-container"
-				style={{
-					"--background-gradient": currentColorPair.backgroundGradient,
-					"--button-gradient": currentColorPair.newButtonGradient,
-					"--radial-gradient": currentColorPair.radialGradient,
-					"--box-shadow": currentColorPair.boxShadow,
-				}}
-			>
-				<Title />
-				<p className="space-facts-text">{spaceFacts[currentFactIndex].fact}</p>
-				{/* this is to fix bug */}
-				<span>{spaceFacts[currentFactIndex].index}</span>
-				<button className="space-facts-button" onClick={handleNextFact}>
-					Next Fact
-				</button>
+		<Fragment>
+			<Head>
+				<title>Explore Amazing Space Facts | SpaceOtaku</title>
+				<meta
+					name="description"
+					content="Explore fascinating space facts and trivia at SpaceOtaku. Get ready to be amazed by the universe!"
+				/>
+				<meta
+					name="keywords"
+					content="space otaku,space,Space facts, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts , Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,"
+				/>
+				<meta
+					property="og:url"
+					content="https://www.spaceotaku.online/spacefacts"
+				/>
+				<meta
+					name="twitter:url"
+					content="https://www.spaceotaku.online/spacefacts"
+				/>
+			</Head>
+			<div className="facts-container">
+				<Header />
+				<div
+					className="space-facts-container"
+					style={{
+						"--background-gradient": currentColorPair.backgroundGradient,
+						"--button-gradient": currentColorPair.newButtonGradient,
+						"--radial-gradient": currentColorPair.radialGradient,
+						"--box-shadow": currentColorPair.boxShadow,
+					}}
+				>
+					<Title />
+					<p className="space-facts-text">
+						{spaceFacts[currentFactIndex].fact}
+					</p>
+					{/* this is to fix bug */}
+					<span>{spaceFacts[currentFactIndex].index}</span>
+					<button className="space-facts-button" onClick={handleNextFact}>
+						Next Fact
+					</button>
+				</div>
 			</div>
-		</div>
+		</Fragment>
 	);
 }
 
