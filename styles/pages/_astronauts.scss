@@ -1,4 +1,4 @@
-/* Style the slider */
+/* Style the slider container */
 .slider-container {
 	display: flex;
 	flex-direction: column;
@@ -14,7 +14,6 @@
 	height: 400px;
 	position: relative;
 	margin-top: 20px;
-	perspective-origin: center;
 }
 
 /* Style individual slides */
@@ -36,23 +35,19 @@
 }
 
 /* Style astronaut images */
-/* Style astronaut images */
-/* Style astronaut images */
-.slide img {
-	width: 100%; /* Set the width to 100% to fill the container */
-	height: 100%; /* Set the height to 100% to fill the container */
-	object-fit: cover; /* Scale the image to cover the container */
-	border-radius: 5px 5px 0 0;
+.craft-image {
 	position: absolute;
-	top: 0;
-	left: 0;
-	transition: transform 0.5s ease, z-index 0.5s ease, filter 0.5s ease; /* Add filter transition */
-	z-index: 2;
+	top: 10px;
+	right: 10px;
+	width: 50px; /* Adjust the size as needed */
+	height: auto;
+	cursor: pointer;
+	transition: transform 0.5s ease;
+	z-index: 3;
 }
 
-/* Apply reduced brightness filter to non-active background images */
-.slide:not(.active) img {
-	filter: brightness(0.3); /* Reduce image brightness for non-active slides */
+.craft-image:hover {
+	transform: scale(1.1); /* Add a slight scale effect on hover */
 }
 
 /* Style slide content */
@@ -60,7 +55,7 @@
 	padding: 20px;
 	text-align: center;
 	position: relative;
-	z-index: 3;
+	z-index: 2;
 	color: #333;
 	background-color: rgba(0, 0, 0, 0.8);
 	border-radius: 0 0 5px 5px;
@@ -83,8 +78,8 @@
 	border: none;
 	border-radius: 5px;
 	font-size: 16px;
-	position: relative; /* Ensure button positioning context */
-	z-index: 5; /* Set a higher z-index to keep buttons on top */
+	position: relative;
+	z-index: 5;
 }
 
 .prev-button {
@@ -95,3 +90,29 @@
 .next-button:hover {
 	background-color: #0056b3;
 }
+
+/* Style the craft panel */
+.craft-panel {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 300px; /* Adjust the size as needed */
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	z-index: 5;
+	display: flex;
+}
+
+.craft-panel img {
+	width: 100px; /* Adjust the size as needed */
+	height: auto;
+	margin: 10px;
+}
+
+.craft-details {
+	padding: 10px;
+}
+
+/* Add more styles for the craft panel content as needed */
