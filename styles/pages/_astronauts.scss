@@ -1,4 +1,3 @@
-/* Style the slider container */
 .slider-container {
 	display: flex;
 	flex-direction: column;
@@ -10,24 +9,19 @@
 	position: absolute;
 	top: 5%;
 	font-size: 48px;
-	// margin-bottom: 40px;
 	font-weight: bold;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 	z-index: 100;
 }
-/* Style the slider */
 .slider {
 	perspective: 1000px;
 	width: 300px;
 	height: 400px;
 	position: relative;
 	margin-top: 20px;
-	border-radius: 10px; /* Add some curvature for an attractive appearance */
-
+	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Style individual slides */
 .slide {
 	width: 100%;
 	height: 100%;
@@ -37,120 +31,84 @@
 	align-items: center;
 	justify-content: center;
 	transition: transform 0.5s ease;
-	background-color: rgba(
-		255,
-		255,
-		255,
-		0.95
-	); /* Slightly transparent background for an elegant look */
-	border: 2px solid #fff; /* Add a captivating white border */
-	border-radius: 15px; /* Rounded corners for charm */
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+	background-color: rgba(255, 255, 255, 0.95);
+	border: 2px solid #fff;
+	border-radius: 15px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 	transform-origin: center center -150px;
 	z-index: 1;
 }
-
-/* Hover effect for a more appealing interaction */
 .slide:hover {
-	transform: scale(1.05); /* Slightly increase size on hover for attraction */
-	border-color: #ff69b4; /* Change border color to a captivating shade of pink */
-	box-shadow: 0 12px 24px rgba(255, 105, 180, 0.6); /* Enhanced shadow on hover for a pleasing effect */
+	transform: scale(1.05);
+	border-color: #ff69b4;
+	box-shadow: 0 12px 24px rgba(255, 105, 180, 0.6);
 }
-
-/* Style astronaut images */
 .craft-image {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	width: 50px; /* Adjust the size as needed */
+	width: 50px;
 	height: auto;
 	cursor: pointer;
 	transition: transform 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 	z-index: 3;
-	border: 2px solid #fff; /* Add an elegant white border */
-	border-radius: 50%; /* Make it round */
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Soft outer shadow for elegance */
+	border: 2px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
-
 .craft-image:hover {
-	transform: scale(1.1); /* Slightly increase the size on hover for charm */
-	border-color: #ff00ff; /* Change the border color to a captivating shade */
-	box-shadow: 0 0 15px rgba(255, 0, 255, 0.8); /* Increase shadow on hover for appeal */
+	transform: scale(1.1);
+	border-color: #ff00ff;
+	box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
 }
-
-/* Style slide content */
 .slide-content {
 	padding: 20px;
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	color: #fff; /* White text for contrast */
-	background: rgba(
-		0,
-		0,
-		0,
-		0.7
-	); /* Slightly transparent dark background for elegance */
-	border-radius: 10px; /* Rounded corners for charm */
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle box shadow for depth */
-
-	/* Additional styles for a beautiful and attractive look */
+	color: #fff;
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 	transition: background-color 0.3s ease, box-shadow 0.3s ease,
 		transform 0.3s ease;
-	backdrop-filter: blur(
-		8px
-	); /* Apply a blur effect to the background for elegance */
+	backdrop-filter: blur(8px);
 }
-
-/* Hover effect for an eye-catching and pleasing interaction */
 .slide-content:hover {
-	background-color: rgba(
-		0,
-		0,
-		0,
-		0.8
-	); /* Slightly darker background on hover */
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Elevated box shadow on hover for depth */
-	transform: scale(1.02); /* Slight scale effect on hover for attraction */
-
-	/* Additional styles for text on hover */
+	background-color: rgba(0, 0, 0, 0.8);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+	transform: scale(1.02);
 	h2 {
-		font-size: 32px; /* Larger heading for emphasis */
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for elegance */
+		font-size: 32px;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 	}
-
 	p {
-		font-size: 20px; /* Larger font size for readability */
+		font-size: 20px;
 		line-height: 1.6;
-		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Text shadow for readability */
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 	}
 }
-
-/* Style active slide */
 .active {
 	transform: translateZ(0);
 	z-index: 4;
-	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow for emphasis */
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
-
-/* Style navigation buttons */
 .prev-button,
 .next-button {
 	margin-top: 20px;
 	cursor: pointer;
-	padding: 15px 30px; /* Increased padding for a pleasing touch */
-	background-color: #ff4d4d; /* Eye-catching red background */
-	color: #fff; /* White text for contrast */
+	padding: 15px 30px;
+	background-color: #ff4d4d;
+	color: #fff;
 	border: none;
-	border-radius: 50px; /* Circular button shape for elegance */
-	font-size: 20px; /* Slightly larger font size for emphasis */
-	font-weight: bold; /* Added weight for attractiveness */
+	border-radius: 50px;
+	font-size: 20px;
+	font-weight: bold;
 	transition: background-color 0.3s ease, transform 0.3s ease,
 		box-shadow 0.3s ease;
-	box-shadow: 0 8px 16px rgba(255, 77, 77, 0.4); /* Subtle box shadow for depth */
-	position: relative; /* Required for pseudo-element arrow positioning */
+	box-shadow: 0 8px 16px rgba(255, 77, 77, 0.4);
+	position: relative;
 }
-
 .prev-button::before,
 .next-button::before {
 	content: "";
@@ -162,44 +120,32 @@
 	border-style: solid;
 	transition: border-color 0.3s ease;
 }
-
 .prev-button::before {
 	border-width: 10px 20px 10px 0;
 	border-color: transparent transparent transparent #fff;
-	left: 10px; /* Position the arrow on the left side for Previous button */
+	left: 10px;
 }
-
 .next-button::before {
 	border-width: 10px 0 10px 20px;
 	border-color: transparent #fff transparent transparent;
-	right: 10px; /* Position the arrow on the right side for Next button */
+	right: 10px;
 }
-
-/* Hover effect for an eye-catching interaction */
 .prev-button:hover,
 .next-button:hover {
-	background-color: #ff3333; /* Darker red background on hover */
-	transform: scale(1.08); /* Slightly increased scale effect for attraction */
-	box-shadow: 0 12px 24px rgba(255, 51, 51, 0.6); /* Elevated box shadow on hover for depth */
+	background-color: #ff3333;
+	transform: scale(1.08);
+	box-shadow: 0 12px 24px rgba(255, 51, 51, 0.6);
 }
-
 .prev-button:hover::before,
 .next-button:hover::before {
-	border-color: transparent transparent transparent #ff3333; /* Darker arrow color on hover */
+	border-color: transparent transparent transparent #ff3333;
 }
-
-/* Style the craft panel */
 .craft-panel {
 	position: absolute;
 	top: 15%;
 	right: 5%;
 	width: 320px;
-	background-color: rgba(
-		0,
-		0,
-		0,
-		0.9
-	); /* Slightly transparent dark background */
+	background-color: rgba(0, 0, 0, 0.9);
 	border-radius: 20px;
 	padding: 20px;
 	display: flex;
@@ -215,8 +161,6 @@
 	border: 4px solid #fff;
 	box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
-
-/* Style the craft image within the craft panel */
 .craft-panel img {
 	max-width: 180px;
 	max-height: 180px;
@@ -225,22 +169,18 @@
 	border: 4px solid #fff;
 	box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
-
 .craft-panel h3 {
 	font-size: 28px;
 	margin-bottom: 10px;
 	font-weight: bold;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
-
 .craft-panel p {
 	font-size: 18px;
 	margin-bottom: 12px;
 	line-height: 1.5;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
-
-/* Style the craft panel when it is visible */
 .craft-panel.active {
 	opacity: 1;
 	transform: scale(1);
