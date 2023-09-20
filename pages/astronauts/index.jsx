@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import astronauts from "@/data/astronauts";
 
@@ -6,7 +6,32 @@ const Slider = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [showCraftPanel, setShowCraftPanel] = useState(false);
 	const [showMorePanel, setShowMorePanel] = useState(false);
+	const [rotationAngle, setRotationAngle] = useState(45); // Default angle
+	const [translateZ, setTranslateZ] = useState(300);
+	// Update rotation angle and translateZ when the component mounts (on the client side)
+	useEffect(() => {
+		const updateStyles = () => {
+			// Adjust the breakpoints and values as needed
+			if (window.innerWidth < 768) {
+				setRotationAngle(15);
+				setTranslateZ(10);
+			} else {
+				setRotationAngle(45);
+				setTranslateZ(300);
+			}
+		};
 
+		// Initial update
+		updateStyles();
+
+		// Add a listener to update styles when the window is resized
+		window.addEventListener("resize", updateStyles);
+
+		// Cleanup the listener when the component unmounts
+		return () => {
+			window.removeEventListener("resize", updateStyles);
+		};
+	}, []);
 	const nextSlide = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % astronauts.people.length);
 	};
@@ -31,6 +56,8 @@ const Slider = () => {
 		setShowMorePanel(!showMorePanel);
 	};
 
+	// Calculate the rotation angle based on the viewport width
+
 	return (
 		<div className="slider-container">
 			<h1 className="slider-heading">Astronauts In Space</h1>
@@ -41,8 +68,8 @@ const Slider = () => {
 						key={index}
 						style={{
 							transform: `rotateY(${
-								(index - currentIndex) * 45
-							}deg) translateZ(300px)`,
+								(index - currentIndex) * rotationAngle
+							}deg) translateZ(${translateZ}px)`,
 						}}
 					>
 						<div
