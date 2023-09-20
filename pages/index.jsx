@@ -25,11 +25,11 @@ function Index() {
 				<link rel="canonical" href="https://www.spaceotaku.online/" />
 				<meta property="og:url" content="https://www.spaceotaku.online/" />
 				<meta name="twitter:url" content="https://www.spaceotaku.online/" />
-				<script
+				{/* <script
 					async
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9137289931133916"
-					crossorigin="anonymous"
-				></script>
+					crossOrigin="anonymous"
+				></script> */}
 			</Head>
 			<div className="landing-page-sample-contents">
 				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>
