@@ -114,35 +114,79 @@
 }
 
 .slide-content {
-	padding: 20px;
-	text-align: center;
 	position: relative;
+	top: 20%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
 	z-index: 2;
-	color: #fff;
-	background: rgba(0, 0, 0, 0.7);
-	border-radius: 10px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.9);
+	border-radius: 20px;
+	backdrop-filter: blur(8px);
 	transition: background-color 0.3s ease, box-shadow 0.3s ease,
 		transform 0.3s ease;
-	backdrop-filter: blur(8px);
 	@media (max-width: #{$breakpoint-desktop}) {
-		border-radius: 10px;
+		padding: 20px;
 	}
-	@media (max-width: #{$breakpoint-phone}) {
-		border-radius: 5px;
+	h3 {
+		font-size: var(--font-10);
+		font-family: var(--font-roboto);
+		font-weight: 600;
+		color: var(--cool-yellow);
+		letter-spacing: 2px;
+		margin-bottom: 1px;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-13);
+		}
+	}
+	p {
+		font-size: var(--font-12);
+		font-family: var(--font-roboto);
+		font-weight: 400;
+		color: var(--tertiary-accent);
+		letter-spacing: 2px;
+		margin-bottom: 5px;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-14);
+		}
+	}
+	button {
+		font-size: var(--font-12);
+		font-family: var(--font-roboto);
+		font-weight: 400;
+		letter-spacing: 1px;
+		background: linear-gradient(to right, #0044ff, #00ccff);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		border: none;
+		cursor: pointer;
+		transition: background-position 0.3s ease;
+		&:hover {
+			background-position: right;
+		}
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-14);
+		}
 	}
 }
-
 .slide-content:hover {
-	background-color: rgba(0, 0, 0, 0.8);
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 
-	h2 {
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+	h3 {
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 	}
 
 	p {
-		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+		font-family: 600;
+	}
+	button {
+		color: black;
+		font-weight: 600;
 	}
 }
 

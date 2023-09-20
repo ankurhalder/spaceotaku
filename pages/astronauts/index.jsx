@@ -81,9 +81,9 @@ const Slider = () => {
 							objectFit="cover"
 						/>
 						<div className="slide-content">
-							<h2>{person.name}</h2>
+							<h3>{person.name}</h3>
 							<p>Nationality: {person.nationality}</p>
-							<button onClick={toggleMorePanel}>Show More</button>
+							<button onClick={toggleMorePanel}>Show More...</button>
 						</div>
 					</div>
 				))}
