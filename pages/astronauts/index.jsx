@@ -15,7 +15,7 @@ const Slider = () => {
 				setTranslateZ(10);
 			} else if (window.innerWidth < 1370) {
 				setRotationAngle(90);
-				setTranslateZ(50);
+				setTranslateZ(30);
 			} else {
 				setRotationAngle(90);
 				setTranslateZ(150);
