@@ -9,10 +9,38 @@
 .slider-container h1 {
 	position: absolute;
 	top: 5%;
-	font-size: 48px;
-	font-weight: bold;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-	z-index: 100;
+	bottom: 0%;
+	right: 0%;
+	left: 32%;
+	font-family: var(--font-elianto);
+	font-size: var(--font-5);
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin-bottom: 6%;
+	background: linear-gradient(
+		45deg,
+		#ff7854,
+		#fd267d,
+		#4e7dfc,
+		#27ae60,
+		#ffc107,
+		#e74c3c
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: color 0.3s, background-position 0.3s;
+	background-size: 200% 200%;
+	animation: gradient-animation 3s linear infinite;
+	@media (max-width: #{$breakpoint-desktop}) {
+		font-size: var(--font-6);
+		margin-bottom: 1.5%;
+	}
+	@media (max-width: #{$breakpoint-phone}) {
+		font-size: var(--font-6);
+		margin-bottom: 5%;
+		padding-top: 10%;
+	}
 }
 
 .slider {

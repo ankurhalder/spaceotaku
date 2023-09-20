@@ -20,8 +20,6 @@ table {
 }
 
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	font-family: var(--font-roboto);
 }
 
@@ -43,17 +41,4 @@ input[type="submit"] {
 	border: none;
 	background: none;
 	cursor: pointer;
-}
-
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-	vertical-align: middle;
-	max-width: 100%;
-	height: auto;
 }
