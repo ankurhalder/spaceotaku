@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
+		"dev1": "next dev -p 3001",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint"
@@ -18,6 +19,7 @@
 		"next": "^13.4.19",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"sharp": "^0.32.6",
 		"sitemap": "^7.1.1",
 		"uuid": "^9.0.1",
 		"yarn": "^1.22.19"
