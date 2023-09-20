@@ -6,28 +6,26 @@ const Slider = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [showCraftPanel, setShowCraftPanel] = useState(false);
 	const [showMorePanel, setShowMorePanel] = useState(false);
-	const [rotationAngle, setRotationAngle] = useState(45); // Default angle
+	const [rotationAngle, setRotationAngle] = useState(90);
 	const [translateZ, setTranslateZ] = useState(300);
-	// Update rotation angle and translateZ when the component mounts (on the client side)
 	useEffect(() => {
 		const updateStyles = () => {
-			// Adjust the breakpoints and values as needed
-			if (window.innerWidth < 768) {
+			if (window.innerWidth < 450) {
 				setRotationAngle(15);
 				setTranslateZ(10);
+			} else if (window.innerWidth < 1370) {
+				setRotationAngle(30);
+				setTranslateZ(100);
 			} else {
 				setRotationAngle(45);
 				setTranslateZ(300);
 			}
 		};
 
-		// Initial update
 		updateStyles();
 
-		// Add a listener to update styles when the window is resized
 		window.addEventListener("resize", updateStyles);
 
-		// Cleanup the listener when the component unmounts
 		return () => {
 			window.removeEventListener("resize", updateStyles);
 		};
@@ -55,8 +53,6 @@ const Slider = () => {
 	const toggleMorePanel = () => {
 		setShowMorePanel(!showMorePanel);
 	};
-
-	// Calculate the rotation angle based on the viewport width
 
 	return (
 		<div className="slider-container">
@@ -92,7 +88,6 @@ const Slider = () => {
 						<div className="slide-content">
 							<h2>{person.name}</h2>
 							<p>Nationality: {person.nationality}</p>
-							{/* Add more details if needed */}
 							<button onClick={toggleMorePanel}>Show More</button>
 						</div>
 					</div>
@@ -106,7 +101,6 @@ const Slider = () => {
 			</button>
 			{showCraftPanel && (
 				<div className={`craft-panel ${showCraftPanel ? "active" : ""}`}>
-					{/* Craft panel content */}
 					<div className="craft-header">
 						<Image
 							src={craft.image_url}
