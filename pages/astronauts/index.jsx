@@ -11,11 +11,11 @@ const Slider = () => {
 	useEffect(() => {
 		const updateStyles = () => {
 			if (window.innerWidth < 450) {
-				setRotationAngle(15);
+				setRotationAngle(0);
 				setTranslateZ(10);
 			} else if (window.innerWidth < 1370) {
-				setRotationAngle(30);
-				setTranslateZ(100);
+				setRotationAngle(90);
+				setTranslateZ(50);
 			} else {
 				setRotationAngle(90);
 				setTranslateZ(150);

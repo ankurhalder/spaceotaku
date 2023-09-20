@@ -45,8 +45,8 @@
 
 .slider {
 	perspective: 1000px;
-	width: 300px;
-	height: 400px;
+	width: 350px;
+	height: 500px;
 	position: relative;
 	margin-top: 20px;
 	border-radius: 10px;
@@ -72,7 +72,7 @@
 	transition: transform 0.5s ease;
 	background-color: rgba(255, 255, 255, 0.95);
 	border: 2px solid #fff;
-	border-radius: 15px;
+	// border-radius: 15px;
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 	transform-origin: center center -150px;
 	z-index: 1;
@@ -178,6 +178,7 @@
 		box-shadow 0.3s ease;
 	box-shadow: 0 8px 16px rgba(255, 77, 77, 0.4);
 	position: relative;
+	top: 5%;
 	@media (max-width: #{$breakpoint-desktop}) {
 		margin-top: 10px;
 		padding: 10px 20px;
