@@ -17,8 +17,8 @@ const Slider = () => {
 				setRotationAngle(30);
 				setTranslateZ(100);
 			} else {
-				setRotationAngle(45);
-				setTranslateZ(300);
+				setRotationAngle(90);
+				setTranslateZ(150);
 			}
 		};
 
