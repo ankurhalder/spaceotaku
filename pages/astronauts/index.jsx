@@ -11,8 +11,8 @@ const Slider = () => {
 	useEffect(() => {
 		const updateStyles = () => {
 			if (window.innerWidth < 450) {
-				setRotationAngle(0);
-				setTranslateZ(10);
+				setRotationAngle(90);
+				setTranslateZ(150);
 			} else if (window.innerWidth < 1370) {
 				setRotationAngle(90);
 				setTranslateZ(30);
@@ -72,12 +72,7 @@ const Slider = () => {
 							className={`craft-image ${showCraftPanel ? "active" : ""}`}
 							onClick={toggleCraftPanel}
 						>
-							<Image
-								src={craft.image_url}
-								alt={craft.craft}
-								width={50}
-								height={50}
-							/>
+							<Image src={craft.image_url} alt={craft.craft} layout="fill" />
 						</div>
 						<Image
 							src={person.image_url}
