@@ -36,7 +36,7 @@
 				font-size: var(--font-14);
 			}
 			@media (max-width: #{$breakpoint-phone}) {
-				padding: 8px 16px;
+				padding: 10px 20px;
 				font-size: var(--font-13);
 			}
 		}
@@ -340,7 +340,15 @@
 		}
 		@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 		}
-
+		@media (max-width: #{$breakpoint-phone}) {
+			top: 15%;
+			bottom: 0%;
+			right: 0%;
+			left: 10%;
+			max-width: 80%;
+			max-height: 75%;
+			backdrop-filter: blur(8px);
+		}
 		.name-des {
 			font-size: var(--font-12);
 			font-family: var(--font-roboto);
@@ -353,6 +361,9 @@
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				font-size: var(--font-15);
+			}
+			@media (max-width: #{$breakpoint-phone}) {
+				font-size: var(--font-11);
 			}
 		}
 		.name {
@@ -369,6 +380,9 @@
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				font-size: var(--font-14);
+			}
+			@media (max-width: #{$breakpoint-phone}) {
+				font-size: var(--font-10);
 			}
 		}
 		img {
@@ -396,6 +410,14 @@
 				height: 200px;
 				max-height: 80px;
 			}
+			@media (max-width: #{$breakpoint-phone}) {
+				left: 32%;
+				bottom: 1%;
+				width: 250px;
+				max-width: 100px;
+				height: 250px;
+				max-height: 100px;
+			}
 		}
 		.close {
 			position: relative;
@@ -408,6 +430,10 @@
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				left: 85%;
 				bottom: 25%;
+			}
+			@media (max-width: #{$breakpoint-phone}) {
+				left: 85%;
+				bottom: 20%;
 			}
 		}
 		h3 {
@@ -422,6 +448,9 @@
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				font-size: var(--font-12);
+			}
+			@media (max-width: #{$breakpoint-phone}) {
+				font-size: var(--font-9);
 			}
 		}
 	}
@@ -444,12 +473,20 @@
 		box-shadow: 0 0 15px var(--white-shadow);
 		gap: 20px;
 		@media (max-width: #{$breakpoint-desktop}) {
-			// top: 10%;
 			left: 7%;
 			gap: 10px;
 		}
 		@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 			left: 7%;
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			top: 15%;
+			bottom: 0%;
+			right: 0%;
+			left: 10%;
+			max-width: 80%;
+			max-height: 75%;
+			backdrop-filter: blur(8px);
 		}
 		.name-des {
 			font-size: var(--font-12);
@@ -463,6 +500,9 @@
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				font-size: var(--font-15);
+			}
+			@media (max-width: #{$breakpoint-phone}) {
+				font-size: var(--font-11);
 			}
 		}
 		.name {
@@ -480,6 +520,9 @@
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				font-size: var(--font-14);
 			}
+			@media (max-width: #{$breakpoint-phone}) {
+				font-size: var(--font-10);
+			}
 		}
 
 		h3 {
@@ -494,6 +537,9 @@
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				font-size: var(--font-12);
+			}
+			@media (max-width: #{$breakpoint-phone}) {
+				font-size: var(--font-9);
 			}
 		}
 		img {
@@ -517,6 +563,12 @@
 				height: 200px;
 				max-height: 80px;
 			}
+			@media (max-width: #{$breakpoint-phone}) {
+				width: 250px;
+				max-width: 100px;
+				height: 250px;
+				max-height: 100px;
+			}
 		}
 		.close {
 			position: relative;
@@ -529,6 +581,10 @@
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				left: 0%;
 				bottom: 2%;
+			}
+			@media (max-width: #{$breakpoint-phone}) {
+				left: 0%;
+				bottom: 17%;
 			}
 		}
 	}

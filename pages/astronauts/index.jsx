@@ -155,7 +155,7 @@ const Slider = () => {
 					</p>
 					<p>
 						<span className="name">Length:</span>
-						<span className="mane-des">{craft.length}</span>
+						<span className="name-des">{craft.length}</span>
 					</p>
 					<p>
 						<span className="name">Width:</span>
