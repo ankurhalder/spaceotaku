@@ -88,12 +88,14 @@ const Slider = () => {
 					</div>
 				))}
 			</div>
-			<button className="prev-button" onClick={prevSlide}>
-				Previous
-			</button>
-			<button className="next-button" onClick={nextSlide}>
-				Next
-			</button>
+			<div className="button-container">
+				<button className="prev-button" onClick={prevSlide}>
+					Previous
+				</button>
+				<button className="next-button" onClick={nextSlide}>
+					Next
+				</button>
+			</div>
 			{showCraftPanel && (
 				<div className={`craft-panel ${showCraftPanel ? "active" : ""}`}>
 					<div className="craft-header">
