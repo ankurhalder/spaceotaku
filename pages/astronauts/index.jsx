@@ -68,11 +68,14 @@ const Slider = () => {
 							}deg) translateZ(${translateZ}px)`,
 						}}
 					>
-						<div
-							className={`craft-image ${showCraftPanel ? "active" : ""}`}
-							onClick={toggleCraftPanel}
-						>
-							<Image src={craft.image_url} alt={craft.craft} layout="fill" />
+						<div className="craft-container">
+							<p className="craft-name none">{craft.craft}</p>
+							<div
+								className={`craft-image ${showCraftPanel ? "active" : ""}`}
+								onClick={toggleCraftPanel}
+							>
+								<Image src={craft.image_url} alt={craft.craft} layout="fill" />
+							</div>
 						</div>
 						<Image
 							src={person.image_url}
