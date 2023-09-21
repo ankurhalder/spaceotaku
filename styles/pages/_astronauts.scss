@@ -311,7 +311,7 @@
 	}
 	.craft-panel {
 		position: absolute;
-		@include flex-container(column, wrap, center, center);
+		@include flex-container(column, wrap, center, flex-start);
 		padding: 15px;
 		top: 15%;
 		right: 2%;
@@ -323,37 +323,50 @@
 		border-radius: 20px;
 		z-index: 6;
 		color: var(--white);
-		text-align: center;
 		border: 4px solid var(--white);
 		box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
-		.name,
+
 		.name-des {
 			font-size: var(--font-12);
 			font-family: var(--font-roboto);
-			letter-spacing: 3px;
+			letter-spacing: 2px;
 			font-weight: 400;
 			margin-bottom: 10px;
 			line-height: 1.5;
 		}
-	}
+		.name {
+			font-size: var(--font-11);
+			font-family: var(--font-roboto);
+			letter-spacing: 3px;
+			font-weight: 600;
+			margin-bottom: 10px;
+			line-height: 1.5;
+			color: var(--cool-blue-2);
+			margin-right: 2px;
+		}
+		img {
+			position: relative;
+			left: 38%;
+			width: 300px;
+			max-width: 120px;
+			height: 300px;
+			max-height: 120px;
+			border-radius: 50%;
+			margin-bottom: 15px;
+			border: 4px solid var(--white);
+			box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+		}
 
-	.craft-panel img {
-		width: 300px;
-		max-width: 120px;
-		height: 300px;
-		max-height: 120px;
-		border-radius: 50%;
-		margin-bottom: 15px;
-		border: 4px solid var(--white);
-		box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
-	}
-
-	.craft-panel h3 {
-		font-size: var(--font-9);
-		letter-spacing: 4px;
-		font-family: var(--font-tektur);
-		font-weight: 400;
-		margin-bottom: 10px;
+		h3 {
+			position: relative;
+			left: 44%;
+			font-size: var(--font-9);
+			color: var(--cool-red);
+			letter-spacing: 4px;
+			font-family: var(--font-tektur);
+			font-weight: 400;
+			margin-bottom: 10px;
+		}
 	}
 
 	.more-panel {
