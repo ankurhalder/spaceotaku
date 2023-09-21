@@ -156,15 +156,42 @@ const Slider = () => {
 			{showMorePanel && (
 				<div className={`more-panel ${showMorePanel ? "active" : ""}`}>
 					<h3>{astronaut.name}</h3>
-					<p>Role: {astronaut.role}</p>
-					<p>Birth Date: {astronaut.birth_date}</p>
-					<p>Birth Place: {astronaut.birth_place}</p>
-					<p>Missions: {astronaut.missions.join(", ")}</p>
-					<p>Total Time in Space: {astronaut.total_time_in_space}</p>
-					<p>Spacewalks: {astronaut.spacewalks}</p>
-					<p>Spacewalk Duration: {astronaut.spacewalk_duration}</p>
-					<p>Educational Background: {astronaut.educational_background}</p>
-					<p>Hobbies: {astronaut.hobbies}</p>
+					<p>
+						<span className="name">Role:</span>{" "}
+						<span className="name-des">{astronaut.role}</span>
+					</p>
+					<p>
+						<span className="name">Birth Date:</span>{" "}
+						<span className="name-des"> {astronaut.birth_date}</span>
+					</p>
+					<p>
+						<span className="name">Birth Place:</span>{" "}
+						<span className="name-des">{astronaut.birth_place}</span>
+					</p>
+					<p>
+						<span className="name">Missions:</span>{" "}
+						<span className="name-des">{astronaut.missions.join(", ")}</span>
+					</p>
+					<p>
+						<span className="name">Total Time in Space:</span>{" "}
+						<span className="name-des">{astronaut.total_time_in_space}</span>
+					</p>
+					<p>
+						<span className="name">Spacewalks:</span>{" "}
+						<span className="name-des">{astronaut.spacewalks}</span>
+					</p>
+					<p>
+						<span className="name">Spacewalk Duration:</span>{" "}
+						<span className="name-des">{astronaut.spacewalk_duration}</span>
+					</p>
+					<p>
+						<span className="name"> Educational Background:</span>{" "}
+						<span className="name-des">{astronaut.educational_background}</span>
+					</p>
+					<p>
+						<span className="name">Hobbies:</span>{" "}
+						<span className="name-des">{astronaut.hobbies}</span>
+					</p>
 				</div>
 			)}
 		</div>
