@@ -55,13 +55,13 @@
 
 		.prev-button::before {
 			border-width: 10px 20px 10px 0;
-			border-color: transparent transparent transparent #fff;
+			border-color: transparent transparent transparent var(--white);
 			left: 10px;
 		}
 
 		.next-button::before {
 			border-width: 10px 0 10px 20px;
-			border-color: transparent #fff transparent transparent;
+			border-color: transparent var(--white) transparent transparent;
 			right: 10px;
 		}
 
@@ -133,7 +133,7 @@
 			position: absolute;
 			@include flex-container(column, wrap, center, center);
 			transition: transform 0.5s ease;
-			background-color: rgba(255, 255, 255, 0.95);
+			background-color: var(--white-shadow);
 			border: 2px solid var(--white);
 			transform-origin: center center -150px;
 			z-index: 1;
@@ -186,11 +186,11 @@
 				.craft-image:hover {
 					transform: scale(1.1);
 					border: 1px solid var(--black);
-					box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+					box-shadow: 0 0 15px var(--black-shadow);
 				}
 				.craft-name {
 					z-index: 4;
-					color: yellow;
+					color: var(--yellow);
 					font-size: var(--font-12);
 					font-family: var(--font-orbitron);
 					letter-spacing: 2px;
@@ -213,7 +213,7 @@
 				text-align: center;
 				z-index: 2;
 				padding: 20px;
-				background: rgba(0, 0, 0, 0.9);
+				background: var(--black-shadow);
 				border-radius: 20px;
 				backdrop-filter: blur(8px);
 				transition: background-color 0.3s ease, box-shadow 0.3s ease,
@@ -310,14 +310,14 @@
 			}
 			.slide-content:hover {
 				background-color: rgba(0, 0, 0, 0.1);
-				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+				box-shadow: 0 8px 16px var(--black-shadow);
 
 				h3 {
-					text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+					text-shadow: 2px 2px 4px var(--black-shadow);
 				}
 
 				p {
-					text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+					text-shadow: 1px 1px 2px var(--black-shadow);
 					font-family: 600;
 				}
 				button {
@@ -331,10 +331,10 @@
 			&.active {
 				transform: translateZ(0);
 				z-index: 4;
-				box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+				box-shadow: 0 8px 12px rgba(0, 0, 0, 0);
 				filter: brightness(1);
 				&:hover {
-					border: 1px solid #fff;
+					border: 1px solid var(--white);
 					box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 				}
 			}
@@ -350,12 +350,12 @@
 		max-width: 30%;
 		height: 700px;
 		max-height: 70%;
-		background-color: rgba(0, 0, 0, 0.9);
+		background-color: var(--black-shadow);
 		border-radius: 20px;
 		z-index: 6;
 		color: var(--white);
 		border: 4px solid var(--white);
-		box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+		box-shadow: 0 0 15px var(--white-shadow);
 		@media (max-width: #{$breakpoint-desktop}) {
 			// top: 10%;
 			// right: 2%;
@@ -403,7 +403,7 @@
 			border-radius: 50%;
 			margin-bottom: 15px;
 			border: 4px solid var(--white);
-			box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+			box-shadow: 0 0 15px var(--white-shadow);
 			@media (max-width: #{$breakpoint-desktop}) {
 				left: 35%;
 				width: 250px;
@@ -446,12 +446,12 @@
 		max-width: 28%;
 		height: 700px;
 		max-height: 70%;
-		background-color: rgba(0, 0, 0, 0.9);
+		background-color: var(--black-shadow);
 		border-radius: 20px;
 		z-index: 6;
 		color: var(--white);
 		border: 4px solid var(--white);
-		box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+		box-shadow: 0 0 15px var(--white-shadow);
 		gap: 20px;
 		@media (max-width: #{$breakpoint-desktop}) {
 			// top: 10%;
