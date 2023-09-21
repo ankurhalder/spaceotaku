@@ -111,25 +111,46 @@ const Slider = () => {
 			</div>
 			{showCraftPanel && (
 				<div className={`craft-panel ${showCraftPanel ? "active" : ""}`}>
-					<div className="craft-header">
-						<Image
-							src={craft.image_url}
-							alt={craft.craft}
-							width={100}
-							height={100}
-						/>
-						<h3>{craft.craft}</h3>
-					</div>
-					<div className="craft-details">
-						<p>Description: {craft.description}</p>
-						<p>Launch Date: {craft.launch_date}</p>
-						<p>Orbit Height: {craft.orbit_height}</p>
-						<p>Orbit Period: {craft.orbit_period}</p>
-						<p>Number of Modules: {craft.number_of_modules}</p>
-						<p>Current Crew Capacity: {craft.current_crew_capacity}</p>
-						<p>Length: {craft.length}</p>
-						<p>Width: {craft.width}</p>
-					</div>
+					<Image
+						src={craft.image_url}
+						alt={craft.craft}
+						width={100}
+						height={100}
+					/>
+					<h3>{craft.craft}</h3>
+
+					<p>
+						<span className="name">Description:</span>
+						<span className="name-des">{craft.description}</span>
+					</p>
+					<p>
+						<span className="name">Launch Date:</span>
+						<span className="name-des">{craft.launch_date}</span>
+					</p>
+					<p>
+						<span className="name">Orbit Height:</span>
+						<span className="name-des">{craft.orbit_height}</span>
+					</p>
+					<p>
+						<span className="name">Orbit Period:</span>
+						<span className="name-des">{craft.orbit_period}</span>
+					</p>
+					<p>
+						<span className="name">Number of Modules:</span>
+						<span className="name-des">{craft.number_of_modules}</span>
+					</p>
+					<p>
+						<span className="name">Current Crew Capacity:</span>
+						<span className="name-des">{craft.current_crew_capacity}</span>
+					</p>
+					<p>
+						<span className="name">Length:</span>
+						<span className="mane-des">{craft.length}</span>
+					</p>
+					<p>
+						<span className="name">Width:</span>
+						<span className="name-des">{craft.width}</span>
+					</p>
 				</div>
 			)}
 			{showMorePanel && (
