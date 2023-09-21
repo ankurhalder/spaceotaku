@@ -337,8 +337,6 @@
 		border: 4px solid var(--white);
 		box-shadow: 0 0 15px var(--white-shadow);
 		@media (max-width: #{$breakpoint-desktop}) {
-			// top: 10%;
-			// right: 2%;
 		}
 		@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 		}
