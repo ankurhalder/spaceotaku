@@ -337,8 +337,11 @@
 		border: 4px solid var(--white);
 		box-shadow: 0 0 15px var(--white-shadow);
 		@media (max-width: #{$breakpoint-desktop}) {
+			max-width: 35%;
+			right: 1%;
 		}
 		@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+			max-width: 32%;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
 			top: 15%;
@@ -355,15 +358,15 @@
 			letter-spacing: 2px;
 			font-weight: 400;
 			margin-bottom: 10px;
-			line-height: 1.5;
+			line-height: 2;
 			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-14);
+				font-size: var(--font-15);
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				font-size: var(--font-15);
 			}
 			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-11);
+				font-size: var(--font-13);
 			}
 		}
 		.name {
@@ -372,17 +375,17 @@
 			letter-spacing: 3px;
 			font-weight: 600;
 			margin-bottom: 10px;
-			line-height: 1.5;
+			line-height: 2;
 			color: var(--cool-blue-2);
 			margin-right: 2px;
 			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-13);
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				font-size: var(--font-14);
 			}
+			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+				font-size: var(--font-15);
+			}
 			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-10);
+				font-size: var(--font-12);
 			}
 		}
 		img {
@@ -397,14 +400,14 @@
 			border: 4px solid var(--white);
 			box-shadow: 0 0 15px var(--white-shadow);
 			@media (max-width: #{$breakpoint-desktop}) {
-				left: 35%;
+				left: 37%;
 				width: 250px;
 				max-width: 100px;
 				height: 250px;
 				max-height: 100px;
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				left: 35%;
+				left: 40%;
 				width: 200px;
 				max-width: 80px;
 				height: 200px;
@@ -429,7 +432,7 @@
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				left: 85%;
-				bottom: 25%;
+				bottom: 23%;
 			}
 			@media (max-width: #{$breakpoint-phone}) {
 				left: 85%;
@@ -444,10 +447,10 @@
 			font-weight: 400;
 			margin-bottom: 10px;
 			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-11);
+				font-size: var(--font-12);
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				font-size: var(--font-12);
+				font-size: var(--font-13);
 			}
 			@media (max-width: #{$breakpoint-phone}) {
 				font-size: var(--font-9);
@@ -576,7 +579,7 @@
 			bottom: 2%;
 			@media (max-width: #{$breakpoint-desktop}) {
 				left: 0%;
-				bottom: 5%;
+				bottom: 2%;
 			}
 			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
 				left: 0%;
