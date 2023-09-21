@@ -82,7 +82,17 @@ const Slider = () => {
 						/>
 						<div className="slide-content">
 							<h3>{person.name}</h3>
-							<p>Nationality: {person.nationality}</p>
+							<div className="nationality-container">
+								<div className="national-flag-container">
+									<Image
+										src={person.national_flag}
+										alt={`${person.name}'s National Flag`}
+										layout="fill"
+										objectFit="cover"
+									/>
+								</div>
+								<p>Nationality: {person.nationality}</p>
+							</div>
 							<button onClick={toggleMorePanel}>Show More...</button>
 						</div>
 					</div>

@@ -1,8 +1,5 @@
 .slider-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	@include flex-container(column, wrap, center, center);
 	height: 100vh;
 	.button-container {
 		@include flex-container(row, wrap, center, center);
@@ -16,8 +13,8 @@
 		.next-button {
 			cursor: pointer;
 			padding: 15px 30px;
-			background-color: #ff4d4d;
-			color: #fff;
+			background-color: var(--cool-red);
+			color: var(--white);
 			border: none;
 			border-radius: 50px;
 			font-size: 20px;
@@ -185,15 +182,24 @@
 						font-size: var(--font-13);
 					}
 				}
-				p {
-					font-size: var(--font-12);
-					font-family: var(--font-roboto);
-					font-weight: 400;
-					color: var(--tertiary-accent);
-					letter-spacing: 2px;
-					margin-bottom: 5px;
-					@media (max-width: #{$breakpoint-desktop}) {
-						font-size: var(--font-14);
+				.nationality-container {
+					@include flex-container(flex, wrap, center, center);
+					gap: 20px;
+					.national-flag-container {
+						position: relative;
+						height: 50px;
+						width: 50px;
+					}
+					p {
+						font-size: var(--font-12);
+						font-family: var(--font-roboto);
+						font-weight: 400;
+						color: var(--tertiary-accent);
+						letter-spacing: 2px;
+						margin-bottom: 5px;
+						@media (max-width: #{$breakpoint-desktop}) {
+							font-size: var(--font-14);
+						}
 					}
 				}
 				button {
