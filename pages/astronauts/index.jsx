@@ -69,13 +69,9 @@ const Slider = () => {
 						}}
 					>
 						<div className="craft-container">
-							<p className="craft-name none">{craft.craft}</p>
-							<div
-								className={`craft-image ${showCraftPanel ? "active" : ""}`}
-								onClick={toggleCraftPanel}
-							>
-								<Image src={craft.image_url} alt={craft.craft} layout="fill" />
-							</div>
+							<p className="craft-name none" onClick={toggleCraftPanel}>
+								{craft.craft}
+							</p>
 						</div>
 						<Image
 							src={person.image_url}
@@ -96,7 +92,11 @@ const Slider = () => {
 								</div>
 								<p>Nationality: {person.nationality}</p>
 							</div>
-							<button onClick={toggleMorePanel}>Show More...</button>
+							{showMorePanel ? (
+								<button onClick={toggleMorePanel}>Show Less...</button>
+							) : (
+								<button onClick={toggleMorePanel}>Show More...</button>
+							)}
 						</div>
 					</div>
 				))}
@@ -117,6 +117,16 @@ const Slider = () => {
 						width={100}
 						height={100}
 					/>
+					<div className="close">
+						<Image
+							src="/bot/close.png"
+							layout="responsive"
+							width={20}
+							height={20}
+							alt="Close"
+							onClick={toggleCraftPanel}
+						></Image>
+					</div>
 					<h3>{craft.craft}</h3>
 
 					<p>
@@ -155,6 +165,16 @@ const Slider = () => {
 			)}
 			{showMorePanel && (
 				<div className={`more-panel ${showMorePanel ? "active" : ""}`}>
+					<div className="close">
+						<Image
+							src="/bot/close.png"
+							layout="responsive"
+							width={20}
+							height={20}
+							alt="Close"
+							onClick={toggleMorePanel}
+						></Image>
+					</div>
 					<h3>{astronaut.name}</h3>
 					<p>
 						<span className="name">Role:</span>{" "}
