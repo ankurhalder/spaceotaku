@@ -34,6 +34,11 @@ async function generateSitemap() {
 		changefreq: "yearly",
 		priority: 0.8,
 	});
+	sitemapStream.write({
+		url: "/astronauts",
+		changefreq: "yearly",
+		priority: 1,
+	});
 	// End the sitemap stream AFTER writing URLs
 	sitemapStream.end();
 
