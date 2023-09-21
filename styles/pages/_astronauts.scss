@@ -1,13 +1,18 @@
 .slider-container {
 	@include flex-container(column, wrap, center, center);
 	height: 100vh;
+	width: 100%;
 	.button-container {
 		@include flex-container(row, wrap, center, center);
 		position: relative;
-		top: 7%;
-		gap: 20px;
+		top: 8%;
+		gap: 30px;
 		@media (max-width: #{$breakpoint-desktop}) {
 			top: 5%;
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			top: 10%;
+			gap: 50px;
 		}
 		.prev-button,
 		.next-button {
@@ -17,8 +22,10 @@
 			color: var(--white);
 			border: none;
 			border-radius: 50px;
-			font-size: 20px;
-			font-weight: bold;
+			font-family: var(--font-orbitron);
+			letter-spacing: 2px;
+			font-size: var(--font-12);
+			font-weight: 500;
 			transition: background-color 0.3s ease, transform 0.3s ease,
 				box-shadow 0.3s ease;
 			box-shadow: 0 8px 16px rgba(255, 77, 77, 0.4);
@@ -26,12 +33,11 @@
 			top: 5%;
 			@media (max-width: #{$breakpoint-desktop}) {
 				padding: 10px 20px;
-				font-size: 18px;
+				font-size: var(--font-14);
 			}
 			@media (max-width: #{$breakpoint-phone}) {
-				margin-top: 5px;
-				padding: 5px 10px;
-				font-size: 16px;
+				padding: 8px 16px;
+				font-size: var(--font-13);
 			}
 		}
 
@@ -98,9 +104,14 @@
 			left: 32%;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-6);
-			margin-bottom: 5%;
-			padding-top: 10%;
+			position: relative;
+			font-size: var(--font-8);
+			left: 0%;
+			top: -12%;
+			right: 0%;
+			bottom: 0%;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
 		}
 	}
 	.slider {
@@ -122,7 +133,6 @@
 			transition: transform 0.5s ease;
 			background-color: rgba(255, 255, 255, 0.95);
 			border: 2px solid var(--white);
-			// box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 			transform-origin: center center -150px;
 			z-index: 1;
 			filter: brightness(0.5);
@@ -145,7 +155,6 @@
 					height: 35px;
 				}
 				@media (max-width: #{$breakpoint-phone}) {
-					// width: 30px;
 				}
 			}
 
