@@ -67,7 +67,7 @@
 
 		.prev-button:hover,
 		.next-button:hover {
-			background-color: #ff3333;
+			background-color: var(--cool-red-1);
 			transform: scale(1.08);
 			box-shadow: 0 12px 24px rgba(255, 51, 51, 0.6);
 		}
@@ -334,7 +334,7 @@
 				filter: brightness(1);
 				&:hover {
 					border: 1px solid var(--white);
-					box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+					box-shadow: 0 0 5px var(--white-shadow);
 				}
 			}
 		}
