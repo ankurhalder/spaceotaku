@@ -1,5 +1,4 @@
 import SpaceShooter from "@/components/SpaceShooter";
-// import { SpaceShooter } from "@/components";
 const SpaceShooterGame = () => {
 	return (
 		<div>

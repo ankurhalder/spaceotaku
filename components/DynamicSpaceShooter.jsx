@@ -21,7 +21,8 @@ const DynamicSpaceShooter = () => {
 				};
 
 				p.setup = () => {
-					p.createCanvas(800, 600);
+					const canvas = p.createCanvas(800, 600);
+					canvas.parent("sketch-container");
 					player = {
 						img: player,
 						x: p.width / 2,

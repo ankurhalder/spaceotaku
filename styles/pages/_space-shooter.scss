@@ -1,0 +1,34 @@
+// Define styles for the game container
+// Define styles for the game container
+#sketch-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; // Set the container height to the viewport height
+	background-color: #000;
+	overflow: hidden; // Hide any overflow content
+	margin: 0;
+	padding: 0;
+}
+
+// Define styles for the game canvas
+canvas {
+	border: 2px solid #fff;
+}
+
+// Define styles for the game over text
+.game-over {
+	font-size: 32px;
+	color: #fff;
+	text-align: center;
+	margin-top: 20px;
+}
+
+// Define styles for the score display
+.score {
+	font-size: 24px;
+	color: #fff;
+	text-align: left;
+	margin-top: 20px;
+	margin-left: 20px;
+}
