@@ -14,6 +14,7 @@ const DynamicSpaceShooter = () => {
 				let moveDown = false;
 				let currentScore = 0;
 				let bestScore = localStorage.getItem("bestScore") || 0;
+				let canvas;
 
 				p.preload = () => {
 					// Load your spacecraft image here
@@ -21,12 +22,26 @@ const DynamicSpaceShooter = () => {
 				};
 
 				p.setup = () => {
-					const canvas = p.createCanvas(1200, 800);
+					// Create a function to set the canvas size
+					const setCanvasSize = () => {
+						const container = document.getElementById("sketch-container");
+						const containerWidth = container.offsetWidth;
+						const containerHeight = container.offsetHeight;
+						p.resizeCanvas(containerWidth, containerHeight);
+					};
+
+					canvas = p.createCanvas(1, 1); // Create a temporary canvas
 					canvas.parent("sketch-container");
+					setCanvasSize(); // Set initial canvas size
+
 					player = {
 						img: player,
 						x: p.width / 2,
 						y: p.height - 50,
+					};
+					p.windowResized = () => {
+						// Call the setCanvasSize function when the window is resized
+						setCanvasSize();
 					};
 				};
 

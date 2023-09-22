@@ -1,4 +1,5 @@
 .space-shooter-container {
+	overflow: hidden;
 	h1 {
 		position: relative;
 		left: 23%;
@@ -25,6 +26,7 @@
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-6);
 			margin-bottom: 1.5%;
+			left: 13%;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
 			font-size: var(--font-6);
@@ -33,34 +35,33 @@
 		}
 	}
 	#sketch-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		width: 100%;
+		@include flex-container(row, nowrap, center, center);
+		position: relative;
+		top: 0%;
+		left: 30%;
+		bottom: 0%;
+		right: 0%;
+		height: 80vh;
+		max-height: 1200px;
+		width: 90%;
+		max-width: 800px;
 		overflow: hidden;
 		margin: 0;
 		padding: 0;
+		@media (max-width: #{$breakpoint-desktop}) {
+			left: 20%;
+			top: 0%;
+			height: 80vh;
+			max-height: 1200px;
+			width: 90%;
+			max-width: 800px;
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			display: none;
+		}
 	}
 
 	canvas {
 		border: 2px solid white;
-	}
-
-	// Define styles for the game over text
-	.game-over {
-		font-size: 32px;
-		color: #fff;
-		text-align: center;
-		margin-top: 20px;
-	}
-
-	// Define styles for the score display
-	.score {
-		font-size: 24px;
-		color: #fff;
-		text-align: left;
-		margin-top: 20px;
-		margin-left: 20px;
 	}
 }
