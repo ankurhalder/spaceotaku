@@ -132,6 +132,17 @@ const DynamicSpaceShooter = () => {
 					p.textSize(24);
 					p.text(`Score: ${currentScore}`, 20, 30);
 					p.text(`Best Score: ${bestScore}`, 20, 60);
+					// Display "Created by Ankur Halder for Space Otaku" at the top center
+					// Display "Created by Ankur Halder for Space Otaku" at the top center with padding
+					p.fill("orange"); // Change the fill color to orange
+					p.textSize(20);
+					const textWidth = p.textWidth(
+						"Created by Ankur Halder for Space Otaku"
+					); // Calculate the width of the text
+					const centerX = (p.width - textWidth) / 2; // Calculate the x-coordinate to center the text horizontally
+					const paddingY = 10; // Add a padding of 10 pixels on top
+					const centerY = paddingY + 20; // Set the y-coordinate with padding
+					p.text("Created by Ankur Halder for Space Otaku.", centerX, centerY);
 				};
 
 				p.keyPressed = () => {
