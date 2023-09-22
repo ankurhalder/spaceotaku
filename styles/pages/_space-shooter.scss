@@ -1,5 +1,9 @@
 .space-shooter-container {
 	overflow: hidden;
+	@media (max-width: $breakpoint-phone) {
+		height: 100vh;
+		width: 100vw;
+	}
 	h1 {
 		position: relative;
 		left: 23%;
@@ -29,7 +33,7 @@
 			left: 13%;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-6);
+			font-size: var(--font-5);
 			margin-bottom: 5%;
 			padding-top: 10%;
 		}
