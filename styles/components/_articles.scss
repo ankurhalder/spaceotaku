@@ -20,6 +20,10 @@
 		max-width: 80%;
 		margin: 0 0 0 12%;
 	}
+	@media (max-width: #{$breakpoint-phone}) {
+		max-width: 30%;
+		margin: 0 0 0 2.2%;
+	}
 	h3 {
 		font-size: var(--font-7);
 		font-family: var(--font-tektur);
