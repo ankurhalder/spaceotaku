@@ -1,7 +1,7 @@
 {
-	"name": "Space Otaku",
-	"short_name": "",
-	"description": "",
+	"name": "Space Otaku by Ankur Halder",
+	"short_name": "Space Otaku",
+	"description": "Discover space wonders with Space Otaku: your source for space news, astronaut profiles, satellite data, and celestial revelations!",
 	"icons": [
 		{
 			"src": "/icons/android-icon-36x36.png",
