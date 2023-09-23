@@ -52,7 +52,7 @@ const Articles = () => {
 						<h4>{article.title}</h4>
 						<p>{article.summary}</p>
 						<a href={article.url} target="_blank" rel="noopener noreferrer">
-							Read More
+							Read More...
 						</a>
 						<img src={article.image_url} alt={article.title} />
 						<p>
@@ -79,8 +79,8 @@ const Articles = () => {
 
 						{/* Display events if available */}
 						{article.events.length > 0 && (
-							<div>
-								<h6 className="events">Events:</h6>
+							<div className="events">
+								<h6>Events:</h6>
 								<ul>
 									{article.events.map((event) => (
 										<li key={event.event_id}>
