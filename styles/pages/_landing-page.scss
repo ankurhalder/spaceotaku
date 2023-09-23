@@ -10,6 +10,7 @@
 			left: 40%;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
+			left: 23%;
 		}
 		button {
 			background-color: transparent;
@@ -36,6 +37,10 @@
 			}
 			@media (max-width: #{$breakpoint-desktop}) {
 				font-size: var(--font-13);
+				padding: 10px 15px;
+			}
+			@media (max-width: #{$breakpoint-phone}) {
+				font-size: var(--font-14);
 				padding: 10px 15px;
 			}
 		}
@@ -82,6 +87,11 @@
 			font-size: var(--font-9);
 			margin: 3% 0 0 5%;
 		}
+		@media (max-width: #{$breakpoint-phone}) {
+			text-align: center;
+			font-size: var(--font-10);
+			margin: 12% 2% 0 2%;
+		}
 	}
 	span {
 		letter-spacing: 4px;
@@ -95,6 +105,10 @@
 			font-size: var(--font-10);
 			margin: 1% 0 0.5% 5%;
 		}
+		@media (max-width: #{$breakpoint-phone}) {
+			font-size: var(--font-11);
+			margin: 1% 1% 1% 1%;
+		}
 	}
 	h5 {
 		font-family: var(--font-tektur);
@@ -107,6 +121,11 @@
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-13);
 			margin: 1% 0 0 5%;
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			font-size: var(--font-14);
+			text-align: center;
+			margin: 1% 2% 1% 2%;
 		}
 	}
 	p {
@@ -124,6 +143,13 @@
 			width: 75%;
 			letter-spacing: 2px;
 			margin: 1% 0 1.5% 5%;
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			font-size: var(--font-13);
+			line-height: 1.5;
+			width: 80%;
+			letter-spacing: 2px;
+			margin: 1% 0% 1% 0%;
 		}
 	}
 }
