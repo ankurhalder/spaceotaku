@@ -7,6 +7,7 @@
 		left: 42%;
 		z-index: 1;
 		@media (max-width: #{$breakpoint-desktop}) {
+			left: 40%;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
 		}
@@ -33,17 +34,9 @@
 				background-color: var(--cool-orange);
 				color: var(--white);
 			}
-			@media (max-width: #{$breakpoint-phone}) {
-				font-size: 14px;
-				padding: 10px 10px;
-				letter-spacing: 1px;
-				font-weight: 500;
-				&:hover {
-					transform: none;
-				}
-				&.active {
-					border-bottom: none;
-				}
+			@media (max-width: #{$breakpoint-desktop}) {
+				font-size: var(--font-13);
+				padding: 10px 15px;
 			}
 		}
 	}
@@ -53,7 +46,7 @@
 	}
 }
 .landing-page-sample-contents {
-	@include flex-container(column, wrap, center, center);
+	@include flex-container(column, nowrap, center, center);
 	h1 {
 		font-family: var(--font-elianto);
 		font-size: var(--font-6);
@@ -86,6 +79,10 @@
 			}
 		}
 		margin: 3% 0 0 3.5%;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-9);
+			margin: 3% 0 0 5%;
+		}
 	}
 	span {
 		letter-spacing: 4px;
@@ -95,6 +92,9 @@
 		font-family: var(--font-source);
 		color: var(--cool-blue-2);
 		margin: 1% 0 0 1.5%;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-10);
+		}
 	}
 	h5 {
 		font-family: var(--font-tektur);
@@ -104,6 +104,9 @@
 		font-weight: 400;
 		text-transform: uppercase;
 		margin: 1% 0 0 1.5%;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-11);
+		}
 	}
 	p {
 		font-family: var(--font-roboto);
@@ -115,5 +118,8 @@
 		font-weight: 400;
 		width: 70%;
 		margin: 1% 0 1% 0;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-11);
+		}
 	}
 }
