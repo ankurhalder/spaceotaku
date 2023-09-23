@@ -52,27 +52,12 @@
 	}
 }
 .landing-page-sample-contents {
-	border-radius: 15px;
-	padding: 30px;
-	text-align: center;
-	transition: background-color 0.3s ease;
-	margin-left: 5%;
-	margin-top: 0.6%;
-	@media (max-width: #{$breakpoint-phone}) {
-		margin-left: 0%;
-		margin-top: 6%;
-	}
+	@include flex-container(column, wrap, center, center);
 	h1 {
-		position: relative;
-		top: 0%;
-		bottom: 0%;
-		right: 0%;
-		left: -1%;
 		font-family: var(--font-elianto);
 		font-size: var(--font-6);
 		text-transform: uppercase;
 		letter-spacing: 4px;
-		margin-bottom: 0.3%;
 		background: linear-gradient(
 			45deg,
 			#ff7854,
@@ -88,41 +73,25 @@
 		transition: color 0.3s, background-position 0.3s;
 		background-size: 200% 200%;
 		animation: gradient-animation 3s linear infinite;
-		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-7);
-			margin-bottom: 1.5%;
-			left: 32%;
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			position: relative;
-			font-size: var(--font-8);
-			left: 0%;
-			top: -10%;
-			right: 0%;
-			bottom: 0%;
-			margin: 0 0 0 0;
-			padding: 0 0 0 0;
+		@keyframes gradient-animation {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 0% 50%;
+			}
 		}
 	}
 	span {
-		position: relative;
-		top: 0%;
-		bottom: 0%;
-		right: 0%;
-		left: -1%;
 		letter-spacing: 4px;
 		font-weight: 600;
 		font-size: var(--font-8);
 		text-transform: capitalize;
 		font-family: var(--font-source);
 		color: var(--cool-blue-2);
-		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-11);
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-11);
-			letter-spacing: 2px;
-		}
 	}
 	h5 {
 		font-family: var(--font-tektur);
@@ -131,17 +100,6 @@
 		letter-spacing: 4px;
 		font-weight: 400;
 		text-transform: uppercase;
-		margin: 20px 0;
-		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-12);
-			letter-spacing: 2px;
-			margin: 10px 0;
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-12);
-			letter-spacing: 2px;
-			margin: 10px 0;
-		}
 	}
 	p {
 		font-family: var(--font-roboto);
@@ -151,14 +109,5 @@
 		text-align: justify;
 		line-height: 1.6;
 		font-weight: 400;
-		max-width: 80%;
-		position: relative;
-		left: 10%;
-		// margin: 20px 0;
-		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-12);
-			letter-spacing: 2px;
-			margin: 10px 0;
-		}
 	}
 }
