@@ -3,7 +3,7 @@
 		background-color: transparent;
 		position: fixed;
 		top: 0;
-		left: 40%;
+		left: 42%;
 		z-index: 1;
 		@media (max-width: #{$breakpoint-desktop}) {
 		}
@@ -14,15 +14,17 @@
 			border: none;
 			color: var(--white);
 			padding: 10px 20px;
+			border-radius: 20px;
+			margin: 5px 5px 0 0;
 			cursor: pointer;
-			font-size: 18px;
+			font-size: var(--font-11);
 			font-weight: bold;
 			transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
 
 			&:hover {
 				background-color: #ff5722;
 				color: var(--white);
-				transform: translateY(-3px);
+				transform: translate(-2px, 2px);
 			}
 
 			&.active {
@@ -60,17 +62,45 @@
 		margin-top: 6%;
 	}
 	h1 {
+		position: relative;
+		top: 0%;
+		bottom: 0%;
+		right: 0%;
+		left: -1%;
 		font-family: var(--font-elianto);
-		font-size: var(--font-7);
-		letter-spacing: 3px;
-		color: var(--cool-blue);
-		margin-bottom: 10px;
+		font-size: var(--font-6);
 		text-transform: uppercase;
-		font-weight: bold;
+		letter-spacing: 4px;
+		margin-bottom: 1%;
+		background: linear-gradient(
+			45deg,
+			#ff7854,
+			#fd267d,
+			#4e7dfc,
+			#27ae60,
+			#ffc107,
+			#e74c3c
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		transition: color 0.3s, background-position 0.3s;
+		background-size: 200% 200%;
+		animation: gradient-animation 3s linear infinite;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-7);
+			margin-bottom: 1.5%;
+			left: 32%;
+		}
 		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-10);
-			letter-spacing: 2px;
-			margin-bottom: 8px;
+			position: relative;
+			font-size: var(--font-8);
+			left: 0%;
+			top: -10%;
+			right: 0%;
+			bottom: 0%;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
 		}
 	}
 	span {
