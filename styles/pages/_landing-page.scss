@@ -3,7 +3,7 @@
 	.tab-nav {
 		background-color: transparent;
 		position: fixed;
-		top: 0;
+		top: 0.5%;
 		left: 42%;
 		z-index: 1;
 		@media (max-width: #{$breakpoint-desktop}) {
@@ -78,7 +78,7 @@
 				background-position: 0% 50%;
 			}
 		}
-		margin: 3% 0 0 3.5%;
+		margin: 3% 0 0 4%;
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-9);
 			margin: 3% 0 0 5%;
@@ -91,7 +91,7 @@
 		text-transform: capitalize;
 		font-family: var(--font-source);
 		color: var(--cool-blue-2);
-		margin: 1% 0 0 1.5%;
+		margin: 0.5% 0 0 3%;
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-10);
 			margin: 1% 0 0.5% 5%;
@@ -104,7 +104,7 @@
 		letter-spacing: 4px;
 		font-weight: 400;
 		text-transform: uppercase;
-		margin: 1% 0 0 1.5%;
+		margin: 1% 0 0 3.5%;
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-13);
 			margin: 1% 0 0 5%;
@@ -119,7 +119,7 @@
 		line-height: 1.5;
 		font-weight: 400;
 		width: 70%;
-		margin: 1% 0 1% 0;
+		margin: 1% 0 1% 3.5%;
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-13);
 			width: 75%;
