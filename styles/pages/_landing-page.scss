@@ -84,6 +84,7 @@
 				background-position: 0% 50%;
 			}
 		}
+		margin: 3% 0 0 3.5%;
 	}
 	span {
 		letter-spacing: 4px;
@@ -92,6 +93,7 @@
 		text-transform: capitalize;
 		font-family: var(--font-source);
 		color: var(--cool-blue-2);
+		margin: 0 0 0 0;
 	}
 	h5 {
 		font-family: var(--font-tektur);
@@ -100,6 +102,7 @@
 		letter-spacing: 4px;
 		font-weight: 400;
 		text-transform: uppercase;
+		margin: 0 0 0 0;
 	}
 	p {
 		font-family: var(--font-roboto);
@@ -109,5 +112,6 @@
 		text-align: justify;
 		line-height: 1.6;
 		font-weight: 400;
+		margin: 0 0 0 0;
 	}
 }
