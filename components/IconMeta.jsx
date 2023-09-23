@@ -3,10 +3,6 @@ import Head from "next/head";
 export default function IconMeta() {
 	return (
 		<Head>
-			<link
-				href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-				rel="stylesheet"
-			/>
 			<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 			<link
 				rel="icon"

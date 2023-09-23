@@ -6,6 +6,10 @@ export default function Document() {
 			<Head>
 				<meta name="msapplication-config" content="/browserconfig.xml" />
 				<link rel="manifest" href="/manifest.json" />
+				<link
+					href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+					rel="stylesheet"
+				/>
 			</Head>
 			<body>
 				<Main />

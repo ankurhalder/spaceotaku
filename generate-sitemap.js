@@ -39,6 +39,11 @@ async function generateSitemap() {
 		changefreq: "yearly",
 		priority: 1,
 	});
+	sitemapStream.write({
+		url: "/spaceshooter",
+		changefreq: "yearly",
+		priority: 0.9,
+	});
 	// End the sitemap stream AFTER writing URLs
 	sitemapStream.end();
 
