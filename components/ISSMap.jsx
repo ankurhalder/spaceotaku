@@ -129,27 +129,6 @@ const ISSMap = () => {
 
 	return (
 		<Fragment>
-			<Head>
-				<title>
-					Track International Space Station (ISS) Location in Real Time
-				</title>
-				<meta
-					name="description"
-					content="Stay updated with the real-time location of the International Space Station (ISS). Calculate your distance and explore its coordinates on an interactive map."
-				/>
-				<meta
-					name="keywords"
-					content=" space otaku,ISS tracking, International Space Station location, real-time ISS tracker, ISS coordinates, space exploration, Earth's orbit, ISS map"
-				/>
-				<meta
-					property="og:url"
-					content="https://www.spaceotaku.online/isstracker"
-				/>
-				<meta
-					name="twitter:url"
-					content="https://www.spaceotaku.online/isstracker"
-				/>
-			</Head>
 			<div className="iss-map-container">
 				<h1>Live International Space Station (ISS) Location</h1>
 				<p className="lat">Latitude: {issLocation.latitude}</p>

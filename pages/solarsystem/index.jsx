@@ -6,13 +6,11 @@ export default function SolarSystem() {
 	return (
 		<Fragment>
 			<Head>
-				<title>
-					Journey Through the Cosmos: Explore the Solar System with Space Otaku.
-				</title>
+				<title>Explore the Solar System | Space Otaku.</title>
 
 				<meta
 					name="description"
-					content="Embark on an exciting journey through our Solar System with Space Otaku. Discover fascinating celestial bodies, planet distances, speeds, and sizes relative to the sun in this immersive experience. Join us now!"
+					content="Discover fascinating celestial bodies, planet distances, speeds, and sizes relative to the sun in this immersive experience by Space Otaku."
 				/>
 				<meta
 					name="keywords"
