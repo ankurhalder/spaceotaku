@@ -17,18 +17,19 @@
 			border-radius: 20px;
 			margin: 5px 5px 0 0;
 			cursor: pointer;
-			font-size: var(--font-11);
-			font-weight: bold;
+			font-size: var(--font-12);
+			font-family: var(--font-tektur);
+			letter-spacing: 2px;
 			transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
 
 			&:hover {
-				background-color: #ff5722;
+				background-color: var(--cool-orange);
 				color: var(--white);
-				transform: translate(-2px, 2px);
+				transform: translate(2px, 2px);
 			}
 
 			&.active {
-				background-color: #ff5722;
+				background-color: var(--cool-orange);
 				color: var(--white);
 			}
 			@media (max-width: #{$breakpoint-phone}) {
