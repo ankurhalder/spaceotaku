@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Fragment } from "react";
 const SideNavbar = ({ isOpen, setIsOpen }) => {
 	// const [isOpen, setIsOpen] = useState(false);

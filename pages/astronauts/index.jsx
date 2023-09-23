@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import astronauts from "@/data/astronauts";
 import Head from "next/head";
 const Slider = () => {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 export default function ChatComponent() {
 	const [open, setOpen] = useState(false);
 	const messagesContentRef = useRef(null);

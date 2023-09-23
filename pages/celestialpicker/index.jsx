@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Fragment } from "react";
 import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Head from "next/head";
 
 const PlanetPage = () => {
