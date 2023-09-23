@@ -72,7 +72,7 @@
 		font-size: var(--font-6);
 		text-transform: uppercase;
 		letter-spacing: 4px;
-		margin-bottom: 1%;
+		margin-bottom: 0.3%;
 		background: linear-gradient(
 			45deg,
 			#ff7854,
@@ -105,10 +105,15 @@
 		}
 	}
 	span {
+		position: relative;
+		top: 0%;
+		bottom: 0%;
+		right: 0%;
+		left: -1%;
 		letter-spacing: 4px;
-		font-size: var(--font-10);
+		font-size: var(--font-8);
 		text-transform: capitalize;
-		font-family: var(--font-press);
+		font-family: var(--font-source);
 		color: var(--cool-blue-2);
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-11);

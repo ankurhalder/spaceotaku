@@ -28,7 +28,7 @@ function Index() {
 			</Head>
 			<div className="landing-page-sample-contents">
 				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>
-				<span>Created by Ankur Halder</span>
+				<span>Created by ANKUR HALDER</span>
 				<h5>
 					Embark on a Celestial Journey with Space Otaku: Your Source for Space
 					Enthusiasts
