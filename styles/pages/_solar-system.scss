@@ -4,13 +4,40 @@
 }
 .solar-system-heading {
 	position: absolute;
-	top: 10%;
-	left: 30%;
-	font-family: var(--font-source);
-	font-size: var(--font-7);
-	letter-spacing: 2px;
-	font-weight: 400;
+	top: 4%;
+	bottom: 0%;
+	right: 0%;
+	left: 10%;
+	font-family: var(--font-elianto);
+	font-size: var(--font-5);
 	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin-bottom: 6%;
+	background: linear-gradient(
+		45deg,
+		#ff7854,
+		#fd267d,
+		#4e7dfc,
+		#27ae60,
+		#ffc107,
+		#e74c3c
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: color 0.3s, background-position 0.3s;
+	background-size: 200% 200%;
+	animation: gradient-animation 3s linear infinite;
+	@media (max-width: #{$breakpoint-desktop}) {
+		font-size: var(--font-8);
+		margin-bottom: 1.5%;
+		left: 16%;
+	}
+	@media (max-width: #{$breakpoint-phone}) {
+		font-size: var(--font-8);
+		margin-bottom: 1.5%;
+		left: 15%;
+	}
 }
 .solar-system-description {
 	display: none;
