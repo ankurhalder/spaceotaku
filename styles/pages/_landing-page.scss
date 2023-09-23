@@ -1,4 +1,5 @@
 .landing-container {
+	@include flex-container(column, wrap, center, center);
 	.tab-nav {
 		background-color: transparent;
 		position: fixed;
@@ -93,7 +94,7 @@
 		text-transform: capitalize;
 		font-family: var(--font-source);
 		color: var(--cool-blue-2);
-		margin: 0 0 0 0;
+		margin: 1% 0 0 1.5%;
 	}
 	h5 {
 		font-family: var(--font-tektur);
@@ -102,7 +103,7 @@
 		letter-spacing: 4px;
 		font-weight: 400;
 		text-transform: uppercase;
-		margin: 0 0 0 0;
+		margin: 1% 0 0 1.5%;
 	}
 	p {
 		font-family: var(--font-roboto);
@@ -110,8 +111,9 @@
 		font-size: var(--font-10);
 		color: var(--white);
 		text-align: justify;
-		line-height: 1.6;
+		line-height: 1.5;
 		font-weight: 400;
-		margin: 0 0 0 0;
+		width: 70%;
+		margin: 1% 0 1% 0;
 	}
 }
