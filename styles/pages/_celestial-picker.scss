@@ -9,22 +9,33 @@
 	}
 	.page-title {
 		font-family: var(--font-elianto);
-		text-transform: uppercase;
 		font-size: var(--font-5);
-		letter-spacing: 3px;
-		background: var(--primary-color-2);
-		-webkit-background-clip: text;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		margin-bottom: 1%;
+		background: linear-gradient(
+			45deg,
+			#ff7854,
+			#fd267d,
+			#4e7dfc,
+			#27ae60,
+			#ffc107,
+			#e74c3c
+		);
 		background-clip: text;
+		-webkit-background-clip: text;
 		color: transparent;
-		padding: 1% 0 1% 0;
+		transition: color 0.3s, background-position 0.3s;
+		background-size: 200% 200%;
+		animation: gradient-animation 3s linear infinite;
 		@media (max-width: #{$breakpoint-desktop}) {
-			padding: 0.8% 0 0.8% 0;
-			font-size: var(--font-6);
+			font-size: var(--font-7);
+			margin-bottom: 1.5%;
+			left: 32%;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			padding: 0.8% 0 0.8% 0;
-			font-size: var(--font-9);
-			margin: 5% 0 0 6%;
+			font-size: var(--font-8);
+			margin-top: 10%;
 		}
 	}
 
