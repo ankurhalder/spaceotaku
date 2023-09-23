@@ -1,24 +1,18 @@
 .landing-container {
 	.tab-nav {
-		display: flex;
-		justify-content: center;
-		background-color: #1e2a38;
+		background-color: transparent;
 		position: fixed;
 		top: 0;
-		width: 70%;
+		left: 40%;
 		z-index: 1;
-		margin: 0 0 0 17%;
-		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-		transition: background-color 0.3s ease-in-out;
+		@media (max-width: #{$breakpoint-desktop}) {
+		}
 		@media (max-width: #{$breakpoint-phone}) {
-			// justify-content: space-between;
-			align-self: center;
-			margin: 0 0 0 15%;
 		}
 		button {
 			background-color: transparent;
 			border: none;
-			color: #ffffff;
+			color: var(--white);
 			padding: 10px 20px;
 			cursor: pointer;
 			font-size: 18px;
@@ -27,14 +21,13 @@
 
 			&:hover {
 				background-color: #ff5722;
-				color: #fff;
+				color: var(--white);
 				transform: translateY(-3px);
 			}
 
 			&.active {
 				background-color: #ff5722;
-				color: #fff;
-				border-bottom: 3px solid #ffffff;
+				color: var(--white);
 			}
 			@media (max-width: #{$breakpoint-phone}) {
 				font-size: 14px;
