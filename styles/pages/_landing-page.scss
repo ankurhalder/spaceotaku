@@ -105,23 +105,32 @@
 		}
 	}
 	span {
-		letter-spacing: 3px;
-		font-size: var(--font-9);
-		font-family: var(--font-tektur);
-		color: var(--white);
+		letter-spacing: 4px;
+		font-size: var(--font-10);
+		text-transform: capitalize;
+		font-family: var(--font-press);
+		color: var(--cool-blue-2);
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-11);
+		}
 		@media (max-width: #{$breakpoint-phone}) {
 			font-size: var(--font-11);
 			letter-spacing: 2px;
 		}
 	}
 	h5 {
-		font-family: var(--font-oswald);
-		letter-spacing: 2px;
+		font-family: var(--font-tektur);
 		font-size: var(--font-11);
 		color: var(--cool-yellow);
-		line-height: 1.6;
+		letter-spacing: 4px;
+		font-weight: 400;
 		text-transform: uppercase;
 		margin: 20px 0;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-12);
+			letter-spacing: 2px;
+			margin: 10px 0;
+		}
 		@media (max-width: #{$breakpoint-phone}) {
 			font-size: var(--font-12);
 			letter-spacing: 2px;
