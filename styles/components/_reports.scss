@@ -1,45 +1,63 @@
 .reports {
-	background-color: #1c1c1c;
+	background-color: #333333;
 	color: var(--white);
 	border-radius: 40px;
 	padding: 20px;
-	width: 80%;
-	max-width: 1000px;
-	margin: 0 0 0 33%;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 0 0 2%;
 	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
-	&:hover {
-		transform: translateY(-4px);
-		box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+	animation: slide-in 0.5s ease-in-out;
+	@keyframes slide-in {
+		0% {
+			transform: translateY(100%);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	@media (max-width: #{$breakpoint-desktop}) {
+		max-width: 80%;
+		margin: 0 0 0 12%;
 	}
 	@media (max-width: #{$breakpoint-phone}) {
-		margin: 0 0 0 15%;
-		width: 100%;
+		max-width: 30%;
+		margin: 0 0 0 2.2%;
 	}
 	h3 {
 		font-size: var(--font-7);
-		font-family: var(--font-orbitron);
-		letter-spacing: 4px;
+		font-family: var(--font-tektur);
+		letter-spacing: 6px;
 		margin-bottom: 2%;
-		font-weight: 500;
-		color: var(--cool-blue);
+		font-weight: 600;
+		color: var(--red);
 		text-align: center;
+		border-bottom: 2px solid var(--red);
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-8);
+			letter-spacing: 4px;
+			margin-bottom: 1.5%;
+		}
 		@media (max-width: #{$breakpoint-phone}) {
 			font-size: var(--font-9);
 			letter-spacing: 2px;
 			margin-bottom: 1.5%;
 		}
 	}
-
 	h4 {
 		font-size: var(--font-10);
 		font-family: var(--font-tektur);
 		margin-bottom: 1.5%;
-		color: var(--tertiary-accent);
+		color: var(--cool-blue-2);
 		letter-spacing: 3.5px;
 		margin-bottom: 2%;
 		font-weight: 500;
+		text-align: center;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-11);
+			letter-spacing: 3px;
+			margin-bottom: 1.5%;
+		}
 		@media (max-width: #{$breakpoint-phone}) {
 			font-size: var(--font-11);
 			letter-spacing: 2px;
@@ -49,44 +67,53 @@
 
 	p {
 		font-size: var(--font-11);
-		line-height: 1.6;
-		margin-bottom: 1.5%;
-		font-family: var(--font-roboto);
+		line-height: 1.5;
+		font-family: var(--font-tektur);
 		color: var(--white);
 		letter-spacing: 2px;
 		font-weight: 400;
+		text-align: center;
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-13);
+			letter-spacing: 3px;
+		}
 		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-12);
+			font-size: var(--font-13);
 			letter-spacing: 2px;
 			margin-bottom: 1.5%;
 		}
 	}
 
 	a {
-		color: #00aaff;
+		color: #ffc107;
 		text-decoration: none;
 		line-height: 1.6;
 		margin-bottom: 1.5%;
-		letter-spacing: 2px;
+		letter-spacing: 3px;
 		font-weight: 400;
 		transition: color 0.2s;
-
+		text-align: center;
 		&:hover {
-			color: #0077aa;
+			color: lighten($color: #ffc107, $amount: 20%);
+		}
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-13);
+			letter-spacing: 3px;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-15);
+			font-size: var(--font-14);
 			letter-spacing: 2px;
 			margin-bottom: 1.5%;
 		}
 	}
-
 	img {
 		max-width: 100%;
-		height: auto;
+		height: 100%;
 		margin-top: 2%;
 		border-radius: 8px;
-		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+		@media (max-width: #{$breakpoint-desktop}) {
+			margin-top: 2%;
+		}
 		@media (max-width: #{$breakpoint-phone}) {
 			margin-top: 4%;
 		}
