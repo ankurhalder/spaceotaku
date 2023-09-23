@@ -111,6 +111,7 @@
 		right: 0%;
 		left: -1%;
 		letter-spacing: 4px;
+		font-weight: 600;
 		font-size: var(--font-8);
 		text-transform: capitalize;
 		font-family: var(--font-source);
@@ -125,7 +126,7 @@
 	}
 	h5 {
 		font-family: var(--font-tektur);
-		font-size: var(--font-11);
+		font-size: var(--font-10);
 		color: var(--cool-yellow);
 		letter-spacing: 4px;
 		font-weight: 400;
@@ -144,12 +145,16 @@
 	}
 	p {
 		font-family: var(--font-roboto);
-		letter-spacing: 2px;
-		font-size: var(--font-11);
-		color: #ffffff;
-
-		line-height: 2;
-		margin: 20px 0;
+		letter-spacing: 3px;
+		font-size: var(--font-10);
+		color: var(--white);
+		text-align: justify;
+		line-height: 1.6;
+		font-weight: 400;
+		max-width: 80%;
+		position: relative;
+		left: 10%;
+		// margin: 20px 0;
 		@media (max-width: #{$breakpoint-phone}) {
 			font-size: var(--font-12);
 			letter-spacing: 2px;
