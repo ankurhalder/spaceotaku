@@ -54,31 +54,41 @@ const Articles = () => {
 							src={article.image_url}
 							alt={article.title}
 						/>
-						<p className="published-at">
-							Published at:
-							<span>{new Date(article.published_at).toLocaleString()}</span>
-						</p>
-						<p className="updated-at">
-							Updated at:
-							<span>{new Date(article.updated_at).toLocaleString()}</span>
-						</p>
-						<p className="news-site">
-							News Site:
-							<span>{article.news_site}</span>
-						</p>
-						<p className="featured">
-							Featured:
-							<span>{article.featured ? "Yes" : "No"}</span>
-						</p>
+						<div className="additional-details">
+							<div className="published-at">
+								<p> Published at:</p>
+								<span>{new Date(article.published_at).toLocaleString()}</span>
+							</div>
+							<div className="updated-at">
+								<p>Updated at:</p>
+								<span>{new Date(article.updated_at).toLocaleString()}</span>
+							</div>
+							<div className="news-site">
+								<p>News Site:</p>
+								<span>{article.news_site}</span>
+							</div>
+							<div className="featured">
+								<p>Featured:</p>
+								<span>{article.featured ? "Yes" : "No"}</span>
+							</div>
+						</div>
 
 						{article.launches.length > 0 && (
 							<div className="launches">
-								<h6>Launches:</h6>
+								<h5>Launches:</h5>
 								<ul>
 									{article.launches.map((launch) => (
 										<li key={launch.launch_id}>
-											<p>Launch ID: {launch.launch_id}</p>
-											<p>Provider: {launch.provider}</p>
+											<div className="additional-details">
+												<div className="launch-id">
+													<p>Launch ID:</p>
+													<span>{launch.launch_id}</span>
+												</div>
+												<div className="provider">
+													<p>Provider:</p>
+													<span>{launch.provider}</span>
+												</div>
+											</div>
 										</li>
 									))}
 								</ul>
@@ -91,8 +101,14 @@ const Articles = () => {
 								<ul>
 									{article.events.map((event) => (
 										<li key={event.event_id}>
-											<p>Event ID: {event.event_id}</p>
-											<p>Provider: {event.provider}</p>
+											<div className="launch-id">
+												<p>Launch ID:</p>
+												<span>{event.event_id}</span>
+											</div>
+											<div className="provider">
+												<p>Provider:</p>
+												<span>{event.provider}</span>
+											</div>
 										</li>
 									))}
 								</ul>

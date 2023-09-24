@@ -73,133 +73,6 @@
 			}
 			@media (max-width: $breakpoint-phone) {
 			}
-			h4 {
-				font-size: var(--font-10);
-				font-family: var(--font-tektur);
-				color: var(--cool-blue-2);
-				letter-spacing: 4px;
-				margin-bottom: 2%;
-				font-weight: 600;
-				text-align: center;
-				@media (max-width: $breakpoint-desktop-wide) {
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-				}
-			}
-			.summary {
-				font-size: var(--font-11);
-				line-height: 1.5;
-				font-family: var(--font-tektur);
-				color: var(--white);
-				letter-spacing: 2px;
-				font-weight: 400;
-				text-align: justify;
-				margin: 0 0 1% 0;
-				@media (max-width: $breakpoint-desktop-wide) {
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-				}
-			}
-			span {
-				font-size: var(--font-12);
-				line-height: 1.5;
-				font-family: var(--font-tektur);
-				color: var(--white);
-				letter-spacing: 2px;
-				font-weight: 400;
-				text-align: justify;
-				margin: 0 0 1% 0;
-				@media (max-width: $breakpoint-desktop-wide) {
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-				}
-			}
-			.published-at {
-				font-size: var(--font-10);
-				line-height: 1.5;
-				margin-bottom: 1%;
-				font-family: var(--font-tektur);
-				color: var(--cool-blue-2);
-				letter-spacing: 4px;
-				font-weight: 400;
-				text-align: center;
-				font-size: var(--font-12);
-			}
-			.updated-at {
-				font-size: var(--font-10);
-				line-height: 1.5;
-				margin-bottom: 1%;
-				font-family: var(--font-tektur);
-				color: var(--cool-blue-2);
-				letter-spacing: 4px;
-				font-weight: 400;
-				text-align: center;
-				font-size: var(--font-12);
-			}
-			.news-site {
-				font-size: var(--font-10);
-				line-height: 1.5;
-				margin-bottom: 1%;
-				font-family: var(--font-tektur);
-				color: var(--cool-blue-2);
-				letter-spacing: 4px;
-				font-weight: 400;
-				text-align: center;
-				font-size: var(--font-12);
-			}
-			.featured {
-				font-size: var(--font-10);
-				line-height: 1.5;
-				margin-bottom: 1%;
-				font-family: var(--font-tektur);
-				color: var(--cool-blue-2);
-				letter-spacing: 4px;
-				font-weight: 400;
-				text-align: center;
-				font-size: var(--font-12);
-			}
-			a {
-				font-size: var(--font-11);
-				color: var(--cool-blue-2);
-				text-decoration: none;
-				line-height: 1;
-				margin-bottom: 1.5%;
-				letter-spacing: 2px;
-				font-weight: 400;
-				transition: color 0.2s;
-
-				&:hover {
-					color: darken($color: #0044ff, $amount: 20%);
-				}
-				@media (max-width: $breakpoint-desktop-wide) {
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-				}
-			}
 
 			.image-container {
 				width: 700px;
@@ -228,16 +101,6 @@
 				padding: 16px;
 				background-color: #1e1e1e;
 				border-radius: 12px;
-				@media (max-width: $breakpoint-desktop-wide) {
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-				}
 
 				h6 {
 					font-size: var(--font-11);
@@ -246,16 +109,6 @@
 					font-weight: 400;
 					margin-bottom: 12px;
 					color: var(--cool-red-1);
-					@media (max-width: $breakpoint-desktop-wide) {
-					}
-					@media (max-width: $breakpoint-desktop) {
-					}
-					@media (max-width: $breakpoint-large-tablet) {
-					}
-					@media (max-width: $breakpoint-tablet) {
-					}
-					@media (max-width: $breakpoint-phone) {
-					}
 				}
 
 				ul {
@@ -270,16 +123,6 @@
 							color: var(--cool-blue-2);
 							letter-spacing: 6px;
 							font-weight: 400;
-							@media (max-width: $breakpoint-desktop-wide) {
-							}
-							@media (max-width: $breakpoint-desktop) {
-							}
-							@media (max-width: $breakpoint-large-tablet) {
-							}
-							@media (max-width: $breakpoint-tablet) {
-							}
-							@media (max-width: $breakpoint-phone) {
-							}
 						}
 					}
 				}
