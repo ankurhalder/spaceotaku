@@ -1,7 +1,7 @@
 .articles {
 	background-color: #333333;
 	border-radius: 40px;
-	padding: 40px;
+	padding: 30px;
 	width: 1200px;
 	max-width: 100%;
 	margin: 0 0 0 0;
@@ -48,15 +48,17 @@
 	ul {
 		@include flex-container(row, wrap, center, center);
 		list-style: none;
-		padding: 5px;
+		padding: 10px;
 
 		li {
+			@include flex-container(column, wrap, center, center);
 			background-color: rgba(0, 0, 0, 0.9);
-			border-radius: 30px;
+			border-radius: 50px;
 			padding: 20px;
 			margin-bottom: 2%;
 			transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-			cursor: pointer;
+			cursor: default;
+			border: 1px solid var(--white);
 			&:hover {
 				transform: translateY(-2px) scale(1.005);
 				box-shadow: 0px 0px 8px var(--white-shadow);
@@ -90,15 +92,15 @@
 				@media (max-width: $breakpoint-phone) {
 				}
 			}
-
-			p {
+			.summary {
 				font-size: var(--font-11);
 				line-height: 1.5;
-				font-family: var(--font-roboto);
+				font-family: var(--font-tektur);
 				color: var(--white);
-				letter-spacing: 1px;
+				letter-spacing: 2px;
 				font-weight: 400;
-				text-align: center;
+				text-align: justify;
+				margin: 0 0 1% 0;
 				@media (max-width: $breakpoint-desktop-wide) {
 				}
 				@media (max-width: $breakpoint-desktop) {
@@ -110,18 +112,82 @@
 				@media (max-width: $breakpoint-phone) {
 				}
 			}
-
+			span {
+				font-size: var(--font-12);
+				line-height: 1.5;
+				font-family: var(--font-tektur);
+				color: var(--white);
+				letter-spacing: 2px;
+				font-weight: 400;
+				text-align: justify;
+				margin: 0 0 1% 0;
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
+			}
+			.published-at {
+				font-size: var(--font-10);
+				line-height: 1.5;
+				margin-bottom: 1%;
+				font-family: var(--font-tektur);
+				color: var(--cool-blue-2);
+				letter-spacing: 4px;
+				font-weight: 400;
+				text-align: center;
+				font-size: var(--font-12);
+			}
+			.updated-at {
+				font-size: var(--font-10);
+				line-height: 1.5;
+				margin-bottom: 1%;
+				font-family: var(--font-tektur);
+				color: var(--cool-blue-2);
+				letter-spacing: 4px;
+				font-weight: 400;
+				text-align: center;
+				font-size: var(--font-12);
+			}
+			.news-site {
+				font-size: var(--font-10);
+				line-height: 1.5;
+				margin-bottom: 1%;
+				font-family: var(--font-tektur);
+				color: var(--cool-blue-2);
+				letter-spacing: 4px;
+				font-weight: 400;
+				text-align: center;
+				font-size: var(--font-12);
+			}
+			.featured {
+				font-size: var(--font-10);
+				line-height: 1.5;
+				margin-bottom: 1%;
+				font-family: var(--font-tektur);
+				color: var(--cool-blue-2);
+				letter-spacing: 4px;
+				font-weight: 400;
+				text-align: center;
+				font-size: var(--font-12);
+			}
 			a {
-				color: #ffc107;
+				font-size: var(--font-11);
+				color: var(--cool-blue-2);
 				text-decoration: none;
-				line-height: 1.6;
+				line-height: 1;
 				margin-bottom: 1.5%;
 				letter-spacing: 2px;
 				font-weight: 400;
 				transition: color 0.2s;
 
 				&:hover {
-					color: lighten($color: #ffc107, $amount: 20%);
+					color: darken($color: #0044ff, $amount: 20%);
 				}
 				@media (max-width: $breakpoint-desktop-wide) {
 				}
@@ -135,11 +201,14 @@
 				}
 			}
 
-			img {
+			.image-container {
+				width: 700px;
+				height: 400px;
 				max-width: 100%;
-				height: 100%;
-				margin-top: 2%;
-				border-radius: 8px;
+				max-height: 100%;
+				border-radius: 20px;
+				overflow: hidden;
+				margin: 1% 0 1% 0;
 				@media (max-width: $breakpoint-desktop-wide) {
 				}
 				@media (max-width: $breakpoint-desktop) {
@@ -213,25 +282,6 @@
 							}
 						}
 					}
-				}
-			}
-
-			hr {
-				margin-top: 20px;
-				border: none;
-				border-top: 1px solid #ffffff;
-				&hover {
-					border-top: 2px solid #111111;
-				}
-				@media (max-width: $breakpoint-desktop-wide) {
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
 				}
 			}
 		}

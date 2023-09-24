@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { fetchArticles } from "@/functions/SpaceFlightApi";
-import Image from "next/legacy/image";
 const Articles = () => {
 	const [articles, setArticles] = useState([]);
 	const [loading, setLoading] = useState(true);
@@ -40,23 +39,37 @@ const Articles = () => {
 	}, []);
 
 	return (
-		<div key={articles.id} className="articles">
-			<h3>Spaceflight News Articles</h3>
+		<div key={articles.id} className="articles none">
+			<h3>Space News Articles</h3>
 			<ul>
 				{articles.map((article) => (
 					<li key={article.id}>
 						<h4>{article.title}</h4>
-						<p>{article.summary}</p>
+						<p className="summary">{article.summary}</p>
 						<a href={article.url} target="_blank" rel="noopener noreferrer">
 							Read More...
 						</a>
-						<img src={article.image_url} alt={article.title} />
-						<p>
-							Published at: {new Date(article.published_at).toLocaleString()}
+						<img
+							className="image-container"
+							src={article.image_url}
+							alt={article.title}
+						/>
+						<p className="published-at">
+							Published at:
+							<span>{new Date(article.published_at).toLocaleString()}</span>
 						</p>
-						<p>Updated at: {new Date(article.updated_at).toLocaleString()}</p>
-						<p>News Site: {article.news_site}</p>
-						<p>Featured: {article.featured ? "Yes" : "No"}</p>
+						<p className="updated-at">
+							Updated at:
+							<span>{new Date(article.updated_at).toLocaleString()}</span>
+						</p>
+						<p className="news-site">
+							News Site:
+							<span>{article.news_site}</span>
+						</p>
+						<p className="featured">
+							Featured:
+							<span>{article.featured ? "Yes" : "No"}</span>
+						</p>
 
 						{article.launches.length > 0 && (
 							<div className="launches">
@@ -85,8 +98,6 @@ const Articles = () => {
 								</ul>
 							</div>
 						)}
-
-						<hr />
 					</li>
 				))}
 			</ul>
