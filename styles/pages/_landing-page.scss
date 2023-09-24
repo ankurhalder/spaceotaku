@@ -149,6 +149,7 @@
 		letter-spacing: 4px;
 		font-weight: 400;
 		text-transform: uppercase;
+		margin: 0.5% 0 0.5% 0;
 		@media (max-width: #{$breakpoint-desktop-wide}) {
 			font-size: var(--font-11);
 		}
@@ -175,6 +176,7 @@
 		line-height: 1.5;
 		font-weight: 400;
 		width: 70%;
+		margin: 0.5% 0 0.5% 0;
 		@media (max-width: #{$breakpoint-desktop-wide}) {
 			font-size: var(--font-11);
 		}
