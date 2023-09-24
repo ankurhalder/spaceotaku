@@ -47,7 +47,7 @@
 	@include flex-container(column, nowrap, center, center);
 	h1 {
 		font-family: var(--font-elianto);
-		font-size: var(--font-7);
+		font-size: var(--font-8);
 		text-transform: uppercase;
 		letter-spacing: 4px;
 		background: linear-gradient(
@@ -75,6 +75,24 @@
 			100% {
 				background-position: 0% 50%;
 			}
+		}
+		@media (max-width: #{$breakpoint-desktop-wide}) {
+			font-size: var(--font-9);
+		}
+		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-10);
+		}
+		@media (max-width: #{$breakpoint-large-tablet}) {
+			font-size: var(--font-11);
+			margin: 0 0 0 auto;
+		}
+		@media (max-width: #{$breakpoint-tablet}) {
+			font-size: var(--font-12);
+			margin: 0 0 0 auto;
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			font-size: var(--font-13);
+			margin: 0 0 0 auto;
 		}
 	}
 	span {
