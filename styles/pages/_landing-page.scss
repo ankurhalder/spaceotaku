@@ -2,9 +2,9 @@
 	@include flex-container(column, wrap, center, center);
 	.tab-nav {
 		background-color: transparent;
-		position: fixed;
-		top: 0.5%;
-		left: 42%;
+		// position: fixed;
+		// top: 0.5%;
+		// left: 42%;
 		z-index: 1;
 		@media (max-width: #{$breakpoint-desktop}) {
 			left: 40%;
