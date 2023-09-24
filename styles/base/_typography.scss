@@ -8,6 +8,7 @@
 	--font-tektur: "Tektur", cursive;
 	--font-elianto: "eliantoregular";
 	--font-orbitron: "Orbitron", sans-serif;
+	// large pc
 	--font-1: clamp(64px, 8vw, 5rem);
 	--font-2: clamp(56px, 7vw, 4.5rem);
 	--font-3: clamp(48px, 6vw, 4rem);
@@ -24,23 +25,62 @@
 	--font-14: clamp(9.6px, 0.9vw, 0.9rem);
 	--font-15: clamp(8px, 0.8vw, 0.8rem);
 }
+// laptops
+@media screen and (max-width: $breakpoint-desktop) {
+	:root {
+		--font-1: clamp(60px, 7vw, 4.8rem);
+		--font-2: clamp(52px, 6.5vw, 4.3rem);
+		--font-3: clamp(44px, 6vw, 3.8rem);
+		--font-4: clamp(36px, 5.5vw, 3.3rem);
+		--font-5: clamp(28px, 5vw, 2.8rem);
+		--font-6: clamp(25.2px, 4.5vw, 2.3rem);
+		--font-7: clamp(22.4px, 4vw, 2rem);
+		--font-8: clamp(19.6px, 3.5vw, 1.7rem);
+		--font-9: clamp(16.8px, 3vw, 1.5rem);
+		--font-10: clamp(14px, 2.8vw, 1.3rem);
+		--font-11: clamp(12.6px, 2.5vw, 1.1rem);
+		--font-12: clamp(11.2px, 2.2vw, 1rem);
+		--font-13: clamp(9.8px, 2vw, 0.9rem);
+		--font-14: clamp(8.4px, 1.8vw, 0.8rem);
+		--font-15: clamp(7px, 1.6vw, 0.7rem);
+	}
+}
+@media screen and (max-width: $breakpoint-tablet) {
+	:root {
+		--font-1: clamp(54px, 6.8vw, 4.4rem);
+		--font-2: clamp(46px, 5.8vw, 3.9rem);
+		--font-3: clamp(38px, 4.8vw, 3.3rem);
+		--font-4: clamp(30px, 3.8vw, 2.8rem);
+		--font-5: clamp(27.2px, 3.4vw, 2.4rem);
+		--font-6: clamp(24px, 3vw, 2rem);
+		--font-7: clamp(21px, 2.6vw, 1.7rem);
+		--font-8: clamp(18px, 2.3vw, 1.5rem);
+		--font-9: clamp(15.4px, 1.9vw, 1.3rem);
+		--font-10: clamp(13.8px, 1.7vw, 1.1rem);
+		--font-11: clamp(12.2px, 1.5vw, 1rem);
+		--font-12: clamp(10.6px, 1.3vw, 0.9rem);
+		--font-13: clamp(9px, 1.1vw, 0.8rem);
+		--font-14: clamp(7.8px, 0.98vw, 0.78rem);
+		--font-15: clamp(6.6px, 0.83vw, 0.66rem);
+	}
+}
 
 @media screen and (max-width: $breakpoint-phone) {
 	:root {
-		--font-1: clamp(56px, 7vw, 4rem);
-		--font-2: clamp(48px, 6vw, 3.5rem);
-		--font-3: clamp(40px, 5vw, 3rem);
-		--font-4: clamp(32px, 4vw, 2.5rem);
-		--font-5: clamp(28.8px, 3.5vw, 2rem);
-		--font-6: clamp(25.6px, 3vw, 1.8rem);
-		--font-7: clamp(22.4px, 2.5vw, 1.6rem);
-		--font-8: clamp(19.2px, 2vw, 1.4rem);
-		--font-9: clamp(16px, 1.8vw, 1.2rem);
-		--font-10: clamp(14.4px, 1.5vw, 1.1rem);
-		--font-11: clamp(12.8px, 1.3vw, 1rem);
-		--font-12: clamp(11.2px, 1.1vw, 0.9rem);
-		--font-13: clamp(9.6px, 0.9vw, 0.8rem);
-		--font-14: clamp(8px, 0.8vw, 0.7rem);
-		--font-15: clamp(7.2px, 0.7vw, 0.6rem);
+		--font-1: clamp(52px, 6.5vw, 4.2rem);
+		--font-2: clamp(44px, 5.5vw, 3.7rem);
+		--font-3: clamp(36px, 4.5vw, 3.1rem);
+		--font-4: clamp(28px, 3.5vw, 2.6rem);
+		--font-5: clamp(25.4px, 3.2vw, 2.2rem);
+		--font-6: clamp(22.8px, 2.8vw, 1.8rem);
+		--font-7: clamp(20px, 2.5vw, 1.6rem);
+		--font-8: clamp(17.2px, 2.2vw, 1.4rem);
+		--font-9: clamp(14.6px, 1.8vw, 1.2rem);
+		--font-10: clamp(13px, 1.6vw, 1rem);
+		--font-11: clamp(11.4px, 1.4vw, 0.9rem);
+		--font-12: clamp(9.8px, 1.2vw, 0.8rem);
+		--font-13: clamp(8.2px, 1vw, 0.7rem);
+		--font-14: clamp(6.8px, 0.85vw, 0.68rem);
+		--font-15: clamp(5.8px, 0.73vw, 0.58rem);
 	}
 }
