@@ -1,11 +1,7 @@
 .landing-navbar {
 	.header-navbar {
 		--header-height: 10%;
-		display: flex;
-		position: fixed;
-		justify-content: space-between;
-		align-items: center;
-
+		@include flex-container(row, wrap, space-between, center);
 		z-index: 100;
 		width: 100%;
 		height: var(--header-height);
@@ -14,10 +10,6 @@
 			font-size: var(--font-7);
 			cursor: pointer;
 			margin-left: 20px;
-			// background: linear-gradient(to right, black, white);
-			// background-clip: text;
-			// -webkit-background-clip: text;
-			// color: transparent;
 			color: white;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -57,11 +49,6 @@
 				}
 			}
 		}
-		// .header-theme-toogle-button-container {
-		// 	margin-right: 10px;
-		// 	margin-bottom: 20px;
-		// }
-
 		.header-panel {
 			display: none;
 
