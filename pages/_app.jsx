@@ -1,5 +1,6 @@
 import "../styles/main.scss";
 import "leaflet/dist/leaflet.css";
+import { Analytics } from "@vercel/analytics/react";
 import { Fragment, useState } from "react";
 import Layout from "@/layout/Layout";
 export default function App({ Component, pageProps }) {
@@ -8,6 +9,7 @@ export default function App({ Component, pageProps }) {
 		<Fragment>
 			<Layout isOpen={isOpen} setIsOpen={setIsOpen}>
 				<Component {...pageProps} />
+				<Analytics />
 			</Layout>
 		</Fragment>
 	);
