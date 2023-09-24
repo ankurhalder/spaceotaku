@@ -1,6 +1,9 @@
 .landing-container {
-	@include flex-container(column, wrap, center, center);
+	@include flex-container(column, nowrap, center, center);
 	.tab-nav {
+		position: fixed;
+		top: 0;
+		left: 40%;
 		background-color: transparent;
 		z-index: 1;
 		button {
@@ -26,14 +29,21 @@
 				background-color: var(--cool-orange);
 				color: var(--white);
 			}
-			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-13);
-				padding: 10px 15px;
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-14);
-				padding: 10px 15px;
-			}
+		}
+		@media (max-width: #{$breakpoint-desktop-wide}) {
+			left: 40%;
+		}
+		@media (max-width: #{$breakpoint-desktop}) {
+			left: 38%;
+		}
+		@media (max-width: #{$breakpoint-large-tablet}) {
+			left: 35%;
+		}
+		@media (max-width: #{$breakpoint-tablet}) {
+			left: 30%;
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			left: 15%;
 		}
 	}
 }
@@ -70,8 +80,10 @@
 				background-position: 0% 50%;
 			}
 		}
+		margin: 3% 0 0 0;
 		@media (max-width: #{$breakpoint-desktop-wide}) {
 			font-size: var(--font-9);
+			// margin: 0 0 0 0;
 		}
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-10);

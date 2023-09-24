@@ -3,3 +3,15 @@ $breakpoint-tablet: 768px;
 $breakpoint-large-tablet: 1200px;
 $breakpoint-desktop: 1366px;
 $breakpoint-desktop-wide: 1566px;
+.media-query-sample {
+	@media (max-width: $breakpoint-desktop-wide) {
+	}
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+	}
+	@media (max-width: $breakpoint-tablet) {
+	}
+	@media (max-width: $breakpoint-phone) {
+	}
+}
