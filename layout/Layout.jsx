@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { SideNavbar, ChatBot } from "@/container";
+import { SideNavbar, ChatBot, NavBar } from "@/container";
 import { TwinklingStars } from "@/components";
 import { IconMeta, CommonMeta } from "@/components";
 function Layout({ children, isOpen, setIsOpen }) {
@@ -8,6 +8,7 @@ function Layout({ children, isOpen, setIsOpen }) {
 			<IconMeta></IconMeta>
 			<CommonMeta></CommonMeta>
 			<TwinklingStars></TwinklingStars>
+			<NavBar></NavBar>
 			{/* <SideNavbar isOpen={isOpen} setIsOpen={setIsOpen}></SideNavbar> */}
 			<ChatBot></ChatBot>
 			{children}
