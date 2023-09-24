@@ -54,7 +54,7 @@ const Articles = () => {
 							src={article.image_url}
 							alt={article.title}
 						/>
-						<div className="additional-details">
+						<div className="article-additional-details">
 							<div className="published-at">
 								<p> Published at:</p>
 								<span>{new Date(article.published_at).toLocaleString()}</span>
@@ -72,8 +72,8 @@ const Articles = () => {
 								<span>{article.featured ? "Yes" : "No"}</span>
 							</div>
 						</div>
-
-						{article.launches.length > 0 && (
+						{/* i will do it later if i got time */}
+						{/* {article.launches.length > 0 && (
 							<div className="launches">
 								<h5>Launches:</h5>
 								<ul>
@@ -93,8 +93,8 @@ const Articles = () => {
 									))}
 								</ul>
 							</div>
-						)}
-
+						)} */}
+						{/* 
 						{article.events.length > 0 && (
 							<div className="events">
 								<h6>Events:</h6>
@@ -113,7 +113,7 @@ const Articles = () => {
 									))}
 								</ul>
 							</div>
-						)}
+						)} */}
 					</li>
 				))}
 			</ul>
