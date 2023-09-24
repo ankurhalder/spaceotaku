@@ -1,4 +1,4 @@
-@media (max-width: #{$breakpoint-phone}) {
+@media (max-width: #{$breakpoint-large-tablet}) {
 	#btn {
 		position: absolute;
 		right: 88%;
@@ -19,11 +19,12 @@
 	padding: 6px 14px;
 	z-index: 1000;
 	// transition: all 0.25s ease;
-	@media (max-width: #{$breakpoint-phone}) {
+	@media (max-width: #{$breakpoint-large-tablet}) {
 		display: none;
 	}
+
 	&.open {
-		@media (max-width: #{$breakpoint-phone}) {
+		@media (max-width: #{$breakpoint-large-tablet}) {
 			display: block;
 			width: 250px;
 

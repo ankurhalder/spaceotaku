@@ -3,12 +3,6 @@
 	.tab-nav {
 		background-color: transparent;
 		z-index: 1;
-		@media (max-width: #{$breakpoint-desktop}) {
-			left: 40%;
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			left: 23%;
-		}
 		button {
 			background-color: transparent;
 			border: none;
@@ -83,16 +77,16 @@
 			font-size: var(--font-10);
 		}
 		@media (max-width: #{$breakpoint-large-tablet}) {
+			margin: 5% 0 0 1%;
 			font-size: var(--font-11);
-			margin: 0 0 0 auto;
 		}
 		@media (max-width: #{$breakpoint-tablet}) {
+			margin: 10% 0 0 1%;
+			text-align: center;
 			font-size: var(--font-12);
-			margin: 0 0 0 auto;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-13);
-			margin: 0 0 0 auto;
+			margin: 12% 0 0 1%;
 		}
 	}
 	span {
@@ -102,11 +96,22 @@
 		text-transform: capitalize;
 		font-family: var(--font-source);
 		color: var(--cool-blue-2);
+		@media (max-width: #{$breakpoint-desktop-wide}) {
+			font-size: var(--font-9);
+		}
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-10);
 		}
-		@media (max-width: #{$breakpoint-phone}) {
+		@media (max-width: #{$breakpoint-large-tablet}) {
 			font-size: var(--font-11);
+		}
+		@media (max-width: #{$breakpoint-tablet}) {
+			margin: 1% 0 0 1%;
+			text-align: center;
+			// font-size: var(--font-12);
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			// font-size: var(--font-13);
 		}
 	}
 	h5 {
@@ -116,12 +121,21 @@
 		letter-spacing: 4px;
 		font-weight: 400;
 		text-transform: uppercase;
+		@media (max-width: #{$breakpoint-desktop-wide}) {
+			font-size: var(--font-11);
+		}
 		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-12);
+		}
+		@media (max-width: #{$breakpoint-large-tablet}) {
+			margin: 1% 0 1% 1%;
+			text-align: center;
 			font-size: var(--font-13);
 		}
-		@media (max-width: #{$breakpoint-phone}) {
+		@media (max-width: #{$breakpoint-tablet}) {
 			font-size: var(--font-14);
-			text-align: center;
+		}
+		@media (max-width: #{$breakpoint-phone}) {
 		}
 	}
 	p {
@@ -133,16 +147,20 @@
 		line-height: 1.5;
 		font-weight: 400;
 		width: 70%;
+		@media (max-width: #{$breakpoint-desktop-wide}) {
+			font-size: var(--font-11);
+		}
 		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-12);
+		}
+		@media (max-width: #{$breakpoint-large-tablet}) {
+			text-align: center;
 			font-size: var(--font-13);
-			width: 75%;
-			letter-spacing: 2px;
+		}
+		@media (max-width: #{$breakpoint-tablet}) {
+			font-size: var(--font-14);
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-13);
-			line-height: 1.5;
-			width: 80%;
-			letter-spacing: 2px;
 		}
 	}
 }
