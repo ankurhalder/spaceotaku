@@ -16,13 +16,15 @@
 			transform: translateY(0);
 		}
 	}
-	@media (max-width: #{$breakpoint-desktop}) {
-		max-width: 80%;
-		margin: 0 0 0 12%;
+	@media (max-width: $breakpoint-desktop-wide) {
 	}
-	@media (max-width: #{$breakpoint-phone}) {
-		max-width: 30%;
-		margin: 0 0 0 2.2%;
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+	}
+	@media (max-width: $breakpoint-tablet) {
+	}
+	@media (max-width: $breakpoint-phone) {
 	}
 	h3 {
 		font-size: var(--font-7);
@@ -33,15 +35,15 @@
 		color: var(--red);
 		text-align: center;
 		border-bottom: 2px solid var(--red);
-		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-8);
-			letter-spacing: 4px;
-			margin-bottom: 1.5%;
+		@media (max-width: $breakpoint-desktop-wide) {
 		}
-		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-9);
-			letter-spacing: 2px;
-			margin-bottom: 1.5%;
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
 		}
 	}
 
@@ -61,10 +63,15 @@
 				transform: translateY(-2px) scale(1.005);
 				box-shadow: 0px 0px 8px var(--white-shadow);
 			}
-			@media (max-width: #{$breakpoint-desktop}) {
+			@media (max-width: $breakpoint-desktop-wide) {
 			}
-			@media (max-width: #{$breakpoint-phone}) {
-				padding: 10px;
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
 			}
 			h4 {
 				font-size: var(--font-10);
@@ -74,15 +81,15 @@
 				margin-bottom: 2%;
 				font-weight: 600;
 				text-align: center;
-				@media (max-width: #{$breakpoint-desktop}) {
-					font-size: var(--font-11);
-					letter-spacing: 3px;
-					margin-bottom: 1.5%;
+				@media (max-width: $breakpoint-desktop-wide) {
 				}
-				@media (max-width: #{$breakpoint-phone}) {
-					font-size: var(--font-12);
-					letter-spacing: 2px;
-					margin-bottom: 1.5%;
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
 				}
 			}
 
@@ -94,14 +101,15 @@
 				letter-spacing: 1px;
 				font-weight: 400;
 				text-align: center;
-				@media (max-width: #{$breakpoint-desktop}) {
-					font-size: var(--font-13);
-					letter-spacing: 3px;
+				@media (max-width: $breakpoint-desktop-wide) {
 				}
-				@media (max-width: #{$breakpoint-phone}) {
-					font-size: var(--font-13);
-					letter-spacing: 2px;
-					margin-bottom: 1.5%;
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
 				}
 			}
 
@@ -117,14 +125,15 @@
 				&:hover {
 					color: lighten($color: #ffc107, $amount: 20%);
 				}
-				@media (max-width: #{$breakpoint-desktop}) {
-					font-size: var(--font-13);
-					letter-spacing: 3px;
+				@media (max-width: $breakpoint-desktop-wide) {
 				}
-				@media (max-width: #{$breakpoint-phone}) {
-					font-size: var(--font-13);
-					letter-spacing: 2px;
-					margin-bottom: 1.5%;
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
 				}
 			}
 
@@ -133,11 +142,15 @@
 				height: 100%;
 				margin-top: 2%;
 				border-radius: 8px;
-				@media (max-width: #{$breakpoint-desktop}) {
-					margin-top: 2%;
+				@media (max-width: $breakpoint-desktop-wide) {
 				}
-				@media (max-width: #{$breakpoint-phone}) {
-					margin-top: 4%;
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
 				}
 			}
 
@@ -148,12 +161,15 @@
 				padding: 16px;
 				background-color: #1e1e1e;
 				border-radius: 12px;
-				@media (max-width: #{$breakpoint-desktop}) {
-					margin-top: 10px;
-					padding: 10px;
+				@media (max-width: $breakpoint-desktop-wide) {
 				}
-				@media (max-width: #{$breakpoint-phone}) {
-					margin-top: 10px;
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
 				}
 
 				h6 {
@@ -163,15 +179,15 @@
 					font-weight: 400;
 					margin-bottom: 12px;
 					color: var(--cool-red-1);
-					@media (max-width: #{$breakpoint-desktop}) {
-						font-size: var(--font-13);
-						letter-spacing: 3px;
-						margin-bottom: 8px;
+					@media (max-width: $breakpoint-desktop-wide) {
 					}
-					@media (max-width: #{$breakpoint-phone}) {
-						font-size: var(--font-11);
-						letter-spacing: 2px;
-						margin-bottom: 8px;
+					@media (max-width: $breakpoint-desktop) {
+					}
+					@media (max-width: $breakpoint-large-tablet) {
+					}
+					@media (max-width: $breakpoint-tablet) {
+					}
+					@media (max-width: $breakpoint-phone) {
 					}
 				}
 
@@ -187,13 +203,15 @@
 							color: var(--cool-blue-2);
 							letter-spacing: 6px;
 							font-weight: 400;
-							@media (max-width: #{$breakpoint-desktop}) {
-								font-size: var(--font-13);
-								letter-spacing: 3px;
+							@media (max-width: $breakpoint-desktop-wide) {
 							}
-							@media (max-width: #{$breakpoint-phone}) {
-								font-size: var(--font-13);
-								letter-spacing: 2px;
+							@media (max-width: $breakpoint-desktop) {
+							}
+							@media (max-width: $breakpoint-large-tablet) {
+							}
+							@media (max-width: $breakpoint-tablet) {
+							}
+							@media (max-width: $breakpoint-phone) {
 							}
 						}
 					}
@@ -207,11 +225,15 @@
 				&hover {
 					border-top: 2px solid #111111;
 				}
-				@media (max-width: #{$breakpoint-desktop}) {
-					margin-top: 5px;
+				@media (max-width: $breakpoint-desktop-wide) {
 				}
-				@media (max-width: #{$breakpoint-phone}) {
-					margin-top: 10px;
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
 				}
 			}
 		}
