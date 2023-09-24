@@ -3,7 +3,7 @@
 	.tab-nav {
 		position: fixed;
 		top: 0;
-		left: 40%;
+		left: 42%;
 		background-color: transparent;
 		z-index: 1;
 		button {
@@ -47,7 +47,7 @@
 			}
 		}
 		@media (max-width: #{$breakpoint-desktop-wide}) {
-			// left: 40%;
+			left: 40%;
 		}
 		@media (max-width: #{$breakpoint-desktop}) {
 			// left: 38%;

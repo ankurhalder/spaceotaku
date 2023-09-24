@@ -1,15 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { fetchArticles } from "@/functions/SpaceFlightApi";
-
+import Image from "next/legacy/image";
 const Articles = () => {
 	const [articles, setArticles] = useState([]);
 	const [loading, setLoading] = useState(true);
-	const [page, setPage] = useState(1); // Initial page number
-	// Check if we're running on the client side
+	const [page, setPage] = useState(1);
 	const isClient = typeof window !== "undefined";
-
-	// Add isMobile detection only if we're on the client side
 	const isMobile =
 		isClient &&
 		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -17,7 +14,7 @@ const Articles = () => {
 		);
 	useEffect(() => {
 		async function fetchData() {
-			const articleData = await fetchArticles(page); // Pass the current page to the API function
+			const articleData = await fetchArticles(page);
 			setArticles((prevArticles) => [...prevArticles, ...articleData]);
 			setLoading(false);
 		}
@@ -26,22 +23,21 @@ const Articles = () => {
 
 	const handleScroll = () => {
 		if (
-			(!isMobile && // Check if it's not a mobile device
+			(!isMobile &&
 				window.innerHeight + window.pageYOffset >=
 					document.documentElement.offsetHeight) ||
-			(isMobile && // For mobile devices, add a buffer to trigger earlier
+			(isMobile &&
 				window.innerHeight + window.pageYOffset + 100 >=
 					document.documentElement.offsetHeight)
 		) {
-			// User has scrolled to the bottom of the page
-			setPage((prevPage) => prevPage + 1); // Load the next page of data
+			setPage((prevPage) => prevPage + 1);
 		}
 	};
 
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
-	}, []); // Add and remove scroll event listener
+	}, []);
 
 	return (
 		<div key={articles.id} className="articles">
@@ -62,7 +58,6 @@ const Articles = () => {
 						<p>News Site: {article.news_site}</p>
 						<p>Featured: {article.featured ? "Yes" : "No"}</p>
 
-						{/* Display launches if available */}
 						{article.launches.length > 0 && (
 							<div className="launches">
 								<h6>Launches:</h6>
@@ -77,7 +72,6 @@ const Articles = () => {
 							</div>
 						)}
 
-						{/* Display events if available */}
 						{article.events.length > 0 && (
 							<div className="events">
 								<h6>Events:</h6>

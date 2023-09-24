@@ -1,11 +1,10 @@
 .articles {
 	background-color: #333333;
-	color: var(--white);
 	border-radius: 40px;
-	padding: 20px;
+	padding: 40px;
 	width: 1200px;
 	max-width: 100%;
-	margin: 0 0 0 2%;
+	margin: 0 0 0 0;
 	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 	animation: slide-in 0.5s ease-in-out;
 	@keyframes slide-in {
@@ -28,13 +27,12 @@
 	}
 	h3 {
 		font-size: var(--font-7);
-		font-family: var(--font-tektur);
+		font-family: var(--font-orbitron);
 		letter-spacing: 6px;
 		margin-bottom: 2%;
-		font-weight: 600;
-		color: var(--red);
+		font-weight: 500;
+		color: var(--cool-red);
 		text-align: center;
-		border-bottom: 2px solid var(--red);
 		@media (max-width: $breakpoint-desktop-wide) {
 		}
 		@media (max-width: $breakpoint-desktop) {

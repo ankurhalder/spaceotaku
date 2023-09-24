@@ -1,11 +1,8 @@
-// utils/spaceflightApi.js
-
 const apiUrl = "https://api.spaceflightnewsapi.net/v4";
 
-// Function to fetch articles with pagination support
 export async function fetchArticles(page) {
-	const perPage = 10; // Number of articles to fetch per page
-	const offset = (page - 1) * perPage; // Calculate the offset based on the page number
+	const perPage = 10;
+	const offset = (page - 1) * perPage;
 
 	try {
 		const response = await fetch(
@@ -23,8 +20,8 @@ export async function fetchArticles(page) {
 }
 
 export async function fetchBlogs(page) {
-	const perPage = 10; // Number of blogs to fetch per page
-	const offset = (page - 1) * perPage; // Calculate the offset based on the page number
+	const perPage = 10;
+	const offset = (page - 1) * perPage;
 
 	try {
 		const response = await fetch(
@@ -42,8 +39,8 @@ export async function fetchBlogs(page) {
 }
 
 export async function fetchReports(page) {
-	const perPage = 10; // Number of reports to fetch per page
-	const offset = (page - 1) * perPage; // Calculate the offset based on the page number
+	const perPage = 10;
+	const offset = (page - 1) * perPage;
 
 	try {
 		const response = await fetch(
