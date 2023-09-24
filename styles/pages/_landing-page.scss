@@ -29,21 +29,37 @@
 				background-color: var(--cool-orange);
 				color: var(--white);
 			}
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-13);
+				padding: 8px 16px;
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				font-size: var(--font-14);
+				padding: 6px 12px;
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+				font-size: var(--font-15);
+				padding: 4px 8px;
+			}
 		}
 		@media (max-width: #{$breakpoint-desktop-wide}) {
-			left: 40%;
+			// left: 40%;
 		}
 		@media (max-width: #{$breakpoint-desktop}) {
-			left: 38%;
+			// left: 38%;
 		}
 		@media (max-width: #{$breakpoint-large-tablet}) {
 			left: 35%;
 		}
 		@media (max-width: #{$breakpoint-tablet}) {
-			left: 30%;
+			// left: 38%;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			left: 15%;
+			left: 30%;
 		}
 	}
 }
