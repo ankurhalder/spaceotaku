@@ -53,34 +53,40 @@ function Reports() {
 		<div className="reports">
 			<h3>Reports</h3>
 			{reports.map((report) => (
-				<div key={report.id} className="report">
-					<h4 className="report-title">{report.title}</h4>
-					<strong>URL:</strong>{" "}
-					<a
-						href={report.url}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="report-url"
-					>
-						{report.url}
-					</a>
-					{report.image_url && (
-						<img src={report.image_url} alt="Report" className="report-image" />
-					)}
-					<div className="reports-additional-details">
-						<div className="summary">
-							<span>{report.summary}</span>
+				<ul key={report.id} className="report">
+					<li>
+						<h4 className="report-title">{report.title}</h4>
+
+						<a
+							href={report.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="report-url"
+						>
+							URL: {report.url}
+						</a>
+						{report.image_url && (
+							<img
+								src={report.image_url}
+								alt="Report"
+								className="image-container"
+							/>
+						)}
+						<div className="reports-additional-details">
+							<div className="summary">
+								<span>{report.summary}</span>
+							</div>
+							<div className="published-at">
+								<p>Published at:</p>
+								<span>{report.published_at}</span>
+							</div>
+							<div className="news-site">
+								<p>News Site:</p>
+								<span>{report.news_site}</span>
+							</div>
 						</div>
-						<div className="published-at">
-							<p>Published at:</p>
-							<span>{report.published_at}</span>
-						</div>
-						<div className="news-site">
-							<p>News Site:</p>
-							<span>{report.news_site}</span>
-						</div>
-					</div>
-				</div>
+					</li>
+				</ul>
 			))}
 			{loading && <p>Loading...</p>}
 		</div>
