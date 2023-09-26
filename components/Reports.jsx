@@ -5,12 +5,10 @@ import { fetchReports } from "@/functions/SpaceFlightApi";
 function Reports() {
 	const [reports, setReports] = useState([]);
 	const [loading, setLoading] = useState(true);
-	const [page, setPage] = useState(1); // Initial page number
+	const [page, setPage] = useState(1);
 
-	// Check if we're running on the client side
 	const isClient = typeof window !== "undefined";
 
-	// Add isMobile detection only if we're on the client side
 	const isMobile =
 		isClient &&
 		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -19,42 +17,38 @@ function Reports() {
 
 	useEffect(() => {
 		async function fetchData() {
-			const reportData = await fetchReports(page); // Pass the current page to the API function
+			const reportData = await fetchReports(page);
 			setReports((prevReports) => [...prevReports, ...reportData]);
 			setLoading(false);
 		}
 		fetchData();
-	}, [page]); // Trigger the effect when the page number changes
+	}, [page]);
 
 	const handleScroll = () => {
 		if (
-			(isClient && // Check if we're on the client side
-				(!isMobile || // Check if it's not a mobile device
+			(isClient &&
+				(!isMobile ||
 					window.innerHeight + window.pageYOffset >=
 						document.documentElement.offsetHeight)) ||
-			(isClient && // Check if we're on the client side
-				isMobile && // For mobile devices, add a buffer to trigger earlier
+			(isClient &&
+				isMobile &&
 				window.innerHeight + window.pageYOffset + 100 >=
 					document.documentElement.offsetHeight)
 		) {
-			// User has scrolled to the bottom of the page
-			setPage((prevPage) => prevPage + 1); // Load the next page of data
+			setPage((prevPage) => prevPage + 1);
 		}
 	};
 
 	useEffect(() => {
 		if (isClient) {
-			// Only add the scroll event listener if we're on the client side
 			window.addEventListener("scroll", handleScroll);
 		}
 		return () => {
 			if (isClient) {
-				// Only remove the scroll event listener if we're on the client side
 				window.removeEventListener("scroll", handleScroll);
 			}
 		};
-	}, []); // Add and remove scroll event listener
-
+	}, []);
 	return (
 		<div className="reports">
 			<h3>Reports</h3>
