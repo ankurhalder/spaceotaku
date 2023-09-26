@@ -40,14 +40,27 @@
 		margin-top: 0.5%;
 	}
 	h3 {
-		font-size: var(--font-7);
-		font-family: var(--font-tektur);
+		font-size: var(--font-9);
+		font-family: var(--font-orbitron);
 		letter-spacing: 6px;
-		margin-bottom: 2%;
-		font-weight: 600;
-		color: var(--red);
+		margin-bottom: 0.5%;
+		font-weight: 500;
+		color: var(--cool-red-1);
 		text-align: center;
-		border-bottom: 2px solid var(--red);
+		text-decoration: underline;
+		@media (max-width: $breakpoint-desktop-wide) {
+			font-size: var(--font-10);
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+			font-size: var(--font-11);
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+			margin: 0 0 3% 0;
+		}
 	}
 
 	ul {
