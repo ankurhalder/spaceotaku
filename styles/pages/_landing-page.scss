@@ -6,6 +6,7 @@
 		left: 40%;
 		background-color: transparent;
 		z-index: 1;
+		overflow: hidden;
 		button {
 			background-color: transparent;
 			border: none;
@@ -61,6 +62,9 @@
 		@media (max-width: #{$breakpoint-phone}) {
 			left: 30%;
 		}
+	}
+	.content {
+		text-align: center;
 	}
 }
 .landing-page-sample-contents {
