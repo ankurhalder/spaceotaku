@@ -16,6 +16,29 @@
 			transform: translateY(0);
 		}
 	}
+	@media (max-width: $breakpoint-desktop-wide) {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	@media (max-width: $breakpoint-desktop) {
+		max-width: 70%;
+		margin: 0 auto;
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+		width: 900px;
+		margin: 0 auto;
+	}
+	@media (max-width: $breakpoint-tablet) {
+		width: 600px;
+		margin: 0 auto;
+	}
+	@media (max-width: $breakpoint-phone) {
+		width: 450px;
+		margin: 0 auto;
+		padding: 20px;
+		border-radius: 20px;
+		margin-top: 0.5%;
+	}
 	h3 {
 		font-size: var(--font-7);
 		font-family: var(--font-tektur);
