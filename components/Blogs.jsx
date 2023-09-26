@@ -26,11 +26,9 @@ const Blogs = () => {
 	const handleScroll = () => {
 		if (
 			(isClient &&
-				k(
-					!isMobile ||
-						window.innerHeight + window.pageYOffset >=
-							document.documentElement.offsetHeight
-				)) ||
+				(!isMobile ||
+					window.innerHeight + window.pageYOffset >=
+						document.documentElement.offsetHeight)) ||
 			(isClient &&
 				isMobile &&
 				window.innerHeight + window.pageYOffset + 100 >=
