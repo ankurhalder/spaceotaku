@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Fragment } from "react";
+import { useState, Fragment } from "react";
 import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
 import Image from "next/legacy/image";
