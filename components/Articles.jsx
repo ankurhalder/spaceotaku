@@ -117,6 +117,7 @@ const Articles = () => {
 					</li>
 				))}
 			</ul>
+			{loading && <p>Loading...</p>}
 		</div>
 	);
 };
