@@ -229,40 +229,6 @@
 					height: 200px;
 				}
 			}
-
-			.launches,
-			.events {
-				text-align: center;
-				margin-top: 20px;
-				padding: 16px;
-				background-color: #1e1e1e;
-				border-radius: 12px;
-
-				h6 {
-					font-size: var(--font-11);
-					font-family: var(--font-tektur);
-					letter-spacing: 3px;
-					font-weight: 400;
-					margin-bottom: 12px;
-					color: var(--cool-red-1);
-				}
-
-				ul {
-					list-style: none;
-					padding: 0;
-					li {
-						p {
-							font-size: var(--font-11);
-							line-height: 1.6;
-							margin-bottom: 1.5%;
-							font-family: var(--font-tektur);
-							color: var(--cool-blue-2);
-							letter-spacing: 6px;
-							font-weight: 400;
-						}
-					}
-				}
-			}
 		}
 	}
 }
