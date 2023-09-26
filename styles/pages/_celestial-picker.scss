@@ -9,10 +9,9 @@
 	}
 	.page-title {
 		font-family: var(--font-elianto);
-		font-size: var(--font-5);
+		font-size: var(--font-7);
 		text-transform: uppercase;
 		letter-spacing: 4px;
-		margin-bottom: 1%;
 		background: linear-gradient(
 			45deg,
 			#ff7854,
@@ -28,14 +27,32 @@
 		transition: color 0.3s, background-position 0.3s;
 		background-size: 200% 200%;
 		animation: gradient-animation 3s linear infinite;
+		@keyframes gradient-animation {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+		margin: auto auto auto auto;
+		@media (max-width: #{$breakpoint-desktop-wide}) {
+			font-size: var(--font-9);
+		}
 		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-7);
-			margin-bottom: 1.5%;
-			left: 32%;
+			font-size: var(--font-10);
+		}
+		@media (max-width: #{$breakpoint-large-tablet}) {
+			font-size: var(--font-11);
+		}
+		@media (max-width: #{$breakpoint-tablet}) {
+			text-align: center;
+			font-size: var(--font-11);
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-8);
-			margin-top: 10%;
 		}
 	}
 
