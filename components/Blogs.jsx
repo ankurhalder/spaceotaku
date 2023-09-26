@@ -56,20 +56,6 @@ const Blogs = () => {
 				{blogs.map((blog) => (
 					<li key={blog.id}>
 						<h4>{blog.title}</h4>
-						<div className="blog-additional-details">
-							<div className="published">
-								<p>Published:</p>
-								<span>{blog.published_at}</span>
-							</div>
-							<div className="news-site">
-								<p>News Site:</p>
-								<span>{blog.news_site}</span>
-							</div>
-							<div className="summary">
-								<p>Summary:</p>
-								<span>{blog.summary}</span>
-							</div>
-						</div>
 						<p>
 							URL:
 							<a
@@ -82,6 +68,21 @@ const Blogs = () => {
 							</a>
 						</p>
 						{blog.image_url && <img src={blog.image_url} alt={blog.title} />}
+						<div className="blog-additional-details">
+							<div className="summary">
+								<p>Summary:</p>
+								<span>{blog.summary}</span>
+							</div>
+							<div className="published">
+								<p>Published:</p>
+								<span>{blog.published_at}</span>
+							</div>
+							<div className="news-site">
+								<p>News Site:</p>
+								<span>{blog.news_site}</span>
+							</div>
+						</div>
+
 						<p>Featured: {blog.featured ? "Yes" : "No"}</p>
 					</li>
 				))}

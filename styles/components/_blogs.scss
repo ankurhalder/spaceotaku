@@ -124,36 +124,110 @@
 				@media (max-width: $breakpoint-phone) {
 				}
 			}
-
-			p {
+			.blog-additional-details {
+				@include flex-container(row, wrap, center, center);
 				font-size: var(--font-11);
-				line-height: 1.5;
-				font-family: var(--font-roboto);
-				color: var(--white);
-				letter-spacing: 1px;
+				font-family: var(--font-tektur);
+				letter-spacing: 3px;
 				font-weight: 400;
 				text-align: center;
+				line-height: 1.5;
+				margin: 0 0 0 0;
+				gap: 10px;
+				@media (max-width: $breakpoint-desktop-wide) {
+					font-size: var(--font-12);
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+					font-size: var(--font-13);
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+					// font-size: var(--font-14);
+				}
+				.published {
+					@include flex-container(row, wrap, center, center);
+					color: var(--cool-red-1);
+				}
+				.news-site {
+					@include flex-container(row, wrap, center, center);
+					color: var(--cool-red-1);
+				}
+				.summary {
+					@include flex-container(row, wrap, center, center);
+					color: var(--cool-red-1);
+				}
+				span {
+					font-size: var(--font-11);
+					font-family: var(--font-roboto);
+					color: var(--cool-blue-2);
+					letter-spacing: 4px;
+					font-weight: 400;
+					@media (max-width: $breakpoint-desktop-wide) {
+						font-size: var(--font-12);
+					}
+					@media (max-width: $breakpoint-desktop) {
+					}
+					@media (max-width: $breakpoint-large-tablet) {
+						// font-size: var(--font-13);
+					}
+					@media (max-width: $breakpoint-tablet) {
+					}
+					@media (max-width: $breakpoint-phone) {
+						// font-size: var(--font-14);
+					}
+				}
 			}
 
 			a {
-				color: #ffc107;
 				text-decoration: none;
-				line-height: 1.6;
-				margin-bottom: 1.5%;
+				font-size: var(--font-11);
+				color: var(--cool-red-1);
 				letter-spacing: 2px;
-				font-weight: 400;
-				transition: color 0.2s;
-
 				&:hover {
-					color: lighten($color: #ffc107, $amount: 20%);
+					color: var(--cool-yellow);
+				}
+				@media (max-width: $breakpoint-desktop-wide) {
+					font-size: var(--font-12);
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+					font-size: var(--font-13);
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+					font-size: var(--font-14);
 				}
 			}
 
 			img {
+				width: 600px;
+				height: 450px;
 				max-width: 100%;
 				max-height: 100%;
-				margin-top: 2%;
-				border-radius: 8px;
+				border-radius: 20px;
+				overflow: hidden;
+				margin: 1% 0 1% 0;
+				@media (max-width: $breakpoint-desktop-wide) {
+					width: 500px;
+					height: 350px;
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+					width: 400px;
+					height: 250px;
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+					width: 300px;
+					height: 200px;
+				}
 			}
 
 			.launches,
@@ -187,15 +261,6 @@
 							font-weight: 400;
 						}
 					}
-				}
-			}
-
-			hr {
-				margin-top: 20px;
-				border: none;
-				border-top: 1px solid #ffffff;
-				&hover {
-					border-top: 2px solid #111111;
 				}
 			}
 		}
