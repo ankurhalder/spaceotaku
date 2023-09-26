@@ -1,13 +1,13 @@
 .blogs {
 	background-color: #333333;
-	color: var(--white);
 	border-radius: 40px;
-	padding: 20px;
+	padding: 30px;
 	width: 1200px;
 	max-width: 100%;
-	margin: 0 0 0 2%;
+	margin: 0 auto;
 	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 	animation: slide-in 0.5s ease-in-out;
+	border: 0.1px solid var(--white);
 	@keyframes slide-in {
 		0% {
 			transform: translateY(100%);
