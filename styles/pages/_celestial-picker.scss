@@ -57,7 +57,7 @@
 	}
 
 	.planet-data-container {
-		@include flex-container(row, wrap, space-between, none);
+		@include flex-container(column, nowrap, center, space-between);
 		background-color: rgba(32, 32, 32, 1);
 		border-radius: 20px;
 		width: 100%;
@@ -76,7 +76,7 @@
 			border-radius: 10px;
 		}
 		.planet-details {
-			@include flex-container(column, wrap, flex-start, center);
+			@include flex-container(row, wrap, flex-end, flex-start);
 
 			.planet-name {
 				font-family: var(--font-orbitron);
@@ -144,13 +144,12 @@
 
 			.planet-image {
 				position: relative;
+				position: absolute;
 				width: 100%;
 				max-width: 450px;
 				height: 100%;
 				max-height: 450px;
 				overflow: hidden;
-				right: 40%;
-				top: 7%;
 				border-radius: 20px;
 				box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
 				animation: scaleIn 1s forwards;
