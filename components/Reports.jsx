@@ -64,6 +64,9 @@ function Reports() {
 					>
 						{report.url}
 					</a>
+					{report.image_url && (
+						<img src={report.image_url} alt="Report" className="report-image" />
+					)}
 					<div className="reports-additional-details">
 						<div className="summary">
 							<span>{report.summary}</span>
@@ -77,9 +80,6 @@ function Reports() {
 							<span>{report.news_site}</span>
 						</div>
 					</div>
-					{report.image_url && (
-						<img src={report.image_url} alt="Report" className="report-image" />
-					)}
 				</div>
 			))}
 			{loading && <p>Loading...</p>}
