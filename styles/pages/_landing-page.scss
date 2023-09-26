@@ -37,30 +37,27 @@
 			@media (max-width: $breakpoint-desktop) {
 			}
 			@media (max-width: $breakpoint-large-tablet) {
-				font-size: var(--font-14);
 				padding: 6px 12px;
 			}
 			@media (max-width: $breakpoint-tablet) {
 			}
 			@media (max-width: $breakpoint-phone) {
-				font-size: var(--font-15);
-				padding: 4px 8px;
 			}
 		}
 		@media (max-width: #{$breakpoint-desktop-wide}) {
-			left: 40%;
+			left: auto;
 		}
 		@media (max-width: #{$breakpoint-desktop}) {
-			// left: 38%;
+			left: auto;
 		}
 		@media (max-width: #{$breakpoint-large-tablet}) {
-			left: 35%;
+			left: auto;
 		}
 		@media (max-width: #{$breakpoint-tablet}) {
-			// left: 38%;
+			left: auto;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			left: 30%;
+			left: auto;
 		}
 	}
 	.content {
@@ -115,7 +112,7 @@
 		@media (max-width: #{$breakpoint-tablet}) {
 			margin: 10% 0 0 1%;
 			text-align: center;
-			font-size: var(--font-12);
+			font-size: var(--font-11);
 		}
 		@media (max-width: #{$breakpoint-phone}) {
 			margin: 12% 0 0 1%;
@@ -166,9 +163,10 @@
 			font-size: var(--font-13);
 		}
 		@media (max-width: #{$breakpoint-tablet}) {
-			font-size: var(--font-14);
+			// font-size: var(--font-14);
 		}
 		@media (max-width: #{$breakpoint-phone}) {
+			margin: 1.5% 0 1.5% 1%;
 		}
 	}
 	p {
@@ -189,12 +187,11 @@
 		}
 		@media (max-width: #{$breakpoint-large-tablet}) {
 			text-align: center;
-			font-size: var(--font-13);
 		}
 		@media (max-width: #{$breakpoint-tablet}) {
-			font-size: var(--font-14);
 		}
 		@media (max-width: #{$breakpoint-phone}) {
+			margin: 0 0 1% 0;
 		}
 	}
 }
