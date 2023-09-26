@@ -55,24 +55,28 @@ function Reports() {
 			{reports.map((report) => (
 				<div key={report.id} className="report">
 					<h4 className="report-title">{report.title}</h4>
-					<p className="report-summary">{report.summary}</p>
-					<p>
-						<strong>Published at:</strong> {report.published_at}
-					</p>
-					<p>
-						<strong>News Site:</strong> {report.news_site}
-					</p>
-					<p>
-						<strong>URL:</strong>{" "}
-						<a
-							href={report.url}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="report-url"
-						>
-							{report.url}
-						</a>
-					</p>
+					<strong>URL:</strong>{" "}
+					<a
+						href={report.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="report-url"
+					>
+						{report.url}
+					</a>
+					<div className="reports-additional-details">
+						<div className="summary">
+							<span>{report.summary}</span>
+						</div>
+						<div className="published-at">
+							<p>Published at:</p>
+							<span>{report.published_at}</span>
+						</div>
+						<div className="news-site">
+							<p>News Site:</p>
+							<span>{report.news_site}</span>
+						</div>
+					</div>
 					{report.image_url && (
 						<img src={report.image_url} alt="Report" className="report-image" />
 					)}
