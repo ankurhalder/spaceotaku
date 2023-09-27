@@ -1,64 +1,69 @@
 .planet-page {
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
-	background: linear-gradient(to bottom, #333, #444);
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 	padding: 40px;
-	border-radius: 15px;
+	background: linear-gradient(to bottom, #0a192f, #161b33);
+	box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
 	overflow: hidden;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
 	animation: scaleIn 1s ease;
-	transition: background-color 0.3s ease;
 
 	&:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+		transform: translateY(-25px);
+		box-shadow: 0 60px 120px rgba(0, 0, 0, 0.8);
 	}
+
 	.page-title {
 		color: #f39c12;
-		font-size: 3.5rem;
-		margin-bottom: 20px;
+		font-size: 5rem;
+		margin: 20px 0;
 		text-align: center;
 		text-transform: uppercase;
-		letter-spacing: 2px;
+		letter-spacing: 6px;
 		padding-top: 20px;
-		border-bottom: 2px solid #f39c12;
-		transition: color 0.3s ease;
+		border-bottom: 6px solid #f39c12;
+		transition: color 0.4s;
 		animation: fadeInUp 1s ease;
 	}
+
 	.planet-dropdown {
-		margin-bottom: 30px;
 		text-align: center;
 
 		label {
 			font-weight: bold;
-			font-size: 1.6rem;
-			color: #fff;
+			font-size: 2.5rem;
+			color: #f39c12;
 			margin-right: 10px;
+			transition: color 0.3s, font-size 0.3s;
+			font-family: "Arial", sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 2px;
 		}
 
 		.custom-dropdown {
 			display: inline-block;
 			position: relative;
-			width: 150px; /* Adjust the width as needed */
-			margin-top: 10px;
+			width: 240px;
+			margin-top: 15px;
 
 			.selected-planet {
-				width: 50px;
-				height: 50px;
+				width: 120px;
+				height: 120px;
 				border-radius: 50%;
 				overflow: hidden;
 				position: relative;
+				transition: transform 0.3s;
 
 				img {
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
 					cursor: pointer;
-					transition: transform 0.2s ease;
+					transition: transform 0.3s;
 
 					&:hover {
-						transform: scale(1.1);
+						transform: scale(1.05);
 					}
 				}
 			}
@@ -71,9 +76,12 @@
 				height: 100%;
 				opacity: 0;
 				cursor: pointer;
+				z-index: 2;
+				transition: opacity 0.3s, transform 0.3s;
+				transform-origin: center bottom;
 
 				&:hover + .selected-planet img {
-					transform: scale(1.1);
+					transform: scale(1.05);
 				}
 
 				option {
@@ -84,65 +92,68 @@
 				}
 			}
 		}
-	}
-	.planet-data-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		animation: fadeInUp 1s ease;
 
-		.planet-details {
-			margin-bottom: 30px;
-			animation: fadeInUp 1s ease;
-
-			.planet-name {
-				font-size: 4rem;
-				font-weight: bold;
-				color: #f39c12;
-				margin-bottom: 20px;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				transition: color 0.3s ease;
+		&:hover {
+			label {
+				color: #e74c3c;
+				font-size: 2.7rem;
 			}
 
+			.selected-planet img {
+				transform: scale(1.05);
+			}
+
+			select {
+				opacity: 1;
+				transform: translateY(-5px);
+			}
+		}
+	}
+
+	.planet-data-container {
+		text-align: center;
+		.planet-details {
+			margin-bottom: 40px;
+			.planet-name {
+				font-size: 5rem;
+				font-weight: bold;
+				color: #f39c12;
+				margin-bottom: 30px;
+				text-transform: uppercase;
+				letter-spacing: 6px;
+				transition: color 0.3s;
+			}
 			.planet-image {
 				position: relative;
-				height: 300px;
-				width: 300px;
-				border-radius: 15px;
+				height: 400px;
+				width: 400px;
+				border-radius: 20px;
 				overflow: hidden;
-				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-				border: 4px solid #fff;
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+				box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+				border: 6px solid #fff;
+				transition: transform 0.3s, box-shadow 0.3s;
 				img {
 					width: 100%;
 					height: auto;
 					object-fit: cover;
-					transition: transform 0.3s ease;
-
+					transition: transform 0.3s;
 					&:hover {
 						transform: scale(1.05);
 					}
 				}
 			}
-
 			.details {
-				margin-top: 30px;
-
+				margin-top: 40px;
 				.detail-item {
 					display: flex;
 					justify-content: space-between;
-					margin-bottom: 15px;
-					font-size: 1.6rem;
-
+					margin-bottom: 25px;
+					font-size: 2.2rem;
 					strong {
 						font-weight: bold;
 						color: #e74c3c;
-						transition: color 0.3s ease;
+						transition: color 0.3s;
 					}
-
 					span {
 						font-weight: normal;
 					}
@@ -152,65 +163,69 @@
 
 		.planet-agency-mission {
 			h4 {
-				font-size: 2.5rem;
+				font-size: 3.2rem;
 				color: #e74c3c;
-				margin-bottom: 20px;
+				margin-bottom: 40px;
 				text-transform: uppercase;
-				letter-spacing: 1px;
-				transition: color 0.3s ease;
+				letter-spacing: 4px;
+				transition: color 0.3s;
+				font-family: "Arial", sans-serif;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 			}
 
 			ul {
 				list-style: none;
 				padding: 0;
-
 				li {
-					margin-bottom: 30px;
-					animation: fadeInUp 1s ease;
-
+					margin-bottom: 50px;
 					.agency {
 						display: flex;
 						align-items: center;
-						margin-bottom: 20px;
+						margin-bottom: 40px;
 
 						img {
-							width: 100px;
-							height: 100px;
+							width: 160px;
+							height: 160px;
 							object-fit: cover;
 							border-radius: 50%;
-							margin-right: 20px;
-							box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-							transition: transform 0.3s ease, box-shadow 0.3s ease,
-								opacity 0.3s ease;
-
+							margin-right: 40px;
+							box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+							transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
 							&:hover {
 								transform: scale(1.1);
-								box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-								opacity: 0.8;
+								box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+								opacity: 0.9;
 							}
 						}
 
 						strong {
 							font-weight: bold;
-							font-size: 1.6rem;
+							font-size: 2.5rem;
 							color: #f39c12;
-							transition: color 0.3s ease;
+							transition: color 0.3s;
+							font-family: "Georgia", serif;
+							text-transform: uppercase;
 						}
 
 						.mission {
-							font-size: 1.4rem;
-							margin-top: 10px;
+							font-size: 2.2rem;
+							margin-top: 25px;
 							color: #e74c3c;
+							font-family: "Verdana", sans-serif;
+							font-style: italic;
+							text-decoration: underline;
+							letter-spacing: 1px;
 						}
 					}
 				}
 			}
 		}
 	}
+
 	@keyframes fadeInUp {
 		from {
 			opacity: 0;
-			transform: translateY(20px);
+			transform: translateY(50px);
 		}
 		to {
 			opacity: 1;
@@ -220,7 +235,7 @@
 
 	@keyframes scaleIn {
 		from {
-			transform: scale(0.9);
+			transform: scale(0.95);
 		}
 		to {
 			transform: scale(1);
