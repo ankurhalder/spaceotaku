@@ -37,13 +37,22 @@ const PlanetPage = () => {
 				<h1 className="page-title">Explore Celestial Bodies</h1>
 				<div className="planet-dropdown">
 					<label>Select a Celestial Body:</label>
-					<select value={selectedPlanet} onChange={handleChangePlanet}>
-						{Object.keys(planetData).map((planet) => (
-							<option key={planet} value={planet}>
-								{planetData[planet].name}
-							</option>
-						))}
-					</select>
+					<div className="custom-dropdown">
+						<div className="selected-planet">
+							<Image
+								src={`/celestial/${selectedPlanet}.png`}
+								alt={`${selectedPlanet} Image`}
+								layout="fill"
+							/>
+						</div>
+						<select value={selectedPlanet} onChange={handleChangePlanet}>
+							{Object.keys(planetData).map((planet) => (
+								<option key={planet} value={planet}>
+									{planetData[planet].name}
+								</option>
+							))}
+						</select>
+					</div>
 				</div>
 				<div className="planet-data-container">
 					<div className="planet-details">
