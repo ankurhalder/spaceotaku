@@ -184,18 +184,22 @@
 		border-radius: 30px;
 		@media (max-width: $breakpoint-desktop-wide) {
 			width: 900px;
+			border-radius: 25px;
 		}
 		@media (max-width: $breakpoint-desktop) {
 			width: 800px;
 		}
 		@media (max-width: $breakpoint-large-tablet) {
-			width: 700px;
+			width: 650px;
+			border-radius: 20px;
 		}
 		@media (max-width: $breakpoint-tablet) {
-			width: 500px;
+			width: 400px;
+			border-radius: 15px;
 		}
 		@media (max-width: $breakpoint-phone) {
 			width: 250px;
+			border-radius: 10px;
 		}
 		.planet-details {
 			.planet-name {
@@ -223,6 +227,9 @@
 			.planet-flex {
 				@include flex-container(row, nowrap, center, flex-start);
 				margin: 1% 1% 1% 1%;
+				@media (max-width: $breakpoint-tablet) {
+					@include flex-container(row, wrap, center, center);
+				}
 				.planet-image {
 					position: relative;
 					height: 400px;
@@ -256,13 +263,14 @@
 					}
 					@media (max-width: $breakpoint-tablet) {
 						height: 150px;
-						width: 300px;
+						width: 150px;
 						border-radius: 12px;
 						box-shadow: 0 6px 15px var(--black-shadow);
+						margin: 0.5% 0 0.5% 0;
 					}
 					@media (max-width: $breakpoint-phone) {
 						height: 100px;
-						width: 200px;
+						width: 100px;
 						border-radius: 10px;
 						box-shadow: 0 4px 10px var(--black-shadow);
 					}
@@ -275,6 +283,21 @@
 						max-width: 75%;
 						line-height: 1.5;
 						transition: color 0.3s;
+						@media (max-width: $breakpoint-desktop-wide) {
+							max-width: 80%;
+						}
+						@media (max-width: $breakpoint-desktop) {
+							max-width: 85%;
+						}
+						@media (max-width: $breakpoint-large-tablet) {
+							max-width: 90%;
+						}
+						@media (max-width: $breakpoint-tablet) {
+							max-width: 95%;
+						}
+						@media (max-width: $breakpoint-phone) {
+							max-width: 100%;
+						}
 						strong {
 							font-family: var(--font-tektur);
 							font-weight: bold;
@@ -282,6 +305,19 @@
 							color: var(--cool-yellow-2);
 							text-transform: capitalize;
 							letter-spacing: 4px;
+							margin-bottom: 4px;
+							@media (max-width: $breakpoint-desktop-wide) {
+								font-size: var(--font-12);
+							}
+							@media (max-width: $breakpoint-desktop) {
+							}
+							@media (max-width: $breakpoint-large-tablet) {
+							}
+							@media (max-width: $breakpoint-tablet) {
+								font-size: var(--font-13);
+							}
+							@media (max-width: $breakpoint-phone) {
+							}
 						}
 						span {
 							font-family: var(--font-orbitron);
@@ -289,6 +325,19 @@
 							font-weight: 400;
 							color: var(--white);
 							letter-spacing: 2px;
+							text-align: center;
+							@media (max-width: $breakpoint-desktop-wide) {
+								font-size: var(--font-13);
+							}
+							@media (max-width: $breakpoint-desktop) {
+							}
+							@media (max-width: $breakpoint-large-tablet) {
+							}
+							@media (max-width: $breakpoint-tablet) {
+								font-size: var(--font-14);
+							}
+							@media (max-width: $breakpoint-phone) {
+							}
 						}
 					}
 				}
