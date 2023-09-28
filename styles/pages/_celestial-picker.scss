@@ -4,22 +4,56 @@
 	transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
 	animation: scaleIn 1s ease;
 
-	// &:hover {
-	// 	transform: translateY(-25px);
-	// 	box-shadow: 0 60px 120px rgba(0, 0, 0, 0.8);
-	// }
-
 	.page-title {
-		color: #f39c12;
-		font-size: 5rem;
-		margin: 20px 0;
-		text-align: center;
+		font-family: var(--font-elianto);
+		font-size: var(--font-5);
 		text-transform: uppercase;
-		letter-spacing: 6px;
-		padding-top: 20px;
-		border-bottom: 6px solid #f39c12;
-		transition: color 0.4s;
-		animation: fadeInUp 1s ease;
+		letter-spacing: 4px;
+		background: linear-gradient(
+			45deg,
+			#ff7854,
+			#fd267d,
+			#4e7dfc,
+			#27ae60,
+			#ffc107,
+			#e74c3c
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		transition: color 0.3s, background-position 0.3s;
+		background-size: 200% 200%;
+		animation: gradient-animation 3s linear infinite;
+		@keyframes gradient-animation {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+		text-align: center;
+		margin: auto auto auto auto;
+		@media (max-width: #{$breakpoint-desktop-wide}) {
+			font-size: var(--font-7);
+			margin: auto auto auto auto;
+		}
+		@media (max-width: #{$breakpoint-desktop}) {
+			margin: auto auto auto auto;
+		}
+		@media (max-width: #{$breakpoint-large-tablet}) {
+			font-size: var(--font-8);
+			margin: auto auto auto auto;
+		}
+		@media (max-width: #{$breakpoint-tablet}) {
+			margin: auto auto auto auto;
+		}
+		@media (max-width: #{$breakpoint-phone}) {
+			margin: auto auto auto auto;
+		}
 	}
 
 	.planet-dropdown {
