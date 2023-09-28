@@ -72,8 +72,6 @@
 			@media (max-width: $breakpoint-desktop-wide) {
 				font-size: var(--font-10);
 			}
-
-			// Add media queries for other breakpoints as needed
 		}
 
 		.custom-dropdown {
@@ -109,26 +107,31 @@
 				position: absolute;
 				top: 100%;
 				left: 0;
-				width: 100%;
-				background-color: #fff;
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				background-color: white;
+				border: 1px solid #ccc;
+				border-top: none;
+				max-height: 200px;
+				overflow-y: auto;
 				display: none;
-				z-index: 200;
+				z-index: 2;
+				width: 100%;
+			}
 
-				.dropdown-item {
-					padding: 10px 20px;
-					cursor: pointer;
+			.open .dropdown-menu {
+				display: block;
+			}
 
-					&.active {
-						background-color: var(
-							--cool-yellow-2
-						); // Highlight the selected item
-						font-weight: bold;
-					}
+			.dropdown-item {
+				padding: 10px;
+				cursor: pointer;
 
-					&:hover {
-						background-color: var(--cool-yellow-1); // Add hover effect
-					}
+				&:hover {
+					background-color: #f2f2f2;
+				}
+
+				&.active {
+					font-weight: bold;
+					background-color: #ccc; /* Change the background color for active item */
 				}
 			}
 		}
@@ -145,139 +148,139 @@
 			}
 		}
 	}
-}
 
-.planet-data-container {
-	width: 1200px;
-	margin: 0 auto;
-	background: var(--panel-bg);
-	text-align: center;
-	.planet-details {
-		margin-bottom: 40px;
-		.planet-name {
-			font-size: 5rem;
-			font-weight: bold;
-			color: #f39c12;
-			margin-bottom: 30px;
-			text-transform: uppercase;
-			letter-spacing: 6px;
-			transition: color 0.3s;
-		}
-		.planet-image {
-			position: relative;
-			height: 400px;
-			width: 400px;
-			border-radius: 20px;
-			overflow: hidden;
-			box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
-			border: 6px solid #fff;
-			transition: transform 0.3s, box-shadow 0.3s;
-			img {
-				width: 100%;
-				height: auto;
-				object-fit: cover;
-				transition: transform 0.3s;
-				&:hover {
-					transform: scale(1.05);
-				}
-			}
-		}
-		.details {
-			margin-top: 40px;
-			.detail-item {
-				display: flex;
-				justify-content: space-between;
-				margin-bottom: 25px;
-				font-size: 2.2rem;
-				strong {
-					font-weight: bold;
-					color: #e74c3c;
-					transition: color 0.3s;
-				}
-				span {
-					font-weight: normal;
-				}
-			}
-		}
-	}
-
-	.planet-agency-mission {
-		h4 {
-			font-size: 3.2rem;
-			color: #e74c3c;
+	.planet-data-container {
+		width: 1200px;
+		margin: 0 auto;
+		background: var(--panel-bg);
+		text-align: center;
+		.planet-details {
 			margin-bottom: 40px;
-			text-transform: uppercase;
-			letter-spacing: 4px;
-			transition: color 0.3s;
-			font-family: "Arial", sans-serif;
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-		}
-
-		ul {
-			list-style: none;
-			padding: 0;
-			li {
-				margin-bottom: 50px;
-				.agency {
-					display: flex;
-					align-items: center;
-					margin-bottom: 40px;
-
-					img {
-						width: 160px;
-						height: 160px;
-						object-fit: cover;
-						border-radius: 50%;
-						margin-right: 40px;
-						box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-						transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-						&:hover {
-							transform: scale(1.1);
-							box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
-							opacity: 0.9;
-						}
+			.planet-name {
+				font-size: 5rem;
+				font-weight: bold;
+				color: #f39c12;
+				margin-bottom: 30px;
+				text-transform: uppercase;
+				letter-spacing: 6px;
+				transition: color 0.3s;
+			}
+			.planet-image {
+				position: relative;
+				height: 400px;
+				width: 400px;
+				border-radius: 20px;
+				overflow: hidden;
+				box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+				border: 6px solid #fff;
+				transition: transform 0.3s, box-shadow 0.3s;
+				img {
+					width: 100%;
+					height: auto;
+					object-fit: cover;
+					transition: transform 0.3s;
+					&:hover {
+						transform: scale(1.05);
 					}
-
+				}
+			}
+			.details {
+				margin-top: 40px;
+				.detail-item {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 25px;
+					font-size: 2.2rem;
 					strong {
 						font-weight: bold;
-						font-size: 2.5rem;
-						color: #f39c12;
-						transition: color 0.3s;
-						font-family: "Georgia", serif;
-						text-transform: uppercase;
-					}
-
-					.mission {
-						font-size: 2.2rem;
-						margin-top: 25px;
 						color: #e74c3c;
-						font-family: "Verdana", sans-serif;
-						font-style: italic;
-						text-decoration: underline;
-						letter-spacing: 1px;
+						transition: color 0.3s;
+					}
+					span {
+						font-weight: normal;
+					}
+				}
+			}
+		}
+
+		.planet-agency-mission {
+			h4 {
+				font-size: 3.2rem;
+				color: #e74c3c;
+				margin-bottom: 40px;
+				text-transform: uppercase;
+				letter-spacing: 4px;
+				transition: color 0.3s;
+				font-family: "Arial", sans-serif;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+				li {
+					margin-bottom: 50px;
+					.agency {
+						display: flex;
+						align-items: center;
+						margin-bottom: 40px;
+
+						img {
+							width: 160px;
+							height: 160px;
+							object-fit: cover;
+							border-radius: 50%;
+							margin-right: 40px;
+							box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+							transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+							&:hover {
+								transform: scale(1.1);
+								box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+								opacity: 0.9;
+							}
+						}
+
+						strong {
+							font-weight: bold;
+							font-size: 2.5rem;
+							color: #f39c12;
+							transition: color 0.3s;
+							font-family: "Georgia", serif;
+							text-transform: uppercase;
+						}
+
+						.mission {
+							font-size: 2.2rem;
+							margin-top: 25px;
+							color: #e74c3c;
+							font-family: "Verdana", sans-serif;
+							font-style: italic;
+							text-decoration: underline;
+							letter-spacing: 1px;
+						}
 					}
 				}
 			}
 		}
 	}
-}
 
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translateY(50px);
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
 
-@keyframes scaleIn {
-	from {
-		transform: scale(0.95);
-	}
-	to {
-		transform: scale(1);
+	@keyframes scaleIn {
+		from {
+			transform: scale(0.95);
+		}
+		to {
+			transform: scale(1);
+		}
 	}
 }
