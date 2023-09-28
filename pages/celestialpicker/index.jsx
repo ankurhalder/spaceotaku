@@ -1,20 +1,22 @@
-import { useState, Fragment } from "react";
+import { useState, useEffect, Fragment } from "react";
 import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
 import Image from "next/image";
 import Head from "next/head";
+import { Loading } from "@/components";
 
 const PlanetPage = () => {
 	const [selectedPlanet, setSelectedPlanet] = useState("sun");
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+	const [isLoading, setIsLoading] = useState(false); // Set initial isLoading to false
 	const handleChangePlanet = (planet) => {
+		setIsLoading(true); // Set isLoading to true when changing the planet
 		setSelectedPlanet(planet);
-		setIsDropdownOpen(false); // Close the dropdown when a planet is selected
+		setIsDropdownOpen(false);
 	};
 
 	const toggleDropdown = () => {
-		setIsDropdownOpen(!isDropdownOpen); // Toggle the dropdown state
+		setIsDropdownOpen(!isDropdownOpen);
 	};
 	const celestialBody = planetData[selectedPlanet];
 	const agencies = agenciesData[selectedPlanet]?.agencies || [];
@@ -23,21 +25,18 @@ const PlanetPage = () => {
 	const metaKeywords = `${celestialBody.name}, ${celestialBody.distanceFromSun}, ${celestialBody.numberOfMoons}, ${celestialBody.diameter}, ${celestialBody.orbitalPeriod},space otaku, space, astronomy, celestial bodies`;
 	const metaDescription = `Learn about ${celestialBody.name} - its distance from the Sun, number of moons, diameter, orbital period, and more. Explore celestial bodies and space facts on Space Otaku.`;
 
+	useEffect(() => {
+		// Simulate data loading delay
+		const delay = setTimeout(() => {
+			setIsLoading(false);
+		}, 2000);
+
+		return () => clearTimeout(delay);
+	}, [selectedPlanet]); // Add selectedPlanet as a dependency
+
 	return (
 		<Fragment>
-			<Head>
-				<title>{pageTitle}</title>
-				<meta name="description" content={metaDescription} />
-				<meta name="keywords" content={metaKeywords} />
-				<meta
-					property="og:url"
-					content="https://www.spaceotaku.online/celestialpicker"
-				/>
-				<meta
-					name="twitter:url"
-					content="https://www.spaceotaku.online/celestialpicker"
-				/>
-			</Head>
+			<Head>{/* Head content... */}</Head>
 			<div className="planet-page">
 				<h1 className="page-title">Explore Celestial Bodies</h1>
 				<div className={`planet-dropdown ${isDropdownOpen ? "open" : ""}`}>
@@ -108,12 +107,18 @@ const PlanetPage = () => {
 									<span>{celestialBody.atmosphere}</span>
 								</div>
 							</div>
-							<div className="planet-image">
-								<Image
-									src={`/celestial/${selectedPlanet}.png`}
-									alt={`${selectedPlanet} Image`}
-									layout="fill"
-								/>
+							<div>
+								{isLoading ? (
+									<Loading />
+								) : (
+									<div className="planet-image">
+										<Image
+											src={`/celestial/${selectedPlanet}.png`}
+											alt={`${selectedPlanet} Image`}
+											layout="fill"
+										/>
+									</div>
+								)}
 							</div>
 						</div>
 					</div>

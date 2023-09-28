@@ -236,7 +236,7 @@
 				.planet-image {
 					position: relative;
 					height: 300px;
-					width: 550px;
+					width: 350px;
 					margin: auto auto auto auto;
 					border-radius: 20px;
 					overflow: hidden;
@@ -250,19 +250,19 @@
 					}
 					@media (max-width: $breakpoint-desktop-wide) {
 						height: 250px;
-						width: 500px;
+						width: 300px;
 						border-radius: 18px;
 						box-shadow: 0 12px 30px var(--black-shadow);
 					}
 					@media (max-width: $breakpoint-desktop) {
 						height: 250px;
-						width: 500px;
+						width: 300px;
 						border-radius: 16px;
 						box-shadow: 0 10px 25px var(--black-shadow);
 					}
 					@media (max-width: $breakpoint-large-tablet) {
 						height: 180px;
-						width: 400px;
+						width: 200px;
 						border-radius: 14px;
 						box-shadow: 0 8px 20px var(--black-shadow);
 					}
