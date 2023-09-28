@@ -1,16 +1,21 @@
 import { useState, Fragment } from "react";
 import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Head from "next/head";
 
 const PlanetPage = () => {
 	const [selectedPlanet, setSelectedPlanet] = useState("sun");
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-	const handleChangePlanet = (event) => {
-		setSelectedPlanet(event.target.value);
+	const handleChangePlanet = (planet) => {
+		setSelectedPlanet(planet);
+		setIsDropdownOpen(false); // Close the dropdown when a planet is selected
 	};
 
+	const toggleDropdown = () => {
+		setIsDropdownOpen(!isDropdownOpen); // Toggle the dropdown state
+	};
 	const celestialBody = planetData[selectedPlanet];
 	const agencies = agenciesData[selectedPlanet]?.agencies || [];
 
@@ -35,23 +40,38 @@ const PlanetPage = () => {
 			</Head>
 			<div className="planet-page">
 				<h1 className="page-title">Explore Celestial Bodies</h1>
-				<div className="planet-dropdown">
-					<label>Select a Celestial Body:</label>
+				<div className={`planet-dropdown ${isDropdownOpen ? "open" : ""}`}>
+					<label onClick={toggleDropdown}>Select a Celestial Body:</label>
 					<div className="custom-dropdown">
-						<div className="selected-planet">
+						<div className="selected-planet" onClick={toggleDropdown}>
 							<Image
 								src={`/celestial/${selectedPlanet}.png`}
 								alt={`${selectedPlanet} Image`}
-								layout="fill"
+								layout="responsive"
+								width={400}
+								height={400}
+								objectFit="contain"
+								onError={(e) => {
+									e.target.src = "/celestial/sun.png";
+									e.target.alt = "Fallback Image";
+								}}
 							/>
 						</div>
-						<select value={selectedPlanet} onChange={handleChangePlanet}>
-							{Object.keys(planetData).map((planet) => (
-								<option key={planet} value={planet}>
-									{planetData[planet].name}
-								</option>
-							))}
-						</select>
+						{isDropdownOpen && (
+							<div className="dropdown-menu">
+								{Object.keys(planetData).map((planet) => (
+									<div
+										key={planet}
+										className={`dropdown-item ${
+											selectedPlanet === planet ? "active" : ""
+										}`}
+										onClick={() => handleChangePlanet(planet)}
+									>
+										{planetData[planet].name}
+									</div>
+								))}
+							</div>
+						)}
 					</div>
 				</div>
 				<div className="planet-data-container">
