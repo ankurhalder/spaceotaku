@@ -39,20 +39,15 @@
 		margin: auto auto auto auto;
 		@media (max-width: #{$breakpoint-desktop-wide}) {
 			font-size: var(--font-7);
-			margin: auto auto auto auto;
 		}
 		@media (max-width: #{$breakpoint-desktop}) {
-			margin: auto auto auto auto;
 		}
 		@media (max-width: #{$breakpoint-large-tablet}) {
 			font-size: var(--font-8);
-			margin: auto auto auto auto;
 		}
 		@media (max-width: #{$breakpoint-tablet}) {
-			margin: auto auto auto auto;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			margin: auto auto auto auto;
 		}
 	}
 
