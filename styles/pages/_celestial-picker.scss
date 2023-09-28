@@ -86,7 +86,6 @@
 		.custom-dropdown {
 			display: inline-block;
 			position: relative;
-
 			.selected-planet {
 				position: relative;
 				width: 100px;
@@ -114,16 +113,17 @@
 
 			.dropdown-menu {
 				position: absolute;
-				top: 100%;
-				left: 0;
-				background-color: white;
-				border: 1px solid #ccc;
-				border-top: none;
-				max-height: 200px;
+				top: 110%;
+				left: -45%;
+				background-color: var(--white);
+				color: var(--black);
+				border: 2px solid var(--cool-yellow-2);
+				max-height: 400px;
+				width: 200px;
 				overflow-y: auto;
+				overflow-x: hidden;
 				display: none;
-				z-index: 2;
-				width: 100%;
+				z-index: 5;
 			}
 
 			.open .dropdown-menu {
