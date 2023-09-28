@@ -72,6 +72,15 @@
 			@media (max-width: $breakpoint-desktop-wide) {
 				font-size: var(--font-10);
 			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+				font-size: var(--font-11);
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 		}
 
 		.custom-dropdown {
