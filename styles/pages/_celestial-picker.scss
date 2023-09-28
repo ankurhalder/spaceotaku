@@ -222,11 +222,12 @@
 			}
 			.planet-flex {
 				@include flex-container(row, nowrap, center, flex-start);
-				margin: 2% 2% 1% 2%;
+				margin: 1% 1% 1% 1%;
 				.planet-image {
 					position: relative;
 					height: 400px;
 					width: 800px;
+					margin: auto auto auto auto;
 					border-radius: 20px;
 					overflow: hidden;
 					box-shadow: 0 16px 40px var(--black-shadow);
@@ -234,6 +235,36 @@
 					transition: transform 0.3s, box-shadow 0.3s;
 					&:hover {
 						transform: scale(1.01);
+					}
+					@media (max-width: $breakpoint-desktop-wide) {
+						height: 300px;
+						width: 600px;
+						border-radius: 18px;
+						box-shadow: 0 12px 30px var(--black-shadow);
+					}
+					@media (max-width: $breakpoint-desktop) {
+						height: 250px;
+						width: 500px;
+						border-radius: 16px;
+						box-shadow: 0 10px 25px var(--black-shadow);
+					}
+					@media (max-width: $breakpoint-large-tablet) {
+						height: 200px;
+						width: 400px;
+						border-radius: 14px;
+						box-shadow: 0 8px 20px var(--black-shadow);
+					}
+					@media (max-width: $breakpoint-tablet) {
+						height: 150px;
+						width: 300px;
+						border-radius: 12px;
+						box-shadow: 0 6px 15px var(--black-shadow);
+					}
+					@media (max-width: $breakpoint-phone) {
+						height: 100px;
+						width: 200px;
+						border-radius: 10px;
+						box-shadow: 0 4px 10px var(--black-shadow);
 					}
 				}
 
