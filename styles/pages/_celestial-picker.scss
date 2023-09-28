@@ -378,18 +378,21 @@
 				li {
 					margin: 0 0 auto 0;
 					.agency {
-						@include flex-container(row, nowrap, center, flex-start);
+						@include flex-container(column, nowrap, center, center);
 						transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+						cursor: pointer;
+						border: 1px solid var(--black);
+
 						&:hover {
-							transform: scale(1.1);
-							box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+							transform: scale(1.01);
+							box-shadow: 0 24px 60px var(--black-shadow);
 							opacity: 0.9;
+							border: 1px solid var(--black);
 						}
 
 						img {
 							height: 100px;
 							width: 100px;
-							border-radius: 50%;
 							margin: 0 1% 0 1%;
 							@media (max-width: $breakpoint-desktop-wide) {
 								height: 90px;
