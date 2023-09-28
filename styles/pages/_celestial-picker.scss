@@ -68,7 +68,7 @@
 			text-transform: uppercase;
 			letter-spacing: 6px;
 			font-weight: 600;
-
+			margin: auto auto auto auto;
 			@media (max-width: $breakpoint-desktop-wide) {
 				font-size: var(--font-10);
 			}
@@ -77,7 +77,7 @@
 			@media (max-width: $breakpoint-large-tablet) {
 			}
 			@media (max-width: $breakpoint-tablet) {
-				font-size: var(--font-11);
+				font-size: var(--font-12);
 			}
 			@media (max-width: $breakpoint-phone) {
 			}
@@ -89,26 +89,26 @@
 
 			.selected-planet {
 				position: relative;
-				width: 100px; /* Set the width as needed */
-				height: 100px; /* Set the height as needed */
-				border-radius: 50%;
-				overflow: hidden;
+				width: 100px;
+				max-width: 100%;
+				height: 100px;
+				max-height: 100%;
 				transition: transform 0.3s;
 				cursor: pointer;
-
 				&:hover {
 					filter: brightness(1.2);
 				}
-
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-					transition: transform 0.3s;
-
-					&:hover {
-						transform: scale(1.05);
-					}
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+					max-width: 50%;
+					max-height: 50%;
 				}
 			}
 
