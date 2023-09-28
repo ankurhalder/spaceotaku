@@ -3,7 +3,7 @@ import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
 import Image from "next/image";
 import Head from "next/head";
-import { Loading } from "@/components";
+import { LoadingRing } from "@/components";
 
 const PlanetPage = () => {
 	const [selectedPlanet, setSelectedPlanet] = useState("sun");
@@ -121,7 +121,7 @@ const PlanetPage = () => {
 							</div>
 							<div>
 								{isLoading ? (
-									<Loading />
+									<LoadingRing />
 								) : (
 									<div className="planet-image">
 										<Image
