@@ -124,6 +124,16 @@
 				overflow-x: hidden;
 				display: none;
 				z-index: 5;
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			.open .dropdown-menu {
@@ -133,14 +143,23 @@
 			.dropdown-item {
 				padding: 10px;
 				cursor: pointer;
-
+				margin: auto auto auto auto;
 				&:hover {
-					background-color: #f2f2f2;
+					background-color: var(--primary-accent);
+					color: var(--white);
+					transform: translateX(-1px) translateY(1px);
+					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+					transition: 0.1s ease-in-out;
+					border-radius: 5px;
 				}
 
 				&.active {
-					font-weight: bold;
-					background-color: #ccc; /* Change the background color for active item */
+					background-color: var(--primary-accent);
+					color: var(--white);
+					transform: translateX(-1px) translateY(1px);
+					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+					transition: 0.1s ease-in-out;
+					border-radius: 5px;
 				}
 			}
 		}
