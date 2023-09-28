@@ -350,58 +350,109 @@
 		}
 		.planet-agency-mission {
 			h4 {
-				font-size: 3.2rem;
-				color: #e74c3c;
-				margin-bottom: 40px;
-				text-transform: uppercase;
+				font-family: var(--font-orbitron);
+				font-size: var(--font-8);
+				margin: 1% 1% 1% 1%;
 				letter-spacing: 4px;
-				transition: color 0.3s;
-				font-family: "Arial", sans-serif;
-				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+				color: var(--cool-blue-2);
+				text-transform: uppercase;
+				text-decoration: underline;
+				@media (max-width: $breakpoint-desktop-wide) {
+					font-size: var(--font-9);
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+					font-size: var(--font-10);
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			ul {
 				list-style: none;
 				padding: 0;
+
 				li {
-					margin-bottom: 50px;
+					margin: 0 0 auto 0;
 					.agency {
-						display: flex;
-						align-items: center;
-						margin-bottom: 40px;
+						@include flex-container(row, nowrap, center, flex-start);
+						transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+						&:hover {
+							transform: scale(1.1);
+							box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+							opacity: 0.9;
+						}
 
 						img {
-							width: 160px;
-							height: 160px;
-							object-fit: cover;
+							height: 100px;
+							width: 100px;
 							border-radius: 50%;
-							margin-right: 40px;
-							box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-							transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-							&:hover {
-								transform: scale(1.1);
-								box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
-								opacity: 0.9;
+							margin: 0 1% 0 1%;
+							@media (max-width: $breakpoint-desktop-wide) {
+								height: 90px;
+								width: 90px;
+							}
+							@media (max-width: $breakpoint-desktop) {
+								height: 80px;
+								width: 80px;
+							}
+							@media (max-width: $breakpoint-large-tablet) {
+								height: 70px;
+								width: 70px;
+							}
+							@media (max-width: $breakpoint-tablet) {
+								height: 60px;
+								width: 60px;
+							}
+							@media (max-width: $breakpoint-phone) {
+								height: 50px;
+								width: 50px;
 							}
 						}
 
 						strong {
+							font-family: var(--font-tektur);
 							font-weight: bold;
-							font-size: 2.5rem;
-							color: #f39c12;
-							transition: color 0.3s;
-							font-family: "Georgia", serif;
-							text-transform: uppercase;
+							font-size: var(--font-11);
+							color: var(--cool-yellow-2);
+							text-transform: capitalize;
+							letter-spacing: 4px;
+							@media (max-width: $breakpoint-desktop-wide) {
+								font-size: var(--font-12);
+							}
+							@media (max-width: $breakpoint-desktop) {
+							}
+							@media (max-width: $breakpoint-large-tablet) {
+							}
+							@media (max-width: $breakpoint-tablet) {
+								font-size: var(--font-13);
+							}
+							@media (max-width: $breakpoint-phone) {
+							}
 						}
 
 						.mission {
-							font-size: 2.2rem;
-							margin-top: 25px;
-							color: #e74c3c;
-							font-family: "Verdana", sans-serif;
-							font-style: italic;
-							text-decoration: underline;
-							letter-spacing: 1px;
+							font-family: var(--font-orbitron);
+							font-size: var(--font-12);
+							font-weight: 400;
+							color: var(--white);
+							letter-spacing: 2px;
+							margin-bottom: 2%;
+							@media (max-width: $breakpoint-desktop-wide) {
+								font-size: var(--font-13);
+							}
+							@media (max-width: $breakpoint-desktop) {
+							}
+							@media (max-width: $breakpoint-large-tablet) {
+							}
+							@media (max-width: $breakpoint-tablet) {
+								font-size: var(--font-14);
+							}
+							@media (max-width: $breakpoint-phone) {
+							}
 						}
 					}
 				}
