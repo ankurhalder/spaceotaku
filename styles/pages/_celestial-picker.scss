@@ -181,6 +181,22 @@
 		margin: 0 auto;
 		background: var(--panel-bg);
 		text-align: center;
+		border-radius: 30px;
+		@media (max-width: $breakpoint-desktop-wide) {
+			width: 900px;
+		}
+		@media (max-width: $breakpoint-desktop) {
+			width: 800px;
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+			width: 700px;
+		}
+		@media (max-width: $breakpoint-tablet) {
+			width: 500px;
+		}
+		@media (max-width: $breakpoint-phone) {
+			width: 250px;
+		}
 		.planet-details {
 			margin: auto auto auto auto;
 			.planet-name {
@@ -192,6 +208,18 @@
 				color: var(--cool-blue-2);
 				margin: auto auto auto auto;
 				text-transform: uppercase;
+				@media (max-width: $breakpoint-desktop-wide) {
+					font-size: var(--font-9);
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+					font-size: var(--font-10);
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 			.planet-flex {
 				@include flex-container(row, nowrap, center, flex-start);
