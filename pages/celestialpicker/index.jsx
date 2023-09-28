@@ -36,7 +36,19 @@ const PlanetPage = () => {
 
 	return (
 		<Fragment>
-			<Head>{/* Head content... */}</Head>
+			<Head>
+				<title>{pageTitle}</title>
+				<meta name="description" content={metaDescription} />
+				<meta name="keywords" content={metaKeywords} />
+				<meta
+					property="og:url"
+					content="https://www.spaceotaku.online/celestialpicker"
+				/>
+				<meta
+					name="twitter:url"
+					content="https://www.spaceotaku.online/celestialpicker"
+				/>
+			</Head>
 			<div className="planet-page">
 				<h1 className="page-title">Explore Celestial Bodies</h1>
 				<div className={`planet-dropdown ${isDropdownOpen ? "open" : ""}`}>
