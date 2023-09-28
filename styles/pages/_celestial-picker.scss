@@ -235,15 +235,36 @@
 					&:hover {
 						transform: scale(1.01);
 					}
+					@media (max-width: $breakpoint-desktop-wide) {
+						height: 300px;
+						width: 300px;
+						box-shadow: 0 12px 30px var(--black-shadow);
+						border-radius: 18px;
+					}
+					@media (max-width: $breakpoint-desktop) {
+						height: 250px;
+						width: 250px;
+					}
+					@media (max-width: $breakpoint-large-tablet) {
+						height: 200px;
+						width: 200px;
+						box-shadow: 0 8px 20px var(--black-shadow);
+						border-radius: 15px;
+					}
+					@media (max-width: $breakpoint-tablet) {
+						height: 150px;
+						width: 150px;
+					}
+					@media (max-width: $breakpoint-phone) {
+						height: 100px;
+						width: 100px;
+						border-radius: 10px;
+					}
 				}
 
 				.details {
-					margin-top: 40px;
+					text-align: justify;
 					.detail-item {
-						display: flex;
-						justify-content: space-between;
-						margin-bottom: 25px;
-						font-size: 2.2rem;
 						strong {
 							font-weight: bold;
 							color: #e74c3c;
