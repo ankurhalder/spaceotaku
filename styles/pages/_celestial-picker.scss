@@ -97,16 +97,24 @@
 					filter: brightness(1.2);
 				}
 				@media (max-width: $breakpoint-desktop-wide) {
+					width: 90px;
+					height: 90px;
 				}
 				@media (max-width: $breakpoint-desktop) {
+					width: 80px;
+					height: 80px;
 				}
 				@media (max-width: $breakpoint-large-tablet) {
+					width: 75px;
+					height: 75px;
 				}
 				@media (max-width: $breakpoint-tablet) {
+					width: 60px;
+					height: 60px;
 				}
 				@media (max-width: $breakpoint-phone) {
-					max-width: 50%;
-					max-height: 50%;
+					width: 50px;
+					height: 50px;
 				}
 			}
 
@@ -242,6 +250,8 @@
 					transition: transform 0.3s, box-shadow 0.3s;
 					&:hover {
 						transform: scale(1.01);
+						background: rgba(0, 0, 0, 0.1);
+						box-shadow: 0 8px 32px 0 var(--black-shadow);
 					}
 					@media (max-width: $breakpoint-desktop-wide) {
 						height: 300px;
@@ -257,7 +267,7 @@
 					}
 					@media (max-width: $breakpoint-large-tablet) {
 						height: 200px;
-						width: 400px;
+						width: 450px;
 						border-radius: 14px;
 						box-shadow: 0 8px 20px var(--black-shadow);
 					}
@@ -294,6 +304,7 @@
 						}
 						@media (max-width: $breakpoint-tablet) {
 							max-width: 95%;
+							@include flex-container(row, wrap, center, center);
 						}
 						@media (max-width: $breakpoint-phone) {
 							max-width: 100%;
