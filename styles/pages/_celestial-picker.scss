@@ -3,6 +3,7 @@
 	overflow: hidden;
 	transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
 	animation: scaleIn 1s ease;
+	height: 100vh;
 
 	.page-title {
 		font-family: var(--font-elianto);
@@ -48,6 +49,7 @@
 		@media (max-width: #{$breakpoint-tablet}) {
 		}
 		@media (max-width: #{$breakpoint-phone}) {
+			margin: 10% auto auto auto;
 		}
 	}
 
@@ -133,8 +135,12 @@
 				@media (max-width: $breakpoint-large-tablet) {
 				}
 				@media (max-width: $breakpoint-tablet) {
+					left: -100%;
+					width: 150px;
 				}
 				@media (max-width: $breakpoint-phone) {
+					left: -100%;
+					width: 100px;
 				}
 			}
 
