@@ -64,20 +64,20 @@
 			margin: 0 auto;
 			transition: color 0.3s, font-size 0.3s;
 			font-family: var(--font-orbitron);
-			font-size: var(--font-9);
+			font-size: var(--font-11);
 			text-transform: uppercase;
 			letter-spacing: 6px;
 			font-weight: 600;
 			margin: auto auto auto auto;
 			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-10);
+				font-size: var(--font-12);
 			}
 			@media (max-width: $breakpoint-desktop) {
 			}
 			@media (max-width: $breakpoint-large-tablet) {
 			}
 			@media (max-width: $breakpoint-tablet) {
-				font-size: var(--font-12);
+				font-size: var(--font-13);
 			}
 			@media (max-width: $breakpoint-phone) {
 			}
@@ -166,13 +166,13 @@
 
 		&.open {
 			.dropdown-menu {
-				display: block; // Show the dropdown when open class is present
+				display: block;
 			}
 		}
 
 		&:hover {
 			label {
-				color: #e74c3c;
+				color: var(--red);
 			}
 		}
 	}
