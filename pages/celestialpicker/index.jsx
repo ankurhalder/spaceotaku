@@ -77,41 +77,43 @@ const PlanetPage = () => {
 				<div className="planet-data-container">
 					<div className="planet-details">
 						<h3 className="planet-name">{celestialBody.name}</h3>
-						<div className="planet-image">
-							<Image
-								src={`/celestial/${selectedPlanet}.png`}
-								alt={`${selectedPlanet} Image`}
-								layout="fill"
-							/>
-						</div>
-						<div className="details">
-							<div className="detail-item">
-								<strong>Distance from Sun:</strong>
-								<span>{celestialBody.distanceFromSun}</span>
+						<div className="planet-flex">
+							<div className="details">
+								<div className="detail-item">
+									<strong>Distance from Sun:</strong>
+									<span>{celestialBody.distanceFromSun}</span>
+								</div>
+								<div className="detail-item">
+									<strong>Number of Moons:</strong>
+									<span>{celestialBody.numberOfMoons}</span>
+								</div>
+								<div className="detail-item">
+									<strong>Diameter:</strong>
+									<span>{celestialBody.diameter}</span>
+								</div>
+								<div className="detail-item">
+									<strong>Orbital Period:</strong>
+									<span>{celestialBody.orbitalPeriod}</span>
+								</div>
+								<div className="detail-item">
+									<strong>Interesting Fact:</strong>
+									<span>{celestialBody.interestingFact}</span>
+								</div>
+								<div className="detail-item">
+									<strong>Surface Features:</strong>
+									<span>{celestialBody.surfaceFeatures}</span>
+								</div>
+								<div className="detail-item">
+									<strong>Atmosphere:</strong>
+									<span>{celestialBody.atmosphere}</span>
+								</div>
 							</div>
-							<div className="detail-item">
-								<strong>Number of Moons:</strong>
-								<span>{celestialBody.numberOfMoons}</span>
-							</div>
-							<div className="detail-item">
-								<strong>Diameter:</strong>
-								<span>{celestialBody.diameter}</span>
-							</div>
-							<div className="detail-item">
-								<strong>Orbital Period:</strong>
-								<span>{celestialBody.orbitalPeriod}</span>
-							</div>
-							<div className="detail-item">
-								<strong>Interesting Fact:</strong>
-								<span>{celestialBody.interestingFact}</span>
-							</div>
-							<div className="detail-item">
-								<strong>Surface Features:</strong>
-								<span>{celestialBody.surfaceFeatures}</span>
-							</div>
-							<div className="detail-item">
-								<strong>Atmosphere:</strong>
-								<span>{celestialBody.atmosphere}</span>
+							<div className="planet-image">
+								<Image
+									src={`/celestial/${selectedPlanet}.png`}
+									alt={`${selectedPlanet} Image`}
+									layout="fill"
+								/>
 							</div>
 						</div>
 					</div>
