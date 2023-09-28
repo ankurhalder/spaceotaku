@@ -240,8 +240,8 @@
 				}
 				.planet-image {
 					position: relative;
-					height: 400px;
-					width: 700px;
+					height: 300px;
+					width: 550px;
 					margin: auto auto auto auto;
 					border-radius: 20px;
 					overflow: hidden;
@@ -254,8 +254,8 @@
 						box-shadow: 0 8px 32px 0 var(--black-shadow);
 					}
 					@media (max-width: $breakpoint-desktop-wide) {
-						height: 300px;
-						width: 600px;
+						height: 250px;
+						width: 500px;
 						border-radius: 18px;
 						box-shadow: 0 12px 30px var(--black-shadow);
 					}
@@ -266,8 +266,8 @@
 						box-shadow: 0 10px 25px var(--black-shadow);
 					}
 					@media (max-width: $breakpoint-large-tablet) {
-						height: 200px;
-						width: 450px;
+						height: 180px;
+						width: 400px;
 						border-radius: 14px;
 						box-shadow: 0 8px 20px var(--black-shadow);
 					}
