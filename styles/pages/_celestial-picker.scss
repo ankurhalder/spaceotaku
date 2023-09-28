@@ -1,18 +1,13 @@
 .planet-page {
-	max-width: 1000px;
 	margin: 0 auto;
-	padding: 40px;
-	background: linear-gradient(to bottom, #0a192f, #161b33);
-	box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
-	border-radius: 20px;
 	overflow: hidden;
 	transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
 	animation: scaleIn 1s ease;
 
-	&:hover {
-		transform: translateY(-25px);
-		box-shadow: 0 60px 120px rgba(0, 0, 0, 0.8);
-	}
+	// &:hover {
+	// 	transform: translateY(-25px);
+	// 	box-shadow: 0 60px 120px rgba(0, 0, 0, 0.8);
+	// }
 
 	.page-title {
 		color: #f39c12;
@@ -111,6 +106,9 @@
 	}
 
 	.planet-data-container {
+		width: 1200px;
+		margin: 0 auto;
+		background: var(--panel-bg);
 		text-align: center;
 		.planet-details {
 			margin-bottom: 40px;
