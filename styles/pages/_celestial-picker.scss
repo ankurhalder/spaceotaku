@@ -198,7 +198,6 @@
 			width: 250px;
 		}
 		.planet-details {
-			margin: auto auto auto auto;
 			.planet-name {
 				transition: color 0.3s;
 				font-family: var(--font-orbitron);
@@ -206,8 +205,8 @@
 				margin: auto 0 0 0;
 				letter-spacing: 4px;
 				color: var(--cool-blue-2);
-				margin: auto auto auto auto;
 				text-transform: uppercase;
+				text-decoration: underline;
 				@media (max-width: $breakpoint-desktop-wide) {
 					font-size: var(--font-9);
 				}
@@ -223,10 +222,11 @@
 			}
 			.planet-flex {
 				@include flex-container(row, nowrap, center, flex-start);
+				margin: 2% 2% 1% 2%;
 				.planet-image {
 					position: relative;
 					height: 400px;
-					width: 400px;
+					width: 800px;
 					border-radius: 20px;
 					overflow: hidden;
 					box-shadow: 0 16px 40px var(--black-shadow);
@@ -235,43 +235,29 @@
 					&:hover {
 						transform: scale(1.01);
 					}
-					@media (max-width: $breakpoint-desktop-wide) {
-						height: 300px;
-						width: 300px;
-						box-shadow: 0 12px 30px var(--black-shadow);
-						border-radius: 18px;
-					}
-					@media (max-width: $breakpoint-desktop) {
-						height: 250px;
-						width: 250px;
-					}
-					@media (max-width: $breakpoint-large-tablet) {
-						height: 200px;
-						width: 200px;
-						box-shadow: 0 8px 20px var(--black-shadow);
-						border-radius: 15px;
-					}
-					@media (max-width: $breakpoint-tablet) {
-						height: 150px;
-						width: 150px;
-					}
-					@media (max-width: $breakpoint-phone) {
-						height: 100px;
-						width: 100px;
-						border-radius: 10px;
-					}
 				}
 
 				.details {
-					text-align: justify;
 					.detail-item {
+						@include flex-container(column, nowrap, center, flex-start);
+						text-align: justify;
+						max-width: 75%;
+						line-height: 1.5;
+						transition: color 0.3s;
 						strong {
+							font-family: var(--font-tektur);
 							font-weight: bold;
-							color: #e74c3c;
-							transition: color 0.3s;
+							font-size: var(--font-11);
+							color: var(--cool-yellow-2);
+							text-transform: capitalize;
+							letter-spacing: 4px;
 						}
 						span {
-							font-weight: normal;
+							font-family: var(--font-orbitron);
+							font-size: var(--font-12);
+							font-weight: 400;
+							color: var(--white);
+							letter-spacing: 2px;
 						}
 					}
 				}
