@@ -26,7 +26,7 @@ function Index() {
 				<meta property="og:url" content="https://www.spaceotaku.online/" />
 				<meta name="twitter:url" content="https://www.spaceotaku.online/" />
 			</Head>
-			<div className="landing-page-sample-contents">
+			<div className="landing-page-sample-contents none">
 				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>
 				<span>Created by ANKUR HALDER</span>
 				<h5>
@@ -51,7 +51,7 @@ function Index() {
 				</p>
 			</div>
 
-			<div className="landing-container">
+			<div className="landing-container none">
 				<nav className="tab-nav">
 					<button
 						className={`tab-button ${
