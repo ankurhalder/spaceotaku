@@ -30,14 +30,18 @@ $box-shadow: var(--box-shadow);
 			transition: color 0.3s, background-position 0.3s;
 			background-size: 200% 200%;
 			animation: gradient-animation 3s linear infinite;
-			@media (max-width: #{$breakpoint-desktop}) {
+			@media (max-width: $breakpoint-desktop-wide) {
 				font-size: var(--font-6);
-				margin-bottom: 1.5%;
 			}
-			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-6);
-				margin-bottom: 5%;
-				padding-top: 10%;
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				font-size: var(--font-7);
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+				font-size: var(--font-8);
 			}
 		}
 
@@ -51,7 +55,7 @@ $box-shadow: var(--box-shadow);
 		}
 
 		h1:hover {
-			color: #fff;
+			color: var(--white);
 			background-position: 0 0;
 		}
 	}
