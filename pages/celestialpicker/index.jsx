@@ -3,6 +3,7 @@ import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
 import Image from "next/image";
 import Head from "next/head";
+// Import all your loading components here
 import {
 	LoadingRing,
 	LoadingCircle,
@@ -16,6 +17,20 @@ import {
 	LoadingRoller,
 	LoadingSpinner,
 } from "@/components";
+
+const loadingComponents = [
+	LoadingRing,
+	LoadingCircle,
+	LoadingDefault,
+	LoadingDualRing,
+	LoadingEllipsis,
+	LoadingFacebook,
+	LoadingGrid,
+	LoadingHourglass,
+	LoadingRipple,
+	LoadingRoller,
+	LoadingSpinner,
+];
 
 const PlanetPage = () => {
 	const [selectedPlanet, setSelectedPlanet] = useState("sun");
@@ -37,14 +52,20 @@ const PlanetPage = () => {
 	const metaKeywords = `${celestialBody.name}, ${celestialBody.distanceFromSun}, ${celestialBody.numberOfMoons}, ${celestialBody.diameter}, ${celestialBody.orbitalPeriod},space otaku, space, astronomy, celestial bodies`;
 	const metaDescription = `Learn about ${celestialBody.name} - its distance from the Sun, number of moons, diameter, orbital period, and more. Explore celestial bodies and space facts on Space Otaku.`;
 
+	const [randomLoadingComponent, setRandomLoadingComponent] = useState(null);
+
 	useEffect(() => {
 		// Simulate data loading delay
 		const delay = setTimeout(() => {
 			setIsLoading(false);
+			// Select a random loading component
+			const randomIndex = Math.floor(Math.random() * loadingComponents.length);
+			const RandomComponent = loadingComponents[randomIndex];
+			setRandomLoadingComponent(<RandomComponent />);
 		}, 2000);
 
 		return () => clearTimeout(delay);
-	}, [selectedPlanet]); // Add selectedPlanet as a dependency
+	}, [selectedPlanet]);
 
 	return (
 		<Fragment>
@@ -133,7 +154,7 @@ const PlanetPage = () => {
 							</div>
 							<div>
 								{isLoading ? (
-									<LoadingCircle />
+									randomLoadingComponent // Render the randomly selected loading component
 								) : (
 									<div className="planet-image">
 										<Image
