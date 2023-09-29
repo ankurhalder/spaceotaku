@@ -90,7 +90,7 @@ function SpaceFacts() {
 						{spaceFacts[currentFactIndex].fact}
 					</p>
 
-					<span>{currentColorPair.index}</span>
+					{/* <span>{currentColorPair.index}</span> */}
 					<button className="space-facts-button" onClick={handleNextFact}>
 						Next Fact
 					</button>
