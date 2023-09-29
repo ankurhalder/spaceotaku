@@ -3,7 +3,6 @@ import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
 import Image from "next/image";
 import Head from "next/head";
-// Import all your loading components here
 import {
 	LoadingRing,
 	LoadingCircle,
@@ -35,9 +34,9 @@ const loadingComponents = [
 const PlanetPage = () => {
 	const [selectedPlanet, setSelectedPlanet] = useState("sun");
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-	const [isLoading, setIsLoading] = useState(false); // Set initial isLoading to false
+	const [isLoading, setIsLoading] = useState(false);
 	const handleChangePlanet = (planet) => {
-		setIsLoading(true); // Set isLoading to true when changing the planet
+		setIsLoading(true);
 		setSelectedPlanet(planet);
 		setIsDropdownOpen(false);
 	};
@@ -55,10 +54,8 @@ const PlanetPage = () => {
 	const [randomLoadingComponent, setRandomLoadingComponent] = useState(null);
 
 	useEffect(() => {
-		// Simulate data loading delay
 		const delay = setTimeout(() => {
 			setIsLoading(false);
-			// Select a random loading component
 			const randomIndex = Math.floor(Math.random() * loadingComponents.length);
 			const RandomComponent = loadingComponents[randomIndex];
 			setRandomLoadingComponent(<RandomComponent />);
@@ -154,7 +151,7 @@ const PlanetPage = () => {
 							</div>
 							<div>
 								{isLoading ? (
-									randomLoadingComponent // Render the randomly selected loading component
+									randomLoadingComponent
 								) : (
 									<div className="planet-image">
 										<Image
