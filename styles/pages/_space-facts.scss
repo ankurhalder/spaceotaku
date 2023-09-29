@@ -85,10 +85,6 @@ $box-shadow: var(--box-shadow);
 			border-radius: 17px;
 		}
 		@media (max-width: $breakpoint-large-tablet) {
-			// max-width: 30%;
-			// max-height: 80%;
-			// padding: 15px;
-			// border-radius: 10px;
 		}
 		@media (max-width: $breakpoint-tablet) {
 			max-width: 50%;
@@ -97,11 +93,10 @@ $box-shadow: var(--box-shadow);
 			border-radius: 15px;
 		}
 		@media (max-width: $breakpoint-phone) {
-			max-width: 70%;
+			margin-top: 20%;
 			max-width: 300px;
-			max-height: 95%;
-			padding: 5px;
-			// border-radius: 0;
+			max-height: 60%;
+			padding: 15px;
 		}
 		&::before {
 			content: "";
@@ -131,15 +126,12 @@ $box-shadow: var(--box-shadow);
 				@media (max-width: $breakpoint-desktop) {
 				}
 				@media (max-width: $breakpoint-large-tablet) {
-					// font-size: var(--font-8);
-					// letter-spacing: 2px;
 				}
 				@media (max-width: $breakpoint-tablet) {
 					font-size: var(--font-8);
 				}
 				@media (max-width: $breakpoint-phone) {
-					// font-size: var(--font-10);
-					// letter-spacing: 1px;
+					font-size: var(--font-7);
 				}
 			}
 		}
@@ -161,17 +153,12 @@ $box-shadow: var(--box-shadow);
 			}
 			@media (max-width: $breakpoint-large-tablet) {
 				font-size: var(--font-10);
-				// letter-spacing: 1px;
-				// line-height: 1.1;
 			}
 			@media (max-width: $breakpoint-tablet) {
 				font-size: var(--font-8);
 				line-height: 1.5;
 			}
 			@media (max-width: $breakpoint-phone) {
-				font-size: var(--font-11);
-				// letter-spacing: 1px;
-				// line-height: 1;
 			}
 		}
 
@@ -232,13 +219,13 @@ $box-shadow: var(--box-shadow);
 				font-size: var(--font-13);
 				letter-spacing: 2px;
 				padding: 15px 30px;
+				left: 30%;
 			}
 			@media (max-width: $breakpoint-desktop) {
 				left: 30%;
 			}
 			@media (max-width: $breakpoint-large-tablet) {
 				font-size: var(--font-14);
-				// letter-spacing: 1px;
 				padding: 12px 24px;
 			}
 			@media (max-width: $breakpoint-tablet) {
@@ -247,9 +234,8 @@ $box-shadow: var(--box-shadow);
 				padding: 15px 30px;
 			}
 			@media (max-width: $breakpoint-phone) {
-				// font-size: var(--font-16);
-				// letter-spacing: 1px;
-				padding: 8px 16px;
+				padding: 10px 15px;
+				left: 35%;
 			}
 		}
 	}
