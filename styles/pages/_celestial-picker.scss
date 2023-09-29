@@ -1,9 +1,8 @@
 .planet-page {
 	margin: 0 auto;
-	overflow: hidden;
 	transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
 	animation: scaleIn 1s ease;
-	height: 100vh;
+	height: 100%;
 
 	.page-title {
 		font-family: var(--font-elianto);
