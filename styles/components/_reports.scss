@@ -33,10 +33,10 @@
 		margin: 0 auto;
 	}
 	@media (max-width: $breakpoint-phone) {
-		width: 450px;
+		width: 400px;
 		margin: 0 auto;
-		padding: 20px;
-		border-radius: 20px;
+		padding: 15px;
+		border-radius: 10px;
 		margin-top: 0.5%;
 	}
 	h3 {
@@ -149,10 +149,8 @@
 				}
 			}
 			a {
-				text-decoration: none;
 				font-size: var(--font-11);
 				color: var(--cool-red-1);
-				letter-spacing: 2px;
 				&:hover {
 					color: var(--cool-yellow);
 				}
@@ -177,7 +175,7 @@
 				max-height: 100%;
 				border-radius: 20px;
 				overflow: hidden;
-				margin: 1% 0 1% 0;
+				margin: 1% auto 1% 0;
 				@media (max-width: $breakpoint-desktop-wide) {
 					width: 500px;
 					height: 350px;
@@ -203,7 +201,7 @@
 				font-weight: 400;
 				text-align: center;
 				line-height: 1.5;
-				margin: 0 0 0 0;
+				margin: 0 auto;
 				gap: 10px;
 				@media (max-width: $breakpoint-desktop-wide) {
 					font-size: var(--font-12);
@@ -236,6 +234,7 @@
 					color: var(--cool-blue-2);
 					letter-spacing: 4px;
 					font-weight: 400;
+					margin: 0 auto;
 					@media (max-width: $breakpoint-desktop-wide) {
 						font-size: var(--font-12);
 					}

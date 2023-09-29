@@ -61,6 +61,7 @@
 		}
 	}
 	.content {
+		overflow: hidden;
 		text-align: center;
 	}
 }
@@ -137,10 +138,8 @@
 		@media (max-width: #{$breakpoint-tablet}) {
 			margin: 1% 0 0 1%;
 			text-align: center;
-			// font-size: var(--font-12);
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			// font-size: var(--font-13);
 		}
 	}
 	h5 {
@@ -163,7 +162,6 @@
 			font-size: var(--font-13);
 		}
 		@media (max-width: #{$breakpoint-tablet}) {
-			// font-size: var(--font-14);
 		}
 		@media (max-width: #{$breakpoint-phone}) {
 			margin: 1.5% 0 1.5% 1%;
