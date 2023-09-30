@@ -349,4 +349,337 @@ const spaceQuiz = [
 		],
 		correctAnswer: "Gravitational lensing",
 	},
+	{
+		index: 40,
+		difficulty: "hard",
+		question:
+			"What is the name of the nearest star system to our solar system?",
+		options: ["Alpha Centauri", "Sirius", "Proxima Centauri", "Betelgeuse"],
+		correctAnswer: "Alpha Centauri",
+	},
+	{
+		index: 41,
+		difficulty: "hard",
+		question:
+			"Which planet in our solar system has the highest surface temperature, making it one of the hottest planets?",
+		options: ["Venus", "Mercury", "Mars", "Jupiter"],
+		correctAnswer: "Venus",
+	},
+	{
+		index: 42,
+		difficulty: "hard",
+		question:
+			"What is the name of the space telescope launched by NASA in 1990, known for its stunning images of distant galaxies?",
+		options: [
+			"Voyager 2",
+			"Hubble Space Telescope",
+			"Galileo",
+			"Chandra X-ray Observatory",
+		],
+		correctAnswer: "Hubble Space Telescope",
+	},
+	{
+		index: 43,
+		difficulty: "hard",
+		question:
+			"What is the name of the first spacecraft to reach the outermost region of our solar system, known as the heliosphere?",
+		options: ["Voyager 1", "Pioneer 10", "New Horizons", "Cassini"],
+		correctAnswer: "Voyager 1",
+	},
+	{
+		index: 44,
+		difficulty: "medium",
+		question:
+			"Which famous space observatory is named after an astronomer known for his contributions to our understanding of the universe's expansion?",
+		options: [
+			"Kepler Space Telescope",
+			"Spitzer Space Telescope",
+			"James Webb Space Telescope",
+			"Edwin Hubble Space Telescope",
+		],
+		correctAnswer: "Edwin Hubble Space Telescope",
+	},
+	{
+		index: 45,
+		difficulty: "hard",
+		question:
+			"What is the name of the phenomenon where a massive star collapses under its own gravity, resulting in a powerful explosion?",
+		options: ["White Dwarf", "Supernova", "Pulsar", "Quasar"],
+		correctAnswer: "Supernova",
+	},
+	{
+		index: 46,
+		difficulty: "medium",
+		question:
+			"Which planet has the largest number of natural satellites (moons) in our solar system?",
+		options: ["Earth", "Jupiter", "Saturn", "Uranus"],
+		correctAnswer: "Jupiter",
+	},
+	{
+		index: 47,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully landed on the surface of the asteroid Bennu, collected a sample, and returned it to Earth?",
+		options: ["OSIRIS-REx", "Dawn", "Hayabusa2", "Rosetta"],
+		correctAnswer: "OSIRIS-REx",
+	},
+	{
+		index: 48,
+		difficulty: "hard",
+		question:
+			"What is the name of the theoretical concept that suggests the existence of regions in space where the gravitational pull is so strong that not even light can escape?",
+		options: ["Event Horizon", "Asteroid Belt", "Dark Matter", "Black Hole"],
+		correctAnswer: "Black Hole",
+	},
+	{
+		index: 49,
+		difficulty: "medium",
+		question:
+			"Which space agency was responsible for the mission that successfully landed the Perseverance rover on Mars in 2021?",
+		options: ["NASA", "ESA", "ISRO", "CNSA"],
+		correctAnswer: "NASA",
+	},
+	{
+		index: 50,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that became the first to orbit a comet and send a lander to its surface, both in 2014?",
+		options: ["Rosetta", "Dawn", "Hayabusa2", "Voyager 2"],
+		correctAnswer: "Rosetta",
+	},
+	{
+		index: 51,
+		difficulty: "medium",
+		question:
+			"Which moon of Jupiter is known for its subsurface ocean, making it a prime target for the search for extraterrestrial life?",
+		options: ["Io", "Ganymede", "Europa", "Callisto"],
+		correctAnswer: "Europa",
+	},
+	{
+		index: 52,
+		difficulty: "hard",
+		question:
+			"What is the term for the collision of two neutron stars, resulting in the release of gravitational waves and the creation of heavy elements?",
+		options: [
+			"Black Hole Collision",
+			"Supernova",
+			"Neutron Star Merger",
+			"White Dwarf Collision",
+		],
+		correctAnswer: "Neutron Star Merger",
+	},
+	{
+		index: 53,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully entered orbit around Jupiter in 2016 and studied the planet's atmosphere and magnetic field?",
+		options: ["Voyager 1", "Hubble Space Telescope", "Galileo", "Juno"],
+		correctAnswer: "Juno",
+	},
+	{
+		index: 54,
+		difficulty: "medium",
+		question:
+			"Which planet is known for its unique feature called the Great Red Spot, a giant storm that has raged for centuries?",
+		options: ["Earth", "Mars", "Jupiter", "Saturn"],
+		correctAnswer: "Jupiter",
+	},
+	{
+		index: 55,
+		difficulty: "hard",
+		question:
+			"What is the name of the first space station ever launched into orbit, by the Soviet Union in 1971?",
+		options: ["Skylab", "Mir", "Salyut 1", "Tiangong-1"],
+		correctAnswer: "Salyut 1",
+	},
+	{
+		index: 56,
+		difficulty: "hard",
+		question:
+			"What is the name of the region of space believed to contain vast amounts of dark matter and serve as the source of many comets?",
+		options: ["Asteroid Belt", "Oort Cloud", "Kuiper Belt", "Orion Nebula"],
+		correctAnswer: "Oort Cloud",
+	},
+	{
+		index: 57,
+		difficulty: "medium",
+		question:
+			"Which spacecraft, launched by NASA, conducted a flyby of Pluto in 2015 and provided valuable data about the dwarf planet and its moons?",
+		options: ["Voyager 1", "Hubble Space Telescope", "New Horizons", "Cassini"],
+		correctAnswer: "New Horizons",
+	},
+	{
+		index: 58,
+		difficulty: "hard",
+		question:
+			"What is the name of the phenomenon where a massive galaxy's gravity bends and magnifies the light of a more distant object behind it?",
+		options: [
+			"Redshift",
+			"Blueshift",
+			"Gravitational lensing",
+			"Solar eclipse",
+		],
+		correctAnswer: "Gravitational lensing",
+	},
+	{
+		index: 59,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that studied the rings and moons of Saturn, providing valuable data and stunning images of the planet?",
+		options: ["Voyager 1", "Hubble Space Telescope", "Galileo", "Cassini"],
+		correctAnswer: "Cassini",
+	},
+	{
+		index: 60,
+		difficulty: "hard",
+		question:
+			"Which moon of Saturn is known for its complex and dynamic geology, with features such as geysers and a subsurface ocean?",
+		options: ["Mimas", "Enceladus", "Titan", "Hyperion"],
+		correctAnswer: "Enceladus",
+	},
+	{
+		index: 61,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that aims to study the Sun's outer atmosphere and its solar wind, launching in 2021?",
+		options: ["Parker Solar Probe", "SOHO", "STEREO", "Solar Orbiter"],
+		correctAnswer: "Parker Solar Probe",
+	},
+	{
+		index: 62,
+		difficulty: "medium",
+		question:
+			"What is the name of the phenomenon where a comet's tail always points away from the Sun due to solar wind and radiation pressure?",
+		options: [
+			"Solar wind effect",
+			"Tidal force",
+			"Ablation",
+			"Comet tail orientation",
+		],
+		correctAnswer: "Comet tail orientation",
+	},
+	{
+		index: 63,
+		difficulty: "hard",
+		question:
+			"What is the name of the largest volcano in our solar system, located on Mars and known for its immense size?",
+		options: ["Mount Everest", "Mauna Kea", "Olympus Mons", "Mount St. Helens"],
+		correctAnswer: "Olympus Mons",
+	},
+	{
+		index: 64,
+		difficulty: "hard",
+		question:
+			"What is the name of the first spacecraft to successfully land on the surface of Venus and transmit data back to Earth?",
+		options: ["Magellan", "Venus Express", "Venera 7", "Akatsuki"],
+		correctAnswer: "Venera 7",
+	},
+	{
+		index: 65,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a region in space where the gravitational pull is so strong that nothing can escape, not even light?",
+		options: ["Event Horizon", "Asteroid Belt", "Dark Matter", "Singularity"],
+		correctAnswer: "Singularity",
+	},
+	{
+		index: 66,
+		difficulty: "hard",
+		question:
+			"What is the name of the first human-made object to reach interstellar space, having crossed the boundary of our solar system?",
+		options: ["Pioneer 10", "Voyager 1", "Voyager 2", "New Horizons"],
+		correctAnswer: "Voyager 1",
+	},
+	{
+		index: 67,
+		difficulty: "medium",
+		question: "Which gas is the most abundant in the atmosphere of Venus?",
+		options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Sulfur dioxide"],
+		correctAnswer: "Carbon dioxide",
+	},
+	{
+		index: 68,
+		difficulty: "hard",
+		question:
+			"What is the name of the massive galaxy cluster that acts as a gravitational lens, allowing astronomers to see more distant objects behind it?",
+		options: ["Local Group", "Virgo Cluster", "Coma Cluster", "Bullet Cluster"],
+		correctAnswer: "Bullet Cluster",
+	},
+	{
+		index: 69,
+		difficulty: "hard",
+		question:
+			"What is the term for the hypothetical point in space where the gravitational forces of two celestial bodies balance each other, allowing objects to remain relatively stable?",
+		options: ["Lagrange Point", "Barycenter", "Roche Limit", "Perihelion"],
+		correctAnswer: "Lagrange Point",
+	},
+	{
+		index: 70,
+		difficulty: "hard",
+		question:
+			"What is the name of the first spacecraft to successfully land on Mars, soft-landing on the planet's surface in 1976?",
+		options: ["Spirit", "Opportunity", "Viking 1", "Pathfinder"],
+		correctAnswer: "Viking 1",
+	},
+	{
+		index: 71,
+		difficulty: "hard",
+		question:
+			"What is the name of the largest known asteroid in our solar system, located in the asteroid belt between Mars and Jupiter?",
+		options: ["Ceres", "Vesta", "Eris", "Hygiea"],
+		correctAnswer: "Ceres",
+	},
+	{
+		index: 72,
+		difficulty: "hard",
+		question:
+			"What is the term for a region in space where the gravitational forces of a planet and its moon create a gap in the planet's rings?",
+		options: ["Kepler Belt", "Asteroid Belt", "Roche Limit", "Lagrange Point"],
+		correctAnswer: "Roche Limit",
+	},
+	{
+		index: 73,
+		difficulty: "hard",
+		question:
+			"What is the name of the theoretical concept representing a point in space where matter is infinitely dense and space-time is infinitely curved?",
+		options: ["Wormhole", "Black Hole", "Singularity", "Event Horizon"],
+		correctAnswer: "Singularity",
+	},
+	{
+		index: 74,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully landed the Philae probe on the surface of Comet 67P/Churyumov-Gerasimenko in 2014?",
+		options: ["Rosetta", "Dawn", "Hayabusa2", "Voyager 2"],
+		correctAnswer: "Rosetta",
+	},
+	{
+		index: 75,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that discovered evidence of water ice on the moon's surface by impacting a lunar crater with a spacecraft?",
+		options: [
+			"Luna 2",
+			"Lunar Reconnaissance Orbiter",
+			"LCROSS",
+			"Chandrayaan-2",
+		],
+		correctAnswer: "LCROSS",
+	},
+	{
+		index: 76,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully landed the first humans on the Moon, preceding the Apollo program?",
+		options: ["Mercury", "Gemini", "Vostok", "Luna"],
+		correctAnswer: "Luna",
+	},
+	{
+		index: 77,
+		difficulty: "hard",
+		question:
+			"What is the term for the gravitational force that allows a massive celestial body to hold its moons in stable orbits?",
+		options: ["Tidal Force", "Centrifugal Force", "Roche Limit", "Barycenter"],
+		correctAnswer: "Barycenter",
+	},
 ];
