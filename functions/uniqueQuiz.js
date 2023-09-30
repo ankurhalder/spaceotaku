@@ -20,7 +20,7 @@ function removeDuplicateQuestions(questions) {
 	}
 
 	if (duplicateQuestions.length > 0) {
-		console.log("Duplicate Questions:", duplicateQuestions);
+		// console.log("Duplicate Questions:", duplicateQuestions);
 	}
 
 	return uniqueQuestions;
