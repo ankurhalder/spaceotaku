@@ -9,12 +9,21 @@ export default function SpaceQuizPage() {
 	const [showResult, setShowResult] = useState(false);
 	const [timeLeft, setTimeLeft] = useState(600); // 10 minutes in seconds
 	const [shuffledOptions, setShuffledOptions] = useState([]);
+	const [selectedDifficulty, setSelectedDifficulty] = useState(null);
 
 	useEffect(() => {
-		// Shuffle all unique questions initially
-		const shuffledQuestions = shuffle(uniqueSpaceQuiz);
-		setQuestions(shuffledQuestions.slice(0, 10)); // Select any 10 questions initially
-	}, []);
+		if (!selectedDifficulty) {
+			// Show difficulty selection if a difficulty is not selected
+			return;
+		}
+
+		// Shuffle all unique questions based on the selected difficulty
+		const filteredQuestions = uniqueSpaceQuiz.filter(
+			(question) => question.difficulty === selectedDifficulty
+		);
+		const shuffledQuestions = shuffle(filteredQuestions);
+		setQuestions(shuffledQuestions.slice(0, 10)); // Always select 10 questions
+	}, [selectedDifficulty]);
 
 	useEffect(() => {
 		// Shuffle options only when a new question is displayed
@@ -45,7 +54,8 @@ export default function SpaceQuizPage() {
 			setScore(score + 1);
 		}
 
-		if (currentQuestionIndex < questions.length - 1) {
+		if (currentQuestionIndex < 9) {
+			// Check if current question index is less than 9
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
 		} else {
 			setShowResult(true);
@@ -53,8 +63,11 @@ export default function SpaceQuizPage() {
 	};
 
 	const restartQuiz = () => {
-		// Shuffle all questions again to get a new set of 10 questions
-		const shuffledQuestions = shuffle(uniqueSpaceQuiz);
+		// Shuffle all questions based on the selected difficulty
+		const filteredQuestions = uniqueSpaceQuiz.filter(
+			(question) => question.difficulty === selectedDifficulty
+		);
+		const shuffledQuestions = shuffle(filteredQuestions);
 		setQuestions(shuffledQuestions.slice(0, 10));
 		setCurrentQuestionIndex(0);
 		setScore(0);
@@ -63,11 +76,24 @@ export default function SpaceQuizPage() {
 		setShuffledOptions([]);
 	};
 
+	const handleDifficultySelect = (difficulty) => {
+		setSelectedDifficulty(difficulty);
+	};
+
 	const currentQuestion = questions[currentQuestionIndex];
 
 	return (
 		<div className="quiz-container">
-			{showResult ? (
+			{!selectedDifficulty ? (
+				<div className="difficulty-selection">
+					<h2>Select Difficulty:</h2>
+					<button onClick={() => handleDifficultySelect("easy")}>Easy</button>
+					<button onClick={() => handleDifficultySelect("medium")}>
+						Medium
+					</button>
+					<button onClick={() => handleDifficultySelect("hard")}>Hard</button>
+				</div>
+			) : showResult ? (
 				<div className="result-container">
 					<h2>Your Score: {score} / 10</h2>
 					<button onClick={restartQuiz}>Restart Quiz</button>
