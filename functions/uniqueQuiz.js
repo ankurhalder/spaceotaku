@@ -27,5 +27,6 @@ function removeDuplicateQuestions(questions) {
 }
 
 const uniqueSpaceQuiz = removeDuplicateQuestions(spaceQuiz);
+// console.log("Unique Space Quiz:", uniqueSpaceQuiz);
 
 module.exports = uniqueSpaceQuiz;
