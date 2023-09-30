@@ -9,20 +9,36 @@ export default function SpaceQuizPage() {
 	const [showResult, setShowResult] = useState(false);
 	const [timeLeft, setTimeLeft] = useState(600); // 10 minutes in seconds
 	const [shuffledOptions, setShuffledOptions] = useState([]);
+	const [selectedDifficulty, setSelectedDifficulty] = useState(null);
 
 	useEffect(() => {
-		// Shuffle all unique questions for all modes
-		const shuffledQuestions = shuffle(uniqueSpaceQuiz);
+		if (!selectedDifficulty) {
+			// Show difficulty selection if a difficulty is not selected
+			return;
+		}
+
+		// Shuffle all unique questions based on the selected difficulty
+		const filteredQuestions = uniqueSpaceQuiz.filter(
+			(question) => question.difficulty === selectedDifficulty
+		);
+		const shuffledQuestions = shuffle(filteredQuestions);
 		setQuestions(shuffledQuestions.slice(0, 10)); // Always select 10 questions
-	}, []);
+	}, [selectedDifficulty]);
 
 	useEffect(() => {
 		// Shuffle options only when a new question is displayed
 		if (currentQuestionIndex < questions.length) {
 			const currentQuestion = questions[currentQuestionIndex];
 			setShuffledOptions(shuffle(currentQuestion?.options || []));
+			if (selectedDifficulty === "medium") {
+				// Reset timer for medium difficulty
+				setTimeLeft(20);
+			} else if (selectedDifficulty === "hard") {
+				// Reset timer for hard difficulty
+				setTimeLeft(10);
+			}
 		}
-	}, [currentQuestionIndex, questions]);
+	}, [currentQuestionIndex, questions, selectedDifficulty]);
 
 	useEffect(() => {
 		if (timeLeft > 0 && !showResult) {
@@ -33,10 +49,14 @@ export default function SpaceQuizPage() {
 			return () => {
 				clearInterval(timer);
 			};
-		} else if (timeLeft === 0) {
+		} else if (timeLeft === 0 && selectedDifficulty !== "easy") {
+			// Timer ran out for medium and hard modes
+			handleAnswerClick(""); // Move to the next question
+		} else if (timeLeft === 0 && selectedDifficulty === "easy") {
+			// Timer ran out for easy mode, game over
 			setShowResult(true);
 		}
-	}, [timeLeft, showResult]);
+	}, [timeLeft, showResult, selectedDifficulty]);
 
 	const handleAnswerClick = (selectedAnswer) => {
 		const currentQuestion = questions[currentQuestionIndex];
@@ -59,15 +79,41 @@ export default function SpaceQuizPage() {
 		setCurrentQuestionIndex(0);
 		setScore(0);
 		setShowResult(false);
-		setTimeLeft(600);
+		if (selectedDifficulty === "easy") {
+			setTimeLeft(0);
+		} else if (selectedDifficulty === "medium") {
+			setTimeLeft(20);
+		} else if (selectedDifficulty === "hard") {
+			setTimeLeft(10);
+		}
 		setShuffledOptions([]);
+	};
+
+	const handleDifficultySelect = (difficulty) => {
+		setSelectedDifficulty(difficulty);
+		if (difficulty === "easy") {
+			setTimeLeft(300); // 5 minutes in seconds for easy mode
+		} else if (difficulty === "medium") {
+			setTimeLeft(20); // 20 seconds per question for medium mode
+		} else if (difficulty === "hard") {
+			setTimeLeft(10); // 10 seconds per question for hard mode
+		}
 	};
 
 	const currentQuestion = questions[currentQuestionIndex];
 
 	return (
 		<div className="quiz-container">
-			{showResult ? (
+			{!selectedDifficulty ? (
+				<div className="difficulty-selection">
+					<h2>Select Difficulty:</h2>
+					<button onClick={() => handleDifficultySelect("easy")}>Easy</button>
+					<button onClick={() => handleDifficultySelect("medium")}>
+						Medium
+					</button>
+					<button onClick={() => handleDifficultySelect("hard")}>Hard</button>
+				</div>
+			) : showResult ? (
 				<div className="result-container">
 					<h2>Your Score: {score} / 10</h2>
 					<button onClick={restartQuiz}>Restart Quiz</button>

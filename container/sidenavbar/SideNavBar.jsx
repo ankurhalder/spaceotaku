@@ -37,7 +37,7 @@ const SideNavbar = ({ isOpen, setIsOpen }) => {
 			label: "Astronauts in Space",
 		},
 		{ href: "/spaceshooter", icon: "/spaceship.png", label: "Space Shooter" },
-		{ href: "/", icon: "/sidenavbar/question.png", label: "Coming Soon" },
+		{ href: "/spacequiz", icon: "/sidenavbar/quiz.png", label: "Space Quiz" },
 	];
 
 	return (
