@@ -182,4 +182,171 @@ const spaceQuiz = [
 		options: ["Apollo 11", "Hubble Space Telescope", "Voyager 1", "Sputnik 1"],
 		correctAnswer: "Sputnik 1",
 	},
+	{
+		index: 20,
+		difficulty: "medium",
+		question:
+			"Which space agency conducted the Mars Science Laboratory mission, landing the Curiosity rover on Mars?",
+		options: ["NASA", "ESA", "ISRO", "CNSA"],
+		correctAnswer: "NASA",
+	},
+	{
+		index: 21,
+		difficulty: "medium",
+		question:
+			"What is the name of the mission that successfully landed humans on the Moon for the first time?",
+		options: ["Apollo 8", "Apollo 10", "Apollo 11", "Apollo 13"],
+		correctAnswer: "Apollo 11",
+	},
+	{
+		index: 22,
+		difficulty: "medium",
+		question: "What is the largest planet in our solar system?",
+		options: ["Mars", "Saturn", "Jupiter", "Neptune"],
+		correctAnswer: "Jupiter",
+	},
+	{
+		index: 23,
+		difficulty: "easy",
+		question:
+			"Which spacecraft was the first to reach Pluto and provide close-up images of the dwarf planet?",
+		options: ["Voyager 2", "Hubble Space Telescope", "New Horizons", "Cassini"],
+		correctAnswer: "New Horizons",
+	},
+	{
+		index: 24,
+		difficulty: "medium",
+		question:
+			"What is the name of the phenomenon that occurs when the moon passes between the Earth and the Sun, blocking out the Sun's light?",
+		options: ["Solar eclipse", "Lunar eclipse", "Asteroid impact", "Supermoon"],
+		correctAnswer: "Solar eclipse",
+	},
+	{
+		index: 25,
+		difficulty: "medium",
+		question:
+			"Which space agency was responsible for the Rosetta mission, which successfully landed a probe on a comet?",
+		options: ["NASA", "ESA", "ISRO", "CNSA"],
+		correctAnswer: "ESA",
+	},
+	{
+		index: 26,
+		difficulty: "medium",
+		question: "What is the name of the largest moon of Neptune?",
+		options: ["Triton", "Io", "Ganymede", "Enceladus"],
+		correctAnswer: "Triton",
+	},
+	{
+		index: 27,
+		difficulty: "medium",
+		question:
+			"What is the term for a massive, spinning neutron star that emits beams of electromagnetic radiation from its poles?",
+		options: ["Supernova", "Pulsar", "Quasar", "Nebula"],
+		correctAnswer: "Pulsar",
+	},
+	{
+		index: 28,
+		difficulty: "medium",
+		question:
+			"What is the name of the first artificial satellite launched by the United States?",
+		options: ["Sputnik 1", "Explorer 1", "Vanguard 1", "Mariner 1"],
+		correctAnswer: "Explorer 1",
+	},
+	{
+		index: 29,
+		difficulty: "medium",
+		question:
+			"Which space agency is known for launching the Mars rovers Spirit and Opportunity?",
+		options: ["NASA", "ESA", "ISRO", "CNSA"],
+		correctAnswer: "NASA",
+	},
+	{
+		index: 30,
+		difficulty: "medium",
+		question:
+			"What is the name of the spacecraft that studied the gas giant Jupiter and its moons, including the moon Europa?",
+		options: ["Voyager 2", "Hubble Space Telescope", "Galileo", "New Horizons"],
+		correctAnswer: "Galileo",
+	},
+	{
+		index: 31,
+		difficulty: "medium",
+		question: "What is the name of the first woman to travel in space?",
+		options: [
+			"Valentina Tereshkova",
+			"Sally Ride",
+			"Peggy Whitson",
+			"Mae Jemison",
+		],
+		correctAnswer: "Valentina Tereshkova",
+	},
+	{
+		index: 32,
+		difficulty: "medium",
+		question:
+			"Which planet is often referred to as Earth's 'sister planet' due to its similar size and composition?",
+		options: ["Mars", "Venus", "Jupiter", "Mercury"],
+		correctAnswer: "Venus",
+	},
+	{
+		index: 33,
+		difficulty: "medium",
+		question:
+			"What is the name of the space agency responsible for the Chang'e missions to explore the Moon?",
+		options: ["NASA", "ESA", "ISRO", "CNSA"],
+		correctAnswer: "CNSA",
+	},
+	{
+		index: 34,
+		difficulty: "medium",
+		question:
+			"Which spacecraft holds the record for the farthest human-made object from Earth?",
+		options: ["Voyager 1", "Hubble Space Telescope", "New Horizons", "Cassini"],
+		correctAnswer: "Voyager 1",
+	},
+	{
+		index: 35,
+		difficulty: "medium",
+		question:
+			"What is the name of the largest volcano in our solar system, located on Mars?",
+		options: ["Mount Everest", "Mauna Kea", "Olympus Mons", "Mount St. Helens"],
+		correctAnswer: "Olympus Mons",
+	},
+	{
+		index: 36,
+		difficulty: "medium",
+		question:
+			"What is the name of the region of space beyond Pluto where many icy objects are located?",
+		options: ["Asteroid Belt", "Oort Cloud", "Kuiper Belt", "Orion Nebula"],
+		correctAnswer: "Kuiper Belt",
+	},
+	{
+		index: 37,
+		difficulty: "medium",
+		question:
+			"Which space agency successfully landed the Chang'e-4 rover on the far side of the Moon?",
+		options: ["NASA", "ESA", "ISRO", "CNSA"],
+		correctAnswer: "CNSA",
+	},
+	{
+		index: 38,
+		difficulty: "medium",
+		question:
+			"What is the name of the first American space station, launched in 1973?",
+		options: ["Skylab", "Mir", "Salyut 1", "Tiangong-1"],
+		correctAnswer: "Skylab",
+	},
+	{
+		index: 39,
+		difficulty: "medium",
+		question:
+			"What is the name of the phenomenon where light from a celestial object is bent due to the gravitational field of another object?",
+		options: [
+			"Redshift",
+			"Blueshift",
+			"Gravitational lensing",
+			"Solar eclipse",
+		],
+		correctAnswer: "Gravitational lensing",
+	},
 ];
