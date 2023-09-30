@@ -920,4 +920,497 @@ const spaceQuiz = [
 		options: ["Stellar Occultation", "Stellar Evolution", "Supernova", "Nova"],
 		correctAnswer: "Supernova",
 	},
+	{
+		index: 104,
+		difficulty: "hard",
+		question:
+			"What is the name of the first space station to be continuously inhabited by humans, launched by the Soviet Union in 1971?",
+		options: ["Skylab", "Mir", "Salyut 1", "Tiangong-1"],
+		correctAnswer: "Salyut 1",
+	},
+	{
+		index: 105,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a point in space where the gravitational forces of two celestial bodies balance each other, allowing objects to remain relatively stable?",
+		options: ["Lagrange Point", "Barycenter", "Roche Limit", "Perihelion"],
+		correctAnswer: "Lagrange Point",
+	},
+	{
+		index: 106,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully landed on the surface of the asteroid Bennu, collected a sample, and returned it to Earth?",
+		options: ["OSIRIS-REx", "Dawn", "Hayabusa2", "Rosetta"],
+		correctAnswer: "OSIRIS-REx",
+	},
+	{
+		index: 107,
+		difficulty: "hard",
+		question:
+			"What is the term for a massive, spinning neutron star that emits beams of electromagnetic radiation from its poles?",
+		options: ["Supernova", "Pulsar", "Quasar", "Nebula"],
+		correctAnswer: "Pulsar",
+	},
+	{
+		index: 108,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully entered orbit around Jupiter in 2016 and studied the planet's atmosphere and magnetic field?",
+		options: ["Voyager 1", "Hubble Space Telescope", "Galileo", "Juno"],
+		correctAnswer: "Juno",
+	},
+	{
+		index: 109,
+		difficulty: "hard",
+		question:
+			"What is the name of the largest known asteroid in our solar system, located in the asteroid belt between Mars and Jupiter?",
+		options: ["Ceres", "Vesta", "Eris", "Hygiea"],
+		correctAnswer: "Ceres",
+	},
+	{
+		index: 110,
+		difficulty: "hard",
+		question:
+			"What is the term for the collision of two neutron stars, resulting in the release of gravitational waves and the creation of heavy elements?",
+		options: [
+			"Black Hole Collision",
+			"Supernova",
+			"Neutron Star Merger",
+			"White Dwarf Collision",
+		],
+		correctAnswer: "Neutron Star Merger",
+	},
+	{
+		index: 111,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that discovered evidence of water ice on the moon's surface by impacting a lunar crater with a spacecraft?",
+		options: [
+			"Luna 2",
+			"Lunar Reconnaissance Orbiter",
+			"LCROSS",
+			"Chandrayaan-2",
+		],
+		correctAnswer: "LCROSS",
+	},
+	{
+		index: 112,
+		difficulty: "hard",
+		question:
+			"What is the name of the region of space believed to contain vast amounts of dark matter and serve as the source of many comets?",
+		options: ["Asteroid Belt", "Oort Cloud", "Kuiper Belt", "Orion Nebula"],
+		correctAnswer: "Oort Cloud",
+	},
+	{
+		index: 113,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that conducted the first successful flyby of Pluto, providing valuable data and images of the dwarf planet and its moons?",
+		options: ["Voyager 1", "Hubble Space Telescope", "New Horizons", "Cassini"],
+		correctAnswer: "New Horizons",
+	},
+	{
+		index: 114,
+		difficulty: "hard",
+		question:
+			"What is the term for the process by which a massive star collapses under its own gravity and forms a black hole?",
+		options: [
+			"Nebular Hypothesis",
+			"Supernova",
+			"Stellar Evolution",
+			"Black Hole Formation",
+		],
+		correctAnswer: "Black Hole Formation",
+	},
+	{
+		index: 115,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully landed the Philae probe on the surface of Comet 67P/Churyumov-Gerasimenko in 2014?",
+		options: ["Rosetta", "Dawn", "Hayabusa2", "Voyager 2"],
+		correctAnswer: "Rosetta",
+	},
+	{
+		index: 116,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first human on the Moon?",
+		options: ["Apollo 8", "Apollo 10", "Apollo 11", "Apollo 13"],
+		correctAnswer: "Apollo 11",
+	},
+	{
+		index: 117,
+		difficulty: "hard",
+		question:
+			"What is the term for the hypothetical region of space where matter and energy are sucked into a black hole, beyond the event horizon?",
+		options: ["Singularity", "Event Horizon", "Ergosphere", "Quasar Zone"],
+		correctAnswer: "Event Horizon",
+	},
+	{
+		index: 118,
+		difficulty: "hard",
+		question:
+			"What is the name of the first spacecraft to successfully land on the surface of Venus and transmit data back to Earth?",
+		options: ["Magellan", "Venus Express", "Venera 7", "Akatsuki"],
+		correctAnswer: "Venera 7",
+	},
+	{
+		index: 119,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a point in space where the gravitational forces of three or more celestial bodies balance each other, allowing objects to remain relatively stable?",
+		options: ["Lagrange Point", "Barycenter", "Roche Limit", "Perihelion"],
+		correctAnswer: "Lagrange Point",
+	},
+	{
+		index: 120,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that conducted the first successful flyby of Mars in 1965, providing critical data for future missions?",
+		options: ["Mariner 2", "Viking 1", "Mars Odyssey", "Curiosity"],
+		correctAnswer: "Mariner 2",
+	},
+	{
+		index: 121,
+		difficulty: "hard",
+		question:
+			"What is the term for the gravitational force that allows a massive celestial body to hold its moons in stable orbits?",
+		options: ["Tidal Force", "Centrifugal Force", "Roche Limit", "Barycenter"],
+		correctAnswer: "Barycenter",
+	},
+	{
+		index: 122,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully orbited and studied the comet 67P/Churyumov-Gerasimenko, launched by ESA?",
+		options: ["Rosetta", "Dawn", "Hayabusa2", "Voyager 2"],
+		correctAnswer: "Rosetta",
+	},
+	{
+		index: 123,
+		difficulty: "hard",
+		question:
+			"What is the term for the process by which a star's core collapses, resulting in a massive explosion and the ejection of outer layers?",
+		options: ["Stellar Occultation", "Stellar Evolution", "Supernova", "Nova"],
+		correctAnswer: "Supernova",
+	},
+	{
+		index: 124,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that provided valuable data on the composition of the atmosphere of Venus and the conditions on its surface?",
+		options: ["Magellan", "Venus Express", "Venera 7", "Akatsuki"],
+		correctAnswer: "Akatsuki",
+	},
+	{
+		index: 125,
+		difficulty: "hard",
+		question:
+			"What is the term for the point in space where an object in orbit experiences the greatest gravitational force from a celestial body it's orbiting?",
+		options: ["Perihelion", "Apsis", "Ecliptic", "Apoapsis"],
+		correctAnswer: "Perihelion",
+	},
+	{
+		index: 126,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully placed the Mars rover Sojourner on the surface of Mars in 1997?",
+		options: ["Curiosity", "Opportunity", "Perseverance", "Pathfinder"],
+		correctAnswer: "Pathfinder",
+	},
+	{
+		index: 127,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a massive, spinning neutron star that emits beams of electromagnetic radiation from its poles?",
+		options: ["Supernova", "Pulsar", "Quasar", "Nebula"],
+		correctAnswer: "Pulsar",
+	},
+	{
+		index: 128,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first artificial satellite in orbit around Earth?",
+		options: ["Sputnik 1", "Explorer 1", "Vanguard 1", "Mariner 1"],
+		correctAnswer: "Sputnik 1",
+	},
+	{
+		index: 129,
+		difficulty: "hard",
+		question:
+			"What is the term for the dense, central region of a galaxy, often containing a supermassive black hole?",
+		options: [
+			"Stellar Nursery",
+			"Dark Matter Halo",
+			"Galactic Core",
+			"Interstellar Medium",
+		],
+		correctAnswer: "Galactic Core",
+	},
+	{
+		index: 130,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first human in space?",
+		options: [
+			"Yuri Gagarin",
+			"Alan Shepard",
+			"John Glenn",
+			"Valentina Tereshkova",
+		],
+		correctAnswer: "Yuri Gagarin",
+	},
+	{
+		index: 131,
+		difficulty: "hard",
+		question:
+			"What is the term for the process by which a star's core collapses, resulting in a massive explosion and the ejection of outer layers?",
+		options: ["Stellar Occultation", "Stellar Evolution", "Supernova", "Nova"],
+		correctAnswer: "Supernova",
+	},
+	{
+		index: 132,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the Mars rover Curiosity on the surface of Mars in 2012?",
+		options: ["Spirit", "Opportunity", "Viking 1", "Curiosity"],
+		correctAnswer: "Curiosity",
+	},
+	{
+		index: 133,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a point in space where the gravitational forces of three or more celestial bodies balance each other, allowing objects to remain relatively stable?",
+		options: ["Lagrange Point", "Barycenter", "Roche Limit", "Perihelion"],
+		correctAnswer: "Lagrange Point",
+	},
+	{
+		index: 134,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that conducted the first successful flyby of Mars in 1965, providing critical data for future missions?",
+		options: ["Mariner 2", "Viking 1", "Mars Odyssey", "Curiosity"],
+		correctAnswer: "Mariner 2",
+	},
+	{
+		index: 135,
+		difficulty: "hard",
+		question:
+			"What is the term for the gravitational force that allows a massive celestial body to hold its moons in stable orbits?",
+		options: ["Tidal Force", "Centrifugal Force", "Roche Limit", "Barycenter"],
+		correctAnswer: "Barycenter",
+	},
+	{
+		index: 136,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully orbited and studied the comet 67P/Churyumov-Gerasimenko, launched by ESA?",
+		options: ["Rosetta", "Dawn", "Hayabusa2", "Voyager 2"],
+		correctAnswer: "Rosetta",
+	},
+	{
+		index: 137,
+		difficulty: "hard",
+		question:
+			"What is the term for the process by which a star's core collapses, resulting in a massive explosion and the ejection of outer layers?",
+		options: ["Stellar Occultation", "Stellar Evolution", "Supernova", "Nova"],
+		correctAnswer: "Supernova",
+	},
+	{
+		index: 138,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that provided valuable data on the composition of the atmosphere of Venus and the conditions on its surface?",
+		options: ["Magellan", "Venus Express", "Venera 7", "Akatsuki"],
+		correctAnswer: "Akatsuki",
+	},
+	{
+		index: 139,
+		difficulty: "hard",
+		question:
+			"What is the term for the point in space where an object in orbit experiences the greatest gravitational force from a celestial body it's orbiting?",
+		options: ["Perihelion", "Apsis", "Ecliptic", "Apoapsis"],
+		correctAnswer: "Perihelion",
+	},
+	{
+		index: 140,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully placed the Mars rover Sojourner on the surface of Mars in 1997?",
+		options: ["Curiosity", "Opportunity", "Perseverance", "Pathfinder"],
+		correctAnswer: "Pathfinder",
+	},
+	{
+		index: 141,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a massive, spinning neutron star that emits beams of electromagnetic radiation from its poles?",
+		options: ["Supernova", "Pulsar", "Quasar", "Nebula"],
+		correctAnswer: "Pulsar",
+	},
+	{
+		index: 142,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first artificial satellite in orbit around Earth?",
+		options: ["Sputnik 1", "Explorer 1", "Vanguard 1", "Mariner 1"],
+		correctAnswer: "Sputnik 1",
+	},
+	{
+		index: 143,
+		difficulty: "hard",
+		question:
+			"What is the term for the dense, central region of a galaxy, often containing a supermassive black hole?",
+		options: [
+			"Stellar Nursery",
+			"Dark Matter Halo",
+			"Galactic Core",
+			"Interstellar Medium",
+		],
+		correctAnswer: "Galactic Core",
+	},
+	{
+		index: 144,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first human in space?",
+		options: [
+			"Yuri Gagarin",
+			"Alan Shepard",
+			"John Glenn",
+			"Valentina Tereshkova",
+		],
+		correctAnswer: "Yuri Gagarin",
+	},
+	{
+		index: 145,
+		difficulty: "hard",
+		question:
+			"What is the term for the process by which a star's core collapses, resulting in a massive explosion and the ejection of outer layers?",
+		options: ["Stellar Occultation", "Stellar Evolution", "Supernova", "Nova"],
+		correctAnswer: "Supernova",
+	},
+	{
+		index: 146,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully placed the Mars rover Curiosity on the surface of Mars in 2012?",
+		options: ["Spirit", "Opportunity", "Viking 1", "Curiosity"],
+		correctAnswer: "Curiosity",
+	},
+	{
+		index: 147,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a point in space where the gravitational forces of three or more celestial bodies balance each other, allowing objects to remain relatively stable?",
+		options: ["Lagrange Point", "Barycenter", "Roche Limit", "Perihelion"],
+		correctAnswer: "Lagrange Point",
+	},
+	{
+		index: 148,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that conducted the first successful flyby of Mars in 1965, providing critical data for future missions?",
+		options: ["Mariner 2", "Viking 1", "Mars Odyssey", "Curiosity"],
+		correctAnswer: "Mariner 2",
+	},
+	{
+		index: 149,
+		difficulty: "hard",
+		question:
+			"What is the term for the gravitational force that allows a massive celestial body to hold its moons in stable orbits?",
+		options: ["Tidal Force", "Centrifugal Force", "Roche Limit", "Barycenter"],
+		correctAnswer: "Barycenter",
+	},
+	{
+		index: 150,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully orbited and studied the comet 67P/Churyumov-Gerasimenko, launched by ESA?",
+		options: ["Rosetta", "Dawn", "Hayabusa2", "Voyager 2"],
+		correctAnswer: "Rosetta",
+	},
+	{
+		index: 151,
+		difficulty: "hard",
+		question:
+			"What is the term for the process by which a star's core collapses, resulting in a massive explosion and the ejection of outer layers?",
+		options: ["Stellar Occultation", "Stellar Evolution", "Supernova", "Nova"],
+		correctAnswer: "Supernova",
+	},
+	{
+		index: 152,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that provided valuable data on the composition of the atmosphere of Venus and the conditions on its surface?",
+		options: ["Magellan", "Venus Express", "Venera 7", "Akatsuki"],
+		correctAnswer: "Akatsuki",
+	},
+	{
+		index: 153,
+		difficulty: "hard",
+		question:
+			"What is the term for the point in space where an object in orbit experiences the greatest gravitational force from a celestial body it's orbiting?",
+		options: ["Perihelion", "Apsis", "Ecliptic", "Apoapsis"],
+		correctAnswer: "Perihelion",
+	},
+	{
+		index: 154,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully placed the Mars rover Sojourner on the surface of Mars in 1997?",
+		options: ["Curiosity", "Opportunity", "Perseverance", "Pathfinder"],
+		correctAnswer: "Pathfinder",
+	},
+	{
+		index: 155,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a massive, spinning neutron star that emits beams of electromagnetic radiation from its poles?",
+		options: ["Supernova", "Pulsar", "Quasar", "Nebula"],
+		correctAnswer: "Pulsar",
+	},
+	{
+		index: 156,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first artificial satellite in orbit around Earth?",
+		options: ["Sputnik 1", "Explorer 1", "Vanguard 1", "Mariner 1"],
+		correctAnswer: "Sputnik 1",
+	},
+	{
+		index: 157,
+		difficulty: "hard",
+		question:
+			"What is the term for the dense, central region of a galaxy, often containing a supermassive black hole?",
+		options: [
+			"Stellar Nursery",
+			"Dark Matter Halo",
+			"Galactic Core",
+			"Interstellar Medium",
+		],
+		correctAnswer: "Galactic Core",
+	},
+	{
+		index: 158,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first human in space?",
+		options: [
+			"Yuri Gagarin",
+			"Alan Shepard",
+			"John Glenn",
+			"Valentina Tereshkova",
+		],
+		correctAnswer: "Yuri Gagarin",
+	},
+	{
+		index: 159,
+		difficulty: "hard",
+		question:
+			"What is the term for the process by which a star's core collapses, resulting in a massive explosion and the ejection of outer layers?",
+		options: ["Stellar Occultation", "Stellar Evolution", "Supernova", "Nova"],
+		correctAnswer: "Supernova",
+	},
 ];
