@@ -682,4 +682,242 @@ const spaceQuiz = [
 		options: ["Tidal Force", "Centrifugal Force", "Roche Limit", "Barycenter"],
 		correctAnswer: "Barycenter",
 	},
+	{
+		index: 78,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that detected and provided strong evidence for the existence of gravitational waves, originating from the merger of two black holes?",
+		options: [
+			"Hubble Space Telescope",
+			"Kepler Space Telescope",
+			"LIGO",
+			"Planck",
+		],
+		correctAnswer: "LIGO",
+	},
+	{
+		index: 79,
+		difficulty: "hard",
+		question:
+			"What is the name of the first human to perform a spacewalk (extravehicular activity) in outer space?",
+		options: [
+			"Yuri Gagarin",
+			"Neil Armstrong",
+			"Alexei Leonov",
+			"Alan Shepard",
+		],
+		correctAnswer: "Alexei Leonov",
+	},
+	{
+		index: 80,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that discovered and provided direct evidence for the existence of water ice on the surface of the dwarf planet Pluto?",
+		options: ["Voyager 2", "Hubble Space Telescope", "New Horizons", "Cassini"],
+		correctAnswer: "New Horizons",
+	},
+	{
+		index: 81,
+		difficulty: "hard",
+		question:
+			"What is the name of the space probe that provided the first close-up images of the gas giant Jupiter and its largest moons?",
+		options: ["Voyager 1", "Hubble Space Telescope", "Galileo", "Cassini"],
+		correctAnswer: "Galileo",
+	},
+	{
+		index: 82,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that was the first to successfully land on the asteroid Eros and study it up close?",
+		options: ["OSIRIS-REx", "Dawn", "Hayabusa2", "NEAR Shoemaker"],
+		correctAnswer: "NEAR Shoemaker",
+	},
+	{
+		index: 83,
+		difficulty: "hard",
+		question:
+			"What is the term for a massive and extremely bright celestial object at the center of a galaxy, thought to be powered by a supermassive black hole?",
+		options: ["White Dwarf", "Supernova", "Pulsar", "Quasar"],
+		correctAnswer: "Quasar",
+	},
+	{
+		index: 84,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that discovered the first evidence of organic molecules on Mars?",
+		options: ["Curiosity", "Opportunity", "Perseverance", "Spirit"],
+		correctAnswer: "Curiosity",
+	},
+	{
+		index: 85,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully entered orbit around the dwarf planet Ceres and studied its surface?",
+		options: ["Rosetta", "Dawn", "Hayabusa2", "Voyager 2"],
+		correctAnswer: "Dawn",
+	},
+	{
+		index: 86,
+		difficulty: "hard",
+		question:
+			"What is the term for the theoretical concept representing a shortcut through space-time, allowing for faster-than-light travel?",
+		options: ["Wormhole", "Black Hole", "Singularity", "Event Horizon"],
+		correctAnswer: "Wormhole",
+	},
+	{
+		index: 87,
+		difficulty: "hard",
+		question:
+			"What is the name of the space telescope launched by ESA in 2009, designed to study the universe in the X-ray spectrum?",
+		options: [
+			"Voyager 2",
+			"Hubble Space Telescope",
+			"Chandra X-ray Observatory",
+			"James Webb Space Telescope",
+		],
+		correctAnswer: "Chandra X-ray Observatory",
+	},
+	{
+		index: 88,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully landed on the surface of Saturn's largest moon, Titan, and deployed the Huygens probe?",
+		options: ["Voyager 1", "Hubble Space Telescope", "Cassini", "Pioneer 10"],
+		correctAnswer: "Cassini",
+	},
+	{
+		index: 89,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a point in space where the gravitational forces of three or more celestial bodies balance each other, allowing objects to remain relatively stable?",
+		options: ["Lagrange Point", "Barycenter", "Roche Limit", "Perihelion"],
+		correctAnswer: "Lagrange Point",
+	},
+	{
+		index: 90,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully landed the first humans on the surface of Mars?",
+		options: ["Mars 1", "Mars 3", "Viking 1", "Pathfinder"],
+		correctAnswer: "Viking 1",
+	},
+	{
+		index: 91,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that successfully orbited and studied the comet 67P/Churyumov-Gerasimenko, launched by ESA?",
+		options: ["Rosetta", "Dawn", "Hayabusa2", "Voyager 2"],
+		correctAnswer: "Rosetta",
+	},
+	{
+		index: 92,
+		difficulty: "hard",
+		question:
+			"What is the term for the process by which a massive star collapses under its own gravity and forms a black hole?",
+		options: [
+			"Nebular Hypothesis",
+			"Supernova",
+			"Stellar Evolution",
+			"Black Hole Formation",
+		],
+		correctAnswer: "Black Hole Formation",
+	},
+	{
+		index: 93,
+		difficulty: "hard",
+		question:
+			"What is the name of the spacecraft that conducted the first successful flyby of Pluto, providing valuable data and images of the dwarf planet and its moons?",
+		options: ["Voyager 1", "Hubble Space Telescope", "New Horizons", "Cassini"],
+		correctAnswer: "New Horizons",
+	},
+	{
+		index: 94,
+		difficulty: "hard",
+		question:
+			"What is the name of the phenomenon where a star's light is temporarily blocked by a planet passing in front of it?",
+		options: ["Nova", "Supernova", "Stellar Occultation", "Pulsar"],
+		correctAnswer: "Stellar Occultation",
+	},
+	{
+		index: 95,
+		difficulty: "hard",
+		question:
+			"What is the term for the point in space where an object in orbit experiences the greatest gravitational force from a celestial body it's orbiting?",
+		options: ["Perihelion", "Apsis", "Ecliptic", "Apoapsis"],
+		correctAnswer: "Perihelion",
+	},
+	{
+		index: 96,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the Mars rover Sojourner on the surface of Mars in 1997?",
+		options: ["Curiosity", "Opportunity", "Perseverance", "Pathfinder"],
+		correctAnswer: "Pathfinder",
+	},
+	{
+		index: 97,
+		difficulty: "hard",
+		question:
+			"What is the term for a theoretical concept representing a massive, spinning neutron star that emits beams of electromagnetic radiation from its poles?",
+		options: ["Supernova", "Pulsar", "Quasar", "Nebula"],
+		correctAnswer: "Pulsar",
+	},
+	{
+		index: 98,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first artificial satellite in orbit around Earth?",
+		options: ["Sputnik 1", "Explorer 1", "Vanguard 1", "Mariner 1"],
+		correctAnswer: "Sputnik 1",
+	},
+	{
+		index: 99,
+		difficulty: "hard",
+		question:
+			"What is the term for the dense, central region of a galaxy, often containing a supermassive black hole?",
+		options: [
+			"Stellar Nursery",
+			"Dark Matter Halo",
+			"Galactic Core",
+			"Interstellar Medium",
+		],
+		correctAnswer: "Galactic Core",
+	},
+	{
+		index: 100,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first human on the Moon?",
+		options: ["Apollo 8", "Apollo 10", "Apollo 11", "Apollo 13"],
+		correctAnswer: "Apollo 11",
+	},
+	{
+		index: 101,
+		difficulty: "hard",
+		question:
+			"What is the term for the hypothetical region of space where matter and energy are sucked into a black hole, beyond the event horizon?",
+		options: ["Singularity", "Event Horizon", "Ergosphere", "Quasar Zone"],
+		correctAnswer: "Event Horizon",
+	},
+	{
+		index: 102,
+		difficulty: "hard",
+		question:
+			"What is the name of the mission that successfully placed the first human in space?",
+		options: [
+			"Yuri Gagarin",
+			"Alan Shepard",
+			"John Glenn",
+			"Valentina Tereshkova",
+		],
+		correctAnswer: "Yuri Gagarin",
+	},
+	{
+		index: 103,
+		difficulty: "hard",
+		question:
+			"What is the term for the process by which a star's core collapses, resulting in a massive explosion and the ejection of outer layers?",
+		options: ["Stellar Occultation", "Stellar Evolution", "Supernova", "Nova"],
+		correctAnswer: "Supernova",
+	},
 ];
