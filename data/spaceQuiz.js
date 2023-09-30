@@ -2634,3 +2634,4 @@ const spaceQuiz = [
 		correctAnswer: "Supernova",
 	},
 ];
+module.exports = spaceQuiz;
