@@ -6,6 +6,7 @@ function SpaceQuiz() {
 	const [score, setScore] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [selectedAnswer, setSelectedAnswer] = useState("");
+	const [hintText, setHintText] = useState("");
 	const [timer, setTimer] = useState(30); // Set an initial timer value (in seconds)
 
 	const handleAnswerClick = (selectedAnswer) => {
@@ -18,6 +19,24 @@ function SpaceQuiz() {
 		if (currentQuestionIndex < spaceQuizData.length - 1) {
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
 			setSelectedAnswer(""); // Clear the selected answer
+			setHintText(""); // Clear the hint text
+			setTimer(30); // Reset the timer for the next question
+		} else {
+			setShowScore(true);
+		}
+	};
+
+	const handleHintClick = (hint) => {
+		setHintText(hint);
+	};
+
+	const handleSkipClick = () => {
+		// Move to the next question without answering the current one.
+		if (currentQuestionIndex < spaceQuizData.length - 1) {
+			setCurrentQuestionIndex(currentQuestionIndex + 1);
+			setSelectedAnswer(""); // Clear the selected answer
+			setHintText(""); // Clear the hint text
+			setTimer(30); // Reset the timer for the next question
 		} else {
 			setShowScore(true);
 		}
@@ -34,6 +53,9 @@ function SpaceQuiz() {
 		}
 	}, [timer, showScore]);
 
+	// Calculate progress as a percentage
+	const progress = (currentQuestionIndex / spaceQuizData.length) * 100;
+
 	return (
 		<div className="quiz-container">
 			{showScore ? (
@@ -47,6 +69,10 @@ function SpaceQuiz() {
 				<div className="question-container">
 					<h2>Question {currentQuestionIndex + 1}</h2>
 					<p>{spaceQuizData[currentQuestionIndex].question}</p>
+					{hintText && <p className="hint">{hintText}</p>}
+					<div className="progress-bar">
+						<div className="progress" style={{ width: `${progress}%` }}></div>
+					</div>
 					<div className="answer-options">
 						{spaceQuizData[currentQuestionIndex].options.map(
 							(option, index) => (
@@ -65,6 +91,17 @@ function SpaceQuiz() {
 							)
 						)}
 					</div>
+					<button
+						className="hint-button"
+						onClick={() =>
+							handleHintClick(spaceQuizData[currentQuestionIndex].hint)
+						}
+					>
+						Hint
+					</button>
+					<button className="skip-button" onClick={handleSkipClick}>
+						Skip
+					</button>
 					<div className="timer">Time Left: {timer} seconds</div>
 				</div>
 			)}

@@ -1,66 +1,85 @@
-/* styles/global.scss */
+// spaceQuiz.scss
 
 .quiz-container {
 	width: 100%;
-	min-height: 100vh;
+	height: 100vh;
+	max-height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	// background-color: #f0f0f0;
-	padding: 20px;
-	// box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
 
-	.question-container {
-		text-align: center;
+.question-container {
+	text-align: center;
+	margin-bottom: 20px;
+
+	h2 {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+
+	p {
+		font-size: 18px;
 		margin-bottom: 20px;
+	}
 
-		.answer-options {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 10px;
+	.hint {
+		font-size: 16px;
+		font-style: italic;
+		color: #888;
+		margin-bottom: 10px;
+	}
 
-			.answer-option {
-				width: 50%; /* Adjusted for better readability */
-				padding: 10px;
-				background-color: #007bff;
-				color: #fff;
-				border: none;
-				border-radius: 5px;
-				cursor: pointer;
+	.progress-bar {
+		width: 80%;
+		margin: 0 auto;
+		background-color: #ccc;
+		height: 20px;
+		border-radius: 10px;
+		overflow: hidden;
 
-				&:hover {
-					background-color: #0056b3;
-				}
+		.progress {
+			height: 100%;
+			background-color: #007bff;
+		}
+	}
+
+	.answer-options {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+		.answer-option {
+			width: 30%;
+			padding: 10px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+
+			&.selected {
+				background-color: #0056b3;
+			}
+
+			&:hover {
+				background-color: #0056b3;
 			}
 		}
 	}
 
-	.result {
-		font-size: 24px;
-		text-align: center;
-		font-weight: bold;
-		color: #007bff;
-	}
-
-	.timer {
-		margin-top: 20px;
-		font-weight: bold;
-	}
-
-	.progress-bar {
-		margin-top: 10px;
-		font-weight: bold;
-	}
-
-	.review-button {
-		margin-top: 20px;
-		padding: 10px 20px;
+	.hint-button,
+	.skip-button {
 		background-color: #007bff;
 		color: #fff;
 		border: none;
 		border-radius: 5px;
+		padding: 10px 20px;
+		font-size: 16px;
+		margin: 10px;
 		cursor: pointer;
 
 		&:hover {
@@ -68,11 +87,16 @@
 		}
 	}
 
-	.review-questions {
-		margin-top: 20px;
-
-		li {
-			margin-bottom: 10px;
-		}
+	.timer {
+		font-size: 18px;
+		margin-top: 10px;
+		color: #888;
 	}
+}
+
+.result {
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+	color: #007bff;
 }
