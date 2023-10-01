@@ -1,8 +1,8 @@
 // spaceQuiz.scss
 
 body {
-	background-color: #f4f4f4;
-	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	font-family: "Arial", sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -15,6 +15,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	background-color: #f0f0f0;
 }
 
 .difficulty-selection {
@@ -24,49 +25,53 @@ body {
 	gap: 20px;
 
 	h2 {
-		font-size: 28px;
+		font-size: 40px;
 		margin-bottom: 20px;
 		color: #333;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 	}
 
 	.difficulty-button {
 		background-color: #007bff;
 		color: #fff;
 		border: none;
-		border-radius: 5px;
-		padding: 12px 24px;
-		font-size: 18px;
+		border-radius: 10px;
+		padding: 20px 40px;
+		font-size: 32px;
 		margin: 10px;
 		cursor: pointer;
-		transition: background-color 0.3s ease-in-out;
+		transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 
 		&:hover {
 			background-color: #0056b3;
+			transform: scale(1.05);
 		}
 	}
 }
 
 .result {
-	font-size: 28px;
+	font-size: 40px;
 	text-align: center;
 	font-weight: bold;
 	color: #333;
 	margin-bottom: 20px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
 	.restart-button,
 	.review-button {
 		background-color: #007bff;
 		color: #fff;
 		border: none;
-		border-radius: 5px;
-		padding: 12px 24px;
-		font-size: 18px;
+		border-radius: 10px;
+		padding: 20px 40px;
+		font-size: 32px;
 		margin: 10px;
 		cursor: pointer;
-		transition: background-color 0.3s ease-in-out;
+		transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 
 		&:hover {
 			background-color: #0056b3;
+			transform: scale(1.05);
 		}
 	}
 }
@@ -76,28 +81,31 @@ body {
 	margin-bottom: 20px;
 
 	h2 {
-		font-size: 28px;
+		font-size: 40px;
 		margin-bottom: 20px;
 		color: #333;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 	}
 
 	p {
-		font-size: 20px;
+		font-size: 28px;
 		margin-bottom: 20px;
 		color: #333;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 	}
 
 	.timer {
-		font-size: 18px;
+		font-size: 32px;
 		margin-top: 10px;
 		color: #888;
 	}
 
 	.hint {
-		font-size: 18px;
+		font-size: 28px;
 		font-style: italic;
 		color: #888;
 		margin-bottom: 10px;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 	}
 
 	.progress-bar {
@@ -121,21 +129,23 @@ body {
 		gap: 20px;
 
 		.answer-option {
-			width: 40%;
-			padding: 12px;
+			width: 60%;
+			padding: 20px;
 			background-color: #007bff;
 			color: #fff;
 			border: none;
-			border-radius: 5px;
+			border-radius: 10px;
 			cursor: pointer;
-			transition: background-color 0.3s ease-in-out;
+			transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 
 			&.selected {
 				background-color: #0056b3;
+				transform: scale(1.05);
 			}
 
 			&:hover {
 				background-color: #0056b3;
+				transform: scale(1.05);
 			}
 		}
 	}
@@ -144,15 +154,16 @@ body {
 		background-color: #007bff;
 		color: #fff;
 		border: none;
-		border-radius: 5px;
-		padding: 12px 24px;
-		font-size: 18px;
+		border-radius: 10px;
+		padding: 20px 40px;
+		font-size: 32px;
 		margin: 10px;
 		cursor: pointer;
-		transition: background-color 0.3s ease-in-out;
+		transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 
 		&:hover {
 			background-color: #0056b3;
+			transform: scale(1.05);
 		}
 	}
 }
@@ -162,9 +173,10 @@ body {
 	margin-top: 20px;
 
 	h2 {
-		font-size: 28px;
+		font-size: 40px;
 		margin-bottom: 20px;
 		color: #333;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 	}
 
 	.review-item {
@@ -172,8 +184,8 @@ body {
 		margin-bottom: 20px;
 		padding: 20px;
 		background-color: #fff;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		border-radius: 5px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
 
 		p {
 			margin: 0;
