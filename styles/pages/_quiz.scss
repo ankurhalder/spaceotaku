@@ -72,13 +72,10 @@
 	}
 
 	.result {
-		font-size: 36px;
+		font-size: var(--font-8);
 		text-align: center;
-		font-weight: bold;
 		color: var(--white);
-		margin-bottom: 20px;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
+		margin: auto 0 auto 0;
 		.restart-button,
 		.review-button {
 			background-color: var(--cool-blue-1);
