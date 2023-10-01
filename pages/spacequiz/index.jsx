@@ -21,7 +21,9 @@ function SpaceQuiz() {
 	const [difficultySelected, setDifficultySelected] = useState(false);
 	const [quizEnded, setQuizEnded] = useState(false);
 	const [selectedAnswers, setSelectedAnswers] = useState([]);
+	const [feedback, setFeedback] = useState("");
 	const [reviewMode, setReviewMode] = useState(false);
+	const [isQuizDisabled, setIsQuizDisabled] = useState(false); // State to disable quiz interaction
 
 	useEffect(() => {
 		if (!difficultySelected) {
@@ -57,8 +59,16 @@ function SpaceQuiz() {
 	}, [difficultySelected, selectedDifficulty, timer, questions, quizEnded]);
 
 	const handleAnswerClick = (selectedAnswer) => {
-		if (selectedAnswer === questions[currentQuestionIndex].correctAnswer) {
+		const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+
+		// Disable quiz interaction during feedback display
+		setIsQuizDisabled(true);
+
+		if (selectedAnswer === correctAnswer) {
 			setScore(score + 1);
+			setFeedback("Correct!"); // Set feedback to "Correct!"
+		} else {
+			setFeedback("Incorrect!"); // Set feedback to "Incorrect!"
 		}
 
 		// Store the selected answer
@@ -66,14 +76,19 @@ function SpaceQuiz() {
 		updatedSelectedAnswers[currentQuestionIndex] = selectedAnswer;
 		setSelectedAnswers(updatedSelectedAnswers);
 
-		if (currentQuestionIndex < questions.length - 1) {
-			setCurrentQuestionIndex(currentQuestionIndex + 1);
-			setSelectedAnswer("");
-			setHintText("");
-			setTimer(initialTimers[selectedDifficulty]); // Reset timer
-		} else {
-			setQuizEnded(true);
-		}
+		// Delay clearing the feedback message and enabling quiz interaction
+		setTimeout(() => {
+			setFeedback("");
+			setIsQuizDisabled(false);
+			if (currentQuestionIndex < questions.length - 1) {
+				setCurrentQuestionIndex(currentQuestionIndex + 1);
+				setSelectedAnswer("");
+				setHintText("");
+				setTimer(initialTimers[selectedDifficulty]); // Reset timer
+			} else {
+				setQuizEnded(true);
+			}
+		}, 1000);
 	};
 
 	const handleHintClick = (hint) => {
@@ -93,9 +108,14 @@ function SpaceQuiz() {
 		setQuizEnded(false);
 		setSelectedAnswers([]);
 		setReviewMode(false);
+		setFeedback(""); // Clear feedback when restarting quiz
+		setIsQuizDisabled(false); // Enable quiz interaction
 	};
 
 	const handleTimeout = () => {
+		// Disable quiz interaction during feedback display
+		setIsQuizDisabled(true);
+
 		if (currentQuestionIndex < questions.length - 1) {
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
 			setSelectedAnswer("");
@@ -104,6 +124,11 @@ function SpaceQuiz() {
 		} else {
 			setQuizEnded(true);
 		}
+
+		// Delay enabling quiz interaction
+		setTimeout(() => {
+			setIsQuizDisabled(false);
+		}, 1000);
 	};
 
 	// Calculate progress as a percentage
@@ -164,9 +189,20 @@ function SpaceQuiz() {
 								onClick={() => handleAnswerClick(option)}
 								className={`answer-option ${
 									option === selectedAnswer ? "selected" : ""
-								}`}
+								} ${feedback && isQuizDisabled ? "disabled" : ""}`}
+								disabled={isQuizDisabled}
 							>
 								{option}
+								{/* Display feedback for 1 second */}
+								{feedback && (
+									<div
+										className={`answer-feedback ${
+											feedback === "Correct!" ? "correct" : "incorrect"
+										}`}
+									>
+										{feedback}
+									</div>
+								)}
 							</button>
 						))}
 					</div>
@@ -197,6 +233,17 @@ function SpaceQuiz() {
 							<p>
 								<strong>Correct Answer:</strong> {question.correctAnswer}
 							</p>
+							<div
+								className={`answer-feedback ${
+									selectedAnswers[index] === question.correctAnswer
+										? "correct"
+										: "incorrect"
+								}`}
+							>
+								{selectedAnswers[index] === question.correctAnswer
+									? "Correct!"
+									: "Incorrect!"}
+							</div>
 						</div>
 					))}
 				</div>
