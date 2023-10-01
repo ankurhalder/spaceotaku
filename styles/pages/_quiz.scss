@@ -177,13 +177,19 @@
 				&.selected {
 					background-color: $cool-blue-1-hover;
 					transform: scale(1.05);
-					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 				}
 
 				&:hover {
 					background-color: $cool-blue-1-hover;
 					transform: scale(1.05);
-					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+				}
+				.answer-feedback {
+					.correct {
+						color: var(--cool-green);
+					}
+					.incorrect {
+						color: var(--cool-red);
+					}
 				}
 			}
 		}
