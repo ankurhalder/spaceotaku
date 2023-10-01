@@ -3,13 +3,11 @@
 	height: 100vh;
 	max-height: 100%;
 	@include flex-container(column, nowrap, center, center);
-	// text-align: center;
 	.difficulty-selection {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 20px;
-
 		h2 {
 			font-size: 36px;
 			margin-bottom: 20px;
