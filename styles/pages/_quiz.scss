@@ -1,7 +1,7 @@
 // spaceQuiz.scss
 
 body {
-	background-color: #f0f0f0;
+	background-color: #f4f4f4;
 	font-family: "Arial", sans-serif;
 	margin: 0;
 	padding: 0;
@@ -15,7 +15,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background-color: #f0f0f0;
+	background-image: linear-gradient(to bottom, #f4f4f4, #dbe1e6);
 }
 
 .difficulty-selection {
@@ -40,11 +40,13 @@ body {
 		font-size: 32px;
 		margin: 10px;
 		cursor: pointer;
-		transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+		transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
+			box-shadow 0.3s ease-in-out;
 
 		&:hover {
 			background-color: #0056b3;
 			transform: scale(1.05);
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 		}
 	}
 }
@@ -67,11 +69,13 @@ body {
 		font-size: 32px;
 		margin: 10px;
 		cursor: pointer;
-		transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+		transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
+			box-shadow 0.3s ease-in-out;
 
 		&:hover {
 			background-color: #0056b3;
 			transform: scale(1.05);
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 		}
 	}
 }
@@ -136,16 +140,19 @@ body {
 			border: none;
 			border-radius: 10px;
 			cursor: pointer;
-			transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+			transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
+				box-shadow 0.3s ease-in-out;
 
 			&.selected {
 				background-color: #0056b3;
 				transform: scale(1.05);
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 			}
 
 			&:hover {
 				background-color: #0056b3;
 				transform: scale(1.05);
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 			}
 		}
 	}
@@ -159,11 +166,13 @@ body {
 		font-size: 32px;
 		margin: 10px;
 		cursor: pointer;
-		transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+		transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
+			box-shadow 0.3s ease-in-out;
 
 		&:hover {
 			background-color: #0056b3;
 			transform: scale(1.05);
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 		}
 	}
 }
