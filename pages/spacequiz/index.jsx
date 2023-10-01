@@ -24,6 +24,7 @@ function SpaceQuiz() {
 	const [feedback, setFeedback] = useState("");
 	const [reviewMode, setReviewMode] = useState(false);
 	const [isQuizDisabled, setIsQuizDisabled] = useState(false);
+
 	useEffect(() => {
 		if (!difficultySelected) {
 			return;
