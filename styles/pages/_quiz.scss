@@ -37,6 +37,7 @@
 		}
 	}
 	.difficulty-selection {
+		margin: auto 0 auto 0;
 		@include flex-container(column, nowrap, center, center);
 		gap: 5px;
 		h3 {
