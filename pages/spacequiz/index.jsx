@@ -160,7 +160,7 @@ function SpaceQuiz() {
 				</div>
 			) : (
 				<div className="question-container">
-					<h4>Question {currentQuestionIndex + 1}:</h4>
+					<h4>Question {currentQuestionIndex + 1} :</h4>
 					{questions[currentQuestionIndex] && (
 						<p>{questions[currentQuestionIndex].question}</p>
 					)}
