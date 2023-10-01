@@ -19,6 +19,7 @@ function SpaceQuiz() {
 	const [timer, setTimer] = useState(initialTimers.normal); // Default timer for normal difficulty
 	const [selectedDifficulty, setSelectedDifficulty] = useState("");
 	const [difficultySelected, setDifficultySelected] = useState(false);
+	const [quizEnded, setQuizEnded] = useState(false);
 
 	useEffect(() => {
 		if (!difficultySelected) {
@@ -34,7 +35,8 @@ function SpaceQuiz() {
 			);
 			setQuestions(shuffledQuestions);
 
-			// Reset the timer based on the selected difficulty
+			// Reset the question index to 0 and the timer based on the selected difficulty
+			setCurrentQuestionIndex(0);
 			setTimer(initialTimers[selectedDifficulty]);
 		}
 
@@ -51,7 +53,7 @@ function SpaceQuiz() {
 		return () => {
 			clearInterval(timerInterval);
 		};
-	}, [difficultySelected, selectedDifficulty, timer, questions]);
+	}, [difficultySelected, selectedDifficulty, timer, questions, quizEnded]);
 
 	const handleAnswerClick = (selectedAnswer) => {
 		if (selectedAnswer === questions[currentQuestionIndex].correctAnswer) {
@@ -64,7 +66,7 @@ function SpaceQuiz() {
 			setHintText("");
 			setTimer(initialTimers[selectedDifficulty]); // Reset timer
 		} else {
-			setShowScore(true);
+			setQuizEnded(true);
 		}
 	};
 
@@ -77,6 +79,14 @@ function SpaceQuiz() {
 		setDifficultySelected(true);
 	};
 
+	const handleRestartQuiz = () => {
+		setQuestions([]);
+		setSelectedDifficulty("");
+		setDifficultySelected(false);
+		setScore(0);
+		setQuizEnded(false);
+	};
+
 	const handleTimeout = () => {
 		if (currentQuestionIndex < questions.length - 1) {
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -84,7 +94,7 @@ function SpaceQuiz() {
 			setHintText("");
 			setTimer(initialTimers[selectedDifficulty]); // Reset timer
 		} else {
-			setShowScore(true);
+			setQuizEnded(true);
 		}
 	};
 
@@ -115,9 +125,15 @@ function SpaceQuiz() {
 						Advanced
 					</button>
 				</div>
-			) : showScore ? (
+			) : showScore || quizEnded ? (
 				<div className="result">
 					Your Score: {score} out of {questions.length}
+					<br />
+					{quizEnded && (
+						<button className="restart-button" onClick={handleRestartQuiz}>
+							Restart Quiz
+						</button>
+					)}
 				</div>
 			) : (
 				<div className="question-container">
