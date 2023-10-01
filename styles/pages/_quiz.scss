@@ -7,10 +7,12 @@
 		@include flex-container(column, nowrap, center, center);
 		gap: 5px;
 		h2 {
-			font-size: 36px;
-			margin-bottom: 20px;
+			font-family: var(--font-orbitron);
+			letter-spacing: 4px;
+			font-weight: 400;
+			font-size: var(--font-8);
+			margin-bottom: 1%;
 			color: var(--white);
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 		}
 
 		.difficulty-button {
