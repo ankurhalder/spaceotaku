@@ -120,6 +120,7 @@ function SpaceQuiz() {
 
 	return (
 		<div className="quiz-container">
+			<h1 className="Space-quiz-heading">Space Quiz By Space Otaku</h1>
 			{!difficultySelected ? (
 				<div className="difficulty-selection">
 					<h3>Select Difficulty:</h3>
