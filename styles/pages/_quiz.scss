@@ -113,20 +113,20 @@
 			font-weight: 600;
 			font-size: var(--font-8);
 			margin-bottom: 1%;
-			color: var(--cool-yellow);
+			color: var(--white);
 		}
-
 		p {
-			font-size: 28px;
-			margin-bottom: 20px;
-			// color: var(--cool-y);
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+			font-family: var(--font-elianto);
+			font-size: var(--font-7);
+			letter-spacing: 4px;
+			color: var(--cool-blue-2);
 		}
-
 		.timer {
-			font-size: 32px;
-			margin-top: 10px;
-			color: #888;
+			font-size: var(--font-8);
+			color: var(--cool-orange);
+			font-family: var(--font-source);
+			letter-spacing: 4px;
+			font-weight: 600;
 		}
 
 		.hint {
