@@ -23,32 +23,23 @@ function SpaceQuiz() {
 	const [selectedAnswers, setSelectedAnswers] = useState([]);
 	const [feedback, setFeedback] = useState("");
 	const [reviewMode, setReviewMode] = useState(false);
-	const [isQuizDisabled, setIsQuizDisabled] = useState(false); // State to disable quiz interaction
-
+	const [isQuizDisabled, setIsQuizDisabled] = useState(false);
 	useEffect(() => {
 		if (!difficultySelected) {
 			return;
 		}
-
-		// Check if questions have already been loaded
 		if (questions.length === 0) {
-			// Set the questions with the shuffled data
 			const shuffledQuestions = shuffleArray(
-				shuffledSpaceQuizData.slice(0, 10) // Shuffle and slice 10 questions
+				shuffledSpaceQuizData.slice(0, 10)
 			);
 			setQuestions(shuffledQuestions);
-
-			// Reset the question index to 0 and the timer based on the selected difficulty
 			setCurrentQuestionIndex(0);
 			setTimer(initialTimers[selectedDifficulty]);
 		}
-
-		// Start the timer interval
 		const timerInterval = setInterval(() => {
 			if (timer > 0) {
 				setTimer(timer - 1);
 			} else {
-				// Timer reached 0, handle next question or end game
 				handleTimeout();
 			}
 		}, 1000);
@@ -60,23 +51,19 @@ function SpaceQuiz() {
 
 	const handleAnswerClick = (selectedAnswer) => {
 		const correctAnswer = questions[currentQuestionIndex].correctAnswer;
-
-		// Disable quiz interaction during feedback display
 		setIsQuizDisabled(true);
 
 		if (selectedAnswer === correctAnswer) {
 			setScore(score + 1);
-			setFeedback("Correct!"); // Set feedback to "Correct!"
+			setFeedback("Correct!");
 		} else {
-			setFeedback("Incorrect!"); // Set feedback to "Incorrect!"
+			setFeedback("Incorrect!");
 		}
-
-		// Store the selected answer
 		const updatedSelectedAnswers = [...selectedAnswers];
+
 		updatedSelectedAnswers[currentQuestionIndex] = selectedAnswer;
 		setSelectedAnswers(updatedSelectedAnswers);
 
-		// Delay clearing the feedback message and enabling quiz interaction
 		setTimeout(() => {
 			setFeedback("");
 			setIsQuizDisabled(false);
@@ -84,7 +71,7 @@ function SpaceQuiz() {
 				setCurrentQuestionIndex(currentQuestionIndex + 1);
 				setSelectedAnswer("");
 				setHintText("");
-				setTimer(initialTimers[selectedDifficulty]); // Reset timer
+				setTimer(initialTimers[selectedDifficulty]);
 			} else {
 				setQuizEnded(true);
 			}
@@ -108,30 +95,26 @@ function SpaceQuiz() {
 		setQuizEnded(false);
 		setSelectedAnswers([]);
 		setReviewMode(false);
-		setFeedback(""); // Clear feedback when restarting quiz
-		setIsQuizDisabled(false); // Enable quiz interaction
+		setFeedback("");
+		setIsQuizDisabled(false);
 	};
 
 	const handleTimeout = () => {
-		// Disable quiz interaction during feedback display
 		setIsQuizDisabled(true);
 
 		if (currentQuestionIndex < questions.length - 1) {
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
 			setSelectedAnswer("");
 			setHintText("");
-			setTimer(initialTimers[selectedDifficulty]); // Reset timer
+			setTimer(initialTimers[selectedDifficulty]);
 		} else {
 			setQuizEnded(true);
 		}
-
-		// Delay enabling quiz interaction
 		setTimeout(() => {
 			setIsQuizDisabled(false);
 		}, 1000);
 	};
 
-	// Calculate progress as a percentage
 	const progress = (currentQuestionIndex / questions.length) * 100;
 
 	return (
@@ -193,7 +176,6 @@ function SpaceQuiz() {
 								disabled={isQuizDisabled}
 							>
 								{option}
-								{/* Display feedback for 1 second */}
 								{feedback && (
 									<div
 										className={`answer-feedback ${
@@ -251,5 +233,4 @@ function SpaceQuiz() {
 		</div>
 	);
 }
-
 export default SpaceQuiz;
