@@ -19,8 +19,3 @@ export { default as LoadingRing } from "./Loading/LoadingRing";
 export { default as LoadingRipple } from "./Loading/LoadingRipple";
 export { default as LoadingRoller } from "./Loading/LoadingRoller";
 export { default as LoadingSpinner } from "./Loading/LoadingSpinner";
-
-// Quiz Components
-export { default as EasyMode } from "./quiz/EasyMode";
-export { default as MediumMode } from "./quiz/MediumMode";
-export { default as HardMode } from "./quiz/HardMode";
