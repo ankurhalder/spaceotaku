@@ -130,17 +130,21 @@
 		}
 
 		.hint {
-			font-size: 28px;
+			font-family: var(--font-roboto);
+			font-size: var(--font-8);
 			font-style: italic;
-			color: #888;
+			letter-spacing: 4px;
+			color: var(--white);
+			font-weight: 400;
 			margin-bottom: 10px;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 		}
 
 		.progress-bar {
 			width: 80%;
+			max-width: 800px;
 			margin: 0 auto;
-			background-color: #ccc;
+			background-color: #a4a4a4;
 			height: 20px;
 			border-radius: 10px;
 			overflow: hidden;
