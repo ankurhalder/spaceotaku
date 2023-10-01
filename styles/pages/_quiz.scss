@@ -151,16 +151,13 @@
 
 			.progress {
 				height: 100%;
-				background-color: var(--cool-blue-1);
+				background-color: var(--secondary-accent);
 			}
 		}
 
 		.answer-options {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			@include flex-container(row, nowrap, center, center);
 			gap: 20px;
-
 			.answer-option {
 				width: 60%;
 				padding: 20px;
