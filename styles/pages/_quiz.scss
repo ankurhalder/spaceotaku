@@ -1,13 +1,9 @@
 .quiz-container {
 	width: 100%;
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	background-image: linear-gradient(to bottom, #111, #222);
-
+	max-height: 100%;
+	@include flex-container(column, nowrap, center, center);
+	// text-align: center;
 	.difficulty-selection {
 		display: flex;
 		flex-direction: column;
