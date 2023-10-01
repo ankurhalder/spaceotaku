@@ -1,5 +1,36 @@
 // spaceQuiz.scss
 
+.difficulty-container {
+	width: 100%;
+	height: 100vh;
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	h2 {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+
+	.difficulty-button {
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		padding: 10px 20px;
+		font-size: 18px;
+		margin: 10px;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #0056b3;
+		}
+	}
+}
+
 .quiz-container {
 	width: 100%;
 	height: 100vh;
@@ -9,61 +40,83 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-}
 
-.question-container {
-	text-align: center;
-	margin-bottom: 20px;
-
-	h2 {
-		font-size: 24px;
-		margin-bottom: 10px;
-	}
-
-	p {
-		font-size: 18px;
+	.question-container {
+		text-align: center;
 		margin-bottom: 20px;
-	}
 
-	.hint {
-		font-size: 16px;
-		font-style: italic;
-		color: #888;
-		margin-bottom: 10px;
-	}
-
-	.progress-bar {
-		width: 80%;
-		margin: 0 auto;
-		background-color: #ccc;
-		height: 20px;
-		border-radius: 10px;
-		overflow: hidden;
-
-		.progress {
-			height: 100%;
-			background-color: #007bff;
+		h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
 		}
-	}
 
-	.answer-options {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 10px;
+		p {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
 
-		.answer-option {
-			width: 30%;
-			padding: 10px;
+		.hint {
+			font-size: 16px;
+			font-style: italic;
+			color: #888;
+			margin-bottom: 10px;
+		}
+
+		.timer {
+			font-size: 18px;
+			margin-top: 10px;
+			color: #888;
+		}
+
+		.progress-bar {
+			width: 80%;
+			margin: 0 auto;
+			background-color: #ccc;
+			height: 20px;
+			border-radius: 10px;
+			overflow: hidden;
+
+			.progress {
+				height: 100%;
+				background-color: #007bff;
+			}
+		}
+
+		.answer-options {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+
+			.answer-option {
+				width: 30%;
+				padding: 10px;
+				background-color: #007bff;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+
+				&.selected {
+					background-color: #0056b3;
+				}
+
+				&:hover {
+					background-color: #0056b3;
+				}
+			}
+		}
+
+		.hint-button,
+		.skip-button {
 			background-color: #007bff;
 			color: #fff;
 			border: none;
 			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			margin: 10px;
 			cursor: pointer;
-
-			&.selected {
-				background-color: #0056b3;
-			}
 
 			&:hover {
 				background-color: #0056b3;
@@ -71,32 +124,10 @@
 		}
 	}
 
-	.hint-button,
-	.skip-button {
-		background-color: #007bff;
-		color: #fff;
-		border: none;
-		border-radius: 5px;
-		padding: 10px 20px;
-		font-size: 16px;
-		margin: 10px;
-		cursor: pointer;
-
-		&:hover {
-			background-color: #0056b3;
-		}
+	.result {
+		font-size: 24px;
+		text-align: center;
+		font-weight: bold;
+		color: #007bff;
 	}
-
-	.timer {
-		font-size: 18px;
-		margin-top: 10px;
-		color: #888;
-	}
-}
-
-.result {
-	font-size: 24px;
-	text-align: center;
-	font-weight: bold;
-	color: #007bff;
 }
