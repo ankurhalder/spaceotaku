@@ -9,34 +9,49 @@ function SpaceQuiz() {
 	const [showScore, setShowScore] = useState(false);
 	const [selectedAnswer, setSelectedAnswer] = useState("");
 	const [hintText, setHintText] = useState("");
-	const [timer, setTimer] = useState(30);
+	const [timer, setTimer] = useState(0); // Timer state
 	const [difficulty, setDifficulty] = useState(""); // Initialize difficulty as empty
-
 	const [difficultySelected, setDifficultySelected] = useState(false); // Track if difficulty has been selected
 
 	useEffect(() => {
-		if (difficulty === "") {
-			// If difficulty has not been selected, don't fetch questions
+		if (!difficultySelected) {
+			// Difficulty has not been selected, don't fetch questions
 			return;
 		}
 
 		// Set the questions with the shuffled data
 		const shuffledQuestions = shuffleArray(shuffledSpaceQuizData);
 		setQuestions(shuffledQuestions.slice(0, 10));
-	}, [difficulty]);
+
+		// Reset timer when new questions are loaded
+		setTimer(getInitialTimerValue());
+	}, [difficultySelected]);
 
 	useEffect(() => {
-		// Reset the timer based on the selected difficulty
-		let timerDuration = 30; // Default timer duration
+		const timerInterval = setInterval(() => {
+			if (timer > 0) {
+				setTimer(timer - 1);
+			} else {
+				// Timer reached 0, handle next question or end game
+				handleTimeout();
+			}
+		}, 1000);
 
-		if (difficulty === "Intermediate") {
-			timerDuration = 20;
-		} else if (difficulty === "Advanced") {
-			timerDuration = 10;
+		return () => {
+			clearInterval(timerInterval);
+		};
+	}, [timer]);
+
+	const handleTimeout = () => {
+		if (currentQuestionIndex < questions.length - 1) {
+			setCurrentQuestionIndex(currentQuestionIndex + 1);
+			setSelectedAnswer("");
+			setHintText("");
+			setTimer(getInitialTimerValue()); // Reset timer for the next question
+		} else {
+			setShowScore(true);
 		}
-
-		setTimer(timerDuration);
-	}, [difficulty]);
+	};
 
 	const handleAnswerClick = (selectedAnswer) => {
 		if (selectedAnswer === questions[currentQuestionIndex].correctAnswer) {
@@ -47,6 +62,7 @@ function SpaceQuiz() {
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
 			setSelectedAnswer("");
 			setHintText("");
+			setTimer(getInitialTimerValue()); // Reset timer for the next question
 		} else {
 			setShowScore(true);
 		}
@@ -62,15 +78,18 @@ function SpaceQuiz() {
 		setDifficultySelected(true);
 
 		// Reset the timer when difficulty changes
-		let timerDuration = 30; // Default timer duration
+		setTimer(getInitialTimerValue());
+	};
 
-		if (newDifficulty === "Intermediate") {
-			timerDuration = 20;
-		} else if (newDifficulty === "Advanced") {
-			timerDuration = 10;
+	const getInitialTimerValue = () => {
+		// Set initial timer value based on the selected difficulty
+		if (difficulty === "Intermediate") {
+			return 20;
+		} else if (difficulty === "Advanced") {
+			return 10;
+		} else {
+			return 30; // Default timer duration for Normal difficulty
 		}
-
-		setTimer(timerDuration);
 	};
 
 	// Calculate progress as a percentage
@@ -78,46 +97,7 @@ function SpaceQuiz() {
 
 	return (
 		<div className="quiz-container">
-			{showScore ? (
-				<div className="result">
-					Your Score: {score} out of {questions.length}
-				</div>
-			) : (
-				<div className="question-container">
-					<h2>Question {currentQuestionIndex + 1}:</h2>
-					{questions[currentQuestionIndex] && (
-						<p>{questions[currentQuestionIndex].question}</p>
-					)}
-					{hintText && <p className="hint">{hintText}</p>}
-					<div className="progress-bar">
-						<div className="progress" style={{ width: `${progress}%` }}></div>
-					</div>
-					<div className="answer-options">
-						{questions[currentQuestionIndex]?.options.map((option, index) => (
-							<button
-								key={index}
-								onClick={() => handleAnswerClick(option)}
-								className="answer-option"
-							>
-								{option}
-							</button>
-						))}
-					</div>
-					<button
-						className="hint-button"
-						onClick={() =>
-							handleHintClick(
-								questions[currentQuestionIndex]?.hint || "No hint available."
-							)
-						}
-					>
-						Show Hint
-					</button>
-				</div>
-			)}
-
-			{/* Difficulty selection UI */}
-			{!difficultySelected && (
+			{!difficultySelected ? ( // Render difficulty selection
 				<div className="difficulty-selection">
 					<h2>Select Difficulty:</h2>
 					<button
@@ -139,6 +119,54 @@ function SpaceQuiz() {
 						Advanced
 					</button>
 				</div>
+			) : (
+				// Difficulty has been selected, render game elements
+				<>
+					{showScore ? (
+						<div className="result">
+							Your Score: {score} out of {questions.length}
+						</div>
+					) : (
+						<div className="question-container">
+							<h2>Question {currentQuestionIndex + 1}:</h2>
+							{questions[currentQuestionIndex] && (
+								<p>{questions[currentQuestionIndex].question}</p>
+							)}
+							<p className="timer">Time Left: {timer} seconds</p>
+							{hintText && <p className="hint">{hintText}</p>}
+							<div className="progress-bar">
+								<div
+									className="progress"
+									style={{ width: `${progress}%` }}
+								></div>
+							</div>
+							<div className="answer-options">
+								{questions[currentQuestionIndex]?.options.map(
+									(option, index) => (
+										<button
+											key={index}
+											onClick={() => handleAnswerClick(option)}
+											className="answer-option"
+										>
+											{option}
+										</button>
+									)
+								)}
+							</div>
+							<button
+								className="hint-button"
+								onClick={() =>
+									handleHintClick(
+										questions[currentQuestionIndex]?.hint ||
+											"No hint available."
+									)
+								}
+							>
+								Show Hint
+							</button>
+						</div>
+					)}
+				</>
 			)}
 		</div>
 	);
