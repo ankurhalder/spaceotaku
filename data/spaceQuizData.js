@@ -1,5 +1,4 @@
-// spaceQuizData.js
-
+import shuffleArray from "@/functions/shuffleArray";
 const spaceQuizData = [
 	{
 		question: "What is the closest planet to the Sun?",
@@ -155,5 +154,5 @@ if (duplicateQuestions.length > 0) {
 	console.log("No duplicate questions found.");
 }
 console.log("Total questions:", spaceQuizData.length);
-
-export default spaceQuizData;
+const shuffledSpaceQuizData = shuffleArray([...spaceQuizData]);
+export default shuffledSpaceQuizData;

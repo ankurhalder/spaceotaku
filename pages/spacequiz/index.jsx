@@ -1,26 +1,32 @@
 import React, { useState, useEffect } from "react";
-import spaceQuizData from "../../data/spaceQuizData";
+import shuffleArray from "@/functions/shuffleArray";
+import shuffledSpaceQuizData from "../../data/spaceQuizData"; // Import the shuffled data
 
 function SpaceQuiz() {
+	const [questions, setQuestions] = useState([]);
 	const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 	const [score, setScore] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [selectedAnswer, setSelectedAnswer] = useState("");
 	const [hintText, setHintText] = useState("");
-	const [timer, setTimer] = useState(30); // Set an initial timer value (in seconds)
+	const [timer, setTimer] = useState(30);
+
+	useEffect(() => {
+		// Set the questions with the shuffled data
+		const shuffledQuestions = shuffleArray(shuffledSpaceQuizData);
+		setQuestions(shuffledQuestions.slice(0, 10));
+	}, []);
 
 	const handleAnswerClick = (selectedAnswer) => {
-		if (selectedAnswer === spaceQuizData[currentQuestionIndex].correctAnswer) {
-			// If the selected answer is correct, increment the score.
+		if (selectedAnswer === questions[currentQuestionIndex].correctAnswer) {
 			setScore(score + 1);
 		}
 
-		// Move to the next question or show the final score.
-		if (currentQuestionIndex < spaceQuizData.length - 1) {
+		if (currentQuestionIndex < questions.length - 1) {
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
-			setSelectedAnswer(""); // Clear the selected answer
-			setHintText(""); // Clear the hint text
-			setTimer(30); // Reset the timer for the next question
+			setSelectedAnswer("");
+			setHintText("");
+			setTimer(30);
 		} else {
 			setShowScore(true);
 		}
@@ -30,79 +36,46 @@ function SpaceQuiz() {
 		setHintText(hint);
 	};
 
-	const handleSkipClick = () => {
-		// Move to the next question without answering the current one.
-		if (currentQuestionIndex < spaceQuizData.length - 1) {
-			setCurrentQuestionIndex(currentQuestionIndex + 1);
-			setSelectedAnswer(""); // Clear the selected answer
-			setHintText(""); // Clear the hint text
-			setTimer(30); // Reset the timer for the next question
-		} else {
-			setShowScore(true);
-		}
-	};
-
-	useEffect(() => {
-		// Timer logic
-		if (timer > 0 && !showScore) {
-			const countdown = setInterval(() => {
-				setTimer(timer - 1);
-			}, 1000);
-
-			return () => clearInterval(countdown);
-		}
-	}, [timer, showScore]);
-
 	// Calculate progress as a percentage
-	const progress = (currentQuestionIndex / spaceQuizData.length) * 100;
+	const progress = (currentQuestionIndex / questions.length) * 100;
 
 	return (
 		<div className="quiz-container">
 			{showScore ? (
 				<div className="result">
-					<h2>Quiz Completed</h2>
-					<p>
-						Your Score: {score} out of {spaceQuizData.length}
-					</p>
+					Your Score: {score} out of {questions.length}
 				</div>
 			) : (
 				<div className="question-container">
-					<h2>Question {currentQuestionIndex + 1}</h2>
-					<p>{spaceQuizData[currentQuestionIndex].question}</p>
+					<h2>Question {currentQuestionIndex + 1}:</h2>
+					{questions[currentQuestionIndex] && (
+						<p>{questions[currentQuestionIndex].question}</p>
+					)}
 					{hintText && <p className="hint">{hintText}</p>}
 					<div className="progress-bar">
 						<div className="progress" style={{ width: `${progress}%` }}></div>
 					</div>
 					<div className="answer-options">
-						{spaceQuizData[currentQuestionIndex].options.map(
-							(option, index) => (
-								<button
-									key={index}
-									onClick={() => {
-										handleAnswerClick(option);
-										setSelectedAnswer(option);
-									}}
-									className={`answer-option ${
-										option === selectedAnswer ? "selected" : ""
-									}`}
-								>
-									{option}
-								</button>
-							)
-						)}
+						{questions[currentQuestionIndex]?.options.map((option, index) => (
+							<button
+								key={index}
+								onClick={() => handleAnswerClick(option)}
+								className="answer-option"
+							>
+								{option}
+							</button>
+						))}
 					</div>
 					<button
 						className="hint-button"
 						onClick={() =>
-							handleHintClick(spaceQuizData[currentQuestionIndex].hint)
+							handleHintClick(
+								questions[currentQuestionIndex]?.hint || "No hint available."
+							)
 						}
 					>
-						Hint
+						Show Hint
 					</button>
-					<button className="skip-button" onClick={handleSkipClick}>
-						Skip
-					</button>
-					<div className="timer">Time Left: {timer} seconds</div>
 				</div>
 			)}
 		</div>
