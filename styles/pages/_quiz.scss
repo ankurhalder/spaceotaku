@@ -157,14 +157,15 @@
 
 		.answer-options {
 			@include flex-container(row, nowrap, center, center);
-			gap: 20px;
+			gap: 30px;
 			.answer-option {
-				width: 60%;
+				width: 100%;
+				max-width: 200px;
 				padding: 20px;
+				border-radius: 10px;
 				background-color: var(--cool-blue-1);
 				color: var(--white);
 				border: none;
-				border-radius: 10px;
 				cursor: pointer;
 				transition: background-color 0.3s ease-in-out,
 					transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
