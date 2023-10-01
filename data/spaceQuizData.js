@@ -131,4 +131,5 @@ if (duplicateQuestions.length > 0) {
 } else {
 	console.log("No duplicate questions found.");
 }
+console.log("Total questions:", spaceQuizData.length);
 export default spaceQuizData;
