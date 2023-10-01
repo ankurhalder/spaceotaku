@@ -122,7 +122,7 @@ function SpaceQuiz() {
 		<div className="quiz-container">
 			{!difficultySelected ? (
 				<div className="difficulty-selection">
-					<h2>Select Difficulty:</h2>
+					<h3>Select Difficulty:</h3>
 					<button
 						className="difficulty-button"
 						onClick={() => handleDifficultyChange("normal")}
@@ -157,7 +157,7 @@ function SpaceQuiz() {
 				</div>
 			) : (
 				<div className="question-container">
-					<h2>Question {currentQuestionIndex + 1}:</h2>
+					<h4>Question {currentQuestionIndex + 1}:</h4>
 					{questions[currentQuestionIndex] && (
 						<p>{questions[currentQuestionIndex].question}</p>
 					)}
@@ -203,7 +203,7 @@ function SpaceQuiz() {
 			)}
 			{reviewMode && (
 				<div className="review-container">
-					<h2>Review Answers:</h2>
+					<h5>Review Answers:</h5>
 					{questions.map((question, index) => (
 						<div key={index} className="review-item">
 							<p>

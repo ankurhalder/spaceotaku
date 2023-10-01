@@ -6,7 +6,7 @@
 	.difficulty-selection {
 		@include flex-container(column, nowrap, center, center);
 		gap: 5px;
-		h2 {
+		h3 {
 			font-family: var(--font-orbitron);
 			letter-spacing: 4px;
 			font-weight: 400;
@@ -16,7 +16,7 @@
 		}
 
 		.difficulty-button {
-			background-color: #007bff;
+			background-color: var(--cool-blue-1);
 			color: var(--white);
 			border: none;
 			border-radius: 10px;
@@ -45,7 +45,7 @@
 
 		.restart-button,
 		.review-button {
-			background-color: #007bff;
+			background-color: var(--cool-blue-1);
 			color: var(--white);
 			border: none;
 			border-radius: 10px;
@@ -106,7 +106,7 @@
 
 			.progress {
 				height: 100%;
-				background-color: #007bff;
+				background-color: var(--cool-blue-1);
 			}
 		}
 
@@ -119,7 +119,7 @@
 			.answer-option {
 				width: 60%;
 				padding: 20px;
-				background-color: #007bff;
+				background-color: var(--cool-blue-1);
 				color: var(--white);
 				border: none;
 				border-radius: 10px;
@@ -142,7 +142,7 @@
 		}
 
 		.hint-button {
-			background-color: #007bff;
+			background-color: var(--cool-blue-1);
 			color: var(--white);
 			border: none;
 			border-radius: 10px;
