@@ -161,14 +161,14 @@ function SpaceQuiz() {
 			) : (
 				<div className="question-container">
 					<h4>Question {currentQuestionIndex + 1} :</h4>
+					<div className="progress-bar">
+						<div className="progress" style={{ width: `${progress}%` }}></div>
+					</div>
 					{questions[currentQuestionIndex] && (
 						<p>{questions[currentQuestionIndex].question}</p>
 					)}
 					<div className="timer">Time Left: {timer} seconds</div>
 					{hintText && <p className="hint">{hintText}</p>}
-					<div className="progress-bar">
-						<div className="progress" style={{ width: `${progress}%` }}></div>
-					</div>
 					<div className="answer-options">
 						{questions[currentQuestionIndex]?.options.map((option, index) => (
 							<button
