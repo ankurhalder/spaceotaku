@@ -80,7 +80,6 @@
 			letter-spacing: 4px;
 			font-weight: 600;
 			color: var(--white);
-			margin: auto 0 auto 0;
 		}
 		.restart-button,
 		.review-button {
@@ -89,8 +88,11 @@
 			border: none;
 			border-radius: 10px;
 			padding: 18px 36px;
-			font-size: 28px;
-			margin: 10px;
+			font-size: var(--font-10);
+			font-family: var(--font-tektur);
+			letter-spacing: 2px;
+			font-weight: 400;
+			margin: 20px 10px 0 10px;
 			cursor: pointer;
 			transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
 				box-shadow 0.3s ease-in-out;
@@ -98,7 +100,6 @@
 			&:hover {
 				background-color: $cool-blue-1-hover;
 				transform: scale(1.05);
-				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 			}
 		}
 	}
