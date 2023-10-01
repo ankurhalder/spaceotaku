@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import shuffleArray from "@/functions/shuffleArray";
-import shuffledSpaceQuizData from "../../data/spaceQuizData"; // Import the shuffled data
+import shuffledSpaceQuizData from "../../data/spaceQuizData";
 
 const initialTimers = {
 	normal: 30,
@@ -16,14 +16,15 @@ function SpaceQuiz() {
 	const [showScore, setShowScore] = useState(false);
 	const [selectedAnswer, setSelectedAnswer] = useState("");
 	const [hintText, setHintText] = useState("");
-	const [timer, setTimer] = useState(initialTimers.normal); // Default timer for normal difficulty
+	const [timer, setTimer] = useState(initialTimers.normal);
 	const [selectedDifficulty, setSelectedDifficulty] = useState("");
 	const [difficultySelected, setDifficultySelected] = useState(false);
 	const [quizEnded, setQuizEnded] = useState(false);
+	const [selectedAnswers, setSelectedAnswers] = useState([]);
+	const [reviewMode, setReviewMode] = useState(false);
 
 	useEffect(() => {
 		if (!difficultySelected) {
-			// Difficulty has not been selected, don't fetch questions
 			return;
 		}
 
@@ -60,6 +61,11 @@ function SpaceQuiz() {
 			setScore(score + 1);
 		}
 
+		// Store the selected answer
+		const updatedSelectedAnswers = [...selectedAnswers];
+		updatedSelectedAnswers[currentQuestionIndex] = selectedAnswer;
+		setSelectedAnswers(updatedSelectedAnswers);
+
 		if (currentQuestionIndex < questions.length - 1) {
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
 			setSelectedAnswer("");
@@ -85,6 +91,8 @@ function SpaceQuiz() {
 		setDifficultySelected(false);
 		setScore(0);
 		setQuizEnded(false);
+		setSelectedAnswers([]);
+		setReviewMode(false);
 	};
 
 	const handleTimeout = () => {
@@ -134,6 +142,9 @@ function SpaceQuiz() {
 							Restart Quiz
 						</button>
 					)}
+					<button className="review-button" onClick={() => setReviewMode(true)}>
+						Review Answers
+					</button>
 				</div>
 			) : (
 				<div className="question-container">
@@ -169,6 +180,25 @@ function SpaceQuiz() {
 					>
 						Show Hint
 					</button>
+				</div>
+			)}
+			{reviewMode && (
+				<div className="review-container">
+					<h2>Review Answers:</h2>
+					{questions.map((question, index) => (
+						<div key={index} className="review-item">
+							<p>
+								<strong>Question {index + 1}:</strong> {question.question}
+							</p>
+							<p>
+								<strong>Your Answer:</strong>{" "}
+								{selectedAnswers[index] || "Not attempted"}
+							</p>
+							<p>
+								<strong>Correct Answer:</strong> {question.correctAnswer}
+							</p>
+						</div>
+					))}
 				</div>
 			)}
 		</div>
