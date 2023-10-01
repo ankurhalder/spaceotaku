@@ -72,10 +72,15 @@
 	}
 
 	.result {
-		font-size: var(--font-8);
 		text-align: center;
-		color: var(--white);
 		margin: auto 0 auto 0;
+		span {
+			font-family: var(--font-orbitron);
+			font-size: var(--font-8);
+			letter-spacing: 4px;
+			font-weight: 600;
+			color: var(--white);
+		}
 		.restart-button,
 		.review-button {
 			background-color: var(--cool-blue-1);

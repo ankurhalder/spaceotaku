@@ -145,7 +145,9 @@ function SpaceQuiz() {
 				</div>
 			) : showScore || quizEnded ? (
 				<div className="result">
-					Your Score: {score} out of {questions.length}
+					<span>
+						Your Score: {score} out of {questions.length}
+					</span>
 					<br />
 					{quizEnded && (
 						<button className="restart-button" onClick={handleRestartQuiz}>
