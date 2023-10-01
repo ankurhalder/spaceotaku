@@ -7,7 +7,6 @@ export { default as Blogs } from "./Blogs";
 export { default as Reports } from "./Reports";
 export { default as SpaceShooter } from "./SpaceShooter";
 
-// Loading Components
 export { default as LoadingCircle } from "./Loading/LoadingCircle";
 export { default as LoadingDefault } from "./Loading/LoadingDefault";
 export { default as LoadingDualRing } from "./Loading/LoadingDualRing";
