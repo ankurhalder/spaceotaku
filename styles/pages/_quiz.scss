@@ -121,6 +121,19 @@
 			letter-spacing: 4px;
 			font-weight: 600;
 			color: var(--white);
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-9);
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				font-size: var(--font-10);
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+				font-size: var(--font-8);
+			}
 		}
 		.restart-button,
 		.review-button {
@@ -141,6 +154,25 @@
 			&:hover {
 				background-color: $cool-blue-1-hover;
 				transform: scale(1.05);
+			}
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-10);
+				padding: 17px 34px;
+			}
+			@media (max-width: $breakpoint-desktop) {
+				padding: 16px 32px;
+			}
+
+			@media (max-width: $breakpoint-large-tablet) {
+				font-size: var(--font-11);
+				padding: 15px 30px;
+			}
+			@media (max-width: $breakpoint-tablet) {
+				padding: 14px 28px;
+			}
+			@media (max-width: $breakpoint-phone) {
+				padding: 13px 26px;
+				font-size: var(--font-9);
 			}
 		}
 	}
