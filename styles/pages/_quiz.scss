@@ -224,6 +224,18 @@
 			margin-bottom: 10px;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 			margin: 0 0 3% 0;
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-9);
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				font-size: var(--font-10);
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 		}
 
 		.progress-bar {
@@ -237,6 +249,16 @@
 			.progress {
 				height: 100%;
 				background-color: var(--secondary-accent);
+			}
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
 			}
 		}
 
