@@ -120,6 +120,7 @@
 			font-size: var(--font-7);
 			letter-spacing: 4px;
 			color: var(--cool-blue-2);
+			margin: 0 auto 3% auto;
 		}
 		.timer {
 			font-size: var(--font-8);
@@ -127,6 +128,7 @@
 			font-family: var(--font-source);
 			letter-spacing: 4px;
 			font-weight: 600;
+			margin: 0 0 3% 0;
 		}
 
 		.hint {
@@ -138,17 +140,17 @@
 			font-weight: 400;
 			margin-bottom: 10px;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+			margin: 0 0 3% 0;
 		}
 
 		.progress-bar {
 			width: 80%;
 			max-width: 800px;
-			margin: 0 auto;
+			margin: 0 auto 3% auto;
 			background-color: #a4a4a4;
 			height: 20px;
 			border-radius: 10px;
 			overflow: hidden;
-
 			.progress {
 				height: 100%;
 				background-color: var(--secondary-accent);
