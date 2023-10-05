@@ -200,6 +200,18 @@
 			letter-spacing: 4px;
 			font-weight: 600;
 			margin: 0 0 3% 0;
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-9);
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				font-size: var(--font-10);
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 		}
 
 		.hint {
