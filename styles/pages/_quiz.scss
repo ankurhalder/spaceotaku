@@ -274,8 +274,8 @@
 			gap: 20px;
 			.answer-option {
 				text-align: center;
-				width: 100%;
-				max-width: 200px;
+				width: 200px;
+				max-width: 100%;
 				padding: 18px 36px;
 				border-radius: 10px;
 				background-color: var(--cool-blue-1);
@@ -283,8 +283,8 @@
 				border: none;
 				cursor: pointer;
 				font-size: var(--font-10);
-				font-family: var(--font-tektur);
-				letter-spacing: 4px;
+				font-family: var(--font-elianto);
+				letter-spacing: 2px;
 				font-weight: 400;
 				transition: background-color 0.3s ease-in-out,
 					transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
