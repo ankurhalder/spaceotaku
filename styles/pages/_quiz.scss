@@ -175,6 +175,23 @@
 			color: var(--cool-blue-2);
 			margin: 0 auto 3% auto;
 			max-width: 1600px;
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-8);
+				max-width: 1300px;
+			}
+			@media (max-width: $breakpoint-desktop) {
+				max-width: 1200px;
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				font-size: var(--font-9);
+				max-width: 1000px;
+			}
+			@media (max-width: $breakpoint-tablet) {
+				max-width: 500px;
+			}
+			@media (max-width: $breakpoint-phone) {
+				max-width: 250px;
+			}
 		}
 		.timer {
 			font-size: var(--font-8);
