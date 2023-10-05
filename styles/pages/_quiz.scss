@@ -183,14 +183,10 @@
 					background-color: $cool-blue-1-hover;
 					transform: scale(1.05);
 				}
-				.answer-feedback {
-					.correct {
-						color: var(--cool-green);
-					}
-					.incorrect {
-						color: var(--cool-red);
-					}
-				}
+			}
+			.correct {
+				background-color: var(--cool-green);
+				color: var(--white);
 			}
 		}
 

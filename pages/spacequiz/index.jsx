@@ -43,7 +43,7 @@ function SpaceQuiz() {
 			} else {
 				handleTimeout();
 			}
-		}, 1000);
+		}, 2000);
 
 		return () => {
 			clearInterval(timerInterval);
@@ -176,19 +176,21 @@ function SpaceQuiz() {
 								onClick={() => handleAnswerClick(option)}
 								className={`answer-option ${
 									option === selectedAnswer ? "selected" : ""
-								} ${feedback && isQuizDisabled ? "disabled" : ""}`}
+								} ${feedback && isQuizDisabled ? "disabled" : ""}
+								${
+									feedback &&
+									option === questions[currentQuestionIndex].correctAnswer
+										? "correct"
+										: ""
+								}`}
 								disabled={isQuizDisabled}
 							>
 								{option}
-								{feedback && (
-									<div
-										className={`answer-feedback ${
-											feedback === "Correct!" ? "correct" : "incorrect"
-										}`}
-									>
-										{feedback}
-									</div>
-								)}
+								{/* {feedback &&
+									isQuizDisabled &&
+									option === questions[currentQuestionIndex].correctAnswer && (
+										<div className="answer-feedback correct">correct</div>
+									)} */}
 							</button>
 						))}
 					</div>
