@@ -353,6 +353,23 @@
 				background-color: $cool-blue-1-hover;
 				transform: scale(1.01);
 			}
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-10);
+				padding: 15px 30px;
+			}
+			@media (max-width: $breakpoint-desktop) {
+				padding: 15px 30px;
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				font-size: var(--font-11);
+				padding: 12px 24px;
+			}
+			@media (max-width: $breakpoint-tablet) {
+				padding: 10px 20px;
+			}
+			@media (max-width: $breakpoint-phone) {
+				padding: 10px 20px;
+			}
 		}
 	}
 
