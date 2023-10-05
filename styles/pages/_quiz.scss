@@ -279,7 +279,6 @@
 			.answer-option {
 				text-align: center;
 				width: 200px;
-				// max-width: 50%;
 				padding: 18px 36px;
 				height: 100%;
 				border-radius: 10px;
@@ -320,6 +319,9 @@
 				}
 				@media (max-width: $breakpoint-phone) {
 					padding: 10px 20px;
+					width: 150px;
+					height: 100%;
+					font-size: var(--font-9);
 				}
 			}
 			@media (max-width: $breakpoint-desktop-wide) {
@@ -379,6 +381,7 @@
 			}
 			@media (max-width: $breakpoint-phone) {
 				padding: 10px 20px;
+				margin: 10% 0 0 0;
 			}
 		}
 	}
