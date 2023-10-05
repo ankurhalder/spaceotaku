@@ -80,6 +80,7 @@
 			border: none;
 			border-radius: 10px;
 			padding: 18px 36px;
+
 			font-size: var(--font-10);
 			font-family: var(--font-tektur);
 			letter-spacing: 2px;
@@ -156,14 +157,16 @@
 			color: var(--white);
 			@media (max-width: $breakpoint-desktop-wide) {
 				font-size: var(--font-9);
-				margin: 10% 0 0 0;
+				margin: 10% 0 3% 0;
 			}
 			@media (max-width: $breakpoint-desktop) {
 			}
 			@media (max-width: $breakpoint-large-tablet) {
-				margin: 5% 0 0 0;
+				margin: 5% 0 3% 0;
 			}
 			@media (max-width: $breakpoint-tablet) {
+				margin: 10% 0 3% 0;
+				font-size: var(--font-7);
 			}
 			@media (max-width: $breakpoint-phone) {
 			}
@@ -172,7 +175,7 @@
 			font-family: var(--font-elianto);
 			font-size: var(--font-7);
 			letter-spacing: 4px;
-			color: var(--cool-blue-2);
+			color: var(--cool-blue-1);
 			margin: 0 auto 3% auto;
 			max-width: 1600px;
 			@media (max-width: $breakpoint-desktop-wide) {
@@ -188,6 +191,7 @@
 			}
 			@media (max-width: $breakpoint-tablet) {
 				max-width: 500px;
+				font-size: var(--font-7);
 			}
 			@media (max-width: $breakpoint-phone) {
 				max-width: 250px;
@@ -206,7 +210,7 @@
 			@media (max-width: $breakpoint-desktop) {
 			}
 			@media (max-width: $breakpoint-large-tablet) {
-				font-size: var(--font-10);
+				font-size: var(--font-8);
 			}
 			@media (max-width: $breakpoint-tablet) {
 			}
@@ -230,8 +234,7 @@
 			@media (max-width: $breakpoint-desktop) {
 			}
 			@media (max-width: $breakpoint-large-tablet) {
-				font-size: var(--font-10);
-				margin: 3% 0 0 0;
+				margin: 3% 0 3% 0;
 			}
 			@media (max-width: $breakpoint-tablet) {
 			}
@@ -276,8 +279,9 @@
 			.answer-option {
 				text-align: center;
 				width: 200px;
-				max-width: 100%;
+				// max-width: 50%;
 				padding: 18px 36px;
+				height: 100%;
 				border-radius: 10px;
 				background-color: var(--cool-blue-1);
 				color: var(--white);
@@ -311,7 +315,8 @@
 					padding: 12px 24px;
 				}
 				@media (max-width: $breakpoint-tablet) {
-					padding: 10px 20px;
+					padding: 18px 36px;
+					font-size: var(--font-8);
 				}
 				@media (max-width: $breakpoint-phone) {
 					padding: 10px 20px;
@@ -326,6 +331,7 @@
 				gap: 25px;
 			}
 			@media (max-width: $breakpoint-tablet) {
+				gap: 15px;
 			}
 			@media (max-width: $breakpoint-phone) {
 				gap: 10px;
@@ -368,6 +374,8 @@
 			}
 			@media (max-width: $breakpoint-tablet) {
 				padding: 10px 20px;
+				font-size: var(--font-8);
+				margin: 5% 0 0 0;
 			}
 			@media (max-width: $breakpoint-phone) {
 				padding: 10px 20px;
