@@ -35,6 +35,18 @@
 				background-position: 0% 50%;
 			}
 		}
+		@media (max-width: $breakpoint-desktop-wide) {
+			font-size: var(--font-6);
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+			font-size: var(--font-7);
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 	.difficulty-selection {
 		margin: auto 0 auto 0;
