@@ -199,8 +199,11 @@
 			border: none;
 			border-radius: 10px;
 			padding: 18px 36px;
-			font-size: 28px;
-			margin: 10px;
+			font-size: var(--font-10);
+			font-family: var(--font-elianto);
+			letter-spacing: 2px;
+			font-weight: 400;
+			margin: 3% 0 0 0;
 			cursor: pointer;
 			transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
 				box-shadow 0.3s ease-in-out;
