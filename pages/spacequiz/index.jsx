@@ -186,11 +186,6 @@ function SpaceQuiz() {
 								disabled={isQuizDisabled}
 							>
 								{option}
-								{/* {feedback &&
-									isQuizDisabled &&
-									option === questions[currentQuestionIndex].correctAnswer && (
-										<div className="answer-feedback correct">correct</div>
-									)} */}
 							</button>
 						))}
 					</div>
