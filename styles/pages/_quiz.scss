@@ -5,6 +5,7 @@
 	max-height: 100%;
 	@include flex-container(column, nowrap, flex-start, center);
 	h1 {
+		text-align: center;
 		font-family: var(--font-elianto);
 		font-size: var(--font-5);
 		text-transform: uppercase;
@@ -44,6 +45,7 @@
 			font-size: var(--font-7);
 		}
 		@media (max-width: $breakpoint-tablet) {
+			margin: 10% 0 0 0;
 		}
 		@media (max-width: $breakpoint-phone) {
 		}
@@ -59,6 +61,18 @@
 			font-size: var(--font-8);
 			margin-bottom: 1%;
 			color: var(--white);
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-9);
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				// font-size: var(--font-10);
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 		}
 
 		.difficulty-button {
@@ -79,6 +93,21 @@
 			&:hover {
 				background-color: $cool-blue-1-hover;
 				transform: scale(1.05);
+			}
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-10);
+				padding: 15px 30px;
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				font-size: var(--font-11);
+				padding: 12px 24px;
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+				padding: 10px 20px;
 			}
 		}
 	}
