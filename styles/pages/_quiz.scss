@@ -155,6 +155,18 @@
 			font-size: var(--font-8);
 			margin: 0 0 3% 0;
 			color: var(--white);
+			@media (max-width: $breakpoint-desktop-wide) {
+				font-size: var(--font-9);
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+				// font-size: var(--font-10);
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 		}
 		p {
 			font-family: var(--font-elianto);
