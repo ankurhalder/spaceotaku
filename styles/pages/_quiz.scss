@@ -251,14 +251,21 @@
 				background-color: var(--secondary-accent);
 			}
 			@media (max-width: $breakpoint-desktop-wide) {
+				width: 75%;
 			}
 			@media (max-width: $breakpoint-desktop) {
 			}
 			@media (max-width: $breakpoint-large-tablet) {
+				width: 70%;
+				height: 18px;
 			}
 			@media (max-width: $breakpoint-tablet) {
+				width: 70%;
+				height: 16px;
 			}
 			@media (max-width: $breakpoint-phone) {
+				width: 65%;
+				height: 16px;
 			}
 		}
 
