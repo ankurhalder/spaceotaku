@@ -117,7 +117,7 @@ export default function IconMeta() {
 			<link rel="ms-icon" sizes="150x150" href="/icons/ms-icon-150x150.png" />
 			<link rel="ms-icon" sizes="310x310" href="/icons/ms-icon-310x310.png" />
 
-			<meta name="msapplication-TileColor" content="#ffffff" />
+			<meta name="msapplication-TileColor" content="#000000" />
 			<meta
 				name="msapplication-TileImage"
 				content="/icons/ms-icon-144x144.png"
