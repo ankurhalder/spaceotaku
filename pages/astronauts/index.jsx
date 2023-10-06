@@ -21,7 +21,6 @@ const Slider = () => {
 				setTranslateZ(150);
 			}
 		};
-
 		updateStyles();
 
 		window.addEventListener("resize", updateStyles);
