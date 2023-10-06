@@ -72,10 +72,6 @@ const PlanetPage = () => {
 				<meta name="keywords" content={metaKeywords} />
 				<link
 					rel="canonical"
-					href="https://www.spaceotaku.online/celestialpicker"
-				/>
-				<link
-					rel="canonical"
 					href="https://spaceotaku.vercel.app/celestialpicker"
 				/>
 				<meta

@@ -133,10 +133,6 @@ function SpaceQuiz() {
 				<link rel="canonical" href="https://www.spaceotaku.online/spacequiz" />
 				<link rel="canonical" href="https://spaceotaku.vercel.app/spacequiz" />
 				<meta
-					property="og:url"
-					content="https://www.spaceotaku.online/spacequiz"
-				/>
-				<meta
 					name="twitter:url"
 					content="https://www.spaceotaku.online/spacequiz"
 				/>

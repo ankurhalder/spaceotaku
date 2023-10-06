@@ -18,10 +18,6 @@ export default function SolarSystem() {
 				/>
 				<link
 					rel="canonical"
-					href="https://www.spaceotaku.online/solarsystem/"
-				/>
-				<link
-					rel="canonical"
 					href="https://spaceotaku.vercel.app/solarsystem"
 				/>
 				<meta

@@ -15,10 +15,6 @@ const SpaceShooterGame = () => {
 				/>
 				<link
 					rel="canonical"
-					href="https://www.spaceotaku.online/spaceshooter"
-				/>
-				<link
-					rel="canonical"
 					href="https://spaceotaku.vercel.app/spaceshooter"
 				/>
 				<meta
