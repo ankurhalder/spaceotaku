@@ -16,6 +16,14 @@ export default function SolarSystem() {
 					name="keywords"
 					content="space otaku, Solar System, Space Otaku, Planet Distances, Planet Sizes, Planet Speeds, Cosmic Neighborhood, Space Exploration, Celestial Wonders, Space Enthusiast, Educational Simulation, Interactive Learning, Astronomy, Inner Planets, Gas Giants, Ice Giants, Terrestrial Worlds, Dwarf Planets, Kuiper Belt, Oort Cloud, Sun, Solar Phenomena, Space Weather, Astronomy Education, Space Exploration Missions, Solar System Discoveries"
 				/>
+				<link
+					rel="canonical"
+					href="https://www.spaceotaku.online/solarsystem/"
+				/>
+				<link
+					rel="canonical"
+					href="https://spaceotaku.vercel.app/solarsystem"
+				/>
 				<meta
 					property="og:url"
 					content="https://www.spaceotaku.online/solarsystem/"

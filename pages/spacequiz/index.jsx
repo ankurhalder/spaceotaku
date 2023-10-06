@@ -130,6 +130,8 @@ function SpaceQuiz() {
 					name="keywords"
 					content="space quiz, space trivia, quiz game, Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,"
 				/>
+				<link rel="canonical" href="https://www.spaceotaku.online/spacequiz" />
+				<link rel="canonical" href="https://spaceotaku.vercel.app/spacequiz" />
 				<meta
 					property="og:url"
 					content="https://www.spaceotaku.online/spacequiz"
