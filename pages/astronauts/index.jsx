@@ -199,41 +199,41 @@ const Slider = () => {
 						</div>
 						<h3>{astronaut.name}</h3>
 						<p>
-							<span className="name">Role:</span>{" "}
+							<span className="name">Role:</span>
 							<span className="name-des">{astronaut.role}</span>
 						</p>
 						<p>
-							<span className="name">Birth Date:</span>{" "}
+							<span className="name">Birth Date:</span>
 							<span className="name-des"> {astronaut.birth_date}</span>
 						</p>
 						<p>
-							<span className="name">Birth Place:</span>{" "}
+							<span className="name">Birth Place:</span>
 							<span className="name-des">{astronaut.birth_place}</span>
 						</p>
 						<p>
-							<span className="name">Missions:</span>{" "}
+							<span className="name">Missions:</span>
 							<span className="name-des">{astronaut.missions.join(", ")}</span>
 						</p>
 						<p>
-							<span className="name">Total Time in Space:</span>{" "}
+							<span className="name">Total Time in Space:</span>
 							<span className="name-des">{astronaut.total_time_in_space}</span>
 						</p>
 						<p>
-							<span className="name">Spacewalks:</span>{" "}
+							<span className="name">Spacewalks:</span>
 							<span className="name-des">{astronaut.spacewalks}</span>
 						</p>
 						<p>
-							<span className="name">Spacewalk Duration:</span>{" "}
+							<span className="name">Spacewalk Duration:</span>
 							<span className="name-des">{astronaut.spacewalk_duration}</span>
 						</p>
 						<p>
-							<span className="name"> Educational Background:</span>{" "}
+							<span className="name"> Educational Background:</span>
 							<span className="name-des">
 								{astronaut.educational_background}
 							</span>
 						</p>
 						<p>
-							<span className="name">Hobbies:</span>{" "}
+							<span className="name">Hobbies:</span>
 							<span className="name-des">{astronaut.hobbies}</span>
 						</p>
 					</div>
@@ -242,5 +242,4 @@ const Slider = () => {
 		</Fragment>
 	);
 };
-
 export default Slider;
