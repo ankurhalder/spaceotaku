@@ -5,7 +5,6 @@ export { default as ISSMap } from "./ISSMap";
 export { default as Articles } from "./Articles";
 export { default as Blogs } from "./Blogs";
 export { default as Reports } from "./Reports";
-export { default as SpaceShooter } from "./SpaceShooter";
 
 export { default as LoadingCircle } from "./Loading/LoadingCircle";
 export { default as LoadingDefault } from "./Loading/LoadingDefault";
