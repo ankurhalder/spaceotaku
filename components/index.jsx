@@ -6,6 +6,7 @@ export { default as Articles } from "./Articles";
 export { default as Blogs } from "./Blogs";
 export { default as Reports } from "./Reports";
 
+//# Loading Components
 export { default as LoadingCircle } from "./Loading/LoadingCircle";
 export { default as LoadingDefault } from "./Loading/LoadingDefault";
 export { default as LoadingDualRing } from "./Loading/LoadingDualRing";
@@ -17,3 +18,8 @@ export { default as LoadingRing } from "./Loading/LoadingRing";
 export { default as LoadingRipple } from "./Loading/LoadingRipple";
 export { default as LoadingRoller } from "./Loading/LoadingRoller";
 export { default as LoadingSpinner } from "./Loading/LoadingSpinner";
+
+// # Game Components
+export { default as Player } from "./game/Player";
+export { default as Enemy } from "./game/Enemy";
+export { default as Bullet } from "./game/Bullet";
