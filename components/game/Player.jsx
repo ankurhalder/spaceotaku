@@ -1,4 +1,3 @@
-// components/Player.js
 import React from "react";
 
 const Player = ({ x, y }) => {
