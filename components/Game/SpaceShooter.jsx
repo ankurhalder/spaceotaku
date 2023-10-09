@@ -76,6 +76,7 @@ const SpaceShooter = () => {
 				y: player.y,
 			});
 		};
+
 		const handlePlayerMovement = () => {
 			const keysPressed = {
 				ArrowUp: false,
