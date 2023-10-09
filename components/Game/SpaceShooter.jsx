@@ -47,66 +47,78 @@ const SpaceShooter = () => {
 				ctx.fillStyle = "white";
 				ctx.font = "30px Arial";
 				ctx.fillText("Game Over", canvas.width / 2 - 80, canvas.height / 2);
-				return; // Exit the game loop
-			}
-
-			// Draw player image
-			if (playerImg) {
-				ctx.drawImage(
-					playerImg,
-					player.x,
-					player.y,
-					player.width,
-					player.height
-				);
-			}
-
-			// Check for collisions with enemies
-			enemies.forEach((enemy, index) => {
-				if (isCollision(player, enemy)) {
-					// Game over logic
-					setIsGameOver(true);
-					return; // Exit the loop
+			} else {
+				// Draw player image
+				if (playerImg) {
+					ctx.drawImage(
+						playerImg,
+						player.x,
+						player.y,
+						player.width,
+						player.height
+					);
 				}
-				enemy.y += 0.5; // Decreased enemy speed further
 
-				// Randomly select an enemy image
-				const enemyImageIndex = Math.floor(Math.random() * enemyImages.length);
-				const enemyImage = new Image();
-				enemyImage.src = enemyImages[enemyImageIndex];
-				ctx.drawImage(enemyImage, enemy.x, enemy.y, enemy.width, enemy.height);
-			});
+				// Check for collisions with enemies
+				enemies.forEach((enemy, index) => {
+					if (isCollision(player, enemy)) {
+						// Game over logic
+						setIsGameOver(true);
+						return; // Exit the loop
+					}
+					enemy.y += 0.5; // Decreased enemy speed further
 
-			// Draw and update bullets
-			ctx.fillStyle = "yellow";
-			const newBullets = bullets.map((bullet) => {
-				if (bullet.active) {
-					bullet.y -= 2; // Adjust bullet speed
-					ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+					// Randomly select an enemy image
+					const enemyImageIndex = Math.floor(
+						Math.random() * enemyImages.length
+					);
+					const enemyImage = new Image();
+					enemyImage.src = enemyImages[enemyImageIndex];
+					ctx.drawImage(
+						enemyImage,
+						enemy.x,
+						enemy.y,
+						enemy.width,
+						enemy.height
+					);
+				});
 
-					// Check for collisions with enemies
-					const updatedEnemies = [...enemies];
-					enemies.forEach((enemy, index) => {
-						if (isCollision(bullet, enemy)) {
-							// Deactivate the bullet and remove the enemy
-							bullet.active = false;
-							updatedEnemies.splice(index, 1);
-							setScore(score + 10); // Increase the score
-						}
-					});
-					setEnemies(updatedEnemies);
-				}
-				return bullet;
-			});
+				// Draw and update bullets
+				ctx.fillStyle = "yellow";
+				const newBullets = bullets.map((bullet) => {
+					if (bullet.active) {
+						bullet.y -= 2; // Adjust bullet speed
+						ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
 
-			// Remove inactive bullets
-			const filteredBullets = newBullets.filter((bullet) => bullet.active);
+						// Check for collisions with enemies
+						const updatedEnemies = [...enemies];
+						enemies.forEach((enemy, index) => {
+							if (isCollision(bullet, enemy)) {
+								// Deactivate the bullet and remove the enemy
+								bullet.active = false;
+								updatedEnemies.splice(index, 1);
+								setScore(score + 10); // Increase the score
+							}
+						});
+						setEnemies(updatedEnemies);
+					}
+					return bullet;
+				});
 
-			// Update the bullets state with the new positions
-			setBullets(filteredBullets);
+				// Remove inactive bullets
+				const filteredBullets = newBullets.filter((bullet) => bullet.active);
 
-			// Request animation frame
-			requestAnimationFrame(updateGame);
+				// Update the bullets state with the new positions
+				setBullets(filteredBullets);
+
+				// Draw the score in the top-left corner
+				ctx.fillStyle = "white";
+				ctx.font = "20px Arial";
+				ctx.fillText(`Score: ${score}`, 10, 30);
+
+				// Request animation frame
+				requestAnimationFrame(updateGame);
+			}
 		};
 
 		// Helper function to check for collisions
