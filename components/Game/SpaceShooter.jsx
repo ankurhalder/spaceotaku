@@ -21,8 +21,8 @@ const SpaceShooter = () => {
 	// Array of enemy image paths
 	const enemyImages = [
 		"/aliens/alien-1.png",
-		"aliens/alien-2.png",
-		"aliens/alien-3.png",
+		"/aliens/alien-2.png",
+		"/aliens/alien-3.png",
 	];
 
 	useEffect(() => {
@@ -47,75 +47,66 @@ const SpaceShooter = () => {
 				ctx.fillStyle = "white";
 				ctx.font = "30px Arial";
 				ctx.fillText("Game Over", canvas.width / 2 - 80, canvas.height / 2);
-			} else {
-				// Draw player image
-				if (playerImg) {
-					ctx.drawImage(
-						playerImg,
-						player.x,
-						player.y,
-						player.width,
-						player.height
-					);
-				}
-
-				// Draw and update enemies
-				const newEnemies = enemies.map((enemy) => {
-					enemy.y += 0.5; // Decreased enemy speed further
-
-					// Randomly select an enemy image
-					const enemyImageIndex = Math.floor(
-						Math.random() * enemyImages.length
-					);
-					const enemyImage = new Image();
-					enemyImage.src = enemyImages[enemyImageIndex];
-					ctx.drawImage(
-						enemyImage,
-						enemy.x,
-						enemy.y,
-						enemy.width,
-						enemy.height
-					);
-
-					return enemy;
-				});
-
-				// Update the enemies state with the new positions
-				setEnemies(newEnemies);
-
-				// Draw and update bullets
-				ctx.fillStyle = "yellow";
-				const newBullets = bullets.map((bullet) => {
-					if (bullet.active) {
-						bullet.y -= 2; // Adjust bullet speed
-						ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
-
-						// Check for collisions with enemies
-						newEnemies.forEach((enemy, index) => {
-							if (isCollision(bullet, enemy)) {
-								// Deactivate the bullet and remove the enemy
-								bullet.active = false;
-								const updatedEnemies = [...newEnemies];
-								updatedEnemies.splice(index, 1);
-								setEnemies(updatedEnemies);
-
-								// Increase the score
-								setScore(score + 10);
-							}
-						});
-					}
-					return bullet;
-				});
-
-				// Remove inactive bullets
-				const filteredBullets = newBullets.filter((bullet) => bullet.active);
-
-				// Update the bullets state with the new positions
-				setBullets(filteredBullets);
-
-				// Request animation frame
-				requestAnimationFrame(updateGame);
+				return; // Exit the game loop
 			}
+
+			// Draw player image
+			if (playerImg) {
+				ctx.drawImage(
+					playerImg,
+					player.x,
+					player.y,
+					player.width,
+					player.height
+				);
+			}
+
+			// Check for collisions with enemies
+			enemies.forEach((enemy, index) => {
+				if (isCollision(player, enemy)) {
+					// Game over logic
+					setIsGameOver(true);
+					return; // Exit the loop
+				}
+				enemy.y += 0.5; // Decreased enemy speed further
+
+				// Randomly select an enemy image
+				const enemyImageIndex = Math.floor(Math.random() * enemyImages.length);
+				const enemyImage = new Image();
+				enemyImage.src = enemyImages[enemyImageIndex];
+				ctx.drawImage(enemyImage, enemy.x, enemy.y, enemy.width, enemy.height);
+			});
+
+			// Draw and update bullets
+			ctx.fillStyle = "yellow";
+			const newBullets = bullets.map((bullet) => {
+				if (bullet.active) {
+					bullet.y -= 2; // Adjust bullet speed
+					ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+
+					// Check for collisions with enemies
+					const updatedEnemies = [...enemies];
+					enemies.forEach((enemy, index) => {
+						if (isCollision(bullet, enemy)) {
+							// Deactivate the bullet and remove the enemy
+							bullet.active = false;
+							updatedEnemies.splice(index, 1);
+							setScore(score + 10); // Increase the score
+						}
+					});
+					setEnemies(updatedEnemies);
+				}
+				return bullet;
+			});
+
+			// Remove inactive bullets
+			const filteredBullets = newBullets.filter((bullet) => bullet.active);
+
+			// Update the bullets state with the new positions
+			setBullets(filteredBullets);
+
+			// Request animation frame
+			requestAnimationFrame(updateGame);
 		};
 
 		// Helper function to check for collisions
@@ -200,7 +191,7 @@ const SpaceShooter = () => {
 		return () => {
 			document.removeEventListener("keydown", handleKeyDown);
 		};
-	}, [player, enemies, bullets, isSpawning, isGameOver]);
+	}, [player, enemies, bullets, isSpawning, isGameOver, score]);
 
 	return (
 		<div>
