@@ -212,6 +212,7 @@ const SpaceShooter = () => {
 			context.fillStyle = "red";
 			context.fillText("Game Over", canvas.width / 2 - 100, canvas.height / 2);
 		};
+
 		const gameLoop = () => {
 			if (!gameOverRef.current) {
 				moveBullets();
