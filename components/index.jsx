@@ -18,3 +18,6 @@ export { default as LoadingRing } from "./Loading/LoadingRing";
 export { default as LoadingRipple } from "./Loading/LoadingRipple";
 export { default as LoadingRoller } from "./Loading/LoadingRoller";
 export { default as LoadingSpinner } from "./Loading/LoadingSpinner";
+
+// # Game Components
+export { default as SpaceShooter } from "./Game/SpaceShooter";

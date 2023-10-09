@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Fragment } from "react";
+import { SpaceShooter } from "@/components";
 const SpaceShooterGame = () => {
 	return (
 		<Fragment>
@@ -28,6 +29,7 @@ const SpaceShooterGame = () => {
 			</Head>
 			<div className="space-shooter-container">
 				<h1>Space Shooter Game by Space Otaku</h1>
+				<SpaceShooter></SpaceShooter>
 			</div>
 		</Fragment>
 	);
