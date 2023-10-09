@@ -16,6 +16,7 @@ const SpaceShooter = () => {
 	const shootIntervalRef = useRef(null);
 	const enemiesRef = useRef([]);
 	const scoreRef = useRef(0);
+	const gameOverRef = useRef(false); // New game over state
 
 	useEffect(() => {
 		const canvas = canvasRef.current;
@@ -58,6 +59,15 @@ const SpaceShooter = () => {
 					enemy.y = -enemy.height;
 					enemy.x = Math.random() * (canvas.width - enemy.width);
 				}
+				// Check for collision with player
+				if (
+					player.x < enemy.x + enemy.width &&
+					player.x + player.width > enemy.x &&
+					player.y < enemy.y + enemy.height &&
+					player.y + player.height > enemy.y
+				) {
+					gameOverRef.current = true;
+				}
 			});
 		};
 
@@ -67,7 +77,6 @@ const SpaceShooter = () => {
 				y: player.y,
 			});
 		};
-
 		const handlePlayerMovement = () => {
 			const keysPressed = {
 				ArrowUp: false,
@@ -77,23 +86,26 @@ const SpaceShooter = () => {
 			};
 
 			window.addEventListener("keydown", (e) => {
-				keysPressed[e.key] = true;
+				if (!gameOverRef.current) {
+					// Check if the game is not over
+					keysPressed[e.key] = true;
 
-				if (keysPressed.ArrowUp) {
-					player.y -= playerSpeed;
-				}
-				if (keysPressed.ArrowDown) {
-					player.y += playerSpeed;
-				}
-				if (keysPressed.ArrowLeft) {
-					player.x -= playerSpeed;
-				}
-				if (keysPressed.ArrowRight) {
-					player.x += playerSpeed;
-				}
+					if (keysPressed.ArrowUp) {
+						player.y -= playerSpeed;
+					}
+					if (keysPressed.ArrowDown) {
+						player.y += playerSpeed;
+					}
+					if (keysPressed.ArrowLeft) {
+						player.x -= playerSpeed;
+					}
+					if (keysPressed.ArrowRight) {
+						player.x += playerSpeed;
+					}
 
-				keepPlayerInBounds();
-				drawPlayer();
+					keepPlayerInBounds();
+					drawPlayer();
+				}
 			});
 
 			window.addEventListener("keyup", (e) => {
@@ -196,15 +208,25 @@ const SpaceShooter = () => {
 			context.fillText("Score: " + scoreRef.current, 10, 30);
 		};
 
+		const drawGameOver = () => {
+			context.font = "40px Arial";
+			context.fillStyle = "red";
+			context.fillText("Game Over", canvas.width / 2 - 100, canvas.height / 2);
+		};
 		const gameLoop = () => {
-			moveBullets();
-			moveEnemies();
-			handleCollisions();
-			drawPlayer();
-			drawBullets();
-			drawEnemies();
-			drawScore();
-			requestAnimationFrame(gameLoop);
+			if (!gameOverRef.current) {
+				moveBullets();
+				moveEnemies();
+				handleCollisions();
+				drawPlayer();
+				drawBullets();
+				drawEnemies();
+				drawScore();
+				requestAnimationFrame(gameLoop);
+			} else {
+				// Display game over screen
+				drawGameOver();
+			}
 		};
 
 		gameLoop();
