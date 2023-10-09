@@ -1,6 +1,4 @@
-// components/SpaceShooter.js
-
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const SpaceShooter = () => {
 	const canvasRef = useRef(null);
@@ -19,8 +17,6 @@ const SpaceShooter = () => {
 	const enemiesRef = useRef([]);
 	const scoreRef = useRef(0);
 	const gameOverRef = useRef(false);
-
-	const [isRestarted, setIsRestarted] = useState(false);
 
 	useEffect(() => {
 		const canvas = canvasRef.current;
@@ -80,7 +76,6 @@ const SpaceShooter = () => {
 				y: player.y,
 			});
 		};
-
 		const handlePlayerMovement = () => {
 			const keysPressed = {
 				ArrowUp: false,
@@ -215,33 +210,7 @@ const SpaceShooter = () => {
 			context.font = "40px Arial";
 			context.fillStyle = "red";
 			context.fillText("Game Over", canvas.width / 2 - 100, canvas.height / 2);
-			context.font = "20px Arial";
-			context.fillStyle = "white";
-			context.fillText(
-				"Press 'R' to Restart",
-				canvas.width / 2 - 80,
-				canvas.height / 2 + 40
-			);
 		};
-
-		const restartGame = () => {
-			if (isRestarted) {
-				bulletsRef.current = [];
-				enemiesRef.current = [];
-				scoreRef.current = 0;
-				gameOverRef.current = false;
-				player.x = 375;
-				player.y = 500;
-				setIsRestarted(false);
-			}
-		};
-
-		const handleRestart = (e) => {
-			if (e.key === "r" || e.key === "R") {
-				restartGame();
-			}
-		};
-
 		const gameLoop = () => {
 			if (!gameOverRef.current) {
 				moveBullets();
@@ -254,8 +223,6 @@ const SpaceShooter = () => {
 				requestAnimationFrame(gameLoop);
 			} else {
 				drawGameOver();
-				setIsRestarted(true);
-				window.addEventListener("keydown", handleRestart);
 			}
 		};
 
@@ -273,11 +240,8 @@ const SpaceShooter = () => {
 					clearInterval(shootIntervalRef.current);
 				}
 			});
-			if (isRestarted) {
-				window.removeEventListener("keydown", handleRestart);
-			}
 		};
-	}, [isRestarted]);
+	}, []);
 
 	return <canvas ref={canvasRef} width={800} height={600}></canvas>;
 };
