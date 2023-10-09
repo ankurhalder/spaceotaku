@@ -1,4 +1,3 @@
-// components/SpaceShooter.js
 import { useEffect, useRef } from "react";
 
 const SpaceShooter = () => {
