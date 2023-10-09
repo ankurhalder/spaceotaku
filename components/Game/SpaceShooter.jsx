@@ -1,3 +1,4 @@
+// components/SpaceShooter.js
 import { useEffect, useRef } from "react";
 
 const SpaceShooter = () => {
@@ -14,11 +15,13 @@ const SpaceShooter = () => {
 	const bulletSpeed = 5;
 	const isShootingRef = useRef(false);
 	const shootIntervalRef = useRef(null);
+	const enemiesRef = useRef([]);
 
 	useEffect(() => {
 		const canvas = canvasRef.current;
 		const context = canvas.getContext("2d");
 		contextRef.current = context;
+
 		const player = playerRef.current;
 
 		const drawPlayer = () => {
@@ -38,6 +41,23 @@ const SpaceShooter = () => {
 			bulletsRef.current = bulletsRef.current.filter((bullet) => bullet.y > 0);
 			bulletsRef.current.forEach((bullet) => {
 				bullet.y -= bulletSpeed;
+			});
+		};
+
+		const drawEnemies = () => {
+			enemiesRef.current.forEach((enemy) => {
+				context.fillStyle = "green";
+				context.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+			});
+		};
+
+		const moveEnemies = () => {
+			enemiesRef.current.forEach((enemy) => {
+				enemy.y += enemy.speed;
+				if (enemy.y > canvas.height) {
+					enemy.y = -enemy.height;
+					enemy.x = Math.random() * (canvas.width - enemy.width);
+				}
 			});
 		};
 
@@ -97,6 +117,20 @@ const SpaceShooter = () => {
 			}
 		};
 
+		const createEnemies = () => {
+			const numberOfEnemies = 1;
+
+			for (let i = 0; i < numberOfEnemies; i++) {
+				enemiesRef.current.push({
+					x: Math.random() * (canvas.width - 50),
+					y: Math.random() * canvas.height,
+					width: 50,
+					height: 50,
+					speed: 1,
+				});
+			}
+		};
+
 		const handleShooting = () => {
 			window.addEventListener("keydown", (e) => {
 				if (e.key === " " && !isShootingRef.current) {
@@ -118,6 +152,7 @@ const SpaceShooter = () => {
 			const minInterval = 100;
 			const maxDuration = 2000;
 			const maxInterval = 500;
+
 			shoot();
 
 			shootIntervalRef.current = setInterval(() => {
@@ -139,15 +174,17 @@ const SpaceShooter = () => {
 
 		const gameLoop = () => {
 			moveBullets();
+			moveEnemies();
 			drawPlayer();
 			drawBullets();
+			drawEnemies();
 			requestAnimationFrame(gameLoop);
 		};
 
 		gameLoop();
-
 		handlePlayerMovement();
 		handleShooting();
+		createEnemies();
 
 		return () => {
 			window.removeEventListener("keydown", handlePlayerMovement);
