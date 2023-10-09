@@ -1,11 +1,10 @@
-// components/SpaceShooter.js
 import { useEffect, useRef } from "react";
 
 const SpaceShooter = () => {
 	const canvasRef = useRef(null);
 	const contextRef = useRef(null);
 	const playerRef = useRef({
-		x: 375, // Start in the middle horizontally
+		x: 375,
 		y: 500,
 		width: 50,
 		height: 50,
@@ -20,18 +19,14 @@ const SpaceShooter = () => {
 		const canvas = canvasRef.current;
 		const context = canvas.getContext("2d");
 		contextRef.current = context;
-
-		// Define player properties
 		const player = playerRef.current;
 
-		// Function to draw the player
 		const drawPlayer = () => {
 			context.clearRect(0, 0, canvas.width, canvas.height);
 			context.fillStyle = "blue";
 			context.fillRect(player.x, player.y, player.width, player.height);
 		};
 
-		// Function to draw bullets
 		const drawBullets = () => {
 			bulletsRef.current.forEach((bullet) => {
 				context.fillStyle = "red";
@@ -39,7 +34,6 @@ const SpaceShooter = () => {
 			});
 		};
 
-		// Function to move bullets
 		const moveBullets = () => {
 			bulletsRef.current = bulletsRef.current.filter((bullet) => bullet.y > 0);
 			bulletsRef.current.forEach((bullet) => {
@@ -47,15 +41,13 @@ const SpaceShooter = () => {
 			});
 		};
 
-		// Function to handle shooting
 		const shoot = () => {
 			bulletsRef.current.push({
-				x: player.x + player.width / 2 - 2.5, // Start bullets from the middle of the player
+				x: player.x + player.width / 2 - 2.5,
 				y: player.y,
 			});
 		};
 
-		// Handle player movement
 		const handlePlayerMovement = () => {
 			const keysPressed = {
 				ArrowUp: false,
@@ -80,7 +72,6 @@ const SpaceShooter = () => {
 					player.x += playerSpeed;
 				}
 
-				// Keep the player within the canvas boundaries
 				keepPlayerInBounds();
 				drawPlayer();
 			});
@@ -90,7 +81,6 @@ const SpaceShooter = () => {
 			});
 		};
 
-		// Function to keep the player within the canvas boundaries
 		const keepPlayerInBounds = () => {
 			const canvas = canvasRef.current;
 			if (player.x < 0) {
@@ -107,7 +97,6 @@ const SpaceShooter = () => {
 			}
 		};
 
-		// Handle shooting when the Spacebar is pressed
 		const handleShooting = () => {
 			window.addEventListener("keydown", (e) => {
 				if (e.key === " " && !isShootingRef.current) {
@@ -124,25 +113,22 @@ const SpaceShooter = () => {
 			});
 		};
 
-		// Adjust the fire rate based on the Spacebar press duration
 		const startShootingInterval = () => {
 			let duration = 0;
-			const minInterval = 100; // Minimum firing interval
-			const maxDuration = 2000; // Maximum duration for decreasing fire rate
-			const maxInterval = 500; // Maximum firing interval
-			shoot(); // Initial shot
+			const minInterval = 100;
+			const maxDuration = 2000;
+			const maxInterval = 500;
+			shoot();
 
 			shootIntervalRef.current = setInterval(() => {
 				if (isShootingRef.current) {
 					if (duration <= maxDuration) {
-						// Calculate the interval based on the duration
 						const interval =
 							minInterval +
 							((maxInterval - minInterval) * duration) / maxDuration;
 						shoot();
-						duration += minInterval; // Increment by the minimum interval
+						duration += minInterval;
 					} else {
-						// Reached the maximum firing rate
 						shoot();
 					}
 				} else {
@@ -151,7 +137,6 @@ const SpaceShooter = () => {
 			}, minInterval);
 		};
 
-		// Game loop
 		const gameLoop = () => {
 			moveBullets();
 			drawPlayer();
@@ -159,10 +144,8 @@ const SpaceShooter = () => {
 			requestAnimationFrame(gameLoop);
 		};
 
-		// Start the game loop
 		gameLoop();
 
-		// Initialize event listeners
 		handlePlayerMovement();
 		handleShooting();
 
