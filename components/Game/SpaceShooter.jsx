@@ -16,6 +16,7 @@ const SpaceShooter = () => {
 	const isShootingRef = useRef(false);
 	const shootIntervalRef = useRef(null);
 	const enemiesRef = useRef([]);
+	const scoreRef = useRef(0);
 
 	useEffect(() => {
 		const canvas = canvasRef.current;
@@ -118,17 +119,17 @@ const SpaceShooter = () => {
 		};
 
 		const createEnemies = () => {
-			const numberOfEnemies = 1;
-
-			for (let i = 0; i < numberOfEnemies; i++) {
+			const createEnemy = () => {
 				enemiesRef.current.push({
 					x: Math.random() * (canvas.width - 50),
-					y: Math.random() * canvas.height,
+					y: -50,
 					width: 50,
 					height: 50,
 					speed: 1,
 				});
-			}
+			};
+
+			setInterval(createEnemy, 4000);
 		};
 
 		const handleShooting = () => {
@@ -183,9 +184,17 @@ const SpaceShooter = () => {
 					) {
 						bulletsRef.current.splice(bulletIndex, 1);
 						enemiesRef.current.splice(enemyIndex, 1);
+
+						scoreRef.current += 1;
 					}
 				});
 			});
+		};
+
+		const drawScore = () => {
+			context.font = "20px Arial";
+			context.fillStyle = "white";
+			context.fillText("Score: " + scoreRef.current, 10, 30);
 		};
 
 		const gameLoop = () => {
@@ -195,6 +204,7 @@ const SpaceShooter = () => {
 			drawPlayer();
 			drawBullets();
 			drawEnemies();
+			drawScore();
 			requestAnimationFrame(gameLoop);
 		};
 
