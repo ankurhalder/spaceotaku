@@ -16,7 +16,7 @@ const SpaceShooter = () => {
 	const shootIntervalRef = useRef(null);
 	const enemiesRef = useRef([]);
 	const scoreRef = useRef(0);
-	const gameOverRef = useRef(false); // New game over state
+	const gameOverRef = useRef(false);
 
 	useEffect(() => {
 		const canvas = canvasRef.current;
@@ -59,7 +59,6 @@ const SpaceShooter = () => {
 					enemy.y = -enemy.height;
 					enemy.x = Math.random() * (canvas.width - enemy.width);
 				}
-				// Check for collision with player
 				if (
 					player.x < enemy.x + enemy.width &&
 					player.x + player.width > enemy.x &&
@@ -87,7 +86,6 @@ const SpaceShooter = () => {
 
 			window.addEventListener("keydown", (e) => {
 				if (!gameOverRef.current) {
-					// Check if the game is not over
 					keysPressed[e.key] = true;
 
 					if (keysPressed.ArrowUp) {
@@ -224,7 +222,6 @@ const SpaceShooter = () => {
 				drawScore();
 				requestAnimationFrame(gameLoop);
 			} else {
-				// Display game over screen
 				drawGameOver();
 			}
 		};
