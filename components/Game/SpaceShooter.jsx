@@ -172,9 +172,26 @@ const SpaceShooter = () => {
 			}, minInterval);
 		};
 
+		const handleCollisions = () => {
+			bulletsRef.current.forEach((bullet, bulletIndex) => {
+				enemiesRef.current.forEach((enemy, enemyIndex) => {
+					if (
+						bullet.x < enemy.x + enemy.width &&
+						bullet.x + 5 > enemy.x &&
+						bullet.y < enemy.y + enemy.height &&
+						bullet.y + 10 > enemy.y
+					) {
+						bulletsRef.current.splice(bulletIndex, 1);
+						enemiesRef.current.splice(enemyIndex, 1);
+					}
+				});
+			});
+		};
+
 		const gameLoop = () => {
 			moveBullets();
 			moveEnemies();
+			handleCollisions();
 			drawPlayer();
 			drawBullets();
 			drawEnemies();
