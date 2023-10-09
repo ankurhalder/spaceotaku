@@ -9,46 +9,59 @@ const SpaceShooter = () => {
 	});
 
 	const [enemies, setEnemies] = useState([]);
+	const [isSpawning, setIsSpawning] = useState(false);
+	const [isGameOver, setIsGameOver] = useState(false);
+
+	// Set a maximum number of enemies
+	const maxEnemies = 5;
 
 	useEffect(() => {
 		const canvas = document.getElementById("gameCanvas");
 		const ctx = canvas.getContext("2d");
 
-		// Function to update the game state and render the game
 		const updateGame = () => {
 			// Clear the canvas
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-			// Update player position
-			ctx.fillStyle = "blue";
-			ctx.fillRect(player.x, player.y, player.width, player.height);
+			if (isGameOver) {
+				// Display "Game Over" screen
+				ctx.fillStyle = "black";
+				ctx.fillRect(0, 0, canvas.width, canvas.height);
+				ctx.fillStyle = "white";
+				ctx.font = "30px Arial";
+				ctx.fillText("Game Over", canvas.width / 2 - 80, canvas.height / 2);
+			} else {
+				// Draw and update player position
+				ctx.fillStyle = "blue";
+				ctx.fillRect(player.x, player.y, player.width, player.height);
 
-			// Update and draw enemies
-			ctx.fillStyle = "red";
-			const newEnemies = enemies.map((enemy) => {
-				enemy.y += 2; // Adjust enemy speed
-				ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
-				return enemy;
-			});
+				// Draw and update enemies
+				ctx.fillStyle = "red";
+				const newEnemies = enemies.map((enemy) => {
+					enemy.y += 0.5; // Decreased enemy speed further
+					ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+					return enemy;
+				});
 
-			setEnemies(newEnemies);
+				// Update the enemies state with the new positions
+				setEnemies(newEnemies);
 
-			// Remove off-screen enemies
-			const remainingEnemies = newEnemies.filter(
-				(enemy) => enemy.y < canvas.height
-			);
-			setEnemies(remainingEnemies);
+				// Check for collisions with player
+				newEnemies.forEach((enemy, index) => {
+					if (isCollision(player, enemy)) {
+						// Remove the collided enemy from the array
+						const updatedEnemies = [...newEnemies];
+						updatedEnemies.splice(index, 1);
+						setEnemies(updatedEnemies);
 
-			// Check for collisions
-			const collision = newEnemies.some((enemy) => isCollision(player, enemy));
-			if (collision) {
-				// Game over logic
-				alert("Game Over!");
-				document.location.reload();
+						// Game over logic
+						setIsGameOver(true);
+					}
+				});
+
+				// Request animation frame
+				requestAnimationFrame(updateGame);
 			}
-
-			// Request animation frame
-			requestAnimationFrame(updateGame);
 		};
 
 		// Helper function to check for collisions
@@ -61,34 +74,63 @@ const SpaceShooter = () => {
 			);
 		};
 
-		// Event listeners for player movement
-		document.addEventListener("keydown", (event) => {
-			if (event.key === "ArrowLeft" && player.x > 0) {
-				setPlayer({ ...player, x: player.x - 10 });
-			} else if (
-				event.key === "ArrowRight" &&
-				player.x < canvas.width - player.width
-			) {
-				setPlayer({ ...player, x: player.x + 10 });
+		// Event listener for player movement
+		const handleKeyDown = (event) => {
+			if (!isGameOver) {
+				switch (event.key) {
+					case "ArrowLeft":
+						setPlayer({ ...player, x: player.x - 10 });
+						break;
+					case "ArrowRight":
+						setPlayer({ ...player, x: player.x + 10 });
+						break;
+					case "ArrowUp":
+						setPlayer({ ...player, y: player.y - 10 });
+						break;
+					case "ArrowDown":
+						setPlayer({ ...player, y: player.y + 10 });
+						break;
+					default:
+						break;
+				}
 			}
-		});
-
-		// Create and spawn enemies
-		const spawnEnemy = () => {
-			const newEnemy = {
-				x: Math.random() * (canvas.width - 50),
-				y: 0,
-				width: 50,
-				height: 50,
-			};
-			setEnemies((prevEnemies) => [...prevEnemies, newEnemy]);
 		};
 
-		setInterval(spawnEnemy, 1000);
+		document.addEventListener("keydown", handleKeyDown);
+
+		// Function to spawn enemies with a delay
+		const spawnEnemy = () => {
+			if (!isGameOver && enemies.length < maxEnemies && !isSpawning) {
+				setIsSpawning(true);
+
+				const newEnemy = {
+					x: Math.random() * (canvas.width - 50),
+					y: 0,
+					width: 50,
+					height: 50,
+				};
+				setEnemies((prevEnemies) => [...prevEnemies, newEnemy]);
+
+				// Schedule the next enemy spawn after a delay
+				const spawnDelay = Math.random() * 4000 + 2000; // Random delay between 2 and 6 seconds
+				setTimeout(() => {
+					setIsSpawning(false);
+					spawnEnemy();
+				}, spawnDelay);
+			}
+		};
+
+		// Start the initial enemy spawn
+		spawnEnemy();
 
 		// Start the game loop
-		updateGame();
-	}, []);
+		requestAnimationFrame(updateGame);
+
+		// Clean up event listeners on component unmount
+		return () => {
+			document.removeEventListener("keydown", handleKeyDown);
+		};
+	}, [player, enemies, isSpawning, isGameOver]);
 
 	return <canvas id="gameCanvas" width="800" height="600"></canvas>;
 };
