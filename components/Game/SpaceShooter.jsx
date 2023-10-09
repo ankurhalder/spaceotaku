@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 const SpaceShooter = () => {
 	const canvasRef = useRef(null);
 	const contextRef = useRef(null);
+	const enemiesRef = useRef([]); // Array to store enemy objects
 
 	useEffect(() => {
 		const canvas = canvasRef.current;
@@ -11,9 +12,9 @@ const SpaceShooter = () => {
 
 		// Define your game variables here
 		let playerX = canvas.width / 2;
-		let playerY = canvas.height / 2;
-		const playerWidth = 50; // Adjust player size
-		const playerHeight = 50; // Adjust player size
+		let playerY = canvas.height - 50;
+		const playerWidth = 50;
+		const playerHeight = 50;
 		let playerSpeedX = 0;
 		let playerSpeedY = 0;
 		const playerSpeed = 5;
@@ -21,6 +22,18 @@ const SpaceShooter = () => {
 		// Load the spaceship image
 		const spaceshipImg = new Image();
 		spaceshipImg.src = "/spaceship.png"; // Assuming it's in the public directory
+
+		// Create a function to add enemies
+		const addEnemy = () => {
+			const enemy = {
+				x: Math.random() * canvas.width,
+				y: 0,
+				width: 40,
+				height: 40,
+				speed: Math.random() * 2 + 1, // Random enemy speed
+			};
+			enemiesRef.current.push(enemy);
+		};
 
 		// Handle player movement
 		const handlePlayerMove = (e) => {
@@ -69,6 +82,28 @@ const SpaceShooter = () => {
 				playerWidth,
 				playerHeight
 			);
+
+			// Add enemies randomly
+			if (Math.random() < 0.02) {
+				addEnemy();
+			}
+
+			// Update and draw enemies
+			enemiesRef.current.forEach((enemy, index) => {
+				enemy.y += enemy.speed;
+				contextRef.current.fillStyle = "red";
+				contextRef.current.fillRect(
+					enemy.x,
+					enemy.y,
+					enemy.width,
+					enemy.height
+				);
+
+				// Remove enemies that are out of the canvas
+				if (enemy.y > canvas.height) {
+					enemiesRef.current.splice(index, 1);
+				}
+			});
 
 			// Request the next frame
 			requestAnimationFrame(gameLoop);
