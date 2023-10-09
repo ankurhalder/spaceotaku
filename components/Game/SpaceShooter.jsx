@@ -30,7 +30,7 @@ const SpaceShooter = () => {
 				y: 0,
 				width: 40,
 				height: 40,
-				speed: Math.random() * 2 + 1, // Random enemy speed
+				speed: Math.random() * 1 + 1, // Decreased enemy speed
 			};
 			enemiesRef.current.push(enemy);
 		};
@@ -83,7 +83,7 @@ const SpaceShooter = () => {
 				playerHeight
 			);
 
-			// Add enemies randomly with lower probability (e.g., 1%)
+			// Add enemies randomly (decreased frequency)
 			if (Math.random() < 0.01) {
 				addEnemy();
 			}
