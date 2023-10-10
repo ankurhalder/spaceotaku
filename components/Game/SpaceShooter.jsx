@@ -251,7 +251,7 @@ const SpaceShooter = () => {
 				}
 			};
 
-			setInterval(createEnemy, 3000);
+			setInterval(createEnemy, 2000);
 		};
 
 		const handleShooting = () => {
