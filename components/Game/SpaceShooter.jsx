@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef } from "react";
 import { GameMusic } from "..";
+
 const SpaceShooter = () => {
 	const canvasRef = useRef(null);
 	const contextRef = useRef(null);
@@ -27,6 +28,10 @@ const SpaceShooter = () => {
 		"/aliens/alien-5.png",
 	];
 
+	const restartGame = () => {
+		window.location.reload();
+	};
+
 	useEffect(() => {
 		const storedHighScore = localStorage.getItem("spaceShooterHighScore");
 		if (storedHighScore) {
@@ -49,7 +54,6 @@ const SpaceShooter = () => {
 
 		const drawPlayer = () => {
 			context.clearRect(0, 0, canvas.width, canvas.height);
-
 			context.drawImage(
 				playerImageObj,
 				player.x,
@@ -84,6 +88,7 @@ const SpaceShooter = () => {
 				);
 			});
 		};
+
 		const drawCreatedByText = () => {
 			context.font = "16px Arial";
 			context.fillStyle = "yellow";
@@ -185,7 +190,7 @@ const SpaceShooter = () => {
 				});
 			};
 
-			setInterval(createEnemy, 4000);
+			setInterval(createEnemy, 1000);
 		};
 
 		const handleShooting = () => {
@@ -330,9 +335,13 @@ const SpaceShooter = () => {
 			});
 		};
 	}, []);
+
 	return (
 		<>
 			<canvas ref={canvasRef} width={800} height={600}></canvas>
+			<button id="restart-button" onClick={restartGame}>
+				Restart Game
+			</button>
 			<GameMusic />
 		</>
 	);
