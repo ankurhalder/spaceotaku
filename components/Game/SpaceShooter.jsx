@@ -89,8 +89,8 @@ const SpaceShooter = () => {
 			context.fillStyle = "yellow";
 			context.fillText(
 				"Created by Ankur Halder for Space Otaku",
-				10,
-				canvas.height - 10
+				250,
+				canvas.height - 570
 			);
 		};
 
