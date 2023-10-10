@@ -95,4 +95,12 @@
 			font-size: var(--font-8);
 		}
 	}
+	.speaker-container {
+		position: relative;
+		filter: invert(1);
+		transition: all 0.3s;
+		height: 30px;
+		width: 30px;
+		margin-top: 10px;
+	}
 }

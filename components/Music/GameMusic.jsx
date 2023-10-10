@@ -31,14 +31,12 @@ export default function GameMusic() {
 	};
 
 	return (
-		<div>
+		<div className="speaker-container">
 			<Image
-				src={isPlaying ? "/music/speaker.png" : "/music/speaker.png"}
+				src={isPlaying ? "/music/speaker-off.png" : "/music/speaker.png"}
 				alt={isPlaying ? "Speaker On" : "Speaker Off"}
 				onClick={togglePlay}
-				width={32}
-				height={32}
-				style={{ cursor: "pointer" }}
+				layout="fill"
 			/>
 		</div>
 	);
