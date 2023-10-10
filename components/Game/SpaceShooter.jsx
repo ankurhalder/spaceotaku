@@ -122,15 +122,26 @@ const SpaceShooter = () => {
 		};
 
 		const moveEnemies = () => {
-			// Shuffle the enemies randomly to pick some for firing
-			shuffleArray(enemiesRef.current);
+			enemiesRef.current.forEach((enemy) => {
+				// Randomly decide whether to move left or right
+				const shouldMoveLeft = Math.random() < 0.5;
 
-			enemiesRef.current.forEach((enemy, index) => {
+				// Determine the horizontal speed based on the direction
+				const horizontalSpeed = shouldMoveLeft ? -enemy.speed : enemy.speed;
+
+				enemy.x += horizontalSpeed;
 				enemy.y += enemy.speed;
-				if (enemy.y > canvas.height) {
+
+				// If the enemy goes out of bounds, reset its position
+				if (
+					enemy.y > canvas.height ||
+					enemy.x < -enemy.width ||
+					enemy.x > canvas.width
+				) {
 					enemy.y = -enemy.height;
 					enemy.x = Math.random() * (canvas.width - enemy.width);
 				}
+
 				if (
 					player.x < enemy.x + enemy.width &&
 					player.x + player.width > enemy.x &&
@@ -140,9 +151,8 @@ const SpaceShooter = () => {
 					gameOverRef.current = true;
 				}
 
-				// Check if this enemy should fire
-				if (index < 2 && Math.random() < 0.02) {
-					// Adjust probability and number of firing enemies
+				// Generate enemy bullets
+				if (Math.random() < 0.05) {
 					enemyBulletsRef.current.push({
 						x: enemy.x + enemy.width / 2 - 2.5,
 						y: enemy.y + enemy.height,
