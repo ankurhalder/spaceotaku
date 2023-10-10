@@ -3,6 +3,7 @@ import React, { useState, useEffect, Fragment } from "react";
 import shuffleArray from "@/functions/shuffleArray";
 import shuffledSpaceQuizData from "../../data/spaceQuizData";
 import Head from "next/head";
+import { CommonMusic } from "@/components";
 const initialTimers = {
 	normal: 30,
 	intermediate: 20,
@@ -137,6 +138,7 @@ function SpaceQuiz() {
 					content="https://www.spaceotaku.online/spacequiz"
 				/>
 			</Head>
+			<CommonMusic></CommonMusic>
 			<div className="quiz-container">
 				<h1 className="Space-quiz-heading">Space Quiz By Space Otaku</h1>
 				{!difficultySelected ? (

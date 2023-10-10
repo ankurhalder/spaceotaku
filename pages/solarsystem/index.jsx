@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Fragment } from "react";
 import Head from "next/head";
-
+import { CommonMusic } from "@/components";
 export default function SolarSystem() {
 	return (
 		<Fragment>
@@ -29,6 +29,7 @@ export default function SolarSystem() {
 					content="https://www.spaceotaku.online/solarsystem/"
 				/>
 			</Head>
+			<CommonMusic></CommonMusic>
 			<h1 className="solar-system-heading">
 				Explore the Solar System with Space Otaku
 			</h1>

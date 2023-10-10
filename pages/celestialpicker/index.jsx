@@ -3,6 +3,7 @@ import planetData from "../../data/planetData";
 import agenciesData from "../../data/agenciesData";
 import Image from "next/legacy/image";
 import Head from "next/head";
+import { CommonMusic } from "@/components";
 import {
 	LoadingRing,
 	LoadingCircle,
@@ -83,6 +84,7 @@ const PlanetPage = () => {
 					content="https://www.spaceotaku.online/celestialpicker"
 				/>
 			</Head>
+			<CommonMusic></CommonMusic>
 			<div className="planet-page none">
 				<h1 className="page-title">Explore Celestial Bodies</h1>
 				<div className={`planet-dropdown ${isDropdownOpen ? "open" : ""}`}>

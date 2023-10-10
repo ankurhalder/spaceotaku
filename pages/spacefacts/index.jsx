@@ -4,6 +4,7 @@ import spaceFacts from "@/data/spaceFacts";
 import colorPairs from "@/data/colorPairs";
 import Head from "next/head";
 import { Fragment } from "react";
+import { CommonMusic } from "@/components";
 const Header = () => (
 	<header className="header">
 		<h1>Space Facts</h1>
@@ -75,6 +76,7 @@ function SpaceFacts() {
 					content="https://www.spaceotaku.online/spacefacts"
 				/>
 			</Head>
+			<CommonMusic></CommonMusic>
 			<div className="facts-container">
 				<Header />
 				<div

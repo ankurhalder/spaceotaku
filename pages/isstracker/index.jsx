@@ -1,6 +1,7 @@
 import { ISSMap } from "@/components";
 import { Fragment } from "react";
 import Head from "next/head";
+import { CommonMusic } from "@/components";
 export default function IssTracker() {
 	return (
 		<Fragment>
@@ -26,6 +27,7 @@ export default function IssTracker() {
 					content="https://www.spaceotaku.online/isstracker"
 				/>
 			</Head>
+			<CommonMusic></CommonMusic>
 			<div>
 				<ISSMap />
 			</div>

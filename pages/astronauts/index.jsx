@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from "react";
 import Image from "next/legacy/image";
 import astronauts from "@/data/astronauts";
 import Head from "next/head";
+import { CommonMusic } from "@/components";
 const Slider = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [showCraftPanel, setShowCraftPanel] = useState(false);
@@ -75,7 +76,7 @@ const Slider = () => {
 					content="https://www.spaceotaku.online/astronauts"
 				/>
 			</Head>
-
+			<CommonMusic></CommonMusic>
 			<div className="slider-container">
 				<h1 className="slider-heading">Astronauts In Space</h1>
 				<div className="slider">
