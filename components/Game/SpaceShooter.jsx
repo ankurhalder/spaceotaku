@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef } from "react";
-
+import { GameMusic } from "..";
 const SpaceShooter = () => {
 	const canvasRef = useRef(null);
 	const contextRef = useRef(null);
@@ -320,7 +320,12 @@ const SpaceShooter = () => {
 			});
 		};
 	}, []);
-	return <canvas ref={canvasRef} width={800} height={600}></canvas>;
+	return (
+		<>
+			<canvas ref={canvasRef} width={800} height={600}></canvas>
+			<GameMusic />
+		</>
+	);
 };
 
 export default SpaceShooter;

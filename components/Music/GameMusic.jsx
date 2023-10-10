@@ -1,17 +1,37 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function GameMusic() {
+	const [isPlaying, setIsPlaying] = useState(true); // Initially, music is playing
+	const [audio] = useState(new Audio("/music/song-1.mp3"));
+
 	useEffect(() => {
-		const backgroundMusic = new Audio("/music/song-1.mp3");
-		backgroundMusic.loop = true;
-		backgroundMusic.volume = 1;
-		backgroundMusic.play();
+		if (isPlaying) {
+			audio.play();
+		} else {
+			audio.pause();
+		}
 
 		return () => {
-			backgroundMusic.pause();
-			backgroundMusic.currentTime = 0;
+			audio.pause();
+			audio.currentTime = 0;
 		};
-	}, []);
+	}, [isPlaying, audio]);
 
-	return null;
+	const togglePlay = () => {
+		setIsPlaying(!isPlaying);
+	};
+
+	return (
+		<div>
+			<Image
+				src={isPlaying ? "/speaker.png" : "/speaker-off.png"}
+				alt={isPlaying ? "Speaker On" : "Speaker Off"}
+				onClick={togglePlay}
+				width={32}
+				height={32}
+				style={{ cursor: "pointer" }}
+			/>
+		</div>
+	);
 }

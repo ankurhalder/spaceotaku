@@ -21,3 +21,6 @@ export { default as LoadingSpinner } from "./Loading/LoadingSpinner";
 
 // # Game Components
 export { default as SpaceShooter } from "./Game/SpaceShooter";
+
+// # Music Components
+export { default as GameMusic } from "./Music/GameMusic";
