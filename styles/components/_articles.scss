@@ -1,7 +1,5 @@
 .articles {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex-container(column, none, center, center);
 	background: linear-gradient(135deg, #1d1d1d, #090909);
 	color: #f0f0f0;
 	padding: 20px;
@@ -95,16 +93,12 @@
 			}
 
 			.article-additional-details {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-top: auto;
+				@include flex-container(column, none, center, center);
+				margin: auto 0;
 
 				div {
-					flex: 1;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
+					// flex: 1;
+					@include flex-container(column, none, center, center);
 					margin: 10px;
 
 					p {
@@ -114,7 +108,7 @@
 						opacity: 0.8;
 						max-height: 20px;
 						overflow: hidden;
-						transition: max-height 0.3s; /* Added transition for max-height */
+						transition: max-height 0.3s;
 					}
 
 					span {
