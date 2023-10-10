@@ -45,5 +45,17 @@
 		border: 1px solid #fff;
 		display: block;
 		margin: 0 auto;
+		max-width: 100%;
+		max-height: 100%;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 }
