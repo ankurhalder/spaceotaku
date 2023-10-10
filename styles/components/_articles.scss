@@ -1,13 +1,14 @@
 .articles {
-	background-color: var(--panel-bg);
-	border-radius: 20px;
+	// background-color: var(--panel-bg);
+	background-color: transparent;
+	border-radius: 10px;
 	padding: 30px;
 	width: 1200px;
 	max-width: 100%;
 	margin: 0 auto;
 	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 	animation: slide-in 0.5s ease-in-out;
-	border: 0.1px solid var(--white);
+	// border: 0.1px solid var(--white);
 	@keyframes slide-in {
 		0% {
 			transform: translateY(100%);
@@ -43,7 +44,6 @@
 		font-size: var(--font-9);
 		font-family: var(--font-orbitron);
 		letter-spacing: 6px;
-		margin-bottom: 0.5%;
 		font-weight: 500;
 		color: var(--cool-red-1);
 		text-align: center;
@@ -64,30 +64,31 @@
 	}
 
 	ul {
-		padding: 10px;
+		padding: 100px;
+		padding-top: 30px;
 		@media (max-width: $breakpoint-desktop-wide) {
 		}
 		@media (max-width: $breakpoint-desktop) {
 		}
 		@media (max-width: $breakpoint-large-tablet) {
-			padding: 5px;
 		}
 		@media (max-width: $breakpoint-tablet) {
 		}
 		@media (max-width: $breakpoint-phone) {
-			padding: 0;
 		}
 		li {
 			@include flex-container(column, wrap, center, center);
-			background-color: var(--black-shadow);
-			border-radius: 50px;
+			background-color: var(--white-shadow-light);
+			border-radius: 10px;
 			padding: 20px;
-			margin-bottom: 2%;
+			margin-bottom: 3%;
 			transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 			cursor: default;
+			border: 1px solid var(--cool-yellow);
+			backdrop-filter: blur(10px);
 			&:hover {
-				transform: translateY(-2px) scale(1.005);
-				box-shadow: 0px 0px 8px var(--white-shadow-light);
+				transform: translateY(-1px) scale(1.001);
+				box-shadow: 1px 2px 4px var(--white-shadow);
 			}
 
 			@media (max-width: $breakpoint-desktop-wide) {
