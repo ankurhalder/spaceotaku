@@ -82,6 +82,8 @@
 			.image-container {
 				max-width: 100%;
 				height: auto;
+				max-height: 300px;
+				max-width: 250px;
 				margin-top: 15px;
 				border-radius: 15px;
 				box-shadow: 0 4px 8px var(--black-shadow);
@@ -100,12 +102,11 @@
 					// flex: 1;
 					@include flex-container(column, none, center, center);
 					margin: 10px;
-
 					p {
-						font-size: 16px;
-						margin: 5px 0;
-						color: #f0f0f0;
-						opacity: 0.8;
+						font-size: var(--font-11);
+						color: var(--cool-blue-2);
+						margin: auto 0 5% 0;
+						opacity: 1;
 						max-height: 20px;
 						overflow: hidden;
 						transition: max-height 0.3s;
