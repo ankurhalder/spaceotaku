@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function GameMusic() {
+export default function CommonMusic() {
 	const [isPlaying, setIsPlaying] = useState(true);
 	const [audio, setAudio] = useState(null);
 	const [volume, setVolume] = useState(0.5);

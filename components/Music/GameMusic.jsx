@@ -2,32 +2,42 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function GameMusic() {
-	const [isPlaying, setIsPlaying] = useState(true); // Initially, music is playing
-	const [audio, setAudio] = useState(null); // Initialize audio as null
+	const [isPlaying, setIsPlaying] = useState(true);
+	const [audio, setAudio] = useState(null);
+	const [volume, setVolume] = useState(0.5);
+	const [isMuted, setIsMuted] = useState(false); // Added state for muting/unmuting
 
 	useEffect(() => {
-		// Load Audio object on the client-side
-		setAudio(new Audio("/music/song-1.mp3"));
-	}, []);
+		const audioElement = new Audio("/music/song-1.mp3");
+		audioElement.loop = true;
+		audioElement.volume = volume;
+		setAudio(audioElement);
+
+		return () => {
+			audioElement.pause();
+		};
+	}, [volume]);
 
 	useEffect(() => {
 		if (audio) {
-			audio.loop = true; // Enable looping
-			if (isPlaying) {
+			if (isPlaying && !isMuted) {
 				audio.play();
 			} else {
 				audio.pause();
 			}
-
-			return () => {
-				audio.pause();
-				audio.currentTime = 0;
-			};
 		}
-	}, [isPlaying, audio]);
+	}, [isPlaying, isMuted, audio]);
 
 	const togglePlay = () => {
 		setIsPlaying(!isPlaying);
+	};
+
+	const toggleMute = () => {
+		setIsMuted(!isMuted);
+		// Update the volume when muting/unmuting
+		if (audio) {
+			audio.volume = isMuted ? 0 : volume;
+		}
 	};
 
 	return (
@@ -37,7 +47,9 @@ export default function GameMusic() {
 				alt={isPlaying ? "Speaker On" : "Speaker Off"}
 				onClick={togglePlay}
 				layout="fill"
+				className="speaker-image"
 			/>
+			<button onClick={toggleMute}>{isMuted ? "Unmute" : "Mute"}</button>
 		</div>
 	);
 }
