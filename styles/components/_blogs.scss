@@ -66,7 +66,7 @@
 
 		li {
 			background: linear-gradient(45deg, #333, #000);
-			border: 2px solid #ff6f61;
+			border: 2px solid var(--cool-red-2);
 			border-radius: 15px;
 			padding: 20px;
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
@@ -74,72 +74,132 @@
 
 			&:hover {
 				transform: translateY(-5px);
-				box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
-				background: linear-gradient(45deg, #444, #111);
+				box-shadow: 0 12px 24px var(--black-shadow);
+				background: linear-gradient(45deg, #292929, #111);
 			}
 
 			h4 {
-				font-size: 24px;
+				font-family: var(--font-source);
+				font-size: var(--font-10);
+				letter-spacing: 2px;
+				font-weight: 400;
 				margin-bottom: 10px;
-				color: #ff6f61;
-				max-height: 60px;
+				color: var(--cool-red-2);
 				overflow: hidden;
 				transition: max-height 0.3s;
+				@media (max-width: $breakpoint-desktop-wide) {
+					font-size: var(--font-11);
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+					font-size: var(--font-10);
+				}
 			}
 
 			.blog-url {
+				font-family: var(--font-elianto);
+				font-size: var(--font-13);
 				text-decoration: none;
-				color: #ff6f61;
-				margin: 15px 0;
-				font-weight: bold;
+				color: var(--cool-blue-2);
+				margin: auto 0;
 				transition: color 0.3s;
 				display: block;
 
 				&:hover {
 					color: #ffcb69;
 				}
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			img {
 				max-width: 100%;
 				height: auto;
+				max-height: 300px;
+				max-width: 250px;
 				margin-top: 15px;
 				border-radius: 15px;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+				box-shadow: 0 4px 8px var(--black-shadow);
 				transition: transform 0.3s;
 
 				&:hover {
-					transform: scale(1.05);
+					transform: scale(1.01);
+				}
+				@media (max-width: $breakpoint-desktop-wide) {
+					max-height: 250px;
+					max-width: 200px;
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
 				}
 			}
 
 			.blog-additional-details {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-top: auto;
-
+				@include flex-container(column, none, center, center);
+				margin: auto 0;
 				div {
-					flex: 1;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
+					@include flex-container(column, none, center, center);
 					margin: 10px;
-
 					p {
-						font-size: 16px;
-						margin: 5px 0;
-						color: #f0f0f0;
-						opacity: 0.8;
-						max-height: 20px;
+						font-family: var(--font-tektur);
+						font-size: var(--font-11);
+						font-size: 600;
+						letter-spacing: 3px;
+						color: var(--cool-blue-2);
+						margin: auto 0 5% 0;
+						opacity: 1;
 						overflow: hidden;
 						transition: max-height 0.3s;
+						@media (max-width: $breakpoint-desktop-wide) {
+							font-size: var(--font-12);
+						}
+						@media (max-width: $breakpoint-desktop) {
+						}
+						@media (max-width: $breakpoint-large-tablet) {
+						}
+						@media (max-width: $breakpoint-tablet) {
+						}
+						@media (max-width: $breakpoint-phone) {
+							font-size: var(--font-11);
+						}
 					}
 
 					span {
-						font-size: 18px;
-						font-weight: bold;
-						color: #ff6f61;
+						font-family: var(--font-tektur);
+						font-size: var(--font-12);
+						letter-spacing: 2px;
+						font-weight: 400;
+						color: var(--white);
+						@media (max-width: $breakpoint-desktop-wide) {
+							font-size: var(--font-13);
+						}
+						@media (max-width: $breakpoint-desktop) {
+						}
+						@media (max-width: $breakpoint-large-tablet) {
+						}
+						@media (max-width: $breakpoint-tablet) {
+						}
+						@media (max-width: $breakpoint-phone) {
+							font-size: var(--font-12);
+						}
 					}
 				}
 			}
@@ -160,6 +220,6 @@
 	.loading {
 		font-size: 24px;
 		margin: 20px;
-		color: #ff6f61;
+		color: var(--cool-red-2);
 	}
 }
