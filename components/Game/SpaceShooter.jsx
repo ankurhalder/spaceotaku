@@ -17,6 +17,7 @@ const SpaceShooter = () => {
 	const enemiesRef = useRef([]);
 	const scoreRef = useRef(0);
 	const gameOverRef = useRef(false);
+
 	// Define an array of enemy image paths
 	const enemyImages = [
 		"/aliens/alien-1.png",
@@ -34,7 +35,7 @@ const SpaceShooter = () => {
 		const player = playerRef.current;
 		const playerImageObj = new Image(); // Create an image object
 
-		// Set the source of the image from the public directory
+		// Set the source of the player image from the public directory
 		playerImageObj.src = "/spaceship.png"; // Adjust the path as needed
 
 		const enemyImageRefs = enemyImages.map((imagePath) => {
@@ -72,11 +73,9 @@ const SpaceShooter = () => {
 
 		const drawEnemies = () => {
 			enemiesRef.current.forEach((enemy) => {
-				// Select a random enemy image
-				const randomEnemyImage =
-					enemyImageRefs[Math.floor(Math.random() * enemyImageRefs.length)];
+				// Draw the enemy image assigned to each enemy
 				context.drawImage(
-					randomEnemyImage,
+					enemy.image,
 					enemy.x,
 					enemy.y,
 					enemy.width,
@@ -163,12 +162,16 @@ const SpaceShooter = () => {
 
 		const createEnemies = () => {
 			const createEnemy = () => {
+				const randomIndex = Math.floor(Math.random() * enemyImageRefs.length);
+				const randomEnemyImage = enemyImageRefs[randomIndex];
+
 				enemiesRef.current.push({
 					x: Math.random() * (canvas.width - 50),
 					y: -50,
 					width: 50,
 					height: 50,
 					speed: 1,
+					image: randomEnemyImage,
 				});
 			};
 
