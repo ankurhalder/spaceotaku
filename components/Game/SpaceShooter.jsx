@@ -84,6 +84,15 @@ const SpaceShooter = () => {
 				);
 			});
 		};
+		const drawCreatedByText = () => {
+			context.font = "16px Arial";
+			context.fillStyle = "yellow";
+			context.fillText(
+				"Created by Ankur Halder for Space Otaku",
+				10,
+				canvas.height - 10
+			);
+		};
 
 		const moveEnemies = () => {
 			enemiesRef.current.forEach((enemy) => {
@@ -291,6 +300,7 @@ const SpaceShooter = () => {
 				drawEnemies();
 				drawScore();
 				drawHighScore();
+				drawCreatedByText();
 				requestAnimationFrame(gameLoop);
 			} else {
 				if (scoreRef.current > highScoreRef.current) {

@@ -3,19 +3,26 @@ import Image from "next/image";
 
 export default function GameMusic() {
 	const [isPlaying, setIsPlaying] = useState(true); // Initially, music is playing
-	const [audio] = useState(new Audio("/music/song-1.mp3"));
+	const [audio, setAudio] = useState(null); // Initialize audio as null
 
 	useEffect(() => {
-		if (isPlaying) {
-			audio.play();
-		} else {
-			audio.pause();
-		}
+		// Load Audio object on the client-side
+		setAudio(new Audio("/music/song-1.mp3"));
+	}, []);
 
-		return () => {
-			audio.pause();
-			audio.currentTime = 0;
-		};
+	useEffect(() => {
+		if (audio) {
+			if (isPlaying) {
+				audio.play();
+			} else {
+				audio.pause();
+			}
+
+			return () => {
+				audio.pause();
+				audio.currentTime = 0;
+			};
+		}
 	}, [isPlaying, audio]);
 
 	const togglePlay = () => {
@@ -25,7 +32,7 @@ export default function GameMusic() {
 	return (
 		<div>
 			<Image
-				src={isPlaying ? "/speaker.png" : "/speaker-off.png"}
+				src={isPlaying ? "/music/speaker.png" : "/music/speaker.png"}
 				alt={isPlaying ? "Speaker On" : "Speaker Off"}
 				onClick={togglePlay}
 				width={32}
