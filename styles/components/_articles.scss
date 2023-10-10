@@ -14,10 +14,13 @@
 		width: 900px;
 	}
 	@media (max-width: $breakpoint-large-tablet) {
+		width: 700px;
 	}
 	@media (max-width: $breakpoint-tablet) {
+		width: 400px;
 	}
 	@media (max-width: $breakpoint-phone) {
+		width: 300px;
 	}
 	h3 {
 		font-family: var(--font-playfair);
@@ -38,6 +41,7 @@
 		@media (max-width: $breakpoint-tablet) {
 		}
 		@media (max-width: $breakpoint-phone) {
+			font-size: var(--font-7);
 		}
 	}
 
@@ -48,7 +52,17 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 		gap: 20px;
-
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		}
 		li {
 			background: linear-gradient(45deg, #333, #000);
 			border: 2px solid var(--cool-red-2);
@@ -82,6 +96,7 @@
 				@media (max-width: $breakpoint-tablet) {
 				}
 				@media (max-width: $breakpoint-phone) {
+					font-size: var(--font-10);
 				}
 			}
 
@@ -123,7 +138,6 @@
 					color: #ffcb69;
 				}
 				@media (max-width: $breakpoint-desktop-wide) {
-					// font-size: var(--font-14);
 				}
 				@media (max-width: $breakpoint-desktop) {
 				}
@@ -188,6 +202,7 @@
 						@media (max-width: $breakpoint-tablet) {
 						}
 						@media (max-width: $breakpoint-phone) {
+							font-size: var(--font-11);
 						}
 					}
 
@@ -207,6 +222,7 @@
 						@media (max-width: $breakpoint-tablet) {
 						}
 						@media (max-width: $breakpoint-phone) {
+							font-size: var(--font-12);
 						}
 					}
 				}
