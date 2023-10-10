@@ -23,11 +23,26 @@
 		width: 300px;
 	}
 	h3 {
-		font-size: 42px;
+		font-family: var(--font-playfair);
+		font-size: var(--font-7);
+		letter-spacing: 6px;
+		font-weight: 600;
 		margin-bottom: 20px;
 		text-align: center;
 		text-transform: uppercase;
-		color: #ff6f61;
+		color: var(--cool-red-2);
+		@media (max-width: $breakpoint-desktop-wide) {
+			font-size: var(--font-8);
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+			font-size: var(--font-7);
+		}
 	}
 
 	ul {
@@ -37,6 +52,17 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 		gap: 20px;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		}
 
 		li {
 			background: linear-gradient(45deg, #333, #000);
