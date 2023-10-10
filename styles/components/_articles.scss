@@ -10,7 +10,10 @@
 	max-width: 100%;
 	border-radius: 10px;
 	h3 {
-		font-size: 42px;
+		font-family: var(--font-playfair);
+		font-size: var(--font-7);
+		letter-spacing: 6px;
+		font-weight: 600;
 		margin-bottom: 20px;
 		text-align: center;
 		text-transform: uppercase;
