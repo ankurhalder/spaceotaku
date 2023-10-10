@@ -117,6 +117,7 @@
 		}
 		@media (max-width: #{$breakpoint-phone}) {
 			margin: 12% 0 0 1%;
+			font-size: var(--font-10);
 		}
 	}
 	span {
@@ -130,6 +131,7 @@
 			font-size: var(--font-9);
 		}
 		@media (max-width: #{$breakpoint-desktop}) {
+			font-size: var(--font-12);
 			font-size: var(--font-10);
 		}
 		@media (max-width: #{$breakpoint-large-tablet}) {
@@ -140,6 +142,7 @@
 			text-align: center;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
+			font-size: var(--font-10);
 		}
 	}
 	h5 {
@@ -165,6 +168,7 @@
 		}
 		@media (max-width: #{$breakpoint-phone}) {
 			margin: 1.5% 0 1.5% 1%;
+			font-size: var(--font-12);
 		}
 	}
 	p {
@@ -190,6 +194,9 @@
 		}
 		@media (max-width: #{$breakpoint-phone}) {
 			margin: 0 0 1% 0;
+			font-size: var(--font-11);
+			text-align: center;
+			width: 90%;
 		}
 	}
 }
