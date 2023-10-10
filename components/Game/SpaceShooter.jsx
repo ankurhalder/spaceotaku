@@ -254,6 +254,33 @@ const SpaceShooter = () => {
 			context.font = "40px Arial";
 			context.fillStyle = "red";
 			context.fillText("Game Over", canvas.width / 2 - 100, canvas.height / 2);
+			context.font = "30px Arial";
+			context.fillStyle = "yellow";
+			context.fillText(
+				"Score: " + scoreRef.current,
+				canvas.width / 2 - 50,
+				canvas.height / 2 + 40
+			);
+
+			// Get the high score from local storage and display it
+			const highScore = localStorage.getItem("spaceShooterHighScore");
+			if (highScore !== null) {
+				context.font = "30px Arial";
+				context.fillStyle = "deeppink";
+				context.fillText(
+					"High Score: " + highScore,
+					canvas.width / 2 - 90,
+					canvas.height / 2 + 80
+				);
+			} else {
+				context.font = "40px Arial";
+				context.fillStyle = "red";
+				context.fillText(
+					"High Score: 0",
+					canvas.width / 2 - 70,
+					canvas.height / 2 + 80
+				);
+			}
 		};
 
 		const gameLoop = () => {
