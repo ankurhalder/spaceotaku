@@ -27,6 +27,7 @@
 		z-index: 0;
 		@media (max-width: $breakpoint-desktop-wide) {
 			font-size: var(--font-8);
+			top: 0;
 		}
 		@media (max-width: $breakpoint-desktop) {
 			font-size: var(--font-8);
@@ -80,7 +81,7 @@
 			color: #000;
 		}
 		@media (max-width: $breakpoint-desktop-wide) {
-			font-size: var(--font-5);
+			font-size: var(--font-9);
 		}
 		@media (max-width: $breakpoint-desktop) {
 			font-size: var(--font-5);
