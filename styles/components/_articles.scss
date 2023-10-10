@@ -85,12 +85,10 @@
 			transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 			cursor: default;
 			border: 1px solid var(--cool-yellow);
-			backdrop-filter: blur(10px);
 			&:hover {
 				transform: translateY(-1px) scale(1.001);
 				box-shadow: 1px 2px 4px var(--cool-yellow-2);
 				background-color: transparent;
-				backdrop-filter: blur(0px);
 			}
 
 			@media (max-width: $breakpoint-desktop-wide) {
