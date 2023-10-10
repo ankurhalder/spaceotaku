@@ -1,258 +1,116 @@
 .articles {
-	// background-color: var(--panel-bg);
-	background-color: transparent;
-	border-radius: 10px;
-	padding: 30px;
-	width: 1200px;
-	max-width: 100%;
-	margin: 0 auto;
-	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-	animation: slide-in 0.5s ease-in-out;
-	// border: 0.1px solid var(--white);
-	@keyframes slide-in {
-		0% {
-			transform: translateY(100%);
-		}
-		100% {
-			transform: translateY(0);
-		}
-	}
-	@media (max-width: $breakpoint-desktop-wide) {
-		max-width: 80%;
-		margin: 0 auto;
-	}
-	@media (max-width: $breakpoint-desktop) {
-		max-width: 70%;
-		margin: 0 auto;
-	}
-	@media (max-width: $breakpoint-large-tablet) {
-		width: 900px;
-		margin: 0 auto;
-	}
-	@media (max-width: $breakpoint-tablet) {
-		width: 600px;
-		margin: 0 auto;
-	}
-	@media (max-width: $breakpoint-phone) {
-		width: 400px;
-		margin: 0 auto;
-		padding: 15px;
-		border-radius: 10px;
-		margin-top: 0.5%;
-	}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: linear-gradient(135deg, #1d1d1d, #090909);
+	color: #f0f0f0;
+	padding: 20px;
+	font-family: "Poppins", sans-serif;
+
 	h3 {
-		font-size: var(--font-9);
-		font-family: var(--font-orbitron);
-		letter-spacing: 6px;
-		font-weight: 500;
-		color: var(--cool-red-1);
+		font-size: 42px;
+		margin-bottom: 20px;
 		text-align: center;
-		text-decoration: underline;
-		@media (max-width: $breakpoint-desktop-wide) {
-			font-size: var(--font-10);
-		}
-		@media (max-width: $breakpoint-desktop) {
-		}
-		@media (max-width: $breakpoint-large-tablet) {
-			font-size: var(--font-11);
-		}
-		@media (max-width: $breakpoint-tablet) {
-		}
-		@media (max-width: $breakpoint-phone) {
-			margin: 0 0 3% 0;
-		}
+		text-transform: uppercase;
+		color: #ff6f61;
 	}
 
 	ul {
-		padding: 100px;
-		padding-top: 30px;
-		@media (max-width: $breakpoint-desktop-wide) {
-		}
-		@media (max-width: $breakpoint-desktop) {
-		}
-		@media (max-width: $breakpoint-large-tablet) {
-		}
-		@media (max-width: $breakpoint-tablet) {
-		}
-		@media (max-width: $breakpoint-phone) {
-		}
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
 		li {
-			@include flex-container(column, wrap, center, center);
-			background-color: var(--white-shadow-light);
-			border-radius: 10px;
+			background: linear-gradient(45deg, #333, #000);
+			border: 2px solid #ff6f61;
+			border-radius: 15px;
+			margin: 20px;
 			padding: 20px;
-			margin-bottom: 3%;
-			transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
-			cursor: default;
-			border: 1px solid var(--cool-yellow);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+			transition: transform 0.3s, box-shadow 0.3s;
+
 			&:hover {
-				transform: translateY(-1px) scale(1.001);
-				box-shadow: 1px 2px 4px var(--cool-yellow-2);
-				background-color: transparent;
+				transform: translateY(-5px);
+				box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
 			}
 
-			@media (max-width: $breakpoint-desktop-wide) {
-				padding: 15px;
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				padding: 10px;
-			}
-			@media (max-width: $breakpoint-tablet) {
-			}
-			@media (max-width: $breakpoint-phone) {
-				border-radius: 10px;
-				padding: 15px;
-			}
 			h4 {
-				font-size: var(--font-10);
-				font-family: var(--font-orbitron);
-				letter-spacing: 4px;
-				margin: 0 0 1% 0;
-				font-weight: 400;
-				text-align: center;
-				color: var(--cool-blue-2);
-				@media (max-width: $breakpoint-desktop-wide) {
-					font-size: var(--font-12);
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-				}
+				font-size: 36px;
+				margin: 10px 0;
+				color: #ff6f61;
 			}
+
 			.summary {
-				text-align: center;
-				font-size: var(--font-11);
-				line-height: 1.5;
-				margin: 0 0 1% 0;
-				font-family: var(--font-tektur);
-				color: var(--white);
-				letter-spacing: 3px;
-				font-weight: 400;
-				@media (max-width: $breakpoint-desktop-wide) {
-					font-size: var(--font-12);
-					letter-spacing: 2px;
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-					font-size: var(--font-13);
-					letter-spacing: 2px;
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-				}
+				font-size: 24px;
+				margin: 10px 0;
+				color: #f0f0f0;
+				opacity: 0.8;
 			}
+
 			a {
 				text-decoration: none;
-				font-size: var(--font-11);
-				color: var(--cool-red-1);
-				letter-spacing: 2px;
+				color: #ff6f61;
+				margin: 15px 0;
+				font-weight: bold;
+				transition: color 0.3s;
+
 				&:hover {
-					color: var(--cool-yellow);
-				}
-				@media (max-width: $breakpoint-desktop-wide) {
-					font-size: var(--font-12);
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-					font-size: var(--font-13);
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-					font-size: var(--font-14);
+					color: #ffcb69;
 				}
 			}
+
 			.image-container {
-				width: 600px;
-				height: 450px;
 				max-width: 100%;
-				max-height: 100%;
-				border-radius: 20px;
-				overflow: hidden;
-				margin: 1% 0 1% 0;
-				@media (max-width: $breakpoint-desktop-wide) {
-					width: 500px;
-					height: 350px;
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-					width: 400px;
-					height: 250px;
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-					width: 300px;
-					height: 200px;
-				}
+				height: auto;
+				margin-top: 15px;
+				border-radius: 15px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 			}
+
 			.article-additional-details {
-				@include flex-container(row, wrap, center, center);
-				font-size: var(--font-11);
-				font-family: var(--font-tektur);
-				letter-spacing: 3px;
-				font-weight: 400;
-				text-align: center;
-				line-height: 1.5;
-				margin: 0 0 0 0;
-				gap: 10px;
-				@media (max-width: $breakpoint-desktop-wide) {
-					font-size: var(--font-12);
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-					font-size: var(--font-13);
-				}
-				@media (max-width: $breakpoint-tablet) {
-				}
-				@media (max-width: $breakpoint-phone) {
-				}
-				.published-at {
-					@include flex-container(row, wrap, center, center);
-					color: var(--cool-red-1);
-				}
-				.updated-at {
-					@include flex-container(row, wrap, center, center);
-					color: var(--cool-red-1);
-				}
-				.news-site {
-					@include flex-container(row, wrap, center, center);
-					color: var(--cool-red-1);
-				}
-				.featured {
-					@include flex-container(row, wrap, center, center);
-					color: var(--cool-red-1);
-				}
-				span {
-					font-size: var(--font-11);
-					font-family: var(--font-roboto);
-					color: var(--cool-blue-2);
-					letter-spacing: 4px;
-					font-weight: 400;
-					@media (max-width: $breakpoint-desktop-wide) {
-						font-size: var(--font-12);
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-top: 15px;
+
+				div {
+					flex: 1;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin: 10px;
+
+					p {
+						font-size: 20px;
+						margin: 5px 0;
+						color: #f0f0f0;
+						opacity: 0.8;
 					}
-					@media (max-width: $breakpoint-desktop) {
-					}
-					@media (max-width: $breakpoint-large-tablet) {
-					}
-					@media (max-width: $breakpoint-tablet) {
-					}
-					@media (max-width: $breakpoint-phone) {
+
+					span {
+						font-size: 24px;
+						font-weight: bold;
+						color: #ff6f61;
 					}
 				}
 			}
 		}
+	}
+
+	.none {
+		display: none;
+	}
+
+	p {
+		font-size: 28px;
+		margin: 20px;
+		color: #f0f0f0;
+		opacity: 0.8;
+	}
+
+	.loading {
+		font-size: 28px;
+		margin: 20px;
+		color: #ff6f61;
 	}
 }

@@ -72,48 +72,6 @@ const Articles = () => {
 								<span>{article.featured ? "Yes" : "No"}</span>
 							</div>
 						</div>
-						{/* i will do it later if i got time */}
-						{/* {article.launches.length > 0 && (
-							<div className="launches">
-								<h5>Launches:</h5>
-								<ul>
-									{article.launches.map((launch) => (
-										<li key={launch.launch_id}>
-											<div className="additional-details">
-												<div className="launch-id">
-													<p>Launch ID:</p>
-													<span>{launch.launch_id}</span>
-												</div>
-												<div className="provider">
-													<p>Provider:</p>
-													<span>{launch.provider}</span>
-												</div>
-											</div>
-										</li>
-									))}
-								</ul>
-							</div>
-						)} */}
-						{/* 
-						{article.events.length > 0 && (
-							<div className="events">
-								<h6>Events:</h6>
-								<ul>
-									{article.events.map((event) => (
-										<li key={event.event_id}>
-											<div className="launch-id">
-												<p>Launch ID:</p>
-												<span>{event.event_id}</span>
-											</div>
-											<div className="provider">
-												<p>Provider:</p>
-												<span>{event.provider}</span>
-											</div>
-										</li>
-									))}
-								</ul>
-							</div>
-						)} */}
 					</li>
 				))}
 			</ul>
