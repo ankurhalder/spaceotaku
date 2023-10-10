@@ -24,3 +24,4 @@ export { default as SpaceShooter } from "./Game/SpaceShooter";
 
 // # Music Components
 export { default as GameMusic } from "./Music/GameMusic";
+export { default as CommonMusic } from "./Music/CommonMusic";

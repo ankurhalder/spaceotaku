@@ -2,6 +2,7 @@
 import Head from "next/head";
 import { Fragment, useState, useEffect } from "react";
 import { Articles, Blogs, Reports } from "@/components";
+import { CommonMusic } from "@/components";
 function Index() {
 	const [selectedTab, setSelectedTab] = useState("articles");
 	const handleTabChange = (tab) => {
@@ -26,6 +27,7 @@ function Index() {
 				<meta property="og:url" content="https://www.spaceotaku.online/" />
 				<meta name="twitter:url" content="https://www.spaceotaku.online/" />
 			</Head>
+			<CommonMusic></CommonMusic>
 			<div className="landing-page-sample-contents none">
 				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>
 				<span>Created by ANKUR HALDER</span>
