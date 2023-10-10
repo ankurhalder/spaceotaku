@@ -374,6 +374,10 @@
 				background-color: var(--cool-green);
 				color: var(--white);
 			}
+			.incorrect {
+				background-color: var(--cool-red);
+				color: var(--white);
+			}
 		}
 
 		.hint-button {
@@ -422,10 +426,11 @@
 		text-align: left;
 		margin-top: 20px;
 
-		h2 {
-			font-size: 28px;
+		h5 {
+			text-align: center;
+			font-size: var(--font-10);
 			margin-bottom: 20px;
-			color: var(--white);
+			color: var(--cool-green);
 			font-weight: bold;
 		}
 
@@ -438,9 +443,13 @@
 
 			strong {
 				font-weight: bold;
+				font-family: var(--font-orbitron);
+				font-size: var(--font-13);
+				letter-spacing: 3px;
 			}
 
 			p {
+				letter-spacing: 2px;
 				margin: 0;
 				line-height: 1.5;
 
