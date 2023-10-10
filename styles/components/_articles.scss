@@ -8,7 +8,7 @@
 	max-width: 100%;
 	border-radius: 10px;
 	@media (max-width: $breakpoint-desktop-wide) {
-		width: 1200px;
+		width: 1100px;
 	}
 	@media (max-width: $breakpoint-desktop) {
 	}
@@ -27,6 +27,17 @@
 		text-align: center;
 		text-transform: uppercase;
 		color: var(--cool-red-2);
+		@media (max-width: $breakpoint-desktop-wide) {
+			font-size: var(--font-8);
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 
 	ul {
@@ -60,6 +71,17 @@
 				color: var(--cool-red-2);
 				overflow: hidden;
 				transition: max-height 0.3s;
+				@media (max-width: $breakpoint-desktop-wide) {
+					font-size: var(--font-11);
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			.summary {
@@ -73,6 +95,17 @@
 				max-height: 120px;
 				overflow: hidden;
 				transition: max-height 0.3s;
+				@media (max-width: $breakpoint-desktop-wide) {
+					// font-size: var(--font-13);
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			a {
@@ -87,6 +120,17 @@
 
 				&:hover {
 					color: #ffcb69;
+				}
+				@media (max-width: $breakpoint-desktop-wide) {
+					// font-size: var(--font-14);
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
 				}
 			}
 
@@ -103,14 +147,24 @@
 				&:hover {
 					transform: scale(1.01);
 				}
+				@media (max-width: $breakpoint-desktop-wide) {
+					max-height: 250px;
+					max-width: 200px;
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			.article-additional-details {
 				@include flex-container(column, none, center, center);
 				margin: auto 0;
-
 				div {
-					// flex: 1;
 					@include flex-container(column, none, center, center);
 					margin: 10px;
 					p {
@@ -123,6 +177,17 @@
 						opacity: 1;
 						overflow: hidden;
 						transition: max-height 0.3s;
+						@media (max-width: $breakpoint-desktop-wide) {
+							font-size: var(--font-12);
+						}
+						@media (max-width: $breakpoint-desktop) {
+						}
+						@media (max-width: $breakpoint-large-tablet) {
+						}
+						@media (max-width: $breakpoint-tablet) {
+						}
+						@media (max-width: $breakpoint-phone) {
+						}
 					}
 
 					span {
@@ -131,6 +196,17 @@
 						letter-spacing: 2px;
 						font-weight: 400;
 						color: var(--yellow);
+						@media (max-width: $breakpoint-desktop-wide) {
+							font-size: var(--font-13);
+						}
+						@media (max-width: $breakpoint-desktop) {
+						}
+						@media (max-width: $breakpoint-large-tablet) {
+						}
+						@media (max-width: $breakpoint-tablet) {
+						}
+						@media (max-width: $breakpoint-phone) {
+						}
 					}
 				}
 			}
