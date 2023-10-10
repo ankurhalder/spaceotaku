@@ -152,7 +152,7 @@ const SpaceShooter = () => {
 				}
 
 				// Generate enemy bullets
-				if (Math.random() < 0.05) {
+				if (Math.random() < 0.01) {
 					enemyBulletsRef.current.push({
 						x: enemy.x + enemy.width / 2 - 2.5,
 						y: enemy.y + enemy.height,
@@ -251,7 +251,7 @@ const SpaceShooter = () => {
 				}
 			};
 
-			setInterval(createEnemy, 2000);
+			setInterval(createEnemy, 3000);
 		};
 
 		const handleShooting = () => {
