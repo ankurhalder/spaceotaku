@@ -19,12 +19,14 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 20px;
 
 		li {
 			background: linear-gradient(45deg, #333, #000);
 			border: 2px solid #ff6f61;
 			border-radius: 15px;
-			margin: 20px;
 			padding: 20px;
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 			transition: transform 0.3s, box-shadow 0.3s;
@@ -35,13 +37,13 @@
 			}
 
 			h4 {
-				font-size: 36px;
-				margin: 10px 0;
+				font-size: 24px;
+				margin-bottom: 10px;
 				color: #ff6f61;
 			}
 
 			.summary {
-				font-size: 24px;
+				font-size: 18px;
 				margin: 10px 0;
 				color: #f0f0f0;
 				opacity: 0.8;
@@ -69,8 +71,8 @@
 
 			.article-additional-details {
 				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
+				flex-direction: column;
+				align-items: center;
 				margin-top: 15px;
 
 				div {
@@ -81,14 +83,14 @@
 					margin: 10px;
 
 					p {
-						font-size: 20px;
+						font-size: 16px;
 						margin: 5px 0;
 						color: #f0f0f0;
 						opacity: 0.8;
 					}
 
 					span {
-						font-size: 24px;
+						font-size: 18px;
 						font-weight: bold;
 						color: #ff6f61;
 					}
@@ -102,14 +104,14 @@
 	}
 
 	p {
-		font-size: 28px;
+		font-size: 24px;
 		margin: 20px;
 		color: #f0f0f0;
 		opacity: 0.8;
 	}
 
 	.loading {
-		font-size: 28px;
+		font-size: 24px;
 		margin: 20px;
 		color: #ff6f61;
 	}
