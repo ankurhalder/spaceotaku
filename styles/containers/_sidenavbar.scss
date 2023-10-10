@@ -6,7 +6,6 @@
 		font-size: 40px;
 		text-align: center;
 		cursor: pointer;
-		// transition: all 0.25s ease;
 	}
 }
 .sidebar {
@@ -18,7 +17,6 @@
 	background: #11101d;
 	padding: 6px 14px;
 	z-index: 1000;
-	// transition: all 0.25s ease;
 	@media (max-width: #{$breakpoint-large-tablet}) {
 		display: none;
 	}
@@ -39,12 +37,10 @@
 					object-fit: cover;
 					border-radius: 12px;
 					opacity: 1;
-					// transition: all 0.25s ease;
 				}
 
 				.logo_name {
 					opacity: 1;
-					// transition: all 0.25s ease;
 					margin: 20px 0 0 15px;
 					font-family: var(--font-elianto);
 					font-size: var(--font-12);
@@ -59,7 +55,6 @@
 					font-size: 40px;
 					text-align: center;
 					cursor: pointer;
-					// transition: all 0.25s ease;
 				}
 			}
 		}
@@ -76,12 +71,10 @@
 				object-fit: cover;
 				border-radius: 12px;
 				opacity: 1;
-				// transition: all 0.25s ease;
 			}
 
 			.logo_name {
 				opacity: 1;
-				// transition: all 0.25s ease;
 				margin: 20px 0 0 15px;
 				font-family: var(--font-elianto);
 				font-size: var(--font-12);
@@ -96,7 +89,6 @@
 				font-size: 40px;
 				text-align: center;
 				cursor: pointer;
-				// transition: all 0.25s ease;
 			}
 		}
 	}
@@ -110,7 +102,6 @@
 		.logo-container,
 		.logo_name {
 			opacity: 0;
-			// transition: all 0.25s ease;
 		}
 
 		#btn {
@@ -121,7 +112,6 @@
 			font-size: 40px;
 			text-align: center;
 			cursor: pointer;
-			// transition: all 0.25s ease;
 		}
 	}
 
@@ -181,7 +171,6 @@
 		bottom: -10px;
 		padding: 8px 8px;
 		background: #1d1b31;
-		// transition: all 0.25s ease;
 		overflow: hidden;
 		list-style-type: none;
 
@@ -261,7 +250,7 @@
 	}
 	@media (max-width: #{$breakpoint-desktop}) {
 		&.open {
-			width: 230px;
+			width: 250px;
 			.logo-details {
 				height: 0;
 				.logo-container {
