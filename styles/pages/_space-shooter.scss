@@ -60,4 +60,39 @@
 		@media (max-width: $breakpoint-phone) {
 		}
 	}
+	#restart-button {
+		position: relative;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
+		background-color: #000;
+		border: 1px solid #fff;
+		color: #fff;
+		padding: 5px 10px;
+		font-size: var(--font-10);
+		font-family: var(--font-elianto);
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		transition: all 0.3s;
+		margin: 5px 0 0 0;
+		&:hover {
+			background-color: #fff;
+			color: #000;
+		}
+		@media (max-width: $breakpoint-desktop-wide) {
+			font-size: var(--font-5);
+		}
+		@media (max-width: $breakpoint-desktop) {
+			font-size: var(--font-5);
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+			font-size: var(--font-6);
+		}
+		@media (max-width: $breakpoint-tablet) {
+			font-size: var(--font-7);
+		}
+		@media (max-width: $breakpoint-phone) {
+			font-size: var(--font-8);
+		}
+	}
 }
