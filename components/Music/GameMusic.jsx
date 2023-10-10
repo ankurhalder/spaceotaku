@@ -12,6 +12,7 @@ export default function GameMusic() {
 
 	useEffect(() => {
 		if (audio) {
+			audio.loop = true; // Enable looping
 			if (isPlaying) {
 				audio.play();
 			} else {
