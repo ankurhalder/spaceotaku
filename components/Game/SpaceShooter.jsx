@@ -18,6 +18,7 @@ const SpaceShooter = () => {
 	const enemiesRef = useRef([]);
 	const scoreRef = useRef(0);
 	const gameOverRef = useRef(false);
+	const highScoreRef = useRef(0);
 	const enemyImages = [
 		"/aliens/alien-1.png",
 		"/aliens/alien-2.png",
@@ -27,6 +28,11 @@ const SpaceShooter = () => {
 	];
 
 	useEffect(() => {
+		const storedHighScore = localStorage.getItem("spaceShooterHighScore");
+		if (storedHighScore) {
+			highScoreRef.current = parseInt(storedHighScore, 10);
+		}
+
 		const canvas = canvasRef.current;
 		const context = canvas.getContext("2d");
 		contextRef.current = context;
@@ -238,6 +244,12 @@ const SpaceShooter = () => {
 			context.fillText("Score: " + scoreRef.current, 10, 30);
 		};
 
+		const drawHighScore = () => {
+			context.font = "20px Arial";
+			context.fillStyle = "white";
+			context.fillText("High Score: " + highScoreRef.current, 10, 60);
+		};
+
 		const drawGameOver = () => {
 			context.font = "40px Arial";
 			context.fillStyle = "red";
@@ -253,8 +265,16 @@ const SpaceShooter = () => {
 				drawBullets();
 				drawEnemies();
 				drawScore();
+				drawHighScore();
 				requestAnimationFrame(gameLoop);
 			} else {
+				if (scoreRef.current > highScoreRef.current) {
+					highScoreRef.current = scoreRef.current;
+					localStorage.setItem(
+						"spaceShooterHighScore",
+						highScoreRef.current.toString()
+					);
+				}
 				drawGameOver();
 			}
 		};
@@ -275,7 +295,6 @@ const SpaceShooter = () => {
 			});
 		};
 	}, []);
-
 	return <canvas ref={canvasRef} width={800} height={600}></canvas>;
 };
 
