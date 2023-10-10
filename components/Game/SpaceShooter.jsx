@@ -261,8 +261,6 @@ const SpaceShooter = () => {
 				canvas.width / 2 - 50,
 				canvas.height / 2 + 40
 			);
-
-			// Get the high score from local storage and display it
 			const highScore = localStorage.getItem("spaceShooterHighScore");
 			if (highScore !== null) {
 				context.font = "30px Arial";
