@@ -88,7 +88,9 @@
 			backdrop-filter: blur(10px);
 			&:hover {
 				transform: translateY(-1px) scale(1.001);
-				box-shadow: 1px 2px 4px var(--white-shadow);
+				box-shadow: 1px 2px 4px var(--cool-yellow-2);
+				background-color: transparent;
+				backdrop-filter: blur(0px);
 			}
 
 			@media (max-width: $breakpoint-desktop-wide) {
