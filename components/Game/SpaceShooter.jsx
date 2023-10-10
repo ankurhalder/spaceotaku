@@ -273,10 +273,10 @@ const SpaceShooter = () => {
 			const highScore = localStorage.getItem("spaceShooterHighScore");
 			if (highScore !== null) {
 				context.font = "30px Arial";
-				context.fillStyle = "deeppink";
+				context.fillStyle = "yellow";
 				context.fillText(
 					"High Score: " + highScore,
-					canvas.width / 2 - 90,
+					canvas.width / 2 - 95,
 					canvas.height / 2 + 80
 				);
 			} else {
