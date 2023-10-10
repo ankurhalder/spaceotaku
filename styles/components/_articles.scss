@@ -7,6 +7,17 @@
 	width: 1400px;
 	max-width: 100%;
 	border-radius: 10px;
+	@media (max-width: $breakpoint-desktop-wide) {
+		width: 1200px;
+	}
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+	}
+	@media (max-width: $breakpoint-tablet) {
+	}
+	@media (max-width: $breakpoint-phone) {
+	}
 	h3 {
 		font-family: var(--font-playfair);
 		font-size: var(--font-7);
