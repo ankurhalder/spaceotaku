@@ -17,6 +17,7 @@ const SpaceShooter = () => {
 	const isShootingRef = useRef(false);
 	const shootIntervalRef = useRef(null);
 	const enemiesRef = useRef([]);
+	const enemyBulletsRef = useRef([]); // Initialize enemyBulletsRef as an empty array
 	const scoreRef = useRef(0);
 	const gameOverRef = useRef(false);
 	const highScoreRef = useRef(0);
@@ -51,6 +52,8 @@ const SpaceShooter = () => {
 			imageRef.src = imagePath;
 			return imageRef;
 		});
+
+		// Rest of the code remains the same...
 
 		const drawPlayer = () => {
 			context.clearRect(0, 0, canvas.width, canvas.height);
@@ -98,9 +101,31 @@ const SpaceShooter = () => {
 				canvas.height - 570
 			);
 		};
+		const moveEnemyBullets = () => {
+			enemyBulletsRef.current = enemyBulletsRef.current.filter(
+				(bullet) => bullet.y < canvas.height
+			);
+
+			enemyBulletsRef.current.forEach((bullet, bulletIndex) => {
+				bullet.y += bulletSpeed;
+
+				// Check for collision with the player
+				if (
+					player.x < bullet.x + 5 &&
+					player.x + player.width > bullet.x &&
+					player.y < bullet.y + 10 &&
+					player.y + player.height > bullet.y
+				) {
+					gameOverRef.current = true;
+				}
+			});
+		};
 
 		const moveEnemies = () => {
-			enemiesRef.current.forEach((enemy) => {
+			// Shuffle the enemies randomly to pick some for firing
+			shuffleArray(enemiesRef.current);
+
+			enemiesRef.current.forEach((enemy, index) => {
 				enemy.y += enemy.speed;
 				if (enemy.y > canvas.height) {
 					enemy.y = -enemy.height;
@@ -114,8 +139,25 @@ const SpaceShooter = () => {
 				) {
 					gameOverRef.current = true;
 				}
+
+				// Check if this enemy should fire
+				if (index < 2 && Math.random() < 0.02) {
+					// Adjust probability and number of firing enemies
+					enemyBulletsRef.current.push({
+						x: enemy.x + enemy.width / 2 - 2.5,
+						y: enemy.y + enemy.height,
+					});
+				}
 			});
 		};
+
+		// Function to shuffle an array randomly
+		function shuffleArray(array) {
+			for (let i = array.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[array[i], array[j]] = [array[j], array[i]];
+			}
+		}
 
 		const shoot = () => {
 			bulletsRef.current.push({
@@ -180,17 +222,26 @@ const SpaceShooter = () => {
 				const randomIndex = Math.floor(Math.random() * enemyImageRefs.length);
 				const randomEnemyImage = enemyImageRefs[randomIndex];
 
-				enemiesRef.current.push({
+				const enemy = {
 					x: Math.random() * (canvas.width - 50),
 					y: -50,
 					width: 50,
 					height: 50,
 					speed: 1,
 					image: randomEnemyImage,
-				});
+				};
+
+				enemiesRef.current.push(enemy);
+
+				if (Math.random() < 0.1) {
+					enemyBulletsRef.current.push({
+						x: enemy.x + enemy.width / 2 - 2.5,
+						y: enemy.y + enemy.height,
+					});
+				}
 			};
 
-			setInterval(createEnemy, 1000);
+			setInterval(createEnemy, 2000);
 		};
 
 		const handleShooting = () => {
@@ -245,7 +296,6 @@ const SpaceShooter = () => {
 					) {
 						bulletsRef.current.splice(bulletIndex, 1);
 						enemiesRef.current.splice(enemyIndex, 1);
-
 						scoreRef.current += 1;
 					}
 				});
@@ -295,14 +345,23 @@ const SpaceShooter = () => {
 			}
 		};
 
+		const drawEnemyBullets = () => {
+			enemyBulletsRef.current.forEach((bullet) => {
+				context.fillStyle = "blue";
+				context.fillRect(bullet.x, bullet.y, 5, 10);
+			});
+		};
+
 		const gameLoop = () => {
 			if (!gameOverRef.current) {
 				moveBullets();
 				moveEnemies();
+				moveEnemyBullets();
 				handleCollisions();
 				drawPlayer();
 				drawBullets();
 				drawEnemies();
+				drawEnemyBullets();
 				drawScore();
 				drawHighScore();
 				drawCreatedByText();
