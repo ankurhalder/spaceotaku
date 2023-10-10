@@ -17,6 +17,14 @@ const SpaceShooter = () => {
 	const enemiesRef = useRef([]);
 	const scoreRef = useRef(0);
 	const gameOverRef = useRef(false);
+	// Define an array of enemy image paths
+	const enemyImages = [
+		"/aliens/alien-1.png",
+		"/aliens/alien-2.png",
+		"/aliens/alien-3.png",
+		"/aliens/alien-4.png",
+		"/aliens/alien-5.png",
+	];
 
 	useEffect(() => {
 		const canvas = canvasRef.current;
@@ -24,11 +32,28 @@ const SpaceShooter = () => {
 		contextRef.current = context;
 
 		const player = playerRef.current;
+		const playerImageObj = new Image(); // Create an image object
+
+		// Set the source of the image from the public directory
+		playerImageObj.src = "/spaceship.png"; // Adjust the path as needed
+
+		const enemyImageRefs = enemyImages.map((imagePath) => {
+			const imageRef = new Image();
+			imageRef.src = imagePath;
+			return imageRef;
+		});
 
 		const drawPlayer = () => {
 			context.clearRect(0, 0, canvas.width, canvas.height);
-			context.fillStyle = "blue";
-			context.fillRect(player.x, player.y, player.width, player.height);
+
+			// Draw the player image on the canvas
+			context.drawImage(
+				playerImageObj,
+				player.x,
+				player.y,
+				player.width,
+				player.height
+			);
 		};
 
 		const drawBullets = () => {
@@ -47,8 +72,16 @@ const SpaceShooter = () => {
 
 		const drawEnemies = () => {
 			enemiesRef.current.forEach((enemy) => {
-				context.fillStyle = "green";
-				context.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+				// Select a random enemy image
+				const randomEnemyImage =
+					enemyImageRefs[Math.floor(Math.random() * enemyImageRefs.length)];
+				context.drawImage(
+					randomEnemyImage,
+					enemy.x,
+					enemy.y,
+					enemy.width,
+					enemy.height
+				);
 			});
 		};
 
