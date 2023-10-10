@@ -34,16 +34,12 @@
 			border-radius: 15px;
 			padding: 20px;
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-			transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Added transitions */
+			transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 
 			&:hover {
 				transform: translateY(-5px);
-				box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
-				background: linear-gradient(
-					45deg,
-					#444,
-					#111
-				); /* Hover effect for background */
+				box-shadow: 0 12px 24px var(--black-shadow);
+				background: linear-gradient(45deg, #292929, #111);
 			}
 
 			h4 {
