@@ -17,7 +17,6 @@ export default function IssTracker() {
 					name="keywords"
 					content=" space otaku,ISS tracking, International Space Station location, real-time ISS tracker, ISS coordinates, space exploration, Earth's orbit, ISS map"
 				/>
-				<link rel="canonical" href="https://spaceotaku.vercel.app/isstracker" />
 				<meta
 					property="og:url"
 					content="https://www.spaceotaku.online/isstracker"

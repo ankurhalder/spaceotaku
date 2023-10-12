@@ -66,7 +66,6 @@ const Slider = () => {
 					name="keywords"
 					content="space otaku,space,Space facts, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts , Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,space exploration,astronauts, spacecraft, astronaut information"
 				/>
-				<link rel="canonical" href="https://spaceotaku.vercel.app/astronauts" />
 				<meta
 					property="og:url"
 					content="https://www.spaceotaku.online/astronauts"

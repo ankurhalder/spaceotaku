@@ -66,7 +66,6 @@ function SpaceFacts() {
 					name="keywords"
 					content="space otaku,space,Space facts, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts , Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,"
 				/>
-				<link rel="canonical" href="https://spaceotaku.vercel.app/spacefacts" />
 				<meta
 					property="og:url"
 					content="https://www.spaceotaku.online/spacefacts"

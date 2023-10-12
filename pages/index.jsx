@@ -23,7 +23,7 @@ function Index() {
 					name="keywords"
 					content=" space otaku,space, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts , Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,"
 				/>
-				<link rel="canonical" href="https://spaceotaku.vercel.app/" />
+				<link rel="canonical" href="https://spaceotaku.online/" />
 				<meta property="og:url" content="https://www.spaceotaku.online/" />
 				<meta name="twitter:url" content="https://www.spaceotaku.online/" />
 			</Head>
