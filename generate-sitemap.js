@@ -47,7 +47,7 @@ async function generateSitemap() {
 	sitemapStream.write({
 		url: "/spacequiz",
 		changefreq: "yearly",
-		priority: 0.1,
+		priority: 0.9,
 	});
 	// End the sitemap stream AFTER writing URLs
 	sitemapStream.end();
