@@ -86,6 +86,9 @@
 }
 
 .loading-iss-location {
+	width: 100%;
+	height: 100vh;
+	margin: 0 15% 0 0;
 	font-family: var(--font-elianto);
 	font-size: var(--font-8);
 	text-transform: uppercase;
@@ -129,6 +132,7 @@
 		text-align: center;
 		font-size: var(--font-11);
 		margin-top: 10%;
+		margin-right: 0%;
 	}
 	@media (max-width: #{$breakpoint-phone}) {
 	}
