@@ -124,7 +124,11 @@ const ISSMap = () => {
 	}, [issLocation, map, issIcon]);
 
 	if (!issLocation) {
-		return <div className="loading-iss-location">Loading ISS location...</div>;
+		return (
+			<div className="loading-iss-location">
+				Loading Live International Space Station (ISS) Location...
+			</div>
+		);
 	}
 
 	return (
