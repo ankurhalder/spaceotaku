@@ -1,7 +1,7 @@
 const apiUrl = "https://api.spaceflightnewsapi.net/v4";
 
 export async function fetchArticles(page) {
-	const perPage = 1;
+	const perPage = 15;
 	const offset = (page - 1) * perPage;
 
 	try {
@@ -20,7 +20,7 @@ export async function fetchArticles(page) {
 }
 
 export async function fetchBlogs(page) {
-	const perPage = 10;
+	const perPage = 15;
 	const offset = (page - 1) * perPage;
 
 	try {
@@ -39,7 +39,7 @@ export async function fetchBlogs(page) {
 }
 
 export async function fetchReports(page) {
-	const perPage = 10;
+	const perPage = 15;
 	const offset = (page - 1) * perPage;
 
 	try {
