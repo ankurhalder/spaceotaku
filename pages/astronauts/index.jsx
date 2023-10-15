@@ -64,7 +64,7 @@ const Slider = () => {
 				/>
 				<meta
 					name="keywords"
-					content="space otaku,space,Space facts, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts , Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,space exploration,astronauts, spacecraft, astronaut information"
+					content="space otaku,space,Space facts, astronomy, celestial bodies, solar system, astronauts, satellites, space news, cosmic, universe, exploration, stargazing, space enthusiasts , Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,space exploration,astronauts, spacecraft, astronaut, information,Astronaut Profiles, Spacecraft Information, Astronaut Biographies, SpaceOtaku Astronaut Slider,Astronauts in Space,Space Exploration,Space Enthusiasts,Cosmic Exploration "
 				/>
 				<meta
 					property="og:url"
@@ -75,6 +75,115 @@ const Slider = () => {
 					content="https://www.spaceotaku.online/astronauts"
 				/>
 			</Head>
+			<div className="astronauts-description seo">
+				<span className="section-header">Detailed Description:</span>
+				<p>
+					Unveil the captivating world of astronauts currently orbiting our
+					planet through SpaceOtaku&apos;s immersive React component slider.
+					This slider is your portal to in-depth astronaut profiles and
+					comprehensive spacecraft information, delivering an educational and
+					captivating experience for space enthusiasts and eager learners alike.
+				</p>
+
+				<span className="section-header">Astronaut Profiles:</span>
+
+				<span className="subsection-header">Biographical Information:</span>
+				<p>
+					Delve into the lives of astronauts by exploring their biographical
+					details, including their names, roles, birthdates, and birthplaces.
+					Learn about the diverse backgrounds that have brought them to the
+					cosmos.
+				</p>
+
+				<span className="subsection-header">Missions and Contributions:</span>
+				<p>
+					Gain a profound understanding of astronauts&apos; space careers by
+					discovering their mission history. Uncover the missions they&apos;ve
+					undertaken, their roles in these missions, and their remarkable
+					contributions to space exploration.
+				</p>
+
+				<span className="subsection-header">Time Spent in Space:</span>
+				<p>
+					Get a glimpse of each astronaut&apos;s cumulative time spent in space.
+					Explore their experiences, challenges, and achievements during their
+					journeys beyond Earth&apos;s atmosphere.
+				</p>
+
+				<span className="subsection-header">Extravehicular Activities:</span>
+				<p>
+					Learn about the number of spacewalks each astronaut has undertaken and
+					the total duration of their extravehicular activities. Understand
+					their critical roles in conducting spacewalks.
+				</p>
+
+				<span className="subsection-header">Educational Background:</span>
+				<p>
+					Explore the academic backgrounds of these space pioneers, providing
+					insights into their educational journeys and the knowledge that equips
+					them for their extraordinary careers.
+				</p>
+
+				<span className="subsection-header">Personal Interests:</span>
+				<p>
+					Discover the personal interests and hobbies that define these
+					astronauts outside their space missions. Get to know these individuals
+					as multifaceted explorers and human beings.
+				</p>
+
+				<span className="section-header">Spacecraft Information:</span>
+
+				<span className="subsection-header">Craft Particulars:</span>
+				<p>
+					Get an up-close view of the spacecraft that currently serve as the
+					astronauts&apos; home in space. Explore details such as the
+					spacecraft&apos;s name, description, launch date, orbit height, and
+					orbit period.
+				</p>
+
+				<span className="subsection-header">Modules and Crew Capacity:</span>
+				<p>
+					Gain insights into the number of modules in each spacecraft and the
+					current crew capacity. Understand the technical specifications that
+					make these spacecraft the lifeline for astronauts during their
+					missions.
+				</p>
+
+				<span className="subsection-header">Physical Dimensions:</span>
+				<p>
+					Explore the physical dimensions of the spacecraft, including its
+					length and width. Comprehend the structural aspects that enable these
+					spacecraft to withstand the rigors of space.
+				</p>
+
+				<span className="section-header">
+					Perfect for Space Enthusiasts and Curious Minds:
+				</span>
+				<p>
+					Whether you are a seasoned space enthusiast seeking to deepen your
+					knowledge or an eager learner with an insatiable curiosity for space
+					exploration, SpaceOtaku&apos;s astronaut slider is a comprehensive
+					resource that provides both education and engagement. The detailed
+					astronaut profiles and spacecraft information offer a holistic view of
+					the universe&apos;s vast expanse.
+				</p>
+
+				<span className="section-header">Embark on Your Cosmic Journey:</span>
+				<p>
+					Commence your cosmic journey today by exploring SpaceOtaku&apos;s
+					astronaut slider. Uncover the captivating stories and experiences of
+					astronauts who journey beyond Earth&apos;s confines. Gain a profound
+					appreciation for the challenges and wonders of space exploration.
+				</p>
+
+				<span className="section-header">
+					If your heart beats for the cosmos, this slider will supply you with a
+					trove of information and a heightened understanding of the astronauts
+					and spacecraft that navigate the cosmic sea. Begin your exploration
+					now and be inspired by the extraordinary individuals who traverse the
+					celestial expanse.
+				</span>
+			</div>
 			<CommonMusic></CommonMusic>
 			<div className="slider-container">
 				<h1 className="slider-heading">Astronauts Currently In Space</h1>
