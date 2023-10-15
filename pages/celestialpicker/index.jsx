@@ -192,6 +192,7 @@ const PlanetPage = () => {
 				</div>
 			</div>
 			<div className="seo">
+				<p>Explore Celestial Bodies</p>
 				<span className="section-header">Detailed Description:</span>
 				<p>
 					Unveil the enigmatic beauty of celestial bodies as you embark on an

@@ -6,9 +6,7 @@ export default function IssTracker() {
 	return (
 		<Fragment>
 			<Head>
-				<title>
-					Track International Space Station (ISS) Location in Real Time
-				</title>
+				<title>Live International Space Station (ISS) Location</title>
 				<meta
 					name="description"
 					content="Stay updated with the real-time location of the International Space Station (ISS). Calculate your distance and explore its coordinates on an interactive map."
@@ -32,6 +30,7 @@ export default function IssTracker() {
 					Live International Space Station (ISS) Location
 				</h1>
 				<div className="iss-tracker-description seo">
+					<p>Live International Space Station (ISS) Location</p>
 					<span className="section-header">Detailed Description:</span>
 					<p>
 						Welcome to the ultimate resource for tracking the International

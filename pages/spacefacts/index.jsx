@@ -75,7 +75,31 @@ function SpaceFacts() {
 					content="https://www.spaceotaku.online/spacefacts"
 				/>
 			</Head>
+
+			<CommonMusic></CommonMusic>
+			<div className="facts-container">
+				<Header />
+				<div
+					className="space-facts-container"
+					style={{
+						"--background-gradient": currentColorPair.backgroundGradient,
+						"--button-gradient": currentColorPair.newButtonGradient,
+						"--radial-gradient": currentColorPair.radialGradient,
+						"--box-shadow": currentColorPair.boxShadow,
+					}}
+				>
+					<Title />
+					<p className="space-facts-text">
+						{spaceFacts[currentFactIndex].fact}
+					</p>
+					<button className="space-facts-button" onClick={handleNextFact}>
+						Next Fact
+					</button>
+				</div>
+			</div>
 			<div className="seo">
+				<p>Explore Amazing Space Facts | SpaceOtaku</p>
+				<p>Space Facts by Space Otaku</p>
 				<p>
 					Space Facts: Dive into a collection of captivating space facts. Each
 					fact unveils a unique aspect of the universe, providing insight into
@@ -113,27 +137,6 @@ function SpaceFacts() {
 					ignite your cosmic curiosity, this is the place to be. Explore Space
 					Facts and let the wonders of space captivate your imagination!
 				</p>
-			</div>
-			<CommonMusic></CommonMusic>
-			<div className="facts-container">
-				<Header />
-				<div
-					className="space-facts-container"
-					style={{
-						"--background-gradient": currentColorPair.backgroundGradient,
-						"--button-gradient": currentColorPair.newButtonGradient,
-						"--radial-gradient": currentColorPair.radialGradient,
-						"--box-shadow": currentColorPair.boxShadow,
-					}}
-				>
-					<Title />
-					<p className="space-facts-text">
-						{spaceFacts[currentFactIndex].fact}
-					</p>
-					<button className="space-facts-button" onClick={handleNextFact}>
-						Next Fact
-					</button>
-				</div>
 			</div>
 		</Fragment>
 	);

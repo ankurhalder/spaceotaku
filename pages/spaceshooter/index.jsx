@@ -26,6 +26,8 @@ const SpaceShooterGame = () => {
 			<div className="space-shooter-container">
 				<h1>Space Shooter Game by Space Otaku</h1>
 				<div className="seo">
+					<p>Space Shooting Game | Space Otaku</p>
+					<p>Space Shooter Game by Space Otaku</p>
 					<span className="section-header">Detailed Description:</span>
 					<p>
 						Prepare for a cosmic journey like no other with Space Otaku&apos;s
