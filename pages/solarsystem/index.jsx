@@ -29,7 +29,7 @@ export default function SolarSystem() {
 			<h1 className="solar-system-heading">
 				Explore the Solar System with Space Otaku
 			</h1>
-			<div className="solar-system-description">
+			<div className="solar-system-description seo">
 				<h3>Embark on a Cosmic Adventure</h3>
 				<p>
 					Welcome to an awe-inspiring journey through our Solar System,
