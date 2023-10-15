@@ -122,31 +122,31 @@ const PlanetPage = () => {
 						<div className="planet-flex">
 							<div className="details">
 								<div className="detail-item">
-									<strong>Distance from Sun:</strong>
+									<p className="strong">Distance from Sun:</p>
 									<span>{celestialBody.distanceFromSun}</span>
 								</div>
 								<div className="detail-item">
-									<strong>Number of Moons:</strong>
+									<p className="strong">Number of Moons:</p>
 									<span>{celestialBody.numberOfMoons}</span>
 								</div>
 								<div className="detail-item">
-									<strong>Diameter:</strong>
+									<p className="strong">Diameter:</p>
 									<span>{celestialBody.diameter}</span>
 								</div>
 								<div className="detail-item">
-									<strong>Orbital Period:</strong>
+									<p className="strong">Orbital Period:</p>
 									<span>{celestialBody.orbitalPeriod}</span>
 								</div>
 								<div className="detail-item">
-									<strong>Interesting Fact:</strong>
+									<p className="strong">Interesting Fact:</p>
 									<span>{celestialBody.interestingFact}</span>
 								</div>
 								<div className="detail-item">
-									<strong>Surface Features:</strong>
+									<p className="strong">Surface Features:</p>
 									<span>{celestialBody.surfaceFeatures}</span>
 								</div>
 								<div className="detail-item">
-									<strong>Atmosphere:</strong>
+									<p className="strong">Atmosphere:</p>
 									<span>{celestialBody.atmosphere}</span>
 								</div>
 							</div>
@@ -178,7 +178,7 @@ const PlanetPage = () => {
 											width={60}
 											height={60}
 										/>
-										<strong>{agency.name}:</strong>{" "}
+										<p className="strong">{agency.name}:</p>{" "}
 										{agency.missions.map((mission, idx) => (
 											<div key={idx} className="mission">
 												{mission}

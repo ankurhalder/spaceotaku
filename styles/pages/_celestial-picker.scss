@@ -308,7 +308,7 @@
 						@media (max-width: $breakpoint-phone) {
 							max-width: 100%;
 						}
-						strong {
+						.strong {
 							font-family: var(--font-tektur);
 							font-weight: bold;
 							font-size: var(--font-11);
@@ -420,7 +420,7 @@
 							}
 						}
 
-						strong {
+						.strong {
 							font-family: var(--font-tektur);
 							font-weight: bold;
 							font-size: var(--font-11);
