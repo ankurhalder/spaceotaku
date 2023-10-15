@@ -77,7 +77,7 @@ const Slider = () => {
 			</Head>
 			<CommonMusic></CommonMusic>
 			<div className="slider-container">
-				<h1 className="slider-heading">Astronauts In Space</h1>
+				<h1 className="slider-heading">Astronauts Currently In Space</h1>
 				<div className="slider">
 					{astronauts.people.map((person, index) => (
 						<div

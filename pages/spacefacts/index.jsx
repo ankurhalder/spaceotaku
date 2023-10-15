@@ -7,7 +7,7 @@ import { Fragment } from "react";
 import { CommonMusic } from "@/components";
 const Header = () => (
 	<header className="header">
-		<h1>Space Facts</h1>
+		<h1>Space Facts by Space Otaku</h1>
 	</header>
 );
 

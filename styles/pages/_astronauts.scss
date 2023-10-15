@@ -1,5 +1,5 @@
 .slider-container {
-	@include flex-container(column, wrap, center, center);
+	@include flex-container(column, wrap, flex-start, center);
 	height: 100vh;
 	width: 100%;
 	.button-container {
@@ -73,11 +73,7 @@
 		}
 	}
 	h1 {
-		position: absolute;
-		top: 5%;
-		bottom: 0%;
-		right: 0%;
-		left: 32%;
+		margin: 0;
 		font-family: var(--font-elianto);
 		font-size: var(--font-5);
 		text-transform: uppercase;
@@ -100,18 +96,10 @@
 		animation: gradient-animation 3s linear infinite;
 		@media (max-width: #{$breakpoint-desktop}) {
 			font-size: var(--font-7);
-			margin-bottom: 1.5%;
-			left: 32%;
 		}
 		@media (max-width: #{$breakpoint-phone}) {
-			position: relative;
 			font-size: var(--font-8);
-			left: 0%;
-			top: -10%;
-			right: 0%;
-			bottom: 0%;
-			margin: 0 0 0 0;
-			padding: 0 0 0 0;
+			text-align: center;
 		}
 	}
 	.slider {
@@ -124,6 +112,7 @@
 		@media (max-width: #{$breakpoint-phone}) {
 			max-width: 70%;
 			max-height: 60%;
+			margin-top: 30%;
 			position: relative;
 			top: -5%;
 		}
