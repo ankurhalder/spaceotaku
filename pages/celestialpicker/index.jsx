@@ -191,6 +191,126 @@ const PlanetPage = () => {
 					</div>
 				</div>
 			</div>
+			<div className="seo">
+				<span className="section-header">Detailed Description:</span>
+				<p>
+					Unveil the enigmatic beauty of celestial bodies as you embark on an
+					exploration of {celestialBody.name}. This informative and visually
+					captivating page on Space Otaku offers a deep dive into the unique
+					characteristics and mysteries of this celestial entity.
+				</p>
+
+				<span className="section-header">Explore Celestial Bodies:</span>
+
+				<span className="subsection-header">Select a Celestial Body:</span>
+				<p>
+					Begin your cosmic journey by selecting a celestial body of your
+					choice. Each celestial body presents a world of intriguing details to
+					uncover.
+				</p>
+
+				<span className="subsection-header">Custom Dropdown:</span>
+				<p>
+					Use the custom dropdown menu to toggle between different celestial
+					bodies. You can select from a variety of celestial bodies such as the
+					Sun, planets, and other astronomical objects.
+				</p>
+
+				<span className="subsection-header">Visual Representation:</span>
+				<p>
+					Each celestial body is beautifully represented with an accompanying
+					image, allowing you to visually connect with your chosen cosmic
+					destination.
+				</p>
+
+				<span className="section-header">Celestial Body Data:</span>
+
+				<span className="subsection-header">Celestial Body Name:</span>
+				<p>
+					Delve into the details of {celestialBody.name}, learning about its
+					unique characteristics and place in the cosmos.
+				</p>
+
+				<span className="subsection-header">Key Data Points:</span>
+				<p>
+					Discover essential data points such as its distance from the Sun, the
+					number of moons it hosts, its diameter, and orbital period. Gain an
+					in-depth understanding of this celestial body&apos;s physical
+					attributes and its role in our solar system.
+				</p>
+
+				<span className="subsection-header">Interesting Fact:</span>
+				<p>
+					Explore a captivating fact about {celestialBody.name}, unraveling a
+					piece of cosmic wonder that makes it even more fascinating.
+				</p>
+
+				<span className="subsection-header">Surface Features:</span>
+				<p>
+					Dive into the details of {celestialBody.name}&apos;s surface features.
+					Understand the landscape and geological characteristics that define
+					this celestial body.
+				</p>
+
+				<span className="subsection-header">Atmosphere:</span>
+				<p>
+					Learn about the atmospheric conditions of {celestialBody.name}.
+					Understand the gases and elements that surround this cosmic entity.
+				</p>
+
+				<span className="section-header">Agencies and Missions:</span>
+
+				<span className="subsection-header">Discover Space Agencies:</span>
+				<p>
+					Explore the space agencies and organizations that have been involved
+					in missions related to {celestialBody.name}.
+				</p>
+
+				<span className="subsection-header">Missions List:</span>
+				<p>
+					Gain insights into the missions conducted by these space agencies
+					related to {celestialBody.name}. Each mission opens a window into the
+					cosmic exploration and research associated with this celestial body.
+				</p>
+
+				<span className="subsection-header">Random Loading Component:</span>
+				<p>
+					While loading data, enjoy a dynamic and visually engaging loading
+					component that adds an element of anticipation and excitement to your
+					cosmic journey.
+				</p>
+
+				<span className="section-header">Join the Cosmic Exploration:</span>
+				<p>
+					Whether you&apos;re a seasoned space enthusiast or just starting your
+					cosmic exploration, Space Otaku&apos;s PlanetPage provides a
+					comprehensive and engaging platform to learn, discover, and appreciate
+					the wonders of celestial bodies.
+				</p>
+
+				<span className="section-header">How to Explore:</span>
+				<p>
+					Choose Your Celestial Body: Select a celestial body from the dropdown
+					menu to explore its unique attributes. Discover Cosmic Details: Read
+					about the celestial body&apos;s name, key data points, interesting
+					facts, surface features, and atmosphere. Engage with Visuals: Enjoy
+					visual representations of the celestial body and its surroundings.
+					Learn About Missions: Dive into the missions and projects conducted by
+					space agencies related to your selected celestial body.
+				</p>
+
+				<span className="section-header">Ignite Your Cosmic Curiosity:</span>
+				<p>
+					Begin your cosmic journey today and unlock the mysteries of celestial
+					bodies. Whether you seek cosmic knowledge, space facts, or a deeper
+					connection with the universe, Space Otaku&apos;s PlanetPage is your
+					portal to the cosmos.
+				</p>
+
+				<span className="section-header">
+					Explore {celestialBody.name} and let your cosmic curiosity thrive!
+				</span>
+			</div>
 		</Fragment>
 	);
 };
