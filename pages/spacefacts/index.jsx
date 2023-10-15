@@ -75,6 +75,45 @@ function SpaceFacts() {
 					content="https://www.spaceotaku.online/spacefacts"
 				/>
 			</Head>
+			<div className="seo">
+				<p>
+					Space Facts: Dive into a collection of captivating space facts. Each
+					fact unveils a unique aspect of the universe, providing insight into
+					its vastness and complexity.
+				</p>
+
+				<p>
+					Next Fact: After you've absorbed the knowledge of one fact, you can
+					hit the "Next Fact" button to reveal another astonishing piece of
+					cosmic information. These facts are not only informative but also
+					visually engaging, enhancing your learning experience.
+				</p>
+
+				<p>
+					Get Ready to Be Amazed: Space Facts is your portal to the mysteries of
+					the cosmos. It's a place where curiosity is nurtured, and the wonders
+					of space are brought to life. Whether you're a dedicated space
+					enthusiast or simply someone who appreciates the magnificence of the
+					universe, Space Otaku's Space Facts page promises an enlightening and
+					visually captivating journey through the cosmos.
+				</p>
+
+				<p>
+					How to Explore: Discover Cosmic Facts: Click the "Next Fact" button to
+					reveal a fascinating space fact. Experience Visual Delights: Immerse
+					yourself in a dynamic color scheme that enhances the visual appeal of
+					each fact. Unearth Cosmic Secrets: Expand your cosmic knowledge as you
+					explore an ever-evolving collection of facts about our universe.
+				</p>
+
+				<p>
+					Prepare for Cosmic Revelation: Dive into Space Otaku's Space Facts
+					page and get ready to uncover the astonishing secrets of the universe.
+					Whether you're looking for space news, exploration, or simply want to
+					ignite your cosmic curiosity, this is the place to be. Explore Space
+					Facts and let the wonders of space captivate your imagination!
+				</p>
+			</div>
 			<CommonMusic></CommonMusic>
 			<div className="facts-container">
 				<Header />
