@@ -34,7 +34,8 @@ function Index() {
 					Embark on a Celestial Journey with Space Otaku: Your Source for Space
 					Enthusiasts
 				</h5>
-
+				<p className="seo">Navigating the Cosmos for Space Enthusiasts</p>
+				<p className="seo">Space Otaku: Your Cosmic Hub</p>
 				<p>
 					Space Otaku is a dynamic online platform that not only offers a rich
 					array of space-related content but also engages users with an
