@@ -140,6 +140,100 @@ function SpaceQuiz() {
 					content="https://www.spaceotaku.online/spacequiz"
 				/>
 			</Head>
+			<div className="seo">
+				<span className="section-header">Detailed Description:</span>
+				<p>
+					Prepare for an exhilarating cosmic journey as you explore the universe
+					with Space Otaku&apos;s Space Quiz. This interactive quiz is designed
+					to test your cosmic knowledge, challenge your space wisdom, and
+					provide an opportunity for space enthusiasts and learners to expand
+					their understanding of the cosmos.
+				</p>
+
+				<span className="section-header">Space Quiz:</span>
+
+				<span className="subsection-header">Select Your Cosmic Challenge:</span>
+				<p>
+					Kick off your cosmic adventure by choosing the difficulty level that
+					matches your space knowledge. Will you opt for &quot;Normal,&quot;
+					&quot;Intermediate,&quot; or &quot;Advanced&quot;? Your choice will
+					determine the level of challenge you&apos;ll face.
+				</p>
+
+				<span className="subsection-header">Engaging Space Questions:</span>
+				<p>
+					Dive into a captivating array of space questions that cover diverse
+					aspects of the universe. From celestial bodies to space exploration,
+					each question presents an opportunity to enhance your cosmic wisdom.
+				</p>
+
+				<span className="subsection-header">Time-Limited Puzzles:</span>
+				<p>
+					Feel the excitement as you confront time-limited questions. With the
+					clock ticking, you&apos;ll need to rely on your space knowledge and
+					quick thinking to provide the correct answers.
+				</p>
+
+				<span className="subsection-header">Hint Feature:</span>
+				<p>
+					Don&apos;t let challenging questions leave you puzzled. Utilize the
+					hint feature to gain valuable clues that will guide you towards the
+					right answers.
+				</p>
+
+				<span className="subsection-header">Review Your Cosmic Journey:</span>
+				<p>
+					After completing the quiz, step into review mode to revisit the
+					questions, your answers, and the correct solutions. Reflect on your
+					performance and identify areas for improvement.
+				</p>
+
+				<span className="subsection-header">
+					Score and Space Trivia Mastery:
+				</span>
+				<p>
+					Keep track of your score as you progress through the quiz. Challenge
+					yourself to achieve a high score and aim to become a space quiz
+					champion.
+				</p>
+
+				<span className="section-header">
+					For Space Enthusiasts and Cosmic Learners:
+				</span>
+				<p>
+					Whether you&apos;re a dedicated space enthusiast or someone eager to
+					expand your cosmic knowledge, Space Otaku&apos;s Space Quiz welcomes
+					all. This quiz provides a platform for both casual learners and cosmic
+					experts to test their understanding of space and embark on a journey
+					of cosmic discovery.
+				</p>
+
+				<span className="section-header">How to Play:</span>
+				<p>
+					Select Your Cosmic Challenge: Begin by choosing the difficulty level
+					that aligns with your space knowledge and expertise. Answer the Cosmic
+					Questions: Confront a series of space questions, each with its unique
+					challenges. Time is of the essence, so answer promptly. Unlock Hints:
+					If you encounter challenging questions, hints are at your disposal to
+					provide guidance. Reflect and Review: After completing the quiz, enter
+					review mode to revisit your performance and gain insights into your
+					cosmic knowledge.
+				</p>
+
+				<span className="section-header">Challenge Your Space Wisdom:</span>
+				<p>
+					Are you ready to accept the challenge of the Space Quiz? Put your
+					cosmic knowledge to the test, strive for a high score, and aim to
+					become a space quiz champion. Whether you&apos;re a space enthusiast
+					or a cosmic learner, this quiz offers an exciting cosmic journey
+					filled with knowledge and discovery.
+				</p>
+
+				<span className="section-header">
+					Initiate your cosmic journey now and discover the depths of your
+					cosmic wisdom. Are you prepared to ascend as a space quiz champion?
+				</span>
+			</div>
 			<CommonMusic></CommonMusic>
 			<div className="quiz-container">
 				<h1 className="Space-quiz-heading">Space Quiz By Space Otaku</h1>
