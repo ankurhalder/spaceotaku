@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function CommonMusic() {
 	const [isPlaying, setIsPlaying] = useState(true);
