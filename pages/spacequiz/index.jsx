@@ -122,7 +122,7 @@ function SpaceQuiz() {
 	return (
 		<Fragment>
 			<Head>
-				<title>Test Your Space Knowledge | Space Otaku</title>
+				<title>Test Your Quiz Knowledge | Space Otaku</title>
 				<meta
 					name="description"
 					content="Test your space knowledge. Choose difficulty, answer questions, and check your score!"
