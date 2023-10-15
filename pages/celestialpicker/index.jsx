@@ -48,10 +48,9 @@ const PlanetPage = () => {
 	const celestialBody = planetData[selectedPlanet];
 	const agencies = agenciesData[selectedPlanet]?.agencies || [];
 
-	const pageTitle = `${celestialBody.name} - Space Otaku | Explore Celestial Bodies`;
+	const pageTitle = `${celestialBody.name} - Explore Celestial Bodies | Space Otaku`;
 	const metaKeywords = `${celestialBody.name}, ${celestialBody.distanceFromSun}, ${celestialBody.numberOfMoons}, ${celestialBody.diameter}, ${celestialBody.orbitalPeriod},space otaku, space, astronomy, celestial bodies`;
 	const metaDescription = `Learn about ${celestialBody.name} - its distance from the Sun, number of moons, diameter, orbital period, and more. Explore celestial bodies and space facts on Space Otaku.`;
-
 	const [randomLoadingComponent, setRandomLoadingComponent] = useState(null);
 
 	useEffect(() => {
@@ -81,7 +80,7 @@ const PlanetPage = () => {
 				/>
 			</Head>
 			<CommonMusic></CommonMusic>
-			<div className="planet-page none">
+			<div className="planet-page">
 				<h1 className="page-title">Explore Celestial Bodies</h1>
 				<div className={`planet-dropdown ${isDropdownOpen ? "open" : ""}`}>
 					<label onClick={toggleDropdown}>Select a Celestial Body:</label>
@@ -175,7 +174,7 @@ const PlanetPage = () => {
 									<div className="agency">
 										<Image
 											src={`/organisations/${agency.image}.png`}
-											alt={`${agency.name} Logo`}
+											alt={`${agency.image} Logo`}
 											width={60}
 											height={60}
 										/>
