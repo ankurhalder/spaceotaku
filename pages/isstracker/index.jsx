@@ -28,6 +28,9 @@ export default function IssTracker() {
 			</Head>
 			<CommonMusic></CommonMusic>
 			<div>
+				<h1 className="iss-tracker-heading">
+					Live International Space Station (ISS) Location
+				</h1>
 				<ISSMap />
 			</div>
 		</Fragment>

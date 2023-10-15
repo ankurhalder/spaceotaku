@@ -1,6 +1,5 @@
 import { useEffect, useState, Fragment } from "react";
 import axios from "axios";
-import Head from "next/head";
 const ISS_IMAGE_URL = "/ISS.png";
 
 const ISSMap = () => {
@@ -124,17 +123,12 @@ const ISSMap = () => {
 	}, [issLocation, map, issIcon]);
 
 	if (!issLocation) {
-		return (
-			<div className="loading-iss-location">
-				Loading Live International Space Station (ISS) Location...
-			</div>
-		);
+		return <div className="loading-iss-location">Please Wait....</div>;
 	}
 
 	return (
 		<Fragment>
 			<div className="iss-map-container">
-				<h1>Live International Space Station (ISS) Location</h1>
 				<p className="lat">Latitude: {issLocation.latitude}</p>
 				<p className="lon">Longitude: {issLocation.longitude}</p>
 				<p className="user-lat">
