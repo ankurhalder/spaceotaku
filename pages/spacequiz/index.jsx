@@ -132,6 +132,10 @@ function SpaceQuiz() {
 					content="space quiz, space trivia, quiz game, Ankur, Halder, Ankur Halder, Space Otaku, Space Otaku by Ankur Halder,"
 				/>
 				<meta
+					property="og:url"
+					content="https://www.spaceotaku.online/spacequiz"
+				/>
+				<meta
 					name="twitter:url"
 					content="https://www.spaceotaku.online/spacequiz"
 				/>
