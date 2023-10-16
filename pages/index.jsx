@@ -26,7 +26,7 @@ function Index() {
 				<meta property="og:url" content="https://www.spaceotaku.online/" />
 				<meta name="twitter:url" content="https://www.spaceotaku.online/" />
 			</Head>
-			<CommonMusic></CommonMusic>
+			{/* <CommonMusic></CommonMusic> */}
 			<div className="landing-page-sample-contents none">
 				<h1>Space Otaku: Navigating the Cosmos for Space Enthusiasts</h1>
 				<span>Created by ANKUR HALDER</span>

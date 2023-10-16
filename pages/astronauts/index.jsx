@@ -75,7 +75,7 @@ const Slider = () => {
 					content="https://www.spaceotaku.online/astronauts"
 				/>
 			</Head>
-			<CommonMusic></CommonMusic>
+			{/* <CommonMusic></CommonMusic> */}
 			<div className="slider-container">
 				<h1 className="slider-heading">Astronauts Currently In Space</h1>
 				<div className="slider">

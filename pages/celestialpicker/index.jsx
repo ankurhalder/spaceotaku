@@ -79,7 +79,7 @@ const PlanetPage = () => {
 					content="https://www.spaceotaku.online/celestialpicker"
 				/>
 			</Head>
-			<CommonMusic></CommonMusic>
+			{/* <CommonMusic></CommonMusic> */}
 			<div className="planet-page">
 				<h1 className="page-title">Explore Celestial Bodies</h1>
 				<div className={`planet-dropdown ${isDropdownOpen ? "open" : ""}`}>

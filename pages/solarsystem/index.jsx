@@ -25,7 +25,7 @@ export default function SolarSystem() {
 					content="https://www.spaceotaku.online/solarsystem/"
 				/>
 			</Head>
-			<CommonMusic></CommonMusic>
+			{/* <CommonMusic></CommonMusic> */}
 			<h1 className="solar-system-heading">
 				Explore the Solar System with Space Otaku
 			</h1>

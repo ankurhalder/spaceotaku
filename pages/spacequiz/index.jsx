@@ -141,7 +141,7 @@ function SpaceQuiz() {
 				/>
 			</Head>
 
-			<CommonMusic></CommonMusic>
+			{/* <CommonMusic></CommonMusic> */}
 			<div className="quiz-container">
 				<h1 className="Space-quiz-heading">Space Quiz By Space Otaku</h1>
 				{!difficultySelected ? (

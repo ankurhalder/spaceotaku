@@ -76,7 +76,7 @@ function SpaceFacts() {
 				/>
 			</Head>
 
-			<CommonMusic></CommonMusic>
+			{/* <CommonMusic></CommonMusic> */}
 			<div className="facts-container">
 				<Header />
 				<div
