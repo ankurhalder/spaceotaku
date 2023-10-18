@@ -48,6 +48,7 @@
 		@media (max-width: #{$breakpoint-tablet}) {
 		}
 		@media (max-width: #{$breakpoint-phone}) {
+			font-size: var(--font-7);
 		}
 	}
 
@@ -74,6 +75,7 @@
 				font-size: var(--font-13);
 			}
 			@media (max-width: $breakpoint-phone) {
+				font-size: var(--font-12);
 			}
 		}
 
@@ -229,6 +231,7 @@
 					font-size: var(--font-10);
 				}
 				@media (max-width: $breakpoint-phone) {
+					font-size: var(--font-9);
 				}
 			}
 			.planet-flex {
@@ -326,6 +329,7 @@
 								font-size: var(--font-13);
 							}
 							@media (max-width: $breakpoint-phone) {
+								font-variant: var(--font-12);
 							}
 						}
 						span {
@@ -346,6 +350,7 @@
 								font-size: var(--font-14);
 							}
 							@media (max-width: $breakpoint-phone) {
+								font-size: var(--font-13);
 							}
 						}
 					}
@@ -372,6 +377,7 @@
 					font-size: var(--font-10);
 				}
 				@media (max-width: $breakpoint-phone) {
+					font-size: var(--font-9);
 				}
 			}
 
@@ -460,6 +466,7 @@
 							}
 							@media (max-width: $breakpoint-phone) {
 							}
+							font-size: var(--font-13);
 						}
 					}
 				}
