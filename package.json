@@ -27,10 +27,10 @@
 		"yarn": "^1.22.19"
 	},
 	"devDependencies": {
+		"checkly": "^3.1.1",
 		"eslint": "^8.48.0",
 		"eslint-config-next": "^13.4.19",
 		"sass": "^1.66.1",
-		"checkly": "latest",
 		"ts-node": "latest",
 		"typescript": "latest"
 	}
