@@ -2,6 +2,7 @@
   "name": "spaceotaku",
   "version": "0.1.0",
   "private": true,
+  "author": "Ankur Halder",
   "scripts": {
     "dev": "next dev",
     "dev1": "next dev -p 3001",
