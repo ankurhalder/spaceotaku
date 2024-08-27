@@ -2,13 +2,13 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 
 const ChatComponent = dynamic(() => import("./ChatComponent"), {
-	ssr: false,
+  ssr: false,
 });
 
 export default function ChatBot() {
-	return (
-		<div>
-			{/* <Head>
+  return (
+    <div>
+      {/* <Head>
 				<meta charSet="UTF-8" />
 				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 				<title>ML chatbot</title>
@@ -27,7 +27,7 @@ export default function ChatBot() {
 					crossOrigin="anonymous"
 				/>
 			</Head> */}
-			<ChatComponent />
-		</div>
-	);
+      <ChatComponent />
+    </div>
+  );
 }

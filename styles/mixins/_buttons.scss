@@ -2,57 +2,57 @@
 
 // Base button mixin
 @mixin button-base($bg-color, $text-color) {
-	display: inline-block;
-	padding: 12px 24px;
-	font-size: 16px;
-	font-weight: bold;
-	text-align: center;
-	border: none;
-	cursor: pointer;
-	transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-	background-color: $bg-color;
-	color: $text-color;
-	text-transform: uppercase;
-	&:hover {
-		background-color: darken($bg-color, 10%);
-		color: $text-color;
-		transform: translateY(-2px);
-	}
-	&:active {
-		transform: translateY(2px);
-	}
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  background-color: $bg-color;
+  color: $text-color;
+  text-transform: uppercase;
+  &:hover {
+    background-color: darken($bg-color, 10%);
+    color: $text-color;
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 // Gradient button mixin
 @mixin gradient-button($start-color, $end-color, $text-color) {
-	@include button-base(
-		linear-gradient(to right, $start-color, $end-color),
-		$text-color
-	);
+  @include button-base(
+    linear-gradient(to right, $start-color, $end-color),
+    $text-color
+  );
 }
 
 // Shadow button mixin
 @mixin shadow-button($bg-color, $shadow-color, $text-color) {
-	@include button-base($bg-color, $text-color);
-	box-shadow: 0px 4px 8px rgba($shadow-color, 0.2);
+  @include button-base($bg-color, $text-color);
+  box-shadow: 0px 4px 8px rgba($shadow-color, 0.2);
 }
 
 // Rounded button mixin
 @mixin rounded-button($bg-color, $text-color) {
-	@include button-base($bg-color, $text-color);
-	border-radius: 30px;
+  @include button-base($bg-color, $text-color);
+  border-radius: 30px;
 }
 
 // Small button mixin
 @mixin small-button {
-	font-size: 14px;
-	padding: 8px 20px;
+  font-size: 14px;
+  padding: 8px 20px;
 }
 
 // Large button mixin
 @mixin large-button {
-	font-size: 20px;
-	padding: 15px 30px;
+  font-size: 20px;
+  padding: 15px 30px;
 }
 
 // Usage

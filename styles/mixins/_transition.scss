@@ -1,115 +1,115 @@
 :root {
-	/* Transition Durations */
-	--transition-duration-fast: 150ms;
-	--transition-duration-medium: 300ms;
-	--transition-duration-slow: 500ms;
+  /* Transition Durations */
+  --transition-duration-fast: 150ms;
+  --transition-duration-medium: 300ms;
+  --transition-duration-slow: 500ms;
 
-	/* Transition Timing Functions */
-	--transition-timing-ease: ease;
-	--transition-timing-ease-in: ease-in;
-	--transition-timing-ease-out: ease-out;
-	--transition-timing-ease-in-out: ease-in-out;
-	--transition-timing-linear: linear;
-	--transition-timing-cubic-bezier: cubic-bezier(0.25, 0.1, 0.25, 1);
+  /* Transition Timing Functions */
+  --transition-timing-ease: ease;
+  --transition-timing-ease-in: ease-in;
+  --transition-timing-ease-out: ease-out;
+  --transition-timing-ease-in-out: ease-in-out;
+  --transition-timing-linear: linear;
+  --transition-timing-cubic-bezier: cubic-bezier(0.25, 0.1, 0.25, 1);
 
-	/* Transition Delays */
-	--transition-delay-short: 100ms;
-	--transition-delay-medium: 300ms;
-	--transition-delay-long: 500ms;
+  /* Transition Delays */
+  --transition-delay-short: 100ms;
+  --transition-delay-medium: 300ms;
+  --transition-delay-long: 500ms;
 }
 @mixin transition(
-	$properties,
-	$duration: var(--transition-duration-medium),
-	$timing: var(--transition-timing-ease),
-	$delay: var(--transition-delay-short)
+  $properties,
+  $duration: var(--transition-duration-medium),
+  $timing: var(--transition-timing-ease),
+  $delay: var(--transition-delay-short)
 ) {
-	transition: $properties $duration $timing $delay;
+  transition: $properties $duration $timing $delay;
 }
 
 @mixin ease-in-out(
-	$properties,
-	$duration: var(--transition-duration-medium),
-	$delay: var(--transition-delay-short)
+  $properties,
+  $duration: var(--transition-duration-medium),
+  $delay: var(--transition-delay-short)
 ) {
-	@include transition(
-		$properties,
-		$duration,
-		var(--transition-timing-ease-in-out),
-		$delay
-	);
+  @include transition(
+    $properties,
+    $duration,
+    var(--transition-timing-ease-in-out),
+    $delay
+  );
 }
 
 @mixin ease-in(
-	$properties,
-	$duration: var(--transition-duration-medium),
-	$delay: var(--transition-delay-short)
+  $properties,
+  $duration: var(--transition-duration-medium),
+  $delay: var(--transition-delay-short)
 ) {
-	@include transition(
-		$properties,
-		$duration,
-		var(--transition-timing-ease-in),
-		$delay
-	);
+  @include transition(
+    $properties,
+    $duration,
+    var(--transition-timing-ease-in),
+    $delay
+  );
 }
 
 @mixin ease-out(
-	$properties,
-	$duration: var(--transition-duration-medium),
-	$delay: var(--transition-delay-short)
+  $properties,
+  $duration: var(--transition-duration-medium),
+  $delay: var(--transition-delay-short)
 ) {
-	@include transition(
-		$properties,
-		$duration,
-		var(--transition-timing-ease-out),
-		$delay
-	);
+  @include transition(
+    $properties,
+    $duration,
+    var(--transition-timing-ease-out),
+    $delay
+  );
 }
 
 @mixin cubic-bezier(
-	$properties,
-	$cubic-bezier,
-	$duration: var(--transition-duration-medium),
-	$delay: var(--transition-delay-short)
+  $properties,
+  $cubic-bezier,
+  $duration: var(--transition-duration-medium),
+  $delay: var(--transition-delay-short)
 ) {
-	@include transition(
-		$properties,
-		$duration,
-		cubic-bezier($cubic-bezier),
-		$delay
-	);
+  @include transition(
+    $properties,
+    $duration,
+    cubic-bezier($cubic-bezier),
+    $delay
+  );
 }
 
 @mixin scale(
-	$duration: var(--transition-duration-medium),
-	$timing: var(--transition-timing-ease),
-	$delay: var(--transition-delay-short)
+  $duration: var(--transition-duration-medium),
+  $timing: var(--transition-timing-ease),
+  $delay: var(--transition-delay-short)
 ) {
-	@include transition(transform, $duration, $timing, $delay);
+  @include transition(transform, $duration, $timing, $delay);
 }
 
 @mixin rotate(
-	$duration: var(--transition-duration-medium),
-	$timing: var(--transition-timing-ease),
-	$delay: var(--transition-delay-short)
+  $duration: var(--transition-duration-medium),
+  $timing: var(--transition-timing-ease),
+  $delay: var(--transition-delay-short)
 ) {
-	@include transition(transform, $duration, $timing, $delay);
+  @include transition(transform, $duration, $timing, $delay);
 }
 
 @mixin slide(
-	$direction,
-	$duration: var(--transition-duration-medium),
-	$timing: var(--transition-timing-ease),
-	$delay: var(--transition-delay-short)
+  $direction,
+  $duration: var(--transition-duration-medium),
+  $timing: var(--transition-timing-ease),
+  $delay: var(--transition-delay-short)
 ) {
-	@include transition($direction, $duration, $timing, $delay);
+  @include transition($direction, $duration, $timing, $delay);
 }
 
 @mixin fade(
-	$duration: var(--transition-duration-medium),
-	$timing: var(--transition-timing-ease),
-	$delay: var(--transition-delay-short)
+  $duration: var(--transition-duration-medium),
+  $timing: var(--transition-timing-ease),
+  $delay: var(--transition-delay-short)
 ) {
-	@include transition(opacity, $duration, $timing, $delay);
+  @include transition(opacity, $duration, $timing, $delay);
 }
 
 // usage

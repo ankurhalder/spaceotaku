@@ -3,94 +3,94 @@ import React, { useState, useEffect } from "react";
 import { fetchReports } from "@/functions/SpaceFlightApi";
 
 function Reports() {
-	const [reports, setReports] = useState([]);
-	const [loading, setLoading] = useState(true);
-	const [page, setPage] = useState(1);
+  const [reports, setReports] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
 
-	const isClient = typeof window !== "undefined";
+  const isClient = typeof window !== "undefined";
 
-	const isMobile =
-		isClient &&
-		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-			navigator.userAgent
-		);
+  const isMobile =
+    isClient &&
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
 
-	useEffect(() => {
-		async function fetchData() {
-			const reportData = await fetchReports(page);
-			setReports((prevReports) => [...prevReports, ...reportData]);
-			setLoading(false);
-		}
-		fetchData();
-	}, [page]);
+  useEffect(() => {
+    async function fetchData() {
+      const reportData = await fetchReports(page);
+      setReports((prevReports) => [...prevReports, ...reportData]);
+      setLoading(false);
+    }
+    fetchData();
+  }, [page]);
 
-	const handleScroll = () => {
-		if (
-			(isClient &&
-				(!isMobile ||
-					window.innerHeight + window.pageYOffset >=
-						document.documentElement.offsetHeight)) ||
-			(isClient &&
-				isMobile &&
-				window.innerHeight + window.pageYOffset + 100 >=
-					document.documentElement.offsetHeight)
-		) {
-			setPage((prevPage) => prevPage + 1);
-		}
-	};
+  const handleScroll = () => {
+    if (
+      (isClient &&
+        (!isMobile ||
+          window.innerHeight + window.pageYOffset >=
+            document.documentElement.offsetHeight)) ||
+      (isClient &&
+        isMobile &&
+        window.innerHeight + window.pageYOffset + 100 >=
+          document.documentElement.offsetHeight)
+    ) {
+      setPage((prevPage) => prevPage + 1);
+    }
+  };
 
-	useEffect(() => {
-		if (isClient) {
-			window.addEventListener("scroll", handleScroll);
-		}
-		return () => {
-			if (isClient) {
-				window.removeEventListener("scroll", handleScroll);
-			}
-		};
-	}, []);
-	return (
-		<div className="reports">
-			<h3>Reports</h3>
-			{reports.map((report) => (
-				<ul key={report.id} className="report">
-					<li>
-						<h4 className="report-title">{report.title}</h4>
+  useEffect(() => {
+    if (isClient) {
+      window.addEventListener("scroll", handleScroll);
+    }
+    return () => {
+      if (isClient) {
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+  return (
+    <div className="reports">
+      <h3>Reports</h3>
+      {reports.map((report) => (
+        <ul key={report.id} className="report">
+          <li>
+            <h4 className="report-title">{report.title}</h4>
 
-						<a
-							href={report.url}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="report-url"
-						>
-							URL: {report.url}
-						</a>
-						{report.image_url && (
-							<img
-								src={report.image_url}
-								alt="Report"
-								className="image-container"
-							/>
-						)}
-						<div className="reports-additional-details">
-							<div className="summary">
-								<span>{report.summary}</span>
-							</div>
-							<div className="published-at">
-								<p>Published at:</p>
-								<span>{report.published_at}</span>
-							</div>
-							<div className="news-site">
-								<p>News Site:</p>
-								<span>{report.news_site}</span>
-							</div>
-						</div>
-					</li>
-				</ul>
-			))}
-			{loading && <p>Loading...</p>}
-		</div>
-	);
+            <a
+              href={report.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="report-url"
+            >
+              URL: {report.url}
+            </a>
+            {report.image_url && (
+              <img
+                src={report.image_url}
+                alt="Report"
+                className="image-container"
+              />
+            )}
+            <div className="reports-additional-details">
+              <div className="summary">
+                <span>{report.summary}</span>
+              </div>
+              <div className="published-at">
+                <p>Published at:</p>
+                <span>{report.published_at}</span>
+              </div>
+              <div className="news-site">
+                <p>News Site:</p>
+                <span>{report.news_site}</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      ))}
+      {loading && <p>Loading...</p>}
+    </div>
+  );
 }
 
 export default Reports;

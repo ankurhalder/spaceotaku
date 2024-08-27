@@ -1,585 +1,585 @@
 .slider-container {
-	@include flex-container(column, wrap, flex-start, center);
-	height: 100vh;
-	width: 100%;
-	.button-container {
-		@include flex-container(row, wrap, center, center);
-		position: relative;
-		top: 8%;
-		gap: 30px;
-		@media (max-width: #{$breakpoint-desktop}) {
-			top: 5%;
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			top: 4%;
-			gap: 50px;
-		}
-		.prev-button,
-		.next-button {
-			cursor: pointer;
-			padding: 15px 30px;
-			background-color: var(--cool-red);
-			color: var(--white);
-			border: none;
-			border-radius: 50px;
-			font-family: var(--font-orbitron);
-			letter-spacing: 2px;
-			font-size: var(--font-12);
-			font-weight: 500;
-			transition: background-color 0.3s ease, transform 0.3s ease,
-				box-shadow 0.3s ease;
-			box-shadow: 0 8px 16px rgba(255, 77, 77, 0.4);
-			position: relative;
-			top: 5%;
-			@media (max-width: #{$breakpoint-desktop}) {
-				padding: 10px 20px;
-				font-size: var(--font-14);
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				padding: 10px 20px;
-				font-size: var(--font-13);
-			}
-		}
+  @include flex-container(column, wrap, flex-start, center);
+  height: 100vh;
+  width: 100%;
+  .button-container {
+    @include flex-container(row, wrap, center, center);
+    position: relative;
+    top: 8%;
+    gap: 30px;
+    @media (max-width: #{$breakpoint-desktop}) {
+      top: 5%;
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      top: 4%;
+      gap: 50px;
+    }
+    .prev-button,
+    .next-button {
+      cursor: pointer;
+      padding: 15px 30px;
+      background-color: var(--cool-red);
+      color: var(--white);
+      border: none;
+      border-radius: 50px;
+      font-family: var(--font-orbitron);
+      letter-spacing: 2px;
+      font-size: var(--font-12);
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.3s ease,
+        box-shadow 0.3s ease;
+      box-shadow: 0 8px 16px rgba(255, 77, 77, 0.4);
+      position: relative;
+      top: 5%;
+      @media (max-width: #{$breakpoint-desktop}) {
+        padding: 10px 20px;
+        font-size: var(--font-14);
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        padding: 10px 20px;
+        font-size: var(--font-13);
+      }
+    }
 
-		.prev-button::before,
-		.next-button::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 0;
-			height: 0;
-			border-style: solid;
-			transition: border-color 0.3s ease;
-		}
+    .prev-button::before,
+    .next-button::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      transition: border-color 0.3s ease;
+    }
 
-		.prev-button::before {
-			border-width: 10px 20px 10px 0;
-			border-color: transparent transparent transparent var(--white);
-			left: 10px;
-		}
+    .prev-button::before {
+      border-width: 10px 20px 10px 0;
+      border-color: transparent transparent transparent var(--white);
+      left: 10px;
+    }
 
-		.next-button::before {
-			border-width: 10px 0 10px 20px;
-			border-color: transparent var(--white) transparent transparent;
-			right: 10px;
-		}
+    .next-button::before {
+      border-width: 10px 0 10px 20px;
+      border-color: transparent var(--white) transparent transparent;
+      right: 10px;
+    }
 
-		.prev-button:hover,
-		.next-button:hover {
-			background-color: var(--cool-red-1);
-			transform: scale(1.08);
-			box-shadow: 0 12px 24px rgba(255, 51, 51, 0.6);
-		}
-	}
-	h1 {
-		margin: 0;
-		font-family: var(--font-elianto);
-		font-size: var(--font-5);
-		text-transform: uppercase;
-		letter-spacing: 4px;
-		margin-bottom: 6%;
-		background: linear-gradient(
-			45deg,
-			#ff7854,
-			#fd267d,
-			#4e7dfc,
-			#27ae60,
-			#ffc107,
-			#e74c3c
-		);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		transition: color 0.3s, background-position 0.3s;
-		background-size: 200% 200%;
-		animation: gradient-animation 3s linear infinite;
-		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-7);
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-8);
-			text-align: center;
-		}
-	}
-	.slider {
-		perspective: 1000px;
-		width: 350px;
-		height: 500px;
-		margin-top: 20px;
-		max-width: 18%;
-		max-height: 53%;
-		@media (max-width: #{$breakpoint-phone}) {
-			max-width: 70%;
-			max-height: 60%;
-			margin-top: 30%;
-			position: relative;
-			top: -5%;
-		}
-		.slide {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			@include flex-container(column, wrap, center, center);
-			transition: transform 0.5s ease;
-			background-color: var(--white-shadow);
-			border: 2px solid var(--white);
-			transform-origin: center center -150px;
-			z-index: 1;
-			filter: brightness(0.5);
-			.craft-container {
-				@include flex-container(row, wrap, center, center);
-				position: relative;
-				top: -28%;
-				left: 0%;
-				right: 0%;
-				bottom: 0%;
-				gap: 150px;
-				@media (max-width: #{$breakpoint-desktop}) {
-					top: -30%;
-					gap: 100px;
-				}
-				@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-					top: -30%;
-					gap: 100px;
-				}
-				.craft-name {
-					z-index: 4;
-					color: var(--yellow);
-					font-size: var(--font-12);
-					font-family: var(--font-orbitron);
-					letter-spacing: 2px;
-					font-weight: 600;
-					user-select: none;
-					animation: textAnimation 2s infinite;
-					@media (max-width: #{$breakpoint-desktop}) {
-						font-size: var(--font-13);
-					}
-					@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-						font-size: var(--font-13);
-					}
-					@keyframes textAnimation {
-						0% {
-							transform: scale(1);
-							opacity: 0.7;
-						}
-						50% {
-							transform: scale(1.2);
-							opacity: 1;
-						}
-						100% {
-							transform: scale(1);
-							opacity: 0.7;
-						}
-					}
-				}
-			}
-			.slide-content {
-				position: relative;
-				top: 20%;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				text-align: center;
-				z-index: 2;
-				padding: 20px;
-				background: var(--black-shadow);
-				border-radius: 20px;
-				backdrop-filter: blur(8px);
-				transition: background-color 0.3s ease, box-shadow 0.3s ease,
-					transform 0.3s ease;
-				@media (max-width: #{$breakpoint-desktop}) {
-					padding: 10px;
-					top: 30%;
-				}
-				@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-					padding: 10px;
-					top: 29%;
-				}
-				@media (max-width: #{$breakpoint-phone}) {
-					padding: 15px;
-					top: 30%;
-				}
-				h3 {
-					font-size: var(--font-10);
-					font-family: var(--font-roboto);
-					font-weight: 600;
-					color: var(--cool-yellow);
-					letter-spacing: 2px;
-					margin-bottom: 1px;
-					@media (max-width: #{$breakpoint-desktop}) {
-						font-size: var(--font-13);
-					}
-					@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-						font-size: var(--font-14);
-					}
-					@media (max-width: #{$breakpoint-phone}) {
-						font-size: var(--font-12);
-					}
-				}
-				.nationality-container {
-					@include flex-container(flex, wrap, center, center);
-					gap: 20px;
-					.national-flag-container {
-						position: relative;
-						height: 50px;
-						width: 50px;
-						@media (max-width: #{$breakpoint-desktop}) {
-							height: 35px;
-							width: 35px;
-						}
-						@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-							height: 30px;
-							width: 30px;
-						}
-						@media (max-width: #{$breakpoint-phone}) {
-							height: 35px;
-							width: 35px;
-						}
-					}
-					p {
-						font-size: var(--font-12);
-						font-family: var(--font-roboto);
-						font-weight: 400;
-						color: var(--tertiary-accent);
-						letter-spacing: 2px;
-						margin-bottom: 5px;
-						@media (max-width: #{$breakpoint-desktop}) {
-							font-size: var(--font-14);
-						}
-						@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-							font-size: var(--font-15);
-						}
-						@media (max-width: #{$breakpoint-phone}) {
-							font-size: var(--font-12);
-						}
-					}
-				}
-				button {
-					font-size: var(--font-12);
-					font-family: var(--font-roboto);
-					font-weight: 500;
-					letter-spacing: 1px;
-					background: linear-gradient(to right, var(--red), var(--cool-blue-2));
-					-webkit-background-clip: text;
-					background-clip: text;
-					color: transparent;
-					border: none;
-					cursor: pointer;
-					transition: background-position 0.3s ease;
-					&:hover {
-						background-position: right;
-					}
-					@media (max-width: #{$breakpoint-desktop}) {
-						font-size: var(--font-14);
-					}
-					@media (max-width: #{$breakpoint-phone}) {
-						font-size: var(--font-12);
-					}
-				}
-			}
-			.slide-content:hover {
-				background-color: rgba(0, 0, 0, 0.1);
-				box-shadow: 0 8px 16px var(--black-shadow);
+    .prev-button:hover,
+    .next-button:hover {
+      background-color: var(--cool-red-1);
+      transform: scale(1.08);
+      box-shadow: 0 12px 24px rgba(255, 51, 51, 0.6);
+    }
+  }
+  h1 {
+    margin: 0;
+    font-family: var(--font-elianto);
+    font-size: var(--font-5);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 6%;
+    background: linear-gradient(
+      45deg,
+      #ff7854,
+      #fd267d,
+      #4e7dfc,
+      #27ae60,
+      #ffc107,
+      #e74c3c
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s, background-position 0.3s;
+    background-size: 200% 200%;
+    animation: gradient-animation 3s linear infinite;
+    @media (max-width: #{$breakpoint-desktop}) {
+      font-size: var(--font-7);
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      font-size: var(--font-8);
+      text-align: center;
+    }
+  }
+  .slider {
+    perspective: 1000px;
+    width: 350px;
+    height: 500px;
+    margin-top: 20px;
+    max-width: 18%;
+    max-height: 53%;
+    @media (max-width: #{$breakpoint-phone}) {
+      max-width: 70%;
+      max-height: 60%;
+      margin-top: 30%;
+      position: relative;
+      top: -5%;
+    }
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      @include flex-container(column, wrap, center, center);
+      transition: transform 0.5s ease;
+      background-color: var(--white-shadow);
+      border: 2px solid var(--white);
+      transform-origin: center center -150px;
+      z-index: 1;
+      filter: brightness(0.5);
+      .craft-container {
+        @include flex-container(row, wrap, center, center);
+        position: relative;
+        top: -28%;
+        left: 0%;
+        right: 0%;
+        bottom: 0%;
+        gap: 150px;
+        @media (max-width: #{$breakpoint-desktop}) {
+          top: -30%;
+          gap: 100px;
+        }
+        @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+          top: -30%;
+          gap: 100px;
+        }
+        .craft-name {
+          z-index: 4;
+          color: var(--yellow);
+          font-size: var(--font-12);
+          font-family: var(--font-orbitron);
+          letter-spacing: 2px;
+          font-weight: 600;
+          user-select: none;
+          animation: textAnimation 2s infinite;
+          @media (max-width: #{$breakpoint-desktop}) {
+            font-size: var(--font-13);
+          }
+          @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+            font-size: var(--font-13);
+          }
+          @keyframes textAnimation {
+            0% {
+              transform: scale(1);
+              opacity: 0.7;
+            }
+            50% {
+              transform: scale(1.2);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+      .slide-content {
+        position: relative;
+        top: 20%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        z-index: 2;
+        padding: 20px;
+        background: var(--black-shadow);
+        border-radius: 20px;
+        backdrop-filter: blur(8px);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease,
+          transform 0.3s ease;
+        @media (max-width: #{$breakpoint-desktop}) {
+          padding: 10px;
+          top: 30%;
+        }
+        @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+          padding: 10px;
+          top: 29%;
+        }
+        @media (max-width: #{$breakpoint-phone}) {
+          padding: 15px;
+          top: 30%;
+        }
+        h3 {
+          font-size: var(--font-10);
+          font-family: var(--font-roboto);
+          font-weight: 600;
+          color: var(--cool-yellow);
+          letter-spacing: 2px;
+          margin-bottom: 1px;
+          @media (max-width: #{$breakpoint-desktop}) {
+            font-size: var(--font-13);
+          }
+          @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+            font-size: var(--font-14);
+          }
+          @media (max-width: #{$breakpoint-phone}) {
+            font-size: var(--font-12);
+          }
+        }
+        .nationality-container {
+          @include flex-container(flex, wrap, center, center);
+          gap: 20px;
+          .national-flag-container {
+            position: relative;
+            height: 50px;
+            width: 50px;
+            @media (max-width: #{$breakpoint-desktop}) {
+              height: 35px;
+              width: 35px;
+            }
+            @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+              height: 30px;
+              width: 30px;
+            }
+            @media (max-width: #{$breakpoint-phone}) {
+              height: 35px;
+              width: 35px;
+            }
+          }
+          p {
+            font-size: var(--font-12);
+            font-family: var(--font-roboto);
+            font-weight: 400;
+            color: var(--tertiary-accent);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            @media (max-width: #{$breakpoint-desktop}) {
+              font-size: var(--font-14);
+            }
+            @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+              font-size: var(--font-15);
+            }
+            @media (max-width: #{$breakpoint-phone}) {
+              font-size: var(--font-12);
+            }
+          }
+        }
+        button {
+          font-size: var(--font-12);
+          font-family: var(--font-roboto);
+          font-weight: 500;
+          letter-spacing: 1px;
+          background: linear-gradient(to right, var(--red), var(--cool-blue-2));
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          border: none;
+          cursor: pointer;
+          transition: background-position 0.3s ease;
+          &:hover {
+            background-position: right;
+          }
+          @media (max-width: #{$breakpoint-desktop}) {
+            font-size: var(--font-14);
+          }
+          @media (max-width: #{$breakpoint-phone}) {
+            font-size: var(--font-12);
+          }
+        }
+      }
+      .slide-content:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 16px var(--black-shadow);
 
-				h3 {
-					text-shadow: 2px 2px 4px var(--black-shadow);
-				}
+        h3 {
+          text-shadow: 2px 2px 4px var(--black-shadow);
+        }
 
-				p {
-					text-shadow: 1px 1px 2px var(--black-shadow);
-					font-family: 600;
-				}
-				button {
-					font-weight: 600;
-				}
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				transform-origin: center center 150px;
-			}
-			&.active {
-				transform: translateZ(0);
-				z-index: 4;
-				box-shadow: 0 8px 12px rgba(0, 0, 0, 0);
-				filter: brightness(1);
-				&:hover {
-					border: 1px solid var(--white);
-					box-shadow: 0 0 5px var(--white-shadow);
-				}
-			}
-		}
-	}
-	.craft-panel {
-		position: absolute;
-		@include flex-container(column, wrap, center, flex-start);
-		padding: 15px;
-		top: 15%;
-		right: 2%;
-		width: 600px;
-		max-width: 30%;
-		height: 700px;
-		max-height: 70%;
-		background-color: var(--black-shadow);
-		border-radius: 20px;
-		z-index: 6;
-		color: var(--white);
-		border: 4px solid var(--white);
-		box-shadow: 0 0 15px var(--white-shadow);
-		@media (max-width: #{$breakpoint-desktop}) {
-			max-width: 35%;
-			right: 1%;
-		}
-		@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-			max-width: 35%;
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			top: 15%;
-			bottom: 0%;
-			right: 0%;
-			left: 10%;
-			max-width: 80%;
-			max-height: 75%;
-			backdrop-filter: blur(8px);
-		}
-		.name-des {
-			font-size: var(--font-13);
-			font-family: var(--font-roboto);
-			letter-spacing: 2px;
-			font-weight: 400;
-			margin-bottom: 10px;
-			line-height: 1.5;
-			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-15);
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				font-size: var(--font-15);
-				line-height: 0;
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-13);
-			}
-		}
-		.name {
-			font-size: var(--font-12);
-			font-family: var(--font-roboto);
-			letter-spacing: 3px;
-			font-weight: 600;
-			margin-bottom: 10px;
-			line-height: 2;
-			color: var(--cool-blue-2);
-			margin-right: 2px;
-			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-14);
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				font-size: var(--font-15);
-				line-height: 0;
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-12);
-			}
-		}
-		img {
-			position: relative;
-			left: 42%;
-			width: 300px;
-			max-width: 100px;
-			height: 300px;
-			max-height: 100px;
-			border-radius: 50%;
-			margin-bottom: 15px;
-			border: 4px solid var(--white);
-			box-shadow: 0 0 15px var(--white-shadow);
-			@media (max-width: #{$breakpoint-desktop}) {
-				left: 38%;
-				width: 250px;
-				max-width: 100px;
-				height: 250px;
-				max-height: 100px;
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				left: 42%;
-				width: 200px;
-				max-width: 70px;
-				height: 200px;
-				max-height: 70px;
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				left: 32%;
-				bottom: 1%;
-				width: 250px;
-				max-width: 100px;
-				height: 250px;
-				max-height: 100px;
-			}
-		}
-		.close {
-			position: relative;
-			left: 85%;
-			bottom: 18%;
-			@media (max-width: #{$breakpoint-desktop}) {
-				left: 85%;
-				bottom: 23%;
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				left: 85%;
-				bottom: 20%;
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				left: 85%;
-				bottom: 20%;
-			}
-		}
-		h3 {
-			font-size: var(--font-9);
-			color: var(--cool-red);
-			letter-spacing: 4px;
-			font-family: var(--font-tektur);
-			font-weight: 400;
-			margin-bottom: 10px;
-			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-12);
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				font-size: var(--font-13);
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-9);
-			}
-		}
-	}
+        p {
+          text-shadow: 1px 1px 2px var(--black-shadow);
+          font-family: 600;
+        }
+        button {
+          font-weight: 600;
+        }
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        transform-origin: center center 150px;
+      }
+      &.active {
+        transform: translateZ(0);
+        z-index: 4;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0);
+        filter: brightness(1);
+        &:hover {
+          border: 1px solid var(--white);
+          box-shadow: 0 0 5px var(--white-shadow);
+        }
+      }
+    }
+  }
+  .craft-panel {
+    position: absolute;
+    @include flex-container(column, wrap, center, flex-start);
+    padding: 15px;
+    top: 15%;
+    right: 2%;
+    width: 600px;
+    max-width: 30%;
+    height: 700px;
+    max-height: 70%;
+    background-color: var(--black-shadow);
+    border-radius: 20px;
+    z-index: 6;
+    color: var(--white);
+    border: 4px solid var(--white);
+    box-shadow: 0 0 15px var(--white-shadow);
+    @media (max-width: #{$breakpoint-desktop}) {
+      max-width: 35%;
+      right: 1%;
+    }
+    @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+      max-width: 35%;
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      top: 15%;
+      bottom: 0%;
+      right: 0%;
+      left: 10%;
+      max-width: 80%;
+      max-height: 75%;
+      backdrop-filter: blur(8px);
+    }
+    .name-des {
+      font-size: var(--font-13);
+      font-family: var(--font-roboto);
+      letter-spacing: 2px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      @media (max-width: #{$breakpoint-desktop}) {
+        font-size: var(--font-15);
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        font-size: var(--font-15);
+        line-height: 0;
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        font-size: var(--font-13);
+      }
+    }
+    .name {
+      font-size: var(--font-12);
+      font-family: var(--font-roboto);
+      letter-spacing: 3px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 2;
+      color: var(--cool-blue-2);
+      margin-right: 2px;
+      @media (max-width: #{$breakpoint-desktop}) {
+        font-size: var(--font-14);
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        font-size: var(--font-15);
+        line-height: 0;
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        font-size: var(--font-12);
+      }
+    }
+    img {
+      position: relative;
+      left: 42%;
+      width: 300px;
+      max-width: 100px;
+      height: 300px;
+      max-height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid var(--white);
+      box-shadow: 0 0 15px var(--white-shadow);
+      @media (max-width: #{$breakpoint-desktop}) {
+        left: 38%;
+        width: 250px;
+        max-width: 100px;
+        height: 250px;
+        max-height: 100px;
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        left: 42%;
+        width: 200px;
+        max-width: 70px;
+        height: 200px;
+        max-height: 70px;
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        left: 32%;
+        bottom: 1%;
+        width: 250px;
+        max-width: 100px;
+        height: 250px;
+        max-height: 100px;
+      }
+    }
+    .close {
+      position: relative;
+      left: 85%;
+      bottom: 18%;
+      @media (max-width: #{$breakpoint-desktop}) {
+        left: 85%;
+        bottom: 23%;
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        left: 85%;
+        bottom: 20%;
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        left: 85%;
+        bottom: 20%;
+      }
+    }
+    h3 {
+      font-size: var(--font-9);
+      color: var(--cool-red);
+      letter-spacing: 4px;
+      font-family: var(--font-tektur);
+      font-weight: 400;
+      margin-bottom: 10px;
+      @media (max-width: #{$breakpoint-desktop}) {
+        font-size: var(--font-12);
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        font-size: var(--font-13);
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        font-size: var(--font-9);
+      }
+    }
+  }
 
-	.more-panel {
-		position: absolute;
-		@include flex-container(column, wrap, center, flex-start);
-		padding: 15px;
-		top: 15%;
-		left: 5%;
-		width: 600px;
-		max-width: 28%;
-		height: 700px;
-		max-height: 70%;
-		background-color: var(--black-shadow);
-		border-radius: 20px;
-		z-index: 6;
-		color: var(--white);
-		border: 4px solid var(--white);
-		box-shadow: 0 0 15px var(--white-shadow);
-		gap: 20px;
-		@media (max-width: #{$breakpoint-desktop}) {
-			left: 7%;
-			gap: 10px;
-		}
-		@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-			left: 7%;
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			top: 15%;
-			bottom: 0%;
-			right: 0%;
-			left: 10%;
-			max-width: 80%;
-			max-height: 75%;
-			backdrop-filter: blur(8px);
-		}
-		.name-des {
-			font-size: var(--font-12);
-			font-family: var(--font-roboto);
-			letter-spacing: 2px;
-			font-weight: 400;
-			margin-bottom: 10px;
-			line-height: 1.5;
-			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-14);
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				font-size: var(--font-15);
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-11);
-			}
-		}
-		.name {
-			font-size: var(--font-11);
-			font-family: var(--font-roboto);
-			letter-spacing: 3px;
-			font-weight: 600;
-			margin-bottom: 10px;
-			line-height: 1.5;
-			color: var(--cool-blue-2);
-			margin-right: 2px;
-			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-13);
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				font-size: var(--font-14);
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-10);
-			}
-		}
+  .more-panel {
+    position: absolute;
+    @include flex-container(column, wrap, center, flex-start);
+    padding: 15px;
+    top: 15%;
+    left: 5%;
+    width: 600px;
+    max-width: 28%;
+    height: 700px;
+    max-height: 70%;
+    background-color: var(--black-shadow);
+    border-radius: 20px;
+    z-index: 6;
+    color: var(--white);
+    border: 4px solid var(--white);
+    box-shadow: 0 0 15px var(--white-shadow);
+    gap: 20px;
+    @media (max-width: #{$breakpoint-desktop}) {
+      left: 7%;
+      gap: 10px;
+    }
+    @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+      left: 7%;
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      top: 15%;
+      bottom: 0%;
+      right: 0%;
+      left: 10%;
+      max-width: 80%;
+      max-height: 75%;
+      backdrop-filter: blur(8px);
+    }
+    .name-des {
+      font-size: var(--font-12);
+      font-family: var(--font-roboto);
+      letter-spacing: 2px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      @media (max-width: #{$breakpoint-desktop}) {
+        font-size: var(--font-14);
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        font-size: var(--font-15);
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        font-size: var(--font-11);
+      }
+    }
+    .name {
+      font-size: var(--font-11);
+      font-family: var(--font-roboto);
+      letter-spacing: 3px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      color: var(--cool-blue-2);
+      margin-right: 2px;
+      @media (max-width: #{$breakpoint-desktop}) {
+        font-size: var(--font-13);
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        font-size: var(--font-14);
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        font-size: var(--font-10);
+      }
+    }
 
-		h3 {
-			font-size: var(--font-9);
-			color: var(--cool-red);
-			letter-spacing: 4px;
-			font-family: var(--font-tektur);
-			font-weight: 400;
-			margin-bottom: 10px;
-			@media (max-width: #{$breakpoint-desktop}) {
-				font-size: var(--font-11);
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				font-size: var(--font-12);
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				font-size: var(--font-9);
-			}
-		}
-		img {
-			width: 300px;
-			max-width: 120px;
-			height: 300px;
-			max-height: 120px;
-			border-radius: 50%;
-			margin-bottom: 15px;
-			border: 4px solid var(--white);
-			box-shadow: 0 0 15px var(--white-shadow);
-			@media (max-width: #{$breakpoint-desktop}) {
-				width: 250px;
-				max-width: 100px;
-				height: 250px;
-				max-height: 100px;
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				width: 200px;
-				max-width: 80px;
-				height: 200px;
-				max-height: 80px;
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				width: 250px;
-				max-width: 100px;
-				height: 250px;
-				max-height: 100px;
-			}
-		}
-		.close {
-			position: relative;
-			left: 0%;
-			bottom: 2%;
-			@media (max-width: #{$breakpoint-desktop}) {
-				left: 0%;
-				bottom: 2%;
-			}
-			@media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
-				left: 0%;
-				bottom: 2%;
-			}
-			@media (max-width: #{$breakpoint-phone}) {
-				left: 0%;
-				bottom: 8%;
-			}
-		}
-	}
+    h3 {
+      font-size: var(--font-9);
+      color: var(--cool-red);
+      letter-spacing: 4px;
+      font-family: var(--font-tektur);
+      font-weight: 400;
+      margin-bottom: 10px;
+      @media (max-width: #{$breakpoint-desktop}) {
+        font-size: var(--font-11);
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        font-size: var(--font-12);
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        font-size: var(--font-9);
+      }
+    }
+    img {
+      width: 300px;
+      max-width: 120px;
+      height: 300px;
+      max-height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid var(--white);
+      box-shadow: 0 0 15px var(--white-shadow);
+      @media (max-width: #{$breakpoint-desktop}) {
+        width: 250px;
+        max-width: 100px;
+        height: 250px;
+        max-height: 100px;
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        width: 200px;
+        max-width: 80px;
+        height: 200px;
+        max-height: 80px;
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        width: 250px;
+        max-width: 100px;
+        height: 250px;
+        max-height: 100px;
+      }
+    }
+    .close {
+      position: relative;
+      left: 0%;
+      bottom: 2%;
+      @media (max-width: #{$breakpoint-desktop}) {
+        left: 0%;
+        bottom: 2%;
+      }
+      @media (max-width: #{$breakpoint-desktop}) and (max-height: 700px) {
+        left: 0%;
+        bottom: 2%;
+      }
+      @media (max-width: #{$breakpoint-phone}) {
+        left: 0%;
+        bottom: 8%;
+      }
+    }
+  }
 }

@@ -1,137 +1,137 @@
 .iss-map-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 
-	p {
-		font-family: var(--font-roboto);
-		font-size: var(--font-12);
-		letter-spacing: 3px;
-		font-weight: 400;
+  p {
+    font-family: var(--font-roboto);
+    font-size: var(--font-12);
+    letter-spacing: 3px;
+    font-weight: 400;
 
-		margin: 0.7% 0 0.1% 0;
-		@media (max-width: $breakpoint-desktop) {
-			font-size: var(--font-13);
-		}
-		@media (max-width: $breakpoint-phone) {
-			font-size: var(--font-11);
-			margin-bottom: 2%;
-		}
-	}
-	.lat,
-	.lon {
-		color: var(--tertiary-accent);
-	}
-	.user-lat,
-	.user-lon {
-		color: var(--cool-yellow);
-	}
-	.distance {
-		color: var(--white);
-	}
-	#map {
-		width: 100%;
-		height: 60vh;
-	}
+    margin: 0.7% 0 0.1% 0;
+    @media (max-width: $breakpoint-desktop) {
+      font-size: var(--font-13);
+    }
+    @media (max-width: $breakpoint-phone) {
+      font-size: var(--font-11);
+      margin-bottom: 2%;
+    }
+  }
+  .lat,
+  .lon {
+    color: var(--tertiary-accent);
+  }
+  .user-lat,
+  .user-lon {
+    color: var(--cool-yellow);
+  }
+  .distance {
+    color: var(--white);
+  }
+  #map {
+    width: 100%;
+    height: 60vh;
+  }
 }
 
 .loading-iss-location {
-	text-align: center;
-	width: 100%;
-	height: 100vh;
-	font-family: var(--font-elianto);
-	font-size: var(--font-8);
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	background: linear-gradient(
-		45deg,
-		#ff7854,
-		#fd267d,
-		#4e7dfc,
-		#27ae60,
-		#ffc107,
-		#e74c3c
-	);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	transition: color 0.3s, background-position 0.3s;
-	background-size: 200% 200%;
-	animation: gradient-animation 3s linear infinite;
-	@keyframes gradient-animation {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
-	}
-	@media (max-width: #{$breakpoint-desktop-wide}) {
-		font-size: var(--font-9);
-	}
-	@media (max-width: #{$breakpoint-desktop}) {
-		font-size: var(--font-10);
-	}
-	@media (max-width: #{$breakpoint-large-tablet}) {
-		font-size: var(--font-11);
-	}
-	@media (max-width: #{$breakpoint-tablet}) {
-		text-align: center;
-		font-size: var(--font-11);
-	}
-	@media (max-width: #{$breakpoint-phone}) {
-	}
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  font-family: var(--font-elianto);
+  font-size: var(--font-8);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: linear-gradient(
+    45deg,
+    #ff7854,
+    #fd267d,
+    #4e7dfc,
+    #27ae60,
+    #ffc107,
+    #e74c3c
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.3s, background-position 0.3s;
+  background-size: 200% 200%;
+  animation: gradient-animation 3s linear infinite;
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @media (max-width: #{$breakpoint-desktop-wide}) {
+    font-size: var(--font-9);
+  }
+  @media (max-width: #{$breakpoint-desktop}) {
+    font-size: var(--font-10);
+  }
+  @media (max-width: #{$breakpoint-large-tablet}) {
+    font-size: var(--font-11);
+  }
+  @media (max-width: #{$breakpoint-tablet}) {
+    text-align: center;
+    font-size: var(--font-11);
+  }
+  @media (max-width: #{$breakpoint-phone}) {
+  }
 }
 .iss-tracker-heading {
-	text-align: center;
-	font-family: var(--font-elianto);
-	font-size: var(--font-8);
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	background: linear-gradient(
-		45deg,
-		#ff7854,
-		#fd267d,
-		#4e7dfc,
-		#27ae60,
-		#ffc107,
-		#e74c3c
-	);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	transition: color 0.3s, background-position 0.3s;
-	background-size: 200% 200%;
-	animation: gradient-animation 3s linear infinite;
-	margin: 0 auto;
-	@keyframes gradient-animation {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
-	}
-	@media (max-width: #{$breakpoint-desktop-wide}) {
-		font-size: var(--font-9);
-	}
-	@media (max-width: #{$breakpoint-desktop}) {
-		font-size: var(--font-10);
-	}
-	@media (max-width: #{$breakpoint-large-tablet}) {
-		font-size: var(--font-11);
-	}
-	@media (max-width: #{$breakpoint-tablet}) {
-		text-align: center;
-		font-size: var(--font-11);
-	}
-	@media (max-width: #{$breakpoint-phone}) {
-	}
+  text-align: center;
+  font-family: var(--font-elianto);
+  font-size: var(--font-8);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: linear-gradient(
+    45deg,
+    #ff7854,
+    #fd267d,
+    #4e7dfc,
+    #27ae60,
+    #ffc107,
+    #e74c3c
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.3s, background-position 0.3s;
+  background-size: 200% 200%;
+  animation: gradient-animation 3s linear infinite;
+  margin: 0 auto;
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @media (max-width: #{$breakpoint-desktop-wide}) {
+    font-size: var(--font-9);
+  }
+  @media (max-width: #{$breakpoint-desktop}) {
+    font-size: var(--font-10);
+  }
+  @media (max-width: #{$breakpoint-large-tablet}) {
+    font-size: var(--font-11);
+  }
+  @media (max-width: #{$breakpoint-tablet}) {
+    text-align: center;
+    font-size: var(--font-11);
+  }
+  @media (max-width: #{$breakpoint-phone}) {
+  }
 }

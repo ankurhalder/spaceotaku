@@ -1,17 +1,17 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
-	render() {
-		return (
-			<Html lang="en">
-				<Head>
-					<meta name="msapplication-config" content="/browserconfig.xml" />
-					<link rel="manifest" href="/manifest.json" />
-					<link
-						href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-						rel="stylesheet"
-					/>
-					{/* <script
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <meta name="msapplication-config" content="/browserconfig.xml" />
+          <link rel="manifest" href="/manifest.json" />
+          <link
+            href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+            rel="stylesheet"
+          />
+          {/* <script
 						dangerouslySetInnerHTML={{
 							__html: `
                           (function(c,l,a,r,i,t,y){
@@ -22,12 +22,12 @@ export default class MyDocument extends Document {
                          `,
 						}}
 					/> */}
-				</Head>
-				<body className="none">
-					<Main />
-					<NextScript />
-				</body>
-			</Html>
-		);
-	}
+        </Head>
+        <body className="none">
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }

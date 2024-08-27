@@ -1,30 +1,30 @@
 .speaker-container {
-	position: absolute;
-	filter: invert(1);
-	transition: all 0.3s;
-	height: 30px;
-	width: 30px;
-	top: 0;
-	right: 1%;
-	margin-top: 10px;
-	@media (max-width: $breakpoint-desktop-wide) {
-	}
-	@media (max-width: $breakpoint-desktop) {
-		width: 20px;
-		height: 20px;
-	}
+  position: absolute;
+  filter: invert(1);
+  transition: all 0.3s;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  right: 1%;
+  margin-top: 10px;
+  @media (max-width: $breakpoint-desktop-wide) {
+  }
+  @media (max-width: $breakpoint-desktop) {
+    width: 20px;
+    height: 20px;
+  }
 
-	@media (max-width: $breakpoint-large-tablet) {
-	}
-	@media (max-width: $breakpoint-tablet) {
-	}
-	@media (max-width: $breakpoint-phone) {
-	}
-	.volume-control {
-		position: absolute;
-		width: 100px;
-		height: 10px;
-		background-color: #fff;
-		right: 100%;
-	}
+  @media (max-width: $breakpoint-large-tablet) {
+  }
+  @media (max-width: $breakpoint-tablet) {
+  }
+  @media (max-width: $breakpoint-phone) {
+  }
+  .volume-control {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background-color: #fff;
+    right: 100%;
+  }
 }

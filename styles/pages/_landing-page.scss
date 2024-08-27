@@ -1,202 +1,202 @@
 .landing-container {
-	@include flex-container(column, nowrap, center, center);
-	.tab-nav {
-		position: fixed;
-		top: 0;
-		left: 40%;
-		background-color: transparent;
-		z-index: 1;
-		overflow: hidden;
-		button {
-			background-color: transparent;
-			border: none;
-			color: var(--white);
-			padding: 10px 20px;
-			border-radius: 20px;
-			margin: 5px 5px 0 0;
-			cursor: pointer;
-			font-size: var(--font-12);
-			font-family: var(--font-tektur);
-			letter-spacing: 2px;
-			transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
+  @include flex-container(column, nowrap, center, center);
+  .tab-nav {
+    position: fixed;
+    top: 0;
+    left: 40%;
+    background-color: transparent;
+    z-index: 1;
+    overflow: hidden;
+    button {
+      background-color: transparent;
+      border: none;
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin: 5px 5px 0 0;
+      cursor: pointer;
+      font-size: var(--font-12);
+      font-family: var(--font-tektur);
+      letter-spacing: 2px;
+      transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
 
-			&:hover {
-				background-color: var(--cool-orange);
-				color: var(--white);
-				transform: translate(2px, 2px);
-			}
+      &:hover {
+        background-color: var(--cool-orange);
+        color: var(--white);
+        transform: translate(2px, 2px);
+      }
 
-			&.active {
-				background-color: var(--cool-orange);
-				color: var(--white);
-			}
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-13);
-				padding: 8px 16px;
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				padding: 6px 12px;
-			}
-			@media (max-width: $breakpoint-tablet) {
-			}
-			@media (max-width: $breakpoint-phone) {
-			}
-		}
-		@media (max-width: #{$breakpoint-desktop-wide}) {
-			left: auto;
-		}
-		@media (max-width: #{$breakpoint-desktop}) {
-			left: auto;
-		}
-		@media (max-width: #{$breakpoint-large-tablet}) {
-			left: auto;
-		}
-		@media (max-width: #{$breakpoint-tablet}) {
-			left: auto;
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			left: auto;
-		}
-	}
-	.content {
-		overflow: hidden;
-		text-align: center;
-	}
+      &.active {
+        background-color: var(--cool-orange);
+        color: var(--white);
+      }
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-13);
+        padding: 8px 16px;
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        padding: 6px 12px;
+      }
+      @media (max-width: $breakpoint-tablet) {
+      }
+      @media (max-width: $breakpoint-phone) {
+      }
+    }
+    @media (max-width: #{$breakpoint-desktop-wide}) {
+      left: auto;
+    }
+    @media (max-width: #{$breakpoint-desktop}) {
+      left: auto;
+    }
+    @media (max-width: #{$breakpoint-large-tablet}) {
+      left: auto;
+    }
+    @media (max-width: #{$breakpoint-tablet}) {
+      left: auto;
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      left: auto;
+    }
+  }
+  .content {
+    overflow: hidden;
+    text-align: center;
+  }
 }
 .landing-page-sample-contents {
-	@include flex-container(column, nowrap, center, center);
-	h1 {
-		font-family: var(--font-elianto);
-		font-size: var(--font-8);
-		text-transform: uppercase;
-		letter-spacing: 4px;
-		background: linear-gradient(
-			45deg,
-			#ff7854,
-			#fd267d,
-			#4e7dfc,
-			#27ae60,
-			#ffc107,
-			#e74c3c
-		);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		transition: color 0.3s, background-position 0.3s;
-		background-size: 200% 200%;
-		animation: gradient-animation 3s linear infinite;
-		@keyframes gradient-animation {
-			0% {
-				background-position: 0% 50%;
-			}
-			50% {
-				background-position: 100% 50%;
-			}
-			100% {
-				background-position: 0% 50%;
-			}
-		}
-		margin: 3% 0 0 0;
-		@media (max-width: #{$breakpoint-desktop-wide}) {
-			font-size: var(--font-9);
-			// margin: 0 0 0 0;
-		}
-		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-10);
-		}
-		@media (max-width: #{$breakpoint-large-tablet}) {
-			margin: 5% 0 0 1%;
-			font-size: var(--font-11);
-		}
-		@media (max-width: #{$breakpoint-tablet}) {
-			margin: 10% 0 0 1%;
-			text-align: center;
-			font-size: var(--font-11);
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			margin: 12% 0 0 1%;
-			font-size: var(--font-10);
-		}
-	}
-	span {
-		letter-spacing: 4px;
-		font-weight: 600;
-		font-size: var(--font-8);
-		text-transform: capitalize;
-		font-family: var(--font-source);
-		color: var(--cool-blue-2);
-		@media (max-width: #{$breakpoint-desktop-wide}) {
-			font-size: var(--font-9);
-		}
-		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-12);
-			font-size: var(--font-10);
-		}
-		@media (max-width: #{$breakpoint-large-tablet}) {
-			font-size: var(--font-11);
-		}
-		@media (max-width: #{$breakpoint-tablet}) {
-			margin: 1% 0 0 1%;
-			text-align: center;
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-10);
-		}
-	}
-	h5 {
-		font-family: var(--font-tektur);
-		font-size: var(--font-10);
-		color: var(--cool-yellow);
-		letter-spacing: 4px;
-		font-weight: 400;
-		text-transform: uppercase;
-		margin: 0.5% 0 0.5% 0;
-		@media (max-width: #{$breakpoint-desktop-wide}) {
-			font-size: var(--font-11);
-		}
-		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-12);
-		}
-		@media (max-width: #{$breakpoint-large-tablet}) {
-			margin: 1% 0 1% 1%;
-			text-align: center;
-			font-size: var(--font-13);
-		}
-		@media (max-width: #{$breakpoint-tablet}) {
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			margin: 1.5% 0 1.5% 1%;
-			font-size: var(--font-12);
-		}
-	}
-	p {
-		font-family: var(--font-roboto);
-		letter-spacing: 3px;
-		font-size: var(--font-10);
-		color: var(--white);
-		text-align: justify;
-		line-height: 1.5;
-		font-weight: 400;
-		width: 70%;
-		margin: 0.5% 0 0.5% 0;
-		@media (max-width: #{$breakpoint-desktop-wide}) {
-			font-size: var(--font-11);
-		}
-		@media (max-width: #{$breakpoint-desktop}) {
-			font-size: var(--font-12);
-		}
-		@media (max-width: #{$breakpoint-large-tablet}) {
-			text-align: center;
-		}
-		@media (max-width: #{$breakpoint-tablet}) {
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			margin: 0 0 1% 0;
-			font-size: var(--font-11);
-			text-align: center;
-			width: 90%;
-		}
-	}
+  @include flex-container(column, nowrap, center, center);
+  h1 {
+    font-family: var(--font-elianto);
+    font-size: var(--font-8);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(
+      45deg,
+      #ff7854,
+      #fd267d,
+      #4e7dfc,
+      #27ae60,
+      #ffc107,
+      #e74c3c
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s, background-position 0.3s;
+    background-size: 200% 200%;
+    animation: gradient-animation 3s linear infinite;
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    margin: 3% 0 0 0;
+    @media (max-width: #{$breakpoint-desktop-wide}) {
+      font-size: var(--font-9);
+      // margin: 0 0 0 0;
+    }
+    @media (max-width: #{$breakpoint-desktop}) {
+      font-size: var(--font-10);
+    }
+    @media (max-width: #{$breakpoint-large-tablet}) {
+      margin: 5% 0 0 1%;
+      font-size: var(--font-11);
+    }
+    @media (max-width: #{$breakpoint-tablet}) {
+      margin: 10% 0 0 1%;
+      text-align: center;
+      font-size: var(--font-11);
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      margin: 12% 0 0 1%;
+      font-size: var(--font-10);
+    }
+  }
+  span {
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: var(--font-8);
+    text-transform: capitalize;
+    font-family: var(--font-source);
+    color: var(--cool-blue-2);
+    @media (max-width: #{$breakpoint-desktop-wide}) {
+      font-size: var(--font-9);
+    }
+    @media (max-width: #{$breakpoint-desktop}) {
+      font-size: var(--font-12);
+      font-size: var(--font-10);
+    }
+    @media (max-width: #{$breakpoint-large-tablet}) {
+      font-size: var(--font-11);
+    }
+    @media (max-width: #{$breakpoint-tablet}) {
+      margin: 1% 0 0 1%;
+      text-align: center;
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      font-size: var(--font-10);
+    }
+  }
+  h5 {
+    font-family: var(--font-tektur);
+    font-size: var(--font-10);
+    color: var(--cool-yellow);
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0.5% 0 0.5% 0;
+    @media (max-width: #{$breakpoint-desktop-wide}) {
+      font-size: var(--font-11);
+    }
+    @media (max-width: #{$breakpoint-desktop}) {
+      font-size: var(--font-12);
+    }
+    @media (max-width: #{$breakpoint-large-tablet}) {
+      margin: 1% 0 1% 1%;
+      text-align: center;
+      font-size: var(--font-13);
+    }
+    @media (max-width: #{$breakpoint-tablet}) {
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      margin: 1.5% 0 1.5% 1%;
+      font-size: var(--font-12);
+    }
+  }
+  p {
+    font-family: var(--font-roboto);
+    letter-spacing: 3px;
+    font-size: var(--font-10);
+    color: var(--white);
+    text-align: justify;
+    line-height: 1.5;
+    font-weight: 400;
+    width: 70%;
+    margin: 0.5% 0 0.5% 0;
+    @media (max-width: #{$breakpoint-desktop-wide}) {
+      font-size: var(--font-11);
+    }
+    @media (max-width: #{$breakpoint-desktop}) {
+      font-size: var(--font-12);
+    }
+    @media (max-width: #{$breakpoint-large-tablet}) {
+      text-align: center;
+    }
+    @media (max-width: #{$breakpoint-tablet}) {
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      margin: 0 0 1% 0;
+      font-size: var(--font-11);
+      text-align: center;
+      width: 90%;
+    }
+  }
 }

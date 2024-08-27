@@ -1,496 +1,496 @@
 .planet-page {
-	margin: 0 auto;
-	transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
-	animation: scaleIn 1s ease;
-	height: 100%;
+  margin: 0 auto;
+  transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
+  animation: scaleIn 1s ease;
+  height: 100%;
 
-	.page-title {
-		font-family: var(--font-elianto);
-		font-size: var(--font-5);
-		text-transform: uppercase;
-		letter-spacing: 4px;
-		background: linear-gradient(
-			45deg,
-			#ff7854,
-			#fd267d,
-			#4e7dfc,
-			#27ae60,
-			#ffc107,
-			#e74c3c
-		);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		transition: color 0.3s, background-position 0.3s;
-		background-size: 200% 200%;
-		animation: gradient-animation 3s linear infinite;
-		@keyframes gradient-animation {
-			0% {
-				background-position: 0% 50%;
-			}
-			50% {
-				background-position: 100% 50%;
-			}
-			100% {
-				background-position: 0% 50%;
-			}
-		}
-		text-align: center;
-		margin: auto auto auto auto;
-		@media (max-width: #{$breakpoint-desktop-wide}) {
-			font-size: var(--font-7);
-		}
-		@media (max-width: #{$breakpoint-desktop}) {
-		}
-		@media (max-width: #{$breakpoint-large-tablet}) {
-			font-size: var(--font-8);
-		}
-		@media (max-width: #{$breakpoint-tablet}) {
-		}
-		@media (max-width: #{$breakpoint-phone}) {
-			font-size: var(--font-7);
-		}
-	}
+  .page-title {
+    font-family: var(--font-elianto);
+    font-size: var(--font-5);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(
+      45deg,
+      #ff7854,
+      #fd267d,
+      #4e7dfc,
+      #27ae60,
+      #ffc107,
+      #e74c3c
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s, background-position 0.3s;
+    background-size: 200% 200%;
+    animation: gradient-animation 3s linear infinite;
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    text-align: center;
+    margin: auto auto auto auto;
+    @media (max-width: #{$breakpoint-desktop-wide}) {
+      font-size: var(--font-7);
+    }
+    @media (max-width: #{$breakpoint-desktop}) {
+    }
+    @media (max-width: #{$breakpoint-large-tablet}) {
+      font-size: var(--font-8);
+    }
+    @media (max-width: #{$breakpoint-tablet}) {
+    }
+    @media (max-width: #{$breakpoint-phone}) {
+      font-size: var(--font-7);
+    }
+  }
 
-	.planet-dropdown {
-		text-align: center;
-		@include flex-container(row, nowrap, center, center);
-		label {
-			color: var(--cool-yellow-2);
-			transition: color 0.3s, font-size 0.3s;
-			font-family: var(--font-orbitron);
-			font-size: var(--font-11);
-			text-transform: capitalize;
-			letter-spacing: 6px;
-			font-weight: 600;
+  .planet-dropdown {
+    text-align: center;
+    @include flex-container(row, nowrap, center, center);
+    label {
+      color: var(--cool-yellow-2);
+      transition: color 0.3s, font-size 0.3s;
+      font-family: var(--font-orbitron);
+      font-size: var(--font-11);
+      text-transform: capitalize;
+      letter-spacing: 6px;
+      font-weight: 600;
 
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-12);
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-			}
-			@media (max-width: $breakpoint-tablet) {
-				font-size: var(--font-13);
-			}
-			@media (max-width: $breakpoint-phone) {
-				font-size: var(--font-12);
-			}
-		}
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-12);
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+      }
+      @media (max-width: $breakpoint-tablet) {
+        font-size: var(--font-13);
+      }
+      @media (max-width: $breakpoint-phone) {
+        font-size: var(--font-12);
+      }
+    }
 
-		.custom-dropdown {
-			display: inline-block;
-			position: relative;
-			.selected-planet {
-				position: relative;
-				width: 100px;
-				max-width: 100%;
-				height: 100px;
-				max-height: 100%;
-				transition: transform 0.3s;
-				cursor: pointer;
-				&:hover {
-					filter: brightness(1.2);
-				}
-				@media (max-width: $breakpoint-desktop-wide) {
-					width: 90px;
-					height: 90px;
-				}
-				@media (max-width: $breakpoint-desktop) {
-					width: 80px;
-					height: 80px;
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-					width: 75px;
-					height: 75px;
-				}
-				@media (max-width: $breakpoint-tablet) {
-					width: 60px;
-					height: 60px;
-				}
-				@media (max-width: $breakpoint-phone) {
-					width: 50px;
-					height: 50px;
-				}
-			}
+    .custom-dropdown {
+      display: inline-block;
+      position: relative;
+      .selected-planet {
+        position: relative;
+        width: 100px;
+        max-width: 100%;
+        height: 100px;
+        max-height: 100%;
+        transition: transform 0.3s;
+        cursor: pointer;
+        &:hover {
+          filter: brightness(1.2);
+        }
+        @media (max-width: $breakpoint-desktop-wide) {
+          width: 90px;
+          height: 90px;
+        }
+        @media (max-width: $breakpoint-desktop) {
+          width: 80px;
+          height: 80px;
+        }
+        @media (max-width: $breakpoint-large-tablet) {
+          width: 75px;
+          height: 75px;
+        }
+        @media (max-width: $breakpoint-tablet) {
+          width: 60px;
+          height: 60px;
+        }
+        @media (max-width: $breakpoint-phone) {
+          width: 50px;
+          height: 50px;
+        }
+      }
 
-			.dropdown-menu {
-				position: absolute;
-				top: 110%;
-				left: -45%;
-				background-color: var(--white);
-				color: var(--black);
-				border: 2px solid var(--cool-yellow-2);
-				max-height: 400px;
-				width: 200px;
-				overflow-y: auto;
-				overflow-x: hidden;
-				display: none;
-				z-index: 5;
-				@media (max-width: $breakpoint-desktop-wide) {
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-					left: -100%;
-					width: 150px;
-				}
-				@media (max-width: $breakpoint-phone) {
-					left: -100%;
-					width: 100px;
-				}
-			}
+      .dropdown-menu {
+        position: absolute;
+        top: 110%;
+        left: -45%;
+        background-color: var(--white);
+        color: var(--black);
+        border: 2px solid var(--cool-yellow-2);
+        max-height: 400px;
+        width: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: none;
+        z-index: 5;
+        @media (max-width: $breakpoint-desktop-wide) {
+        }
+        @media (max-width: $breakpoint-desktop) {
+        }
+        @media (max-width: $breakpoint-large-tablet) {
+        }
+        @media (max-width: $breakpoint-tablet) {
+          left: -100%;
+          width: 150px;
+        }
+        @media (max-width: $breakpoint-phone) {
+          left: -100%;
+          width: 100px;
+        }
+      }
 
-			.open .dropdown-menu {
-				display: block;
-			}
+      .open .dropdown-menu {
+        display: block;
+      }
 
-			.dropdown-item {
-				padding: 10px;
-				cursor: pointer;
-				margin: auto auto auto auto;
-				&:hover {
-					background-color: var(--primary-accent);
-					color: var(--white);
-					transform: translateX(-1px) translateY(1px);
-					box-shadow: 0 10px 20px var(--black-shadow);
-					transition: 0.1s ease-in-out;
-					border-radius: 5px;
-				}
+      .dropdown-item {
+        padding: 10px;
+        cursor: pointer;
+        margin: auto auto auto auto;
+        &:hover {
+          background-color: var(--primary-accent);
+          color: var(--white);
+          transform: translateX(-1px) translateY(1px);
+          box-shadow: 0 10px 20px var(--black-shadow);
+          transition: 0.1s ease-in-out;
+          border-radius: 5px;
+        }
 
-				&.active {
-					background-color: var(--primary-accent);
-					color: var(--white);
-					transform: translateX(-1px) translateY(1px);
-					box-shadow: 0 10px 20px var(--black-shadow);
-					transition: 0.1s ease-in-out;
-					border-radius: 5px;
-				}
-			}
-		}
+        &.active {
+          background-color: var(--primary-accent);
+          color: var(--white);
+          transform: translateX(-1px) translateY(1px);
+          box-shadow: 0 10px 20px var(--black-shadow);
+          transition: 0.1s ease-in-out;
+          border-radius: 5px;
+        }
+      }
+    }
 
-		&.open {
-			.dropdown-menu {
-				display: block;
-			}
-		}
+    &.open {
+      .dropdown-menu {
+        display: block;
+      }
+    }
 
-		&:hover {
-			label {
-				color: var(--red);
-			}
-		}
-	}
+    &:hover {
+      label {
+        color: var(--red);
+      }
+    }
+  }
 
-	.planet-data-container {
-		width: 1100px;
-		margin: 0 auto;
-		background: var(--panel-bg);
-		text-align: center;
-		border-radius: 30px;
-		@media (max-width: $breakpoint-desktop-wide) {
-			width: 900px;
-			border-radius: 25px;
-		}
-		@media (max-width: $breakpoint-desktop) {
-			width: 800px;
-		}
-		@media (max-width: $breakpoint-large-tablet) {
-			width: 650px;
-			border-radius: 20px;
-		}
-		@media (max-width: $breakpoint-tablet) {
-			width: 400px;
-			border-radius: 15px;
-		}
-		@media (max-width: $breakpoint-phone) {
-			width: 250px;
-			border-radius: 10px;
-		}
-		.planet-details {
-			.planet-name {
-				transition: color 0.3s;
-				font-family: var(--font-orbitron);
-				font-size: var(--font-8);
-				margin: auto 0 0 0;
-				letter-spacing: 4px;
-				color: var(--cool-blue-2);
-				text-transform: uppercase;
-				text-decoration: underline;
-				@media (max-width: $breakpoint-desktop-wide) {
-					font-size: var(--font-9);
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-					font-size: var(--font-10);
-				}
-				@media (max-width: $breakpoint-phone) {
-					font-size: var(--font-9);
-				}
-			}
-			.planet-flex {
-				@include flex-container(row, nowrap, center, flex-start);
-				margin: 1% 1% 1% 1%;
-				@media (max-width: $breakpoint-tablet) {
-					@include flex-container(row, wrap, center, center);
-				}
-				.planet-image {
-					position: relative;
-					height: 300px;
-					width: 300px;
-					margin: auto auto auto auto;
-					border-radius: 20px;
-					overflow: hidden;
-					box-shadow: 0 16px 40px var(--black-shadow);
-					border: 1px solid var(--black);
-					transition: transform 0.3s, box-shadow 0.3s;
-					&:hover {
-						transform: scale(1.01);
-						background: rgba(0, 0, 0, 0.1);
-						box-shadow: 0 8px 32px 0 var(--black-shadow);
-					}
-					@media (max-width: $breakpoint-desktop-wide) {
-						height: 250px;
-						width: 250px;
-						border-radius: 18px;
-						box-shadow: 0 12px 30px var(--black-shadow);
-					}
-					@media (max-width: $breakpoint-desktop) {
-						height: 230px;
-						width: 230px;
-						border-radius: 16px;
-						box-shadow: 0 10px 25px var(--black-shadow);
-					}
-					@media (max-width: $breakpoint-large-tablet) {
-						height: 180px;
-						width: 180px;
-						border-radius: 14px;
-						box-shadow: 0 8px 20px var(--black-shadow);
-					}
-					@media (max-width: $breakpoint-tablet) {
-						height: 150px;
-						width: 150px;
-						border-radius: 12px;
-						box-shadow: 0 6px 15px var(--black-shadow);
-						margin: 0.5% 0 0.5% 0;
-					}
-					@media (max-width: $breakpoint-phone) {
-						height: 100px;
-						width: 100px;
-						border-radius: 10px;
-						box-shadow: 0 4px 10px var(--black-shadow);
-					}
-				}
+  .planet-data-container {
+    width: 1100px;
+    margin: 0 auto;
+    background: var(--panel-bg);
+    text-align: center;
+    border-radius: 30px;
+    @media (max-width: $breakpoint-desktop-wide) {
+      width: 900px;
+      border-radius: 25px;
+    }
+    @media (max-width: $breakpoint-desktop) {
+      width: 800px;
+    }
+    @media (max-width: $breakpoint-large-tablet) {
+      width: 650px;
+      border-radius: 20px;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      width: 400px;
+      border-radius: 15px;
+    }
+    @media (max-width: $breakpoint-phone) {
+      width: 250px;
+      border-radius: 10px;
+    }
+    .planet-details {
+      .planet-name {
+        transition: color 0.3s;
+        font-family: var(--font-orbitron);
+        font-size: var(--font-8);
+        margin: auto 0 0 0;
+        letter-spacing: 4px;
+        color: var(--cool-blue-2);
+        text-transform: uppercase;
+        text-decoration: underline;
+        @media (max-width: $breakpoint-desktop-wide) {
+          font-size: var(--font-9);
+        }
+        @media (max-width: $breakpoint-desktop) {
+        }
+        @media (max-width: $breakpoint-large-tablet) {
+        }
+        @media (max-width: $breakpoint-tablet) {
+          font-size: var(--font-10);
+        }
+        @media (max-width: $breakpoint-phone) {
+          font-size: var(--font-9);
+        }
+      }
+      .planet-flex {
+        @include flex-container(row, nowrap, center, flex-start);
+        margin: 1% 1% 1% 1%;
+        @media (max-width: $breakpoint-tablet) {
+          @include flex-container(row, wrap, center, center);
+        }
+        .planet-image {
+          position: relative;
+          height: 300px;
+          width: 300px;
+          margin: auto auto auto auto;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 16px 40px var(--black-shadow);
+          border: 1px solid var(--black);
+          transition: transform 0.3s, box-shadow 0.3s;
+          &:hover {
+            transform: scale(1.01);
+            background: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px 0 var(--black-shadow);
+          }
+          @media (max-width: $breakpoint-desktop-wide) {
+            height: 250px;
+            width: 250px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px var(--black-shadow);
+          }
+          @media (max-width: $breakpoint-desktop) {
+            height: 230px;
+            width: 230px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px var(--black-shadow);
+          }
+          @media (max-width: $breakpoint-large-tablet) {
+            height: 180px;
+            width: 180px;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px var(--black-shadow);
+          }
+          @media (max-width: $breakpoint-tablet) {
+            height: 150px;
+            width: 150px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px var(--black-shadow);
+            margin: 0.5% 0 0.5% 0;
+          }
+          @media (max-width: $breakpoint-phone) {
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px var(--black-shadow);
+          }
+        }
 
-				.details {
-					.detail-item {
-						@include flex-container(column, nowrap, center, center);
-						text-align: center;
-						max-width: 75%;
-						line-height: 1;
-						transition: color 0.3s;
-						@media (max-width: $breakpoint-desktop-wide) {
-							max-width: 80%;
-						}
-						@media (max-width: $breakpoint-desktop) {
-							max-width: 85%;
-						}
-						@media (max-width: $breakpoint-large-tablet) {
-							max-width: 90%;
-						}
-						@media (max-width: $breakpoint-tablet) {
-							max-width: 95%;
-							@include flex-container(row, wrap, center, center);
-						}
-						@media (max-width: $breakpoint-phone) {
-							max-width: 100%;
-						}
-						.strong {
-							font-family: var(--font-tektur);
-							font-weight: bold;
-							font-size: var(--font-11);
-							color: var(--cool-yellow-2);
-							text-transform: capitalize;
-							letter-spacing: 4px;
-							@media (max-width: $breakpoint-desktop-wide) {
-								font-size: var(--font-12);
-							}
-							@media (max-width: $breakpoint-desktop) {
-							}
-							@media (max-width: $breakpoint-large-tablet) {
-							}
-							@media (max-width: $breakpoint-tablet) {
-								font-size: var(--font-13);
-							}
-							@media (max-width: $breakpoint-phone) {
-								font-variant: var(--font-12);
-							}
-						}
-						span {
-							font-family: var(--font-orbitron);
-							font-size: var(--font-12);
-							font-weight: 400;
-							color: var(--white);
-							letter-spacing: 2px;
-							margin-bottom: 2%;
-							@media (max-width: $breakpoint-desktop-wide) {
-								font-size: var(--font-13);
-							}
-							@media (max-width: $breakpoint-desktop) {
-							}
-							@media (max-width: $breakpoint-large-tablet) {
-							}
-							@media (max-width: $breakpoint-tablet) {
-								font-size: var(--font-14);
-							}
-							@media (max-width: $breakpoint-phone) {
-								font-size: var(--font-13);
-							}
-						}
-					}
-				}
-			}
-		}
-		.planet-agency-mission {
-			h4 {
-				font-family: var(--font-orbitron);
-				font-size: var(--font-8);
-				margin: 1% 1% 1% 1%;
-				letter-spacing: 4px;
-				color: var(--cool-blue-2);
-				text-transform: uppercase;
-				text-decoration: underline;
-				@media (max-width: $breakpoint-desktop-wide) {
-					font-size: var(--font-9);
-				}
-				@media (max-width: $breakpoint-desktop) {
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-				}
-				@media (max-width: $breakpoint-tablet) {
-					font-size: var(--font-10);
-				}
-				@media (max-width: $breakpoint-phone) {
-					font-size: var(--font-9);
-				}
-			}
+        .details {
+          .detail-item {
+            @include flex-container(column, nowrap, center, center);
+            text-align: center;
+            max-width: 75%;
+            line-height: 1;
+            transition: color 0.3s;
+            @media (max-width: $breakpoint-desktop-wide) {
+              max-width: 80%;
+            }
+            @media (max-width: $breakpoint-desktop) {
+              max-width: 85%;
+            }
+            @media (max-width: $breakpoint-large-tablet) {
+              max-width: 90%;
+            }
+            @media (max-width: $breakpoint-tablet) {
+              max-width: 95%;
+              @include flex-container(row, wrap, center, center);
+            }
+            @media (max-width: $breakpoint-phone) {
+              max-width: 100%;
+            }
+            .strong {
+              font-family: var(--font-tektur);
+              font-weight: bold;
+              font-size: var(--font-11);
+              color: var(--cool-yellow-2);
+              text-transform: capitalize;
+              letter-spacing: 4px;
+              @media (max-width: $breakpoint-desktop-wide) {
+                font-size: var(--font-12);
+              }
+              @media (max-width: $breakpoint-desktop) {
+              }
+              @media (max-width: $breakpoint-large-tablet) {
+              }
+              @media (max-width: $breakpoint-tablet) {
+                font-size: var(--font-13);
+              }
+              @media (max-width: $breakpoint-phone) {
+                font-variant: var(--font-12);
+              }
+            }
+            span {
+              font-family: var(--font-orbitron);
+              font-size: var(--font-12);
+              font-weight: 400;
+              color: var(--white);
+              letter-spacing: 2px;
+              margin-bottom: 2%;
+              @media (max-width: $breakpoint-desktop-wide) {
+                font-size: var(--font-13);
+              }
+              @media (max-width: $breakpoint-desktop) {
+              }
+              @media (max-width: $breakpoint-large-tablet) {
+              }
+              @media (max-width: $breakpoint-tablet) {
+                font-size: var(--font-14);
+              }
+              @media (max-width: $breakpoint-phone) {
+                font-size: var(--font-13);
+              }
+            }
+          }
+        }
+      }
+    }
+    .planet-agency-mission {
+      h4 {
+        font-family: var(--font-orbitron);
+        font-size: var(--font-8);
+        margin: 1% 1% 1% 1%;
+        letter-spacing: 4px;
+        color: var(--cool-blue-2);
+        text-transform: uppercase;
+        text-decoration: underline;
+        @media (max-width: $breakpoint-desktop-wide) {
+          font-size: var(--font-9);
+        }
+        @media (max-width: $breakpoint-desktop) {
+        }
+        @media (max-width: $breakpoint-large-tablet) {
+        }
+        @media (max-width: $breakpoint-tablet) {
+          font-size: var(--font-10);
+        }
+        @media (max-width: $breakpoint-phone) {
+          font-size: var(--font-9);
+        }
+      }
 
-			ul {
-				list-style: none;
-				padding: 0;
+      ul {
+        list-style: none;
+        padding: 0;
 
-				li {
-					margin: 0 0 auto 0;
-					.agency {
-						@include flex-container(column, nowrap, center, center);
-						transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-						cursor: pointer;
-						border: 1px solid var(--black);
+        li {
+          margin: 0 0 auto 0;
+          .agency {
+            @include flex-container(column, nowrap, center, center);
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+            cursor: pointer;
+            border: 1px solid var(--black);
 
-						&:hover {
-							transform: scale(1.01);
-							box-shadow: 0 24px 60px var(--black-shadow);
-							opacity: 0.9;
-							border: 1px solid var(--black);
-						}
+            &:hover {
+              transform: scale(1.01);
+              box-shadow: 0 24px 60px var(--black-shadow);
+              opacity: 0.9;
+              border: 1px solid var(--black);
+            }
 
-						img {
-							height: 100px;
-							width: 100px;
-							margin: 0 1% 0 1%;
-							@media (max-width: $breakpoint-desktop-wide) {
-								height: 90px;
-								width: 90px;
-							}
-							@media (max-width: $breakpoint-desktop) {
-								height: 80px;
-								width: 80px;
-							}
-							@media (max-width: $breakpoint-large-tablet) {
-								height: 70px;
-								width: 70px;
-							}
-							@media (max-width: $breakpoint-tablet) {
-								height: 60px;
-								width: 60px;
-							}
-							@media (max-width: $breakpoint-phone) {
-								height: 50px;
-								width: 50px;
-							}
-						}
+            img {
+              height: 100px;
+              width: 100px;
+              margin: 0 1% 0 1%;
+              @media (max-width: $breakpoint-desktop-wide) {
+                height: 90px;
+                width: 90px;
+              }
+              @media (max-width: $breakpoint-desktop) {
+                height: 80px;
+                width: 80px;
+              }
+              @media (max-width: $breakpoint-large-tablet) {
+                height: 70px;
+                width: 70px;
+              }
+              @media (max-width: $breakpoint-tablet) {
+                height: 60px;
+                width: 60px;
+              }
+              @media (max-width: $breakpoint-phone) {
+                height: 50px;
+                width: 50px;
+              }
+            }
 
-						.strong {
-							font-family: var(--font-tektur);
-							font-weight: bold;
-							font-size: var(--font-11);
-							color: var(--cool-yellow-2);
-							text-transform: capitalize;
-							letter-spacing: 4px;
-							@media (max-width: $breakpoint-desktop-wide) {
-								font-size: var(--font-12);
-							}
-							@media (max-width: $breakpoint-desktop) {
-							}
-							@media (max-width: $breakpoint-large-tablet) {
-							}
-							@media (max-width: $breakpoint-tablet) {
-								font-size: var(--font-13);
-							}
-							@media (max-width: $breakpoint-phone) {
-							}
-						}
+            .strong {
+              font-family: var(--font-tektur);
+              font-weight: bold;
+              font-size: var(--font-11);
+              color: var(--cool-yellow-2);
+              text-transform: capitalize;
+              letter-spacing: 4px;
+              @media (max-width: $breakpoint-desktop-wide) {
+                font-size: var(--font-12);
+              }
+              @media (max-width: $breakpoint-desktop) {
+              }
+              @media (max-width: $breakpoint-large-tablet) {
+              }
+              @media (max-width: $breakpoint-tablet) {
+                font-size: var(--font-13);
+              }
+              @media (max-width: $breakpoint-phone) {
+              }
+            }
 
-						.mission {
-							font-family: var(--font-orbitron);
-							font-size: var(--font-12);
-							font-weight: 400;
-							color: var(--white);
-							letter-spacing: 2px;
-							margin-bottom: 2%;
-							@media (max-width: $breakpoint-desktop-wide) {
-								font-size: var(--font-13);
-							}
-							@media (max-width: $breakpoint-desktop) {
-							}
-							@media (max-width: $breakpoint-large-tablet) {
-							}
-							@media (max-width: $breakpoint-tablet) {
-								font-size: var(--font-14);
-							}
-							@media (max-width: $breakpoint-phone) {
-							}
-							font-size: var(--font-13);
-						}
-					}
-				}
-			}
-		}
-	}
+            .mission {
+              font-family: var(--font-orbitron);
+              font-size: var(--font-12);
+              font-weight: 400;
+              color: var(--white);
+              letter-spacing: 2px;
+              margin-bottom: 2%;
+              @media (max-width: $breakpoint-desktop-wide) {
+                font-size: var(--font-13);
+              }
+              @media (max-width: $breakpoint-desktop) {
+              }
+              @media (max-width: $breakpoint-large-tablet) {
+              }
+              @media (max-width: $breakpoint-tablet) {
+                font-size: var(--font-14);
+              }
+              @media (max-width: $breakpoint-phone) {
+              }
+              font-size: var(--font-13);
+            }
+          }
+        }
+      }
+    }
+  }
 
-	@keyframes fadeInUp {
-		from {
-			opacity: 0;
-			transform: translateY(50px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-	@keyframes scaleIn {
-		from {
-			transform: scale(0.95);
-		}
-		to {
-			transform: scale(1);
-		}
-	}
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.95);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
 }

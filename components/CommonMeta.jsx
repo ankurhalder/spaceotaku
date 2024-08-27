@@ -45,11 +45,6 @@ export default function CommonMeta() {
         property="og:url"
         content="https://www.spaceotaku.ankurhalder.in/"
       />
-      <meta property="og:title" content="Ankur Halder - Software Developer" />
-      <meta
-        property="og:description"
-        content="Passionate software developer proficient in MERN stack, Django, Python, and JavaScript. Active contributor to open-source projects."
-      />
       <meta
         property="og:image"
         content="https://www.ankurhalder.in/Ankur_Halder.png"

@@ -2,79 +2,79 @@
 
 // Grid container mixin
 @mixin grid-container(
-	$columns,
-	$gutter: 20px,
-	$min-width: 320px,
-	$max-width: 1200px
+  $columns,
+  $gutter: 20px,
+  $min-width: 320px,
+  $max-width: 1200px
 ) {
-	display: grid;
-	grid-template-columns: repeat($columns, 1fr);
-	grid-gap: $gutter;
-	min-width: $min-width;
-	max-width: $max-width;
-	margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: $gutter;
+  min-width: $min-width;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 // Grid item mixin
 @mixin grid-item($span, $row: auto, $col-start: auto, $col-end: auto) {
-	grid-column: $col-start / $col-end;
-	grid-row: $row;
+  grid-column: $col-start / $col-end;
+  grid-row: $row;
 }
 
 // Centered grid container mixin
 @mixin grid-center-container(
-	$columns,
-	$gutter: 20px,
-	$min-width: 320px,
-	$max-width: 1200px
+  $columns,
+  $gutter: 20px,
+  $min-width: 320px,
+  $max-width: 1200px
 ) {
-	@include grid-container($columns, $gutter, $min-width, $max-width);
-	justify-items: center;
+  @include grid-container($columns, $gutter, $min-width, $max-width);
+  justify-items: center;
 }
 
 // Offset grid item mixin
 @mixin grid-item-offset($span, $offset, $row: auto) {
-	@include grid-item(
-		$span,
-		$row,
-		col-start $offset + 1,
-		col-end $offset + $span + 1
-	);
+  @include grid-item(
+    $span,
+    $row,
+    col-start $offset + 1,
+    col-end $offset + $span + 1
+  );
 }
 
 // Auto-fit grid container mixin
 @mixin grid-auto-fit-container(
-	$min-width: 320px,
-	$max-width: 1200px,
-	$min-column-width: 200px
+  $min-width: 320px,
+  $max-width: 1200px,
+  $min-column-width: 200px
 ) {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax($min-column-width, 1fr));
-	grid-gap: 20px;
-	min-width: $min-width;
-	max-width: $max-width;
-	margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-column-width, 1fr));
+  grid-gap: 20px;
+  min-width: $min-width;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 // Masonry grid container mixin
 @mixin grid-masonry-container(
-	$columns,
-	$gutter: 20px,
-	$min-width: 320px,
-	$max-width: 1200px
+  $columns,
+  $gutter: 20px,
+  $min-width: 320px,
+  $max-width: 1200px
 ) {
-	@include grid-auto-fit-container($min-width, $max-width);
-	grid-auto-rows: 1fr;
-	grid-gap: $gutter;
+  @include grid-auto-fit-container($min-width, $max-width);
+  grid-auto-rows: 1fr;
+  grid-gap: $gutter;
 }
 
 // Responsive grid container mixin
 @mixin responsive-grid-container($breakpoints) {
-	@each $breakpoint, $columns in $breakpoints {
-		@media screen and (min-width: $breakpoint) {
-			@include grid-container($columns);
-		}
-	}
+  @each $breakpoint, $columns in $breakpoints {
+    @media screen and (min-width: $breakpoint) {
+      @include grid-container($columns);
+    }
+  }
 }
 // usage
 

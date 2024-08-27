@@ -5,46 +5,46 @@ import { SessionsClient } from "@google-cloud/dialogflow";
 import { v4 as uuid } from "uuid";
 
 export default async (req, res) => {
-	if (req.method === "POST") {
-		try {
-			const { MSG } = req.body;
-			console.log("Received MSG:", MSG);
+  if (req.method === "POST") {
+    try {
+      const { MSG } = req.body;
+      console.log("Received MSG:", MSG);
 
-			const projectId = "spaceotakuchatbot-utkt";
-			const keyFilePath = process.env.DIALOGFLOW_KEY_FILE;
-			const sessionClient = new SessionsClient({
-				keyFilename: keyFilePath,
-			});
+      const projectId = "spaceotakuchatbot-utkt";
+      const keyFilePath = process.env.DIALOGFLOW_KEY_FILE;
+      const sessionClient = new SessionsClient({
+        keyFilename: keyFilePath,
+      });
 
-			const sessionId = uuid();
-			const sessionPath = sessionClient.projectAgentSessionPath(
-				projectId,
-				sessionId
-			);
+      const sessionId = uuid();
+      const sessionPath = sessionClient.projectAgentSessionPath(
+        projectId,
+        sessionId
+      );
 
-			const request = {
-				session: sessionPath,
-				queryInput: {
-					text: {
-						text: MSG,
-						languageCode: "en-US",
-					},
-				},
-			};
+      const request = {
+        session: sessionPath,
+        queryInput: {
+          text: {
+            text: MSG,
+            languageCode: "en-US",
+          },
+        },
+      };
 
-			console.log("Request Payload:", request);
+      console.log("Request Payload:", request);
 
-			const responses = await sessionClient.detectIntent(request);
-			const result = responses[0].queryResult;
+      const responses = await sessionClient.detectIntent(request);
+      const result = responses[0].queryResult;
 
-			console.log("Dialogflow Response:", result.fulfillmentText);
+      console.log("Dialogflow Response:", result.fulfillmentText);
 
-			res.status(200).json({ Reply: result.fulfillmentText });
-		} catch (error) {
-			console.error("Error:", error);
-			res.status(500).json({ error: "An error occurred." });
-		}
-	} else {
-		res.status(405).json({ error: "Method not allowed" });
-	}
+      res.status(200).json({ Reply: result.fulfillmentText });
+    } catch (error) {
+      console.error("Error:", error);
+      res.status(500).json({ error: "An error occurred." });
+    }
+  } else {
+    res.status(405).json({ error: "Method not allowed" });
+  }
 };

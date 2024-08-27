@@ -1,466 +1,466 @@
 .quiz-container {
-	$cool-blue-1-hover: #0056b3;
-	width: 100%;
-	height: 100vh;
-	max-height: 100%;
-	@include flex-container(column, nowrap, flex-start, center);
-	h1 {
-		text-align: center;
-		font-family: var(--font-elianto);
-		font-size: var(--font-5);
-		text-transform: uppercase;
-		letter-spacing: 4px;
-		background: linear-gradient(
-			45deg,
-			#ff7854,
-			#fd267d,
-			#4e7dfc,
-			#27ae60,
-			#ffc107,
-			#e74c3c
-		);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		transition: color 0.3s, background-position 0.3s;
-		background-size: 200% 200%;
-		animation: gradient-animation 3s linear infinite;
-		@keyframes gradient-animation {
-			0% {
-				background-position: 0% 50%;
-			}
-			50% {
-				background-position: 100% 50%;
-			}
-			100% {
-				background-position: 0% 50%;
-			}
-		}
-		@media (max-width: $breakpoint-desktop-wide) {
-			font-size: var(--font-6);
-		}
-		@media (max-width: $breakpoint-desktop) {
-		}
-		@media (max-width: $breakpoint-large-tablet) {
-			font-size: var(--font-7);
-		}
-		@media (max-width: $breakpoint-tablet) {
-			margin: 10% 0 0 0;
-		}
-		@media (max-width: $breakpoint-phone) {
-		}
-	}
-	.difficulty-selection {
-		margin: auto 0 auto 0;
-		@include flex-container(column, nowrap, center, center);
-		gap: 5px;
-		h3 {
-			font-family: var(--font-orbitron);
-			letter-spacing: 4px;
-			font-weight: 400;
-			font-size: var(--font-8);
-			margin-bottom: 1%;
-			color: var(--white);
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-9);
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-			}
-			@media (max-width: $breakpoint-tablet) {
-			}
-			@media (max-width: $breakpoint-phone) {
-			}
-		}
+  $cool-blue-1-hover: #0056b3;
+  width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  @include flex-container(column, nowrap, flex-start, center);
+  h1 {
+    text-align: center;
+    font-family: var(--font-elianto);
+    font-size: var(--font-5);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(
+      45deg,
+      #ff7854,
+      #fd267d,
+      #4e7dfc,
+      #27ae60,
+      #ffc107,
+      #e74c3c
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s, background-position 0.3s;
+    background-size: 200% 200%;
+    animation: gradient-animation 3s linear infinite;
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    @media (max-width: $breakpoint-desktop-wide) {
+      font-size: var(--font-6);
+    }
+    @media (max-width: $breakpoint-desktop) {
+    }
+    @media (max-width: $breakpoint-large-tablet) {
+      font-size: var(--font-7);
+    }
+    @media (max-width: $breakpoint-tablet) {
+      margin: 10% 0 0 0;
+    }
+    @media (max-width: $breakpoint-phone) {
+    }
+  }
+  .difficulty-selection {
+    margin: auto 0 auto 0;
+    @include flex-container(column, nowrap, center, center);
+    gap: 5px;
+    h3 {
+      font-family: var(--font-orbitron);
+      letter-spacing: 4px;
+      font-weight: 400;
+      font-size: var(--font-8);
+      margin-bottom: 1%;
+      color: var(--white);
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-9);
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+      }
+      @media (max-width: $breakpoint-tablet) {
+      }
+      @media (max-width: $breakpoint-phone) {
+      }
+    }
 
-		.difficulty-button {
-			background-color: var(--cool-blue-1);
-			color: var(--white);
-			border: none;
-			border-radius: 10px;
-			padding: 18px 36px;
+    .difficulty-button {
+      background-color: var(--cool-blue-1);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 18px 36px;
 
-			font-size: var(--font-10);
-			font-family: var(--font-tektur);
-			letter-spacing: 2px;
-			font-weight: 400;
-			margin: 10px 0 10px 0;
-			cursor: pointer;
-			transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
-				box-shadow 0.3s ease-in-out;
+      font-size: var(--font-10);
+      font-family: var(--font-tektur);
+      letter-spacing: 2px;
+      font-weight: 400;
+      margin: 10px 0 10px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
+        box-shadow 0.3s ease-in-out;
 
-			&:hover {
-				background-color: $cool-blue-1-hover;
-				transform: scale(1.05);
-			}
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-10);
-				padding: 15px 30px;
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				font-size: var(--font-11);
-				padding: 12px 24px;
-			}
-			@media (max-width: $breakpoint-tablet) {
-			}
-			@media (max-width: $breakpoint-phone) {
-				padding: 10px 20px;
-			}
-		}
-	}
+      &:hover {
+        background-color: $cool-blue-1-hover;
+        transform: scale(1.05);
+      }
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-10);
+        padding: 15px 30px;
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        font-size: var(--font-11);
+        padding: 12px 24px;
+      }
+      @media (max-width: $breakpoint-tablet) {
+      }
+      @media (max-width: $breakpoint-phone) {
+        padding: 10px 20px;
+      }
+    }
+  }
 
-	.result {
-		text-align: center;
-		margin: auto 0 auto 0;
-		span {
-			font-family: var(--font-orbitron);
-			font-size: var(--font-8);
-			letter-spacing: 4px;
-			font-weight: 600;
-			color: var(--white);
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-9);
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				font-size: var(--font-10);
-			}
-			@media (max-width: $breakpoint-tablet) {
-			}
-			@media (max-width: $breakpoint-phone) {
-				font-size: var(--font-8);
-			}
-		}
-		.restart-button,
-		.review-button {
-			background-color: var(--cool-blue-1);
-			color: var(--white);
-			border: none;
-			border-radius: 10px;
-			padding: 18px 36px;
-			font-size: var(--font-10);
-			font-family: var(--font-tektur);
-			letter-spacing: 2px;
-			font-weight: 400;
-			margin: 20px 10px 0 10px;
-			cursor: pointer;
-			transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
-				box-shadow 0.3s ease-in-out;
+  .result {
+    text-align: center;
+    margin: auto 0 auto 0;
+    span {
+      font-family: var(--font-orbitron);
+      font-size: var(--font-8);
+      letter-spacing: 4px;
+      font-weight: 600;
+      color: var(--white);
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-9);
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        font-size: var(--font-10);
+      }
+      @media (max-width: $breakpoint-tablet) {
+      }
+      @media (max-width: $breakpoint-phone) {
+        font-size: var(--font-8);
+      }
+    }
+    .restart-button,
+    .review-button {
+      background-color: var(--cool-blue-1);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 18px 36px;
+      font-size: var(--font-10);
+      font-family: var(--font-tektur);
+      letter-spacing: 2px;
+      font-weight: 400;
+      margin: 20px 10px 0 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
+        box-shadow 0.3s ease-in-out;
 
-			&:hover {
-				background-color: $cool-blue-1-hover;
-				transform: scale(1.05);
-			}
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-10);
-				padding: 17px 34px;
-			}
-			@media (max-width: $breakpoint-desktop) {
-				padding: 16px 32px;
-			}
+      &:hover {
+        background-color: $cool-blue-1-hover;
+        transform: scale(1.05);
+      }
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-10);
+        padding: 17px 34px;
+      }
+      @media (max-width: $breakpoint-desktop) {
+        padding: 16px 32px;
+      }
 
-			@media (max-width: $breakpoint-large-tablet) {
-				font-size: var(--font-11);
-				padding: 15px 30px;
-			}
-			@media (max-width: $breakpoint-tablet) {
-				padding: 14px 28px;
-			}
-			@media (max-width: $breakpoint-phone) {
-				padding: 13px 26px;
-				font-size: var(--font-9);
-			}
-		}
-	}
+      @media (max-width: $breakpoint-large-tablet) {
+        font-size: var(--font-11);
+        padding: 15px 30px;
+      }
+      @media (max-width: $breakpoint-tablet) {
+        padding: 14px 28px;
+      }
+      @media (max-width: $breakpoint-phone) {
+        padding: 13px 26px;
+        font-size: var(--font-9);
+      }
+    }
+  }
 
-	.question-container {
-		text-align: center;
-		margin: 5% 0 0 0;
-		h4 {
-			font-family: var(--font-orbitron);
-			letter-spacing: 4px;
-			font-weight: 600;
-			font-size: var(--font-8);
-			margin: 0 0 3% 0;
-			color: var(--white);
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-9);
-				margin: 10% 0 3% 0;
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				margin: 5% 0 3% 0;
-			}
-			@media (max-width: $breakpoint-tablet) {
-				margin: 10% 0 3% 0;
-				font-size: var(--font-7);
-			}
-			@media (max-width: $breakpoint-phone) {
-			}
-		}
-		p {
-			font-family: var(--font-elianto);
-			font-size: var(--font-7);
-			letter-spacing: 4px;
-			color: var(--cool-blue-1);
-			margin: 0 auto 3% auto;
-			max-width: 1600px;
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-8);
-				max-width: 1300px;
-			}
-			@media (max-width: $breakpoint-desktop) {
-				max-width: 1100px;
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				font-size: var(--font-9);
-				max-width: 800px;
-			}
-			@media (max-width: $breakpoint-tablet) {
-				max-width: 500px;
-				font-size: var(--font-7);
-			}
-			@media (max-width: $breakpoint-phone) {
-				max-width: 250px;
-			}
-		}
-		.timer {
-			font-size: var(--font-8);
-			color: var(--cool-orange);
-			font-family: var(--font-source);
-			letter-spacing: 4px;
-			font-weight: 600;
-			margin: 0 0 3% 0;
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-9);
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				font-size: var(--font-8);
-			}
-			@media (max-width: $breakpoint-tablet) {
-			}
-			@media (max-width: $breakpoint-phone) {
-			}
-		}
+  .question-container {
+    text-align: center;
+    margin: 5% 0 0 0;
+    h4 {
+      font-family: var(--font-orbitron);
+      letter-spacing: 4px;
+      font-weight: 600;
+      font-size: var(--font-8);
+      margin: 0 0 3% 0;
+      color: var(--white);
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-9);
+        margin: 10% 0 3% 0;
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        margin: 5% 0 3% 0;
+      }
+      @media (max-width: $breakpoint-tablet) {
+        margin: 10% 0 3% 0;
+        font-size: var(--font-7);
+      }
+      @media (max-width: $breakpoint-phone) {
+      }
+    }
+    p {
+      font-family: var(--font-elianto);
+      font-size: var(--font-7);
+      letter-spacing: 4px;
+      color: var(--cool-blue-1);
+      margin: 0 auto 3% auto;
+      max-width: 1600px;
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-8);
+        max-width: 1300px;
+      }
+      @media (max-width: $breakpoint-desktop) {
+        max-width: 1100px;
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        font-size: var(--font-9);
+        max-width: 800px;
+      }
+      @media (max-width: $breakpoint-tablet) {
+        max-width: 500px;
+        font-size: var(--font-7);
+      }
+      @media (max-width: $breakpoint-phone) {
+        max-width: 250px;
+      }
+    }
+    .timer {
+      font-size: var(--font-8);
+      color: var(--cool-orange);
+      font-family: var(--font-source);
+      letter-spacing: 4px;
+      font-weight: 600;
+      margin: 0 0 3% 0;
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-9);
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        font-size: var(--font-8);
+      }
+      @media (max-width: $breakpoint-tablet) {
+      }
+      @media (max-width: $breakpoint-phone) {
+      }
+    }
 
-		.hint {
-			font-family: var(--font-roboto);
-			font-size: var(--font-8);
-			font-style: italic;
-			letter-spacing: 4px;
-			color: var(--white);
-			font-weight: 400;
-			margin-bottom: 10px;
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-			margin: 0 0 3% 0;
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-9);
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				margin: 3% 0 3% 0;
-			}
-			@media (max-width: $breakpoint-tablet) {
-			}
-			@media (max-width: $breakpoint-phone) {
-			}
-		}
+    .hint {
+      font-family: var(--font-roboto);
+      font-size: var(--font-8);
+      font-style: italic;
+      letter-spacing: 4px;
+      color: var(--white);
+      font-weight: 400;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 0 0 3% 0;
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-9);
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        margin: 3% 0 3% 0;
+      }
+      @media (max-width: $breakpoint-tablet) {
+      }
+      @media (max-width: $breakpoint-phone) {
+      }
+    }
 
-		.progress-bar {
-			width: 80%;
-			max-width: 800px;
-			margin: 0 auto 3% auto;
-			background-color: #a4a4a4;
-			height: 20px;
-			border-radius: 10px;
-			overflow: hidden;
-			.progress {
-				height: 100%;
-				background-color: var(--secondary-accent);
-			}
-			@media (max-width: $breakpoint-desktop-wide) {
-				width: 75%;
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				width: 70%;
-				height: 18px;
-			}
-			@media (max-width: $breakpoint-tablet) {
-				width: 70%;
-				height: 16px;
-			}
-			@media (max-width: $breakpoint-phone) {
-				width: 65%;
-				height: 16px;
-			}
-		}
+    .progress-bar {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto 3% auto;
+      background-color: #a4a4a4;
+      height: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      .progress {
+        height: 100%;
+        background-color: var(--secondary-accent);
+      }
+      @media (max-width: $breakpoint-desktop-wide) {
+        width: 75%;
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        width: 70%;
+        height: 18px;
+      }
+      @media (max-width: $breakpoint-tablet) {
+        width: 70%;
+        height: 16px;
+      }
+      @media (max-width: $breakpoint-phone) {
+        width: 65%;
+        height: 16px;
+      }
+    }
 
-		.answer-options {
-			@include flex-container(row, nowrap, center, center);
-			gap: 20px;
-			.answer-option {
-				text-align: center;
-				width: 200px;
-				padding: 18px 36px;
-				height: 100%;
-				border-radius: 10px;
-				background-color: var(--cool-blue-1);
-				color: var(--white);
-				border: none;
-				cursor: pointer;
-				font-size: var(--font-10);
-				font-family: var(--font-elianto);
-				letter-spacing: 2px;
-				font-weight: 400;
-				transition: background-color 0.3s ease-in-out,
-					transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    .answer-options {
+      @include flex-container(row, nowrap, center, center);
+      gap: 20px;
+      .answer-option {
+        text-align: center;
+        width: 200px;
+        padding: 18px 36px;
+        height: 100%;
+        border-radius: 10px;
+        background-color: var(--cool-blue-1);
+        color: var(--white);
+        border: none;
+        cursor: pointer;
+        font-size: var(--font-10);
+        font-family: var(--font-elianto);
+        letter-spacing: 2px;
+        font-weight: 400;
+        transition: background-color 0.3s ease-in-out,
+          transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 
-				&.selected {
-					background-color: $cool-blue-1-hover;
-					transform: scale(1.05);
-				}
+        &.selected {
+          background-color: $cool-blue-1-hover;
+          transform: scale(1.05);
+        }
 
-				&:hover {
-					background-color: $cool-blue-1-hover;
-					transform: scale(1.01);
-				}
-				@media (max-width: $breakpoint-desktop-wide) {
-					font-size: var(--font-10);
-					padding: 15px 30px;
-				}
-				@media (max-width: $breakpoint-desktop) {
-					padding: 15px 30px;
-				}
-				@media (max-width: $breakpoint-large-tablet) {
-					font-size: var(--font-11);
-					padding: 12px 24px;
-				}
-				@media (max-width: $breakpoint-tablet) {
-					padding: 18px 36px;
-					font-size: var(--font-8);
-				}
-				@media (max-width: $breakpoint-phone) {
-					padding: 10px 20px;
-					width: 150px;
-					height: 100%;
-					font-size: var(--font-9);
-				}
-			}
-			@media (max-width: $breakpoint-desktop-wide) {
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				@include flex-container(column, nowrap, center, center);
-				gap: 25px;
-			}
-			@media (max-width: $breakpoint-tablet) {
-				gap: 15px;
-			}
-			@media (max-width: $breakpoint-phone) {
-				gap: 10px;
-			}
-			.correct {
-				background-color: var(--cool-green);
-				color: var(--white);
-			}
-			.incorrect {
-				background-color: var(--cool-red);
-				color: var(--white);
-			}
-		}
+        &:hover {
+          background-color: $cool-blue-1-hover;
+          transform: scale(1.01);
+        }
+        @media (max-width: $breakpoint-desktop-wide) {
+          font-size: var(--font-10);
+          padding: 15px 30px;
+        }
+        @media (max-width: $breakpoint-desktop) {
+          padding: 15px 30px;
+        }
+        @media (max-width: $breakpoint-large-tablet) {
+          font-size: var(--font-11);
+          padding: 12px 24px;
+        }
+        @media (max-width: $breakpoint-tablet) {
+          padding: 18px 36px;
+          font-size: var(--font-8);
+        }
+        @media (max-width: $breakpoint-phone) {
+          padding: 10px 20px;
+          width: 150px;
+          height: 100%;
+          font-size: var(--font-9);
+        }
+      }
+      @media (max-width: $breakpoint-desktop-wide) {
+      }
+      @media (max-width: $breakpoint-desktop) {
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        @include flex-container(column, nowrap, center, center);
+        gap: 25px;
+      }
+      @media (max-width: $breakpoint-tablet) {
+        gap: 15px;
+      }
+      @media (max-width: $breakpoint-phone) {
+        gap: 10px;
+      }
+      .correct {
+        background-color: var(--cool-green);
+        color: var(--white);
+      }
+      .incorrect {
+        background-color: var(--cool-red);
+        color: var(--white);
+      }
+    }
 
-		.hint-button {
-			background-color: var(--cool-blue-1);
-			color: var(--white);
-			border: none;
-			border-radius: 10px;
-			padding: 18px 36px;
-			font-size: var(--font-10);
-			font-family: var(--font-elianto);
-			letter-spacing: 2px;
-			font-weight: 400;
-			margin: 3% 0 0 0;
-			cursor: pointer;
-			transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
-				box-shadow 0.3s ease-in-out;
+    .hint-button {
+      background-color: var(--cool-blue-1);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 18px 36px;
+      font-size: var(--font-10);
+      font-family: var(--font-elianto);
+      letter-spacing: 2px;
+      font-weight: 400;
+      margin: 3% 0 0 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out,
+        box-shadow 0.3s ease-in-out;
 
-			&:hover {
-				background-color: $cool-blue-1-hover;
-				transform: scale(1.01);
-			}
-			@media (max-width: $breakpoint-desktop-wide) {
-				font-size: var(--font-10);
-				padding: 15px 30px;
-			}
-			@media (max-width: $breakpoint-desktop) {
-				padding: 15px 30px;
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-				font-size: var(--font-11);
-				padding: 12px 24px;
-			}
-			@media (max-width: $breakpoint-tablet) {
-				padding: 10px 20px;
-				font-size: var(--font-8);
-				margin: 5% 0 0 0;
-			}
-			@media (max-width: $breakpoint-phone) {
-				padding: 10px 20px;
-				margin: 10% 0 0 0;
-			}
-		}
-	}
+      &:hover {
+        background-color: $cool-blue-1-hover;
+        transform: scale(1.01);
+      }
+      @media (max-width: $breakpoint-desktop-wide) {
+        font-size: var(--font-10);
+        padding: 15px 30px;
+      }
+      @media (max-width: $breakpoint-desktop) {
+        padding: 15px 30px;
+      }
+      @media (max-width: $breakpoint-large-tablet) {
+        font-size: var(--font-11);
+        padding: 12px 24px;
+      }
+      @media (max-width: $breakpoint-tablet) {
+        padding: 10px 20px;
+        font-size: var(--font-8);
+        margin: 5% 0 0 0;
+      }
+      @media (max-width: $breakpoint-phone) {
+        padding: 10px 20px;
+        margin: 10% 0 0 0;
+      }
+    }
+  }
 
-	.review-container {
-		text-align: left;
-		margin-top: 20px;
+  .review-container {
+    text-align: left;
+    margin-top: 20px;
 
-		h5 {
-			text-align: center;
-			font-size: var(--font-10);
-			margin-bottom: 20px;
-			color: var(--cool-green);
-			font-weight: bold;
-		}
+    h5 {
+      text-align: center;
+      font-size: var(--font-10);
+      margin-bottom: 20px;
+      color: var(--cool-green);
+      font-weight: bold;
+    }
 
-		.review-item {
-			background-color: #333;
-			border-radius: 10px;
-			margin-bottom: 20px;
-			padding: 20px;
-			color: var(--white);
+    .review-item {
+      background-color: #333;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 20px;
+      color: var(--white);
 
-			strong {
-				font-weight: bold;
-				font-family: var(--font-orbitron);
-				font-size: var(--font-13);
-				letter-spacing: 3px;
-			}
+      strong {
+        font-weight: bold;
+        font-family: var(--font-orbitron);
+        font-size: var(--font-13);
+        letter-spacing: 3px;
+      }
 
-			p {
-				letter-spacing: 2px;
-				margin: 0;
-				line-height: 1.5;
+      p {
+        letter-spacing: 2px;
+        margin: 0;
+        line-height: 1.5;
 
-				strong {
-					font-weight: bold;
-				}
-			}
+        strong {
+          font-weight: bold;
+        }
+      }
 
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
