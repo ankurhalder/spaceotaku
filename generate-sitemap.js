@@ -7,7 +7,7 @@ const { publicRuntimeConfig } = require("./next.config");
 const baseUrl =
   serverRuntimeConfig.BASE_URL ||
   publicRuntimeConfig.BASE_URL ||
-  "https://www.spaceotaku.online/";
+  "https://www.spaceotaku.ankurhalder.in";
 
 async function generateSitemap() {
   const sitemapStream = new SitemapStream({ hostname: baseUrl });
