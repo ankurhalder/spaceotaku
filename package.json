@@ -28,7 +28,7 @@
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "checkly": "^4.6.3",
+    "checkly": "^5.0.1",
     "eslint": "^9.18.0",
     "eslint-config-next": "^15.0.3",
     "sass": "^1.66.1",
