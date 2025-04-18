@@ -1,8 +1,12 @@
 {
   "name": "spaceotaku",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "author": "Ankur Halder",
+  "author": {
+    "name": "Ankur Halder",
+    "email": "ankur.halder12345@gmail.com",
+    "url": "https://ankurhalder.in"
+  },
   "scripts": {
     "dev": "next dev",
     "dev1": "next dev -p 3001",
@@ -13,7 +17,7 @@
   "dependencies": {
     "@google-cloud/dialogflow": "^6.1.0",
     "@vercel/analytics": "^1.0.2",
-    "axios": "^1.6.0",
+    "axios": "^1.8.4",
     "dotenv": "^16.3.1",
     "express": "^4.19.2",
     "google-map-react": "^2.2.1",
@@ -28,7 +32,7 @@
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "checkly": "^5.0.1",
+    "checkly": "^3.1.1",
     "eslint": "^9.18.0",
     "eslint-config-next": "^15.0.3",
     "sass": "^1.66.1",
