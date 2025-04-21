@@ -15,7 +15,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@google-cloud/dialogflow": "^6.1.0",
+    "@google-cloud/dialogflow": "^7.0.1",
     "@vercel/analytics": "^1.0.2",
     "axios": "^1.8.4",
     "dotenv": "^16.3.1",
