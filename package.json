@@ -34,7 +34,7 @@
   "devDependencies": {
     "checkly": "^5.2.0",
     "eslint": "^9.18.0",
-    "eslint-config-next": "^15.0.3",
+    "eslint-config-next": "^16.0.1",
     "sass": "^1.66.1",
     "ts-node": "latest",
     "typescript": "latest"
