@@ -54,8 +54,10 @@ Contributions are welcome and encouraged! If you find a bug or have an idea for 
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [GNU AFFERO GENERAL PUBLIC LICENSE](LICENSE).
 
 ---
 
 Explore the cosmos with Space Otaku! Stay curious, stay galactic. 🚀🌌
+
+<!-- Connector low-level write test on branch test-readme-edit-20260410, 2026-04-10 -->
